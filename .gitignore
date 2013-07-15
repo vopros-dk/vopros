@@ -1,5 +1,3 @@
 modules
 libraries
-themes
-*.py[co]
-
+themes/contrib
