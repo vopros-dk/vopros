@@ -34,7 +34,7 @@ projects[job_scheduler][subdir] = contrib
 projects[job_scheduler][version] = 2.0-alpha3
 
 projects[libraries][subdir] = contrib
-projects[libraries][version] = 1.0
+projects[libraries][version] = 2.1
 
 projects[link][subdir] = contrib
 projects[link][version] = 1.1
@@ -58,6 +58,15 @@ projects[search_api][version] = 1.4
 
 projects[search_api_solr][subdir] = contrib
 projects[search_api_solr][version] = 1.0-rc3
+
+projects[services][subdir] = contrib
+projects[services][version] = 3.4
+
+; Need the latest version to have fields working
+projects[services_views][subdir] = contrib
+projects[services_views][download][type] = git
+projects[services_views][download][url] = http://git.drupal.org/project/services_views.git
+projects[services_views][download][revision] = 1d584a0f283240d0596a20e705f5572245c7b014
 
 projects[token][subdir] = contrib
 projects[token][version] = 1.4
