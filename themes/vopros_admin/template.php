@@ -16,7 +16,6 @@ function vopros_admin_preprocess_views_view_field(&$vars) {
     ) {
       $path = drupal_get_path('theme', 'vopros_admin');
       $vars['output'] .= ' ' . theme('image', array('path' => $path . '/images/mail_icon.png'));
-      dpm($vars);
     }
   }
 }
