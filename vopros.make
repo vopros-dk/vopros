@@ -8,6 +8,9 @@ projects[cache_actions][version] = 2.0-alpha5
 projects[ctools][subdir] = contrib
 projects[ctools][version] = 1.2
 
+projects[date][subdir] = contrib
+projects[date][version] = 2.6
+
 projects[diff][subdir] = contrib
 projects[diff][download][type] = git
 projects[diff][download][url] = http://git.drupal.org/project/diff.git
