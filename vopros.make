@@ -90,7 +90,7 @@ projects[votingapi][version] = 2.10
 projects[osa_addi][subdir] = contrib
 projects[osa_addi][type] = module
 projects[osa_addi][download][type] = git
-projects[osa_addi][download][url] = https://github.com/DBC-as/Vopros-opensearch-admin.git
+projects[osa_addi][download][url] = https://github.com/DBCDK/Vopros-opensearch-admin.git
 
 projects[ting][type] = "module"
 projects[ting][download][type] = "git"
