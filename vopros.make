@@ -100,7 +100,7 @@ projects[ting][download][tag] = "7.x-0.11"
 ; Our own module collection
 projects[vopros][type] = module
 projects[vopros][download][type] = git
-projects[vopros][download][url] = "https://github.com/DBC-as/Vopros-base.git"
+projects[vopros][download][url] = "https://github.com/dbcdk/Vopros-base.git"
 
 ; Libraries
 libraries[search_api_solr_php_client][download][type] = get
