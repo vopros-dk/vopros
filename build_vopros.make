@@ -8,4 +8,4 @@ projects[drupal][version] = 7.22
 
 projects[vopros][type] = "profile"
 projects[vopros][download][type] = "git"
-projects[vopros][download][url] = "https://github.com/reload/Vopros-install.git"
+projects[vopros][download][url] = "https://github.com/DBCDK/Vopros-install.git"
