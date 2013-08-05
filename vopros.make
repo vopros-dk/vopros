@@ -101,6 +101,7 @@ projects[ting][download][tag] = "7.x-0.11"
 projects[vopros][type] = module
 projects[vopros][download][type] = git
 projects[vopros][download][url] = "https://github.com/reload/Vopros-base.git"
+projects[vopros][download][branch] = "service"
 
 ; Libraries
 libraries[search_api_solr_php_client][download][type] = get
