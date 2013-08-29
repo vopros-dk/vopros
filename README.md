@@ -9,6 +9,10 @@ Building
 
 You will need [drush make][] to build this install profile.
 
+To build a full site, run:
+
+   drush make https://raw.github.com/DBCDK/Vopros-install/master/build_vopros.make /path/to/build/to
+
 To build an install profile without Drupal core, run:
 
     drush make --no-core --contrib-destination=. vopros.make
