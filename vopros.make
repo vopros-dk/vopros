@@ -90,7 +90,7 @@ projects[votingapi][version] = 2.10
 projects[osa_addi][subdir] = contrib
 projects[osa_addi][type] = module
 projects[osa_addi][download][type] = git
-projects[osa_addi][download][url] = https://github.com/reload/Vopros-opensearch-admin.git
+projects[osa_addi][download][url] = https://github.com/DBCDK/Vopros-opensearch-admin.git
 
 projects[ting][type] = "module"
 projects[ting][download][type] = "git"
@@ -100,7 +100,7 @@ projects[ting][download][tag] = "7.x-0.11"
 ; Our own module collection
 projects[vopros][type] = module
 projects[vopros][download][type] = git
-projects[vopros][download][url] = "https://github.com/reload/Vopros-base.git"
+projects[vopros][download][url] = "https://github.com/DBCDK/Vopros-base.git"
 projects[vopros][download][branch] = "service"
 
 ; Libraries
