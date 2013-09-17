@@ -538,9 +538,9 @@ function vopros_feedback_token_info_alter(&$info) {
 function vopros_feedback_tokens($type, $tokens, array $data = array(), array $options = array()) {
   $replacements = array();
   if ($type == 'vopros_email' && !empty($data['vopros_email'])) {
+    $token = $email->email_id . '/' . md5($email->email_id . variable_get('vopros_feedback_secret', ''));
     $email = $data['vopros_email'];
     if (in_array('feedback-url', array_keys($tokens))) {
-      $token = $email->email_id . '/' . md5($email->email_id . variable_get('vopros_feedback_secret', ''));
       $replacements[$tokens['feedback-url']] = url('vopros/feedback/' . $token, array('absolute' => TRUE));
     }
     if (in_array('feedback-token', array_keys($tokens))) {
