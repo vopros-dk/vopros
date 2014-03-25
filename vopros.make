@@ -43,9 +43,7 @@ projects[link][subdir] = contrib
 projects[link][version] = 1.1
 
 projects[mailhandler][subdir] = contrib
-projects[mailhandler][version] = 2.8
-; Fix bad encoding detection. See https://drupal.org/node/2076505
-projects[mailhandler][patch][] = https://drupal.org/files/mailhandler-encoding-2076505-4.patch
+projects[mailhandler][version] = 2.9
 
 projects[nanosoap][subdir] = contrib
 projects[nanosoap][download][type] = git
