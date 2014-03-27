@@ -46,15 +46,13 @@ projects[mailhandler][subdir] = contrib
 projects[mailhandler][version] = 2.9
 
 projects[nanosoap][subdir] = contrib
-projects[nanosoap][download][type] = git
-projects[nanosoap][download][url] = http://git.drupal.org/project/nanosoap.git
-projects[nanosoap][download][revision] = 5f7e56dbbaca4c894dc69a96c0b23fb83c2a85b7
+projects[nanosoap][version] = 1.0
 
 projects[profile2][subdir] = contrib
 projects[profile2][version] = 1.3
 
 projects[rules][subdir] = contrib
-projects[rules][version] = 2.2
+projects[rules][version] = 2.6
 
 projects[search_api][subdir] = contrib
 projects[search_api][version] = 1.8
@@ -63,7 +61,7 @@ projects[search_api_solr][subdir] = contrib
 projects[search_api_solr][version] = 1.2
 
 projects[services][subdir] = contrib
-projects[services][version] = 3.4
+projects[services][version] = 3.7
 
 ; Need the latest version to have fields working
 projects[services_views][subdir] = contrib
@@ -75,12 +73,10 @@ projects[token][subdir] = contrib
 projects[token][version] = 1.4
 
 projects[uuid][subdir] = contrib
-projects[uuid][download][type] = git
-projects[uuid][download][url] = http://git.drupal.org/project/uuid.git
-projects[uuid][download][revision] = 22c3ae3f24e19ad411f14cb08b854895d4a6721b
+projects[uuid][version] = 1.0-alpha5
 
 projects[views][subdir] = contrib
-projects[views][version] = 3.5
+projects[views][version] = 3.7
 
 projects[votingapi][subdir] = contrib
 projects[votingapi][version] = 2.10
