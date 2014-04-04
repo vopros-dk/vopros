@@ -85,7 +85,7 @@ function vopros_answer_views_default_views() {
   $handler->display->display_options['footer']['views_count']['id'] = 'views_count';
   $handler->display->display_options['footer']['views_count']['table'] = 'vopros_question';
   $handler->display->display_options['footer']['views_count']['field'] = 'views_count';
-  /* Relationship: Answer: Svar ID */
+  /* Relationship: Answer: Answer ID */
   $handler->display->display_options['relationships']['answer_id']['id'] = 'answer_id';
   $handler->display->display_options['relationships']['answer_id']['table'] = 'vopros_answer';
   $handler->display->display_options['relationships']['answer_id']['field'] = 'answer_id';
@@ -106,7 +106,7 @@ function vopros_answer_views_default_views() {
   $handler->display->display_options['relationships']['profile']['table'] = 'users';
   $handler->display->display_options['relationships']['profile']['field'] = 'profile';
   $handler->display->display_options['relationships']['profile']['relationship'] = 'uid';
-  /* Field: Question: Spørgsmål ID */
+  /* Field: Question: Question ID */
   $handler->display->display_options['fields']['question_id']['id'] = 'question_id';
   $handler->display->display_options['fields']['question_id']['table'] = 'vopros_question';
   $handler->display->display_options['fields']['question_id']['field'] = 'question_id';
@@ -186,34 +186,6 @@ function vopros_answer_views_default_views() {
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'management';
   $handler->display->display_options['menu']['context'] = 0;
-  $translatables['vopros_answer_overview'] = array(
-    t('Master'),
-    t('Answer overview'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('Answer revisions'),
-    t('question'),
-    t('Answer creator'),
-    t('Profile'),
-    t('Spørgsmål ID'),
-    t('.'),
-    t('Question'),
-    t('Received from'),
-    t('Library'),
-    t('Question created'),
-    t('Page'),
-  );
   $export['vopros_answer_overview'] = $view;
 
   $view = new view();
@@ -297,7 +269,7 @@ function vopros_answer_views_default_views() {
   $handler->display->display_options['relationships']['question_id']['id'] = 'question_id';
   $handler->display->display_options['relationships']['question_id']['table'] = 'vopros_answer';
   $handler->display->display_options['relationships']['question_id']['field'] = 'question_id';
-  /* Field: Question: Spørgsmål ID */
+  /* Field: Question: Question ID */
   $handler->display->display_options['fields']['question_id']['id'] = 'question_id';
   $handler->display->display_options['fields']['question_id']['table'] = 'vopros_question';
   $handler->display->display_options['fields']['question_id']['field'] = 'question_id';
@@ -366,34 +338,6 @@ function vopros_answer_views_default_views() {
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['path'] = 'user/%/vopros/questions';
-  $translatables['vopros_question_own_questions'] = array(
-    t('Master'),
-    t('Your questions'),
-    t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
-    t('question'),
-    t('Spørgsmål ID'),
-    t('.'),
-    t('Title'),
-    t('Usage'),
-    t('Status'),
-    t('Deadline'),
-    t('Created'),
-    t('Release question'),
-    t('All'),
-    t('Page'),
-  );
   $export['vopros_question_own_questions'] = $view;
 
   return $export;
