@@ -9,6 +9,7 @@ dependencies[] = entity
 dependencies[] = taxonomy
 dependencies[] = views
 dependencies[] = vopros_base
+dependencies[] = file
 configure = admin/vopros/config/question
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:1
