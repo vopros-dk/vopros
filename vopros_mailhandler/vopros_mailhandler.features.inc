@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * email.features.inc
+ * vopros_mailhandler.features.inc
  */
 
 /**

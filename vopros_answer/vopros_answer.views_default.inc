@@ -133,7 +133,7 @@ function vopros_answer_views_default_views() {
   $handler->display->display_options['fields']['name']['field'] = 'name';
   $handler->display->display_options['fields']['name']['relationship'] = 'uid';
   $handler->display->display_options['fields']['name']['label'] = 'Answer creator';
-  /* Field: Profile: Library */
+  /* Field: Profile: Bibliotek */
   $handler->display->display_options['fields']['vopros_user_library']['id'] = 'vopros_user_library';
   $handler->display->display_options['fields']['vopros_user_library']['table'] = 'field_data_vopros_user_library';
   $handler->display->display_options['fields']['vopros_user_library']['field'] = 'vopros_user_library';
@@ -145,6 +145,12 @@ function vopros_answer_views_default_views() {
   $handler->display->display_options['fields']['created']['relationship'] = 'question_id';
   $handler->display->display_options['fields']['created']['label'] = 'Question created';
   $handler->display->display_options['fields']['created']['date_format'] = 'short';
+  /* Sort criterion: Question: Created */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'vopros_question';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['relationship'] = 'question_id';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   /* Filter criterion: Question: Qanda_service_name */
   $handler->display->display_options['filters']['qanda_service_name']['id'] = 'qanda_service_name';
   $handler->display->display_options['filters']['qanda_service_name']['table'] = 'vopros_question';
@@ -166,7 +172,7 @@ function vopros_answer_views_default_views() {
   $handler->display->display_options['filters']['uid']['expose']['label'] = 'Answer creator';
   $handler->display->display_options['filters']['uid']['expose']['operator'] = 'uid_op';
   $handler->display->display_options['filters']['uid']['expose']['identifier'] = 'uid';
-  /* Filter criterion: Profile: Library (vopros_user_library) */
+  /* Filter criterion: Profile: Bibliotek (vopros_user_library) */
   $handler->display->display_options['filters']['vopros_user_library_value']['id'] = 'vopros_user_library_value';
   $handler->display->display_options['filters']['vopros_user_library_value']['table'] = 'field_data_vopros_user_library';
   $handler->display->display_options['filters']['vopros_user_library_value']['field'] = 'vopros_user_library_value';
@@ -179,13 +185,41 @@ function vopros_answer_views_default_views() {
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['path'] = 'admin/vopros/questions/answer-overview';
   $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Answer overview';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'management';
   $handler->display->display_options['menu']['context'] = 0;
+  $translatables['vopros_answer_overview'] = array(
+    t('Master'),
+    t('Answer overview'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('Answer revisions'),
+    t('question'),
+    t('Answer creator'),
+    t('Profile'),
+    t('Question ID'),
+    t('.'),
+    t('Question'),
+    t('Received from'),
+    t('Bibliotek'),
+    t('Question created'),
+    t('Library'),
+    t('Page'),
+  );
   $export['vopros_answer_overview'] = $view;
 
   $view = new view();
@@ -338,6 +372,34 @@ function vopros_answer_views_default_views() {
   $handler = $view->new_display('page', 'Page', 'page');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['path'] = 'user/%/vopros/questions';
+  $translatables['vopros_question_own_questions'] = array(
+    t('Master'),
+    t('Your questions'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('question'),
+    t('Question ID'),
+    t('.'),
+    t('Title'),
+    t('Usage'),
+    t('Status'),
+    t('Deadline'),
+    t('Created'),
+    t('Release question'),
+    t('All'),
+    t('Page'),
+  );
   $export['vopros_question_own_questions'] = $view;
 
   return $export;

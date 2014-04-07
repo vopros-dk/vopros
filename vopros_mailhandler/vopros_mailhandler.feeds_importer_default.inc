@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * email.feeds_importer_default.inc
+ * vopros_mailhandler.feeds_importer_default.inc
  */
 
 /**
@@ -28,6 +28,7 @@ function vopros_mailhandler_feeds_importer_default() {
       'config' => array(
         'available_commands' => 'status',
         'authenticate_plugin' => 'MailhandlerAuthenticateDefault',
+        'extended_headers' => NULL,
       ),
     ),
     'processor' => array(
@@ -67,7 +68,7 @@ function vopros_mailhandler_feeds_importer_default() {
     ),
     'content_type' => '',
     'update' => 0,
-    'import_period' => '1800',
+    'import_period' => '0',
     'expire_period' => 3600,
     'import_on_create' => 1,
     'process_in_background' => 0,

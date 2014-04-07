@@ -50,12 +50,12 @@ function vopros_user_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 7,
+          'weight' => '7',
         ),
       ),
       'entity_type' => 'profile2',
       'field_name' => 'field_vopros_user_description',
-      'label' => 'Description',
+      'label' => 'Beskrivelse',
       'required' => 0,
       'settings' => array(
         'text_processing' => '0',
@@ -119,12 +119,12 @@ function vopros_user_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 8,
+          'weight' => '8',
         ),
       ),
       'entity_type' => 'profile2',
       'field_name' => 'field_vopros_user_expertise',
-      'label' => 'Expertise',
+      'label' => 'Fagområder',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -183,10 +183,10 @@ function vopros_user_field_default_fields() {
           'module' => 'image',
           'settings' => array(
             'image_link' => '',
-            'image_style' => '',
+            'image_style' => 'medium',
           ),
           'type' => 'image',
-          'weight' => 6,
+          'weight' => '6',
         ),
       ),
       'entity_type' => 'profile2',
@@ -200,7 +200,7 @@ function vopros_user_field_default_fields() {
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
         'max_resolution' => '',
-        'min_resolution' => '',
+        'min_resolution' => '100x100',
         'title_field' => 0,
         'user_register_form' => FALSE,
       ),
@@ -208,7 +208,7 @@ function vopros_user_field_default_fields() {
         'active' => 1,
         'module' => 'image',
         'settings' => array(
-          'preview_image_style' => 'thumbnail',
+          'preview_image_style' => 'medium',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
@@ -263,7 +263,7 @@ function vopros_user_field_default_fields() {
       ),
       'entity_type' => 'profile2',
       'field_name' => 'vopros_user_first_name',
-      'label' => 'First name',
+      'label' => 'Fornavn',
       'required' => 0,
       'settings' => array(
         'text_processing' => '0',
@@ -327,7 +327,7 @@ function vopros_user_field_default_fields() {
       ),
       'entity_type' => 'profile2',
       'field_name' => 'vopros_user_last_name',
-      'label' => 'Last name',
+      'label' => 'Efternavn',
       'required' => 0,
       'settings' => array(
         'text_processing' => '0',
@@ -385,7 +385,7 @@ function vopros_user_field_default_fields() {
       ),
       'entity_type' => 'profile2',
       'field_name' => 'vopros_user_library',
-      'label' => 'Library',
+      'label' => 'Bibliotek',
       'required' => 0,
       'settings' => array(
         'user_register_form' => FALSE,
@@ -445,7 +445,7 @@ function vopros_user_field_default_fields() {
       ),
       'entity_type' => 'profile2',
       'field_name' => 'vopros_user_notes',
-      'label' => 'Notes',
+      'label' => 'Bemærkninger',
       'required' => 0,
       'settings' => array(
         'text_processing' => '0',
@@ -509,7 +509,7 @@ function vopros_user_field_default_fields() {
       ),
       'entity_type' => 'profile2',
       'field_name' => 'vopros_user_phone_number',
-      'label' => 'Phone number',
+      'label' => 'Telefonnummer',
       'required' => 0,
       'settings' => array(
         'text_processing' => '0',
@@ -606,15 +606,15 @@ function vopros_user_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Description');
-  t('Expertise');
-  t('First name');
+  t('Bemærkninger');
+  t('Beskrivelse');
+  t('Bibliotek');
+  t('Efternavn');
+  t('Fagområder');
+  t('Fornavn');
   t('Image');
-  t('Last name');
-  t('Library');
-  t('Notes');
-  t('Phone number');
   t('Shortcut links');
+  t('Telefonnummer');
 
   return $fields;
 }
