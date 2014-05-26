@@ -14,15 +14,6 @@ function vopros_base_init() {
 }
 
 /**
- * Implements hook_ctools_plugin_api().
- */
-function vopros_base_ctools_plugin_api() {
-  list($module, $api) = func_get_args();
-  if ($module == "environment_indicator" && $api == "default_environment_indicator_environments") {
-    return array("version" => "1");
-  }
-}
-/**
  * Implements hook_menu().
  */
 function vopros_base_menu() {
