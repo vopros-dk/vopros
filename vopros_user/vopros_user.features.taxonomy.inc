@@ -13,9 +13,9 @@ function vopros_user_taxonomy_default_vocabularies() {
       'name' => 'Expertise',
       'machine_name' => 'vopros_user_expertise',
       'description' => '',
-      'hierarchy' => '0',
+      'hierarchy' => 0,
       'module' => 'taxonomy',
-      'weight' => '0',
+      'weight' => 0,
     ),
   );
 }
