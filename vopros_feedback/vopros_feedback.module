@@ -144,6 +144,9 @@ function vopros_feedback_permission() {
     'view own feedback' => array(
       'title' => t('View own feedback'),
     ),
+    'view agency feedback' => array(
+      'title' => t('View agency feedback'),
+    ),
   );
 
   return $permissions;

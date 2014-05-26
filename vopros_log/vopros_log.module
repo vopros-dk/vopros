@@ -221,6 +221,10 @@ function vopros_log_form($form, &$form_state, $log = NULL, $question_id = NULL, 
     }
     $log_messages = vopros_log_load_multiple(array(), $conditions);
 
+    // Sort the messages, vopros_log_load_multiple returns them in whatever
+    // order the database returns them.
+    uasort($log_messages, '_vopros_log_cmp');
+
     foreach ($log_messages as $log_message) {
       $form['log_messages'][] = array(
         '#log' => $log_message,
@@ -230,6 +234,15 @@ function vopros_log_form($form, &$form_state, $log = NULL, $question_id = NULL, 
   }
 
   return $form;
+}
+
+/**
+ * Sort comparison function.
+ *
+ * Sorts items by date.
+ */
+function _vopros_log_cmp($a, $b) {
+  return $b->created - $a->created;
 }
 
 /**
