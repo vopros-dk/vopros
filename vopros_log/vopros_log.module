@@ -266,7 +266,7 @@ function vopros_log_form_ajax_submit(&$form, &$form_state) {
     $commands[] = ajax_command_invoke('#edit-save-log-message', 'before', array('<div id="log-status-message"><div class="messages status">' . t('Log message created') . '</div></div>'));
     if ($form_state['show_messages']) {
       $log_message = theme('vopros_log_question_feed', array('log' => $log));
-      $commands[] = ajax_command_invoke('#vopros-log-messages', 'append', array($log_message));
+      $commands[] = ajax_command_invoke('#vopros-log-messages', 'prepend', array($log_message));
     }
   }
   else {
