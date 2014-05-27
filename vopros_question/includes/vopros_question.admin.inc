@@ -173,10 +173,15 @@ function vopros_question_question_form($form, &$form_state, $question, $add_ques
     $form['form']['question_status']['#default_value'] = 'answered';
   }
 
+  $deadline_options = _vopros_question_deadline();
+  // Add option for question deadline, if not found in the configured deadlines.
+  if (!empty($question->question_deadline) && !isset($deadline_options[$question->question_deadline])) {
+    $deadline_options[$question->question_deadline] = format_interval($question->question_deadline * 60 * 60);
+  }
   $form['form']['question_deadline'] = array(
     '#type' => 'select',
     '#title' => t('Deadline'),
-    '#options' => _vopros_question_deadline(),
+    '#options' => $deadline_options,
     '#default_value' => !empty($question->question_deadline) ? $question->question_deadline : -1,
   );
 
