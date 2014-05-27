@@ -250,16 +250,16 @@ function vopros_question_menu() {
     'admin/vopros/questions/%vopros_question' => array(
       'title callback' => 'vopros_question_title',
       'title arguments' => array(3),
-       'page callback' => 'vopros_question_page_view',
-       'page arguments' => array(3),
-       'access callback' => 'vopros_question_access',
-       'access arguments' => array('view'),
-       'file' => 'includes/vopros_question.admin.inc',
+      'page callback' => 'vopros_question_page_view',
+      'page arguments' => array(3),
+      'access callback' => 'vopros_question_access',
+      'access arguments' => array('view'),
+      'file' => 'includes/vopros_question.admin.inc',
     ),
     'admin/vopros/questions/%vopros_question/view' => array(
       'title' => 'View',
-       'type' => MENU_DEFAULT_LOCAL_TASK,
-       'weight' => -10,
+      'type' => MENU_DEFAULT_LOCAL_TASK,
+      'weight' => -10,
     ),
     'admin/vopros/questions/%vopros_question/admin-edit' => array(
       'title' => 'Admin edit',
