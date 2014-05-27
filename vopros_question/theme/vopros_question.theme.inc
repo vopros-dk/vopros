@@ -64,7 +64,7 @@ function theme_vopros_question_status($variables) {
  */
 function theme_vopros_question_content($variables) {
   $question = $variables['question']['#question'];
-  return '<p class="question-content">' . check_plain($question->question_content) . '</p>';
+  return '<p class="question-content">' . nl2br(check_plain($question->question_content)) . '</p>';
 }
 
 /**
@@ -244,7 +244,7 @@ function theme_vopros_question_revision_question_feed($variables) {
   $date = format_date($revision->revision_timestamp, 'short');
   $statuses = _vopros_question_status();
   $status = isset($statuses[$revision->question_status]) ? $statuses[$revision->question_status] : t('Unknown');
-  
+
   $output = '<div class="status-feed-item feed-item">';
   // Special case, question created from email.
   $mapping = _vopros_question_status_reason();
