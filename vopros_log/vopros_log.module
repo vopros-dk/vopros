@@ -180,6 +180,26 @@ function vopros_log_access($op, $log = NULL, $account = NULL) {
   return FALSE;
 }
 
+/**
+ * Show the add log entry form, optionally the existing entries.
+ *
+ * Note that answer id is only used when creating the log entry, not for
+ * limiting the displayed entries (which still show all messages on the
+ * question).
+ *
+ * @param array $form
+ *   Form passed by Form API.
+ * @param array $form_state
+ *   Form state passed by Form API.
+ * @param VoprosLog $log
+ *   Existing log entry to copy default content from.
+ * @param int $question_id
+ *   Question id to create/show log entry for.
+ * @param int $answer_id
+ *   Answer id to create log entry for.
+ * @param bool $show_messages
+ *   Whether to show existing messages.
+ */
 function vopros_log_form($form, &$form_state, $log = NULL, $question_id = NULL, $answer_id = NULL, $show_messages = FALSE) {
   $form_state['show_messages'] = $show_messages;
 
@@ -215,9 +235,6 @@ function vopros_log_form($form, &$form_state, $log = NULL, $question_id = NULL, 
     $conditions = array();
     if ($question_id) {
       $conditions['question_id'] = $question_id;
-    }
-    if ($answer_id) {
-      $conditions['answer_id'] = $answer_id;
     }
     $log_messages = vopros_log_load_multiple(array(), $conditions);
 
@@ -266,7 +283,7 @@ function vopros_log_form_ajax_submit(&$form, &$form_state) {
     $commands[] = ajax_command_invoke('#edit-save-log-message', 'before', array('<div id="log-status-message"><div class="messages status">' . t('Log message created') . '</div></div>'));
     if ($form_state['show_messages']) {
       $log_message = theme('vopros_log_question_feed', array('log' => $log));
-      $commands[] = ajax_command_invoke('#vopros-log-messages', 'append', array($log_message));
+      $commands[] = ajax_command_invoke('#vopros-log-messages', 'prepend', array($log_message));
     }
   }
   else {
@@ -303,7 +320,7 @@ function vopros_log_vopros_question_activity_feed($question, &$feed) {
  * Implements hook_form_FORM_ID_alter().
  */
 function vopros_log_form_vopros_answer_form_alter(&$form, &$form_state) {
-  $form['action']['log'] = vopros_log_form(array(), $form_state, NULL, $form['question']['#value']->question_id, $form['answer']['#value']->answer_id);
+  $form['action']['log'] = vopros_log_form(array(), $form_state, NULL, $form['question']['#value']->question_id, $form['answer']['#value']->answer_id, TRUE);
   $form['action']['log']['log_content']['#required'] = FALSE;
 }
 
