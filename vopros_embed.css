@@ -1,0 +1,14 @@
+/**
+ * Styles for the questions form.
+ */
+
+#embedded-page-wrapper #main {
+  width: 100%;
+  margin: 0;
+}
+
+#embedded-page-wrapper #content {
+  display: block;
+  float: none;
+  position: static;
+}
