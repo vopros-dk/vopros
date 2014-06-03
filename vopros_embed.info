@@ -3,3 +3,4 @@ description = Provide embedable question forms for other sites.
 package = Vopros
 core = 7.x
 dependencies[] = vopros_question
+dependencies[] = vopros_email
