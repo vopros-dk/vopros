@@ -119,7 +119,7 @@ EOF;
 
   $form['from_url'] = array(
     '#type' => 'value',
-    '#value' => $url,
+    '#value' => $referrer,
   );
 
   $form['form']['question_usage'] = array(
@@ -189,17 +189,6 @@ function vopros_embed_question_submit($form, &$form_state) {
   }
   $question->qanda_service_name = $agency_id;
 
-  if ($form_state['values']['from_url']) {
-    $log[] = "Sendt fra " . $form_state['values']['from_url'];
-  }
-
-  if ($form_state['values']['agency_mail']) {
-    $log[] = "Vidresend til " . $form_state['values']['agency_mail'] . " hvis dette er et spørgsmål der bedre kan besvares lokalt.";
-  }
-
-  if ($log) {
-    $question->log = implode("\n", $log);
-  }
 
   // This is odd, but that's how vopros_question_question_form_submit() does it.
   if (!isset($question->created) || empty($question->created)) {
@@ -211,7 +200,28 @@ function vopros_embed_question_submit($form, &$form_state) {
 
   field_attach_submit('vopros_question', $question, $form, $form_state);
 
+  // Save question.
   $question->save();
+
+  if (module_exists('vopros_log')) {
+    if ($form_state['values']['from_url']) {
+      $log[] = "Sendt fra " . $form_state['values']['from_url'];
+    }
+
+    if ($form_state['values']['agency_mail']) {
+      $log[] = "Vidresend til " . $form_state['values']['agency_mail'] . " hvis dette er et spørgsmål der bedre kan besvares lokalt.";
+    }
+    // Save log entry.
+    $values = array(
+      'question_id' => $question->question_id,
+      // 'answer_id' => NULL,
+      'log_content' => implode("\n", $log),
+      // 'uid' => NULL,
+    );
+    $log = vopros_log_new($values);
+    vopros_log_save($log);
+  }
+
   $form_state['redirect'] = 'embed/ask_question/submitted';
 }
 
