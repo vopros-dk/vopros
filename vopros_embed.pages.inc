@@ -37,6 +37,11 @@ function vopros_embed_question($form, &$form_state) {
 
   $agency_mail = isset($_GET['agency_mail']) ? check_plain($_GET['agency_mail']) : '';
 
+  $focus_script = <<<EOF
+jQuery(document).ready(function ($) {
+  \$('.form-item-question-content textarea').focus();
+});
+EOF;
 
   $form['question_content'] = array(
     '#type' => 'textarea',
@@ -44,6 +49,11 @@ function vopros_embed_question($form, &$form_state) {
     '#required' => TRUE,
     '#default_value' => '',
     '#weight' => -70,
+    '#attached' => array(
+      'js' => array(
+        $focus_script => array('type' => 'inline'),
+      ),
+    ),
   );
 
   $form['user_name'] = array(
