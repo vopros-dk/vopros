@@ -12,7 +12,7 @@
  */
 function vopros_embed_question($form, &$form_state) {
   $form['#attached'] = array(
-    'css' => array(drupal_get_path('module', 'vopros_embed') . '/vopros_embed.css'),
+    'css' => array(drupal_get_path('module', 'vopros_embed') . '/css/vopros_embed.css'),
   );
 
   $agency_id = isset($_GET['agency_id']) ? check_plain($_GET['agency_id']) : '';
@@ -212,9 +212,32 @@ function vopros_embed_question_submitted_page() {
   $build = array(
     '#markup' => t('Your question has been submitted.'),
     '#attached' => array(
-      'css' => array(drupal_get_path('module', 'vopros_embed') . '/vopros_embed.css'),
+      'css' => array(drupal_get_path('module', 'vopros_embed') . '/css/vopros_embed.css'),
     ),
   );
 
   return $build;
+}
+
+/**
+ *
+ */
+function vopros_embed_question_modal_js() {
+  drupal_add_http_header('Content-Type', 'application/javascript');
+
+  $js = file_get_contents(drupal_get_path('module', 'vopros_embed') . '/libraries/jquery-1.11.1.min.js');
+  $js .= "\n";
+
+  $js .= file_get_contents(drupal_get_path('module', 'vopros_embed') . '/libraries/magnific-popup-0.9.9/jquery.magnific-popup.min.js');
+  $js .= "\n";
+
+  $our_js = file_get_contents(drupal_get_path('module', 'vopros_embed') . '/js/vopros_embed.js');
+  $css = array(
+    '!mag_style' => '/' . drupal_get_path('module', 'vopros_embed') . '/libraries/magnific-popup-0.9.9/magnific-popup.css',
+    '!vopros_style' => '/' . drupal_get_path('module', 'vopros_embed') . '/css/vopros_embed_popup.css',
+  );
+  $js .= strtr($our_js, $css);
+  $js .= "\n";
+
+  print $js;
 }
