@@ -13,3 +13,8 @@
   position: static;
   margin: 1em;
 }
+
+#embedded-page-wrapper #footer {
+  width: auto;
+  min-width: 0;
+}

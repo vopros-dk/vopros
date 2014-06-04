@@ -220,21 +220,37 @@ function vopros_embed_question_submitted_page() {
 }
 
 /**
- *
+ * Return JavaScript for popup.
  */
 function vopros_embed_question_modal_js() {
   drupal_add_http_header('Content-Type', 'application/javascript');
 
-  $js = file_get_contents(drupal_get_path('module', 'vopros_embed') . '/libraries/jquery-1.11.1.min.js');
-  $js .= "\n";
+  $base = drupal_get_path('module', 'vopros_embed');
+  $libraries = array(
+    // Add our own copy of jQuery.
+    $base . '/libraries/jquery-1.11.1.min.js',
+    // Add jQuery migrate to reintroduce functions BBQ needs.
+    $base . '/libraries/jquery-migrate-1.2.1.min.js',
+    // Add BBQ for URL query string manipulation.
+    $base . '/libraries/bbq-1.2.1/jquery.ba-bbq.min.js',
+    // Add Magific Popup.
+    $base . '/libraries/magnific-popup-0.9.9/jquery.magnific-popup.min.js',
+  );
 
-  $js .= file_get_contents(drupal_get_path('module', 'vopros_embed') . '/libraries/magnific-popup-0.9.9/jquery.magnific-popup.min.js');
-  $js .= "\n";
+  $js = '';
+  foreach ($libraries as $lib) {
+    $js .= file_get_contents($lib);
+    $js .= "\n";
+  }
 
-  $our_js = file_get_contents(drupal_get_path('module', 'vopros_embed') . '/js/vopros_embed.js');
+  $ask_url = url('embed/ask_question', array('absolute' => TRUE));
+
+  // Add our own code.
+  $our_js = file_get_contents($base . '/js/vopros_embed.js');
   $css = array(
-    '!mag_style' => '/' . drupal_get_path('module', 'vopros_embed') . '/libraries/magnific-popup-0.9.9/magnific-popup.css',
-    '!vopros_style' => '/' . drupal_get_path('module', 'vopros_embed') . '/css/vopros_embed_popup.css',
+    '!mag_style' => url($base . '/libraries/magnific-popup-0.9.9/magnific-popup.css'),
+    '!vopros_style' => url($base . '/css/vopros_embed_popup.css'),
+    '!ask_url' => $ask_url,
   );
   $js .= strtr($our_js, $css);
   $js .= "\n";
