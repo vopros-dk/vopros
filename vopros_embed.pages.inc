@@ -64,27 +64,12 @@ EOF;
     '#weight' => -60,
   );
 
-  $form['user_email'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Email'),
-    '#required' => TRUE,
-    '#default_value' => isset($_GET['mail']) ? check_plain($_GET['mail']) : '',
-    '#weight' => -50,
-  );
-
-  $form['user_mobile_phone'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Mobile phone'),
-    '#default_value' => isset($_GET['phone']) ? check_plain($_GET['phone']) : '',
-    '#weight' => -40,
-  );
-
   $form['user_postal_code'] = array(
     '#type' => 'textfield',
     '#title' => t('Postal code'),
     '#required' => TRUE,
     '#default_value' => isset($_GET['zip']) ? check_plain($_GET['zip']) : '',
-    '#weight' => -30,
+    '#weight' => -50,
   );
 
   // Pick out a specific subset of options.
@@ -94,6 +79,30 @@ EOF;
     '#title' => t('How to recieve answer'),
     '#options' => $options,
     '#default_value' => 'mail',
+    '#weight' => -40,
+  );
+
+  $form['user_email'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Email'),
+    '#default_value' => isset($_GET['mail']) ? check_plain($_GET['mail']) : '',
+    '#states' => array(
+      'visible' => array(
+        'input[name=user_answer_preference]' => array('value' => 'mail'),
+      ),
+    ),
+    '#weight' => -30,
+  );
+
+  $form['user_mobile_phone'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Mobile phone'),
+    '#default_value' => isset($_GET['phone']) ? check_plain($_GET['phone']) : '',
+    '#states' => array(
+      'visible' => array(
+        'input[name=user_answer_preference]' => array('value' => 'sms'),
+      ),
+    ),
     '#weight' => -20,
   );
 
@@ -154,9 +163,18 @@ EOF;
  * Validate handler for vopros_embed_question().
  */
 function vopros_embed_question_validate($form, &$form_state) {
+  if ($form_state['values']['user_answer_preference'] == 'mail' &&
+    empty($form_state['values']['user_email'])) {
+    form_error($form['user_email'], t('E-mail required.'));
+    // Unset sms in case it was prepopulated.
+    form_set_value($form['user_mobile_phone'], '', $form_state);
+  }
+
   if ($form_state['values']['user_answer_preference'] == 'sms' &&
     empty($form_state['values']['user_mobile_phone'])) {
-    form_error($form['user_mobile_phone'], t('Mobile phone number required for SMS replies.'));
+    form_error($form['user_mobile_phone'], t('Mobile phone number required.'));
+    // Unset E-mail in case it was prepopulated.
+    form_set_value($form['user_email'], '', $form_state);
   }
 
   // Validate fields.
@@ -188,7 +206,6 @@ function vopros_embed_question_submit($form, &$form_state) {
     variable_set('vopros_question_qanda_service_options', $new_options);
   }
   $question->qanda_service_name = $agency_id;
-
 
   // This is odd, but that's how vopros_question_question_form_submit() does it.
   if (!isset($question->created) || empty($question->created)) {
