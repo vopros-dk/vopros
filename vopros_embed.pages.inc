@@ -207,14 +207,6 @@ function vopros_embed_question_submit($form, &$form_state) {
   }
   $question->qanda_service_name = $agency_id;
 
-  // This is odd, but that's how vopros_question_question_form_submit() does it.
-  if (!isset($question->created) || empty($question->created)) {
-    // Set the created time 1 second in the past to make it different from the
-    // changed.  This is to make sure that we don't hit the edit page on first
-    // view.
-    $question->created = REQUEST_TIME - 1;
-  }
-
   field_attach_submit('vopros_question', $question, $form, $form_state);
 
   // Save question.
