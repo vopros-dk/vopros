@@ -16,6 +16,17 @@
 
 
   $(document).ready(function() {
+    // Set up onmessage handler to close popup.
+    $(window).on('message', function (e) {
+      // jQuery doesn't know about the onmessage event, so the data
+      // doesn't get copied to the JQ event. So we just look at the
+      // original.
+      if (e.originalEvent.data == 'ask_vopros_close') {
+        $.magnificPopup.close();
+      }
+    });
+
+    // Find any settings.
     var query = {};
     if (typeof window.ask_vopros != "undefined") {
       query = window.ask_vopros;

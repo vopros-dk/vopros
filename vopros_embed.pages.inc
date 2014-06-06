@@ -250,6 +250,7 @@ function vopros_embed_question_submitted_page() {
     '#markup' => t('Your question has been submitted.'),
     '#attached' => array(
       'css' => array(drupal_get_path('module', 'vopros_embed') . '/css/vopros_embed.css'),
+    'js' => array(drupal_get_path('module', 'vopros_embed') . '/js/vopros_embed_popup.js'),
     ),
   );
 
