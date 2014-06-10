@@ -231,7 +231,7 @@ function vopros_embed_question_submit($form, &$form_state) {
     vopros_log_save($log);
   }
 
-  $form_state['redirect'] = 'embed/ask_question/submitted';
+  $form_state['redirect'] = 'embed/ask-question/submitted';
 }
 
 /**
@@ -273,7 +273,7 @@ function vopros_embed_question_modal_js() {
     $js .= "\n";
   }
 
-  $ask_url = url('embed/ask_question', array('absolute' => TRUE));
+  $ask_url = url('embed/ask-question', array('absolute' => TRUE));
 
   // Add our own code.
   $our_js = file_get_contents($base . '/js/vopros_embed.js');

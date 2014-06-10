@@ -9,7 +9,7 @@
  * Implements hook_menu().
  */
 function vopros_embed_menu() {
-  $items['embed/ask_question'] = array(
+  $items['embed/ask-question'] = array(
     'title' => 'Ask question',
     'title callback' => '_vopros_embed_menu_title',
     'page callback' => 'drupal_get_form',
@@ -19,7 +19,7 @@ function vopros_embed_menu() {
     'delivery callback' => 'vopros_embed_deliver_html_page',
   );
 
-  $items['embed/ask_question/submitted'] = array(
+  $items['embed/ask-question/submitted'] = array(
     'title' => 'Question submitted',
     'page callback' => 'vopros_embed_question_submitted_page',
     'access callback' => TRUE,
