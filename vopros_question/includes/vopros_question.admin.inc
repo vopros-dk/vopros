@@ -319,9 +319,12 @@ function vopros_question_question_form_submit(&$form, &$form_state) {
     }
   }
 
+  // Skip over edit-on-first-view as manually added questions by definition have
+  // been edited by a librarian. @see vopros_question_page_view().
   if (!isset($question->created) || empty($question->created)) {
-    // Set the created time 1 second in the past to make it different from the changed.
-    // This is to make sure that we don't hit the edit page on first view.
+    // Set the created time 1 second in the past to make it different from the
+    // changed.  This is to make sure that we don't hit the edit page on first
+    // view.
     $question->created = REQUEST_TIME - 1;
   }
 
@@ -381,9 +384,13 @@ function vopros_question_title_form($form, &$form_state, $question) {
 }
 
 /**
- * Handle the display of a question
+ * Handle the display of a question.
+ *
+ * If the question haven't been edited yet, redirect to the edit page to allow
+ * the librarian to add a title and otherwise fix up the question.
  */
 function vopros_question_page_view($question, $view_mode = 'administrator', $langcode = NULL) {
+  // Redirect virgin questions.
   if ($question->created == $question->changed) {
     drupal_goto('admin/vopros/questions/' . $question->question_id . '/edit');
   }
