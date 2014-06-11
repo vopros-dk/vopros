@@ -32,12 +32,25 @@
       query = window.ask_vopros;
     }
 
+    var popup = false;
+    // Simple responsive: If the window is small, don't use the popup,
+    // but let the link function normally instead.
+    console.log(window.screen.width);
+    if (screen.width > 500) {
+      query.popup = 'y';
+      popup = true;
+    }
+
     // URL is always set to the current location.
     query.url = window.location.href;
 
     // Fix urls and attach Magnific popup to the link.
-    $('a[href*="!ask_url"]').querystring(query).magnificPopup({
-      type: 'iframe',
-    });
+    var links = $('a[href*="!ask_url"]');
+    links.querystring(query);
+    if (popup) {
+      links.magnificPopup({
+        type: 'iframe',
+      });
+    }
   });
 })();

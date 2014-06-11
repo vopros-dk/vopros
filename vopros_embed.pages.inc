@@ -37,6 +37,8 @@ function vopros_embed_question($form, &$form_state) {
 
   $agency_mail = isset($_GET['agency_mail']) ? check_plain($_GET['agency_mail']) : '';
 
+  $popup = isset($_GET['popup']);
+
   $focus_script = <<<EOF
 jQuery(document).ready(function ($) {
   \$('.form-item-question-content textarea').focus();
@@ -129,6 +131,11 @@ EOF;
   $form['from_url'] = array(
     '#type' => 'value',
     '#value' => $referrer,
+  );
+
+  $form['popup'] = array(
+    '#type' => 'value',
+    '#value' => $popup,
   );
 
   $form['form']['question_usage'] = array(
@@ -231,14 +238,22 @@ function vopros_embed_question_submit($form, &$form_state) {
     vopros_log_save($log);
   }
 
-  $form_state['redirect'] = 'embed/ask-question/submitted';
+  // If the form was not shown from a popup, add the originating URL to the
+  // path, so we can add a return link.
+  if ($form_state['values']['popup']) {
+    $query = array('destination' => $form_state['values']['from_url']);
+  }
+
+  $form_state['redirect'] = array('embed/ask-question/submitted', array('query' => $query));
 }
 
 /**
  * Page callback for the question submitted page.
  */
 function vopros_embed_question_submitted_page() {
-  $build = array(
+  $build[] = array(
+    '#prefix' => '<p>',
+    '#suffix' => '</p>',
     '#markup' => t('Your question has been submitted.'),
     '#attached' => array(
       'css' => array(drupal_get_path('module', 'vopros_embed') . '/css/vopros_embed.css'),
@@ -246,6 +261,14 @@ function vopros_embed_question_submitted_page() {
     ),
   );
 
+  // Add return button.
+  if (isset($_GET['destination'])) {
+    $build[] = array(
+      '#prefix' => '<p>',
+      '#suffix' => '</p>',
+      '#markup' => l(t('Return'), $_GET['destination']),
+    );
+  }
   return $build;
 }
 
