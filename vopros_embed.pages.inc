@@ -225,7 +225,7 @@ function vopros_embed_question_submit($form, &$form_state) {
     }
 
     if ($form_state['values']['agency_mail']) {
-      $log[] = "Vidresend til " . $form_state['values']['agency_mail'] . " hvis dette er et spørgsmål der bedre kan besvares lokalt.";
+      $log[] = "Videresend til " . $form_state['values']['agency_mail'] . " hvis dette er et spørgsmål der bedre kan besvares lokalt.";
     }
     // Save log entry.
     $values = array(
