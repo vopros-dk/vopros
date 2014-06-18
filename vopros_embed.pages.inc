@@ -240,7 +240,7 @@ function vopros_embed_question_submit($form, &$form_state) {
 
   // If the form was not shown from a popup, add the originating URL to the
   // path, so we can add a return link.
-  if ($form_state['values']['popup']) {
+  if (!$form_state['values']['popup']) {
     $query = array('destination' => $form_state['values']['from_url']);
   }
 
