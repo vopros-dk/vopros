@@ -75,7 +75,10 @@ EOF;
   );
 
   // Pick out a specific subset of options.
-  $options = array_intersect_key(_vopros_question_user_answer_preference(), array('mail' => TRUE, 'sms' => TRUE));
+  $options = array_intersect_key(_vopros_question_user_answer_preference(), array(
+               'mail' => TRUE,
+               'sms' => TRUE,
+             ));
   $form['user_answer_preference'] = array(
     '#type' => 'radios',
     '#title' => t('How to recieve answer'),
@@ -203,7 +206,7 @@ function vopros_embed_question_submit($form, &$form_state) {
   }
   $log = array();
 
-  // Ensure that there's an qanda_service_name fer this sender.
+  // Ensure that there's an qanda_service_name for this sender.
   $agency_id = $question->agency_id;
   $qanda_options = _vopros_question_qanda_serice_options();
   if (!isset($qanda_options[$agency_id])) {
@@ -251,13 +254,15 @@ function vopros_embed_question_submit($form, &$form_state) {
  * Page callback for the question submitted page.
  */
 function vopros_embed_question_submitted_page() {
+  $build = array();
+
   $build[] = array(
     '#prefix' => '<p>',
     '#suffix' => '</p>',
     '#markup' => t('Your question has been submitted.'),
     '#attached' => array(
       'css' => array(drupal_get_path('module', 'vopros_embed') . '/css/vopros_embed.css'),
-    'js' => array(drupal_get_path('module', 'vopros_embed') . '/js/vopros_embed_popup.js'),
+      'js' => array(drupal_get_path('module', 'vopros_embed') . '/js/vopros_embed_popup.js'),
     ),
   );
 
