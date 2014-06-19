@@ -176,15 +176,21 @@ function vopros_embed_question_validate($form, &$form_state) {
   if ($form_state['values']['user_answer_preference'] == 'mail' &&
     empty($form_state['values']['user_email'])) {
     form_error($form['user_email'], t('E-mail required.'));
-    // Unset sms in case it was prepopulated.
-    form_set_value($form['user_mobile_phone'], '', $form_state);
   }
 
   if ($form_state['values']['user_answer_preference'] == 'sms' &&
     empty($form_state['values']['user_mobile_phone'])) {
     form_error($form['user_mobile_phone'], t('Mobile phone number required.'));
-    // Unset E-mail in case it was prepopulated.
+  }
+
+  // Unset mail in case it was prepopulated.
+  if ($form_state['values']['user_answer_preference'] != 'mail') {
     form_set_value($form['user_email'], '', $form_state);
+  }
+
+  // Unset sms in case it was prepopulated.
+  if ($form_state['values']['user_answer_preference'] != 'sms') {
+    form_set_value($form['user_mobile_phone'], '', $form_state);
   }
 
   // Validate fields.
