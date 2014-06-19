@@ -200,7 +200,7 @@ function vopros_embed_question_validate($form, &$form_state) {
   }
 
   // Validate fields.
-  $question = entity_create('vopros_question', array());
+  $question = $form_state['values']['question'];
   field_attach_validate('vopros_question', $question, $form, $form_state);
 
 }
