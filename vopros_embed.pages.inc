@@ -78,6 +78,7 @@ EOF;
   $options = array_intersect_key(_vopros_question_user_answer_preference(), array(
                'mail' => TRUE,
                'sms' => TRUE,
+               'chat' => TRUE,
              ));
   $form['user_answer_preference'] = array(
     '#type' => 'radios',
@@ -119,6 +120,11 @@ EOF;
     '#options' => $deadline_options,
     '#default_value' => -1,
     '#weight' => -10,
+    '#states' => array(
+      'invisible' => array(
+        'input[name=user_answer_preference]' => array('value' => 'chat'),
+      ),
+    ),
   );
 
   $form['agency_id'] = array(
