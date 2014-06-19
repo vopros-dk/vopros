@@ -35,7 +35,6 @@
     var popup = false;
     // Simple responsive: If the window is small, don't use the popup,
     // but let the link function normally instead.
-    console.log(window.screen.width);
     if (screen.width > 500) {
       query.popup = 'y';
       popup = true;
