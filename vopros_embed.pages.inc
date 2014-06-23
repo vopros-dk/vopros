@@ -11,10 +11,6 @@
  * Returns a form for asking a question.
  */
 function vopros_embed_question($form, &$form_state) {
-  $form['#attached'] = array(
-    'css' => array(drupal_get_path('module', 'vopros_embed') . '/css/vopros_embed.css'),
-  );
-
   $agency_id = isset($_GET['agency_id']) ? check_plain($_GET['agency_id']) : '';
 
   // We can't work without an agency.
@@ -278,7 +274,14 @@ function vopros_embed_question_submit($form, &$form_state) {
     $query = array('destination' => $form_state['values']['from_url']);
   }
 
-  $form_state['redirect'] = array('embed/ask-question/submitted', array('query' => $query));
+  if ($form_state['values']['user_answer_preference'] == 'chat') {
+    // Redirect chats to the chat page.
+    $form_state['redirect'] = array('embed/ask-question/chat/' . $question->question_id, array('query' => $query));
+  }
+  else {
+    // Else redirect to the confirmation page.
+    $form_state['redirect'] = array('embed/ask-question/submitted', array('query' => $query));
+  }
 }
 
 /**
@@ -292,7 +295,6 @@ function vopros_embed_question_submitted_page() {
     '#suffix' => '</p>',
     '#markup' => t('Your question has been submitted.'),
     '#attached' => array(
-      'css' => array(drupal_get_path('module', 'vopros_embed') . '/css/vopros_embed.css'),
       'js' => array(drupal_get_path('module', 'vopros_embed') . '/js/vopros_embed_popup.js'),
     ),
   );

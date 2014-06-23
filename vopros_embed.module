@@ -128,6 +128,7 @@ function vopros_embed_render_page($page) {
     $page['content']['system_main'] = drupal_set_page_content();
   }
 
+  drupal_add_css(drupal_get_path('module', 'vopros_embed') . '/css/vopros_embed.css');
   return drupal_render($page);
 }
 
