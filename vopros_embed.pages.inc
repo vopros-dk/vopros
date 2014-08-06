@@ -206,7 +206,7 @@ EOF;
  * Validate handler for vopros_embed_question().
  */
 function vopros_embed_question_validate($form, &$form_state) {
-  if ($form_state['values']['user_answer_preference'] == 'mail' &&
+  if (in_array($form_state['values']['user_answer_preference'], array('mail', 'chat')) &&
     empty($form_state['values']['user_email'])) {
     form_error($form['user_email'], t('E-mail required.'));
   }
