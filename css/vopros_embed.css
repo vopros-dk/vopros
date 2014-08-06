@@ -33,6 +33,10 @@ textarea {
     -webkit-box-sizing: border-box;
 }
 
+input[type='submit']:disabled {
+  color: #d2d2d2;
+}
+
 @media all and (max-device-width: 500px) {
   input[type='text'],
   input[type='number'],

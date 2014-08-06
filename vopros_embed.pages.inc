@@ -40,13 +40,30 @@ jQuery(document).ready(function ($) {
   \$('.form-item-question-content textarea').focus();
 });
 EOF;
+  // Pick out a specific subset of options.
+  $options = array_intersect_key(_vopros_question_user_answer_preference(), array(
+               'mail' => TRUE,
+               'sms' => TRUE,
+               'chat' => TRUE,
+             ));
+
+  $form['user_answer_preference'] = array(
+    '#type' => 'radios',
+    '#title' => t('How to recieve answer'),
+    '#options' => $options,
+    '#default_value' => 'mail',
+    '#weight' => -70,
+    '#attributes' => array(
+      'class' => array('options-' . count($options)),
+    ),
+  );
 
   $form['question_content'] = array(
     '#type' => 'textarea',
     '#title' => t('Question content'),
     '#required' => TRUE,
     '#default_value' => '',
-    '#weight' => -70,
+    '#weight' => -60,
     '#attached' => array(
       'js' => array(
         $focus_script => array('type' => 'inline'),
@@ -59,7 +76,7 @@ EOF;
     '#title' => t('Name'),
     '#required' => TRUE,
     '#default_value' => isset($_GET['name']) ? check_plain($_GET['name']) : '',
-    '#weight' => -60,
+    '#weight' => -50,
   );
 
   $form['user_postal_code'] = array(
@@ -67,20 +84,6 @@ EOF;
     '#title' => t('Postal code'),
     '#required' => TRUE,
     '#default_value' => isset($_GET['zip']) ? check_plain($_GET['zip']) : '',
-    '#weight' => -50,
-  );
-
-  // Pick out a specific subset of options.
-  $options = array_intersect_key(_vopros_question_user_answer_preference(), array(
-               'mail' => TRUE,
-               'sms' => TRUE,
-               'chat' => TRUE,
-             ));
-  $form['user_answer_preference'] = array(
-    '#type' => 'radios',
-    '#title' => t('How to recieve answer'),
-    '#options' => $options,
-    '#default_value' => 'mail',
     '#weight' => -40,
   );
 
@@ -178,7 +181,7 @@ EOF;
   $form['submit-chat'] = array(
     '#type' => 'submit',
     '#value' => t('Start chat'),
-    '#attributes' => array('class' => array('primary-action')),
+    '#attributes' => array('class' => array('primary-action', 'chat-submit')),
     '#states' => array(
       'visible' => array(
         'input[name=user_answer_preference]' => array('value' => 'chat'),
