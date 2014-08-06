@@ -79,24 +79,19 @@ EOF;
     '#weight' => -50,
   );
 
-  $form['user_postal_code'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Postal code'),
-    '#required' => TRUE,
-    '#default_value' => isset($_GET['zip']) ? check_plain($_GET['zip']) : '',
-    '#weight' => -40,
-  );
-
   $form['user_email'] = array(
     '#type' => 'textfield',
     '#title' => t('Email'),
     '#default_value' => isset($_GET['mail']) ? check_plain($_GET['mail']) : '',
     '#states' => array(
       'visible' => array(
-        'input[name=user_answer_preference]' => array('value' => 'mail'),
+        'input[name=user_answer_preference]' => array(
+          array('value' => 'mail'),
+          array('value' => 'chat'),
+        ),
       ),
     ),
-    '#weight' => -30,
+    '#weight' => -40,
   );
 
   $form['user_mobile_phone'] = array(
@@ -106,6 +101,21 @@ EOF;
     '#states' => array(
       'visible' => array(
         'input[name=user_answer_preference]' => array('value' => 'sms'),
+      ),
+    ),
+    '#weight' => -30,
+  );
+
+  $form['user_postal_code'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Postal code'),
+    '#default_value' => isset($_GET['zip']) ? check_plain($_GET['zip']) : '',
+    '#states' => array(
+      'visible' => array(
+        'input[name=user_answer_preference]' => array(
+          array('value' => 'mail'),
+          array('value' => 'sms'),
+        ),
       ),
     ),
     '#weight' => -20,
