@@ -274,16 +274,9 @@ function vopros_embed_question_submit($form, &$form_state) {
     $query = array('destination' => $form_state['values']['from_url']);
   }
 
-  if ($form_state['values']['user_answer_preference'] == 'chat') {
+  if ($form_state['values']['user_answer_preference'] == 'chat' && module_exists('vopros_chat')) {
     // Redirect chats to the chat page.
-    if (module_exists('vopros_chat')) {
-      $channel_hash = vopros_chat_get_channel_hash_from_question_id($question->question_id);
-    }
-    else {
-      $channel_hash = '';
-    }
-    $channel_hash = vopros_chat_get_channel_hash_from_question_id($question->question_id);
-    $form_state['redirect'] = array('embed/ask-question/chat/' . $question->question_id . '/' . $channel_hash, array('query' => $query));
+    $form_state['redirect'] = array(vopros_chat_url($question), array('query' => $query));
   }
   else {
     // Else redirect to the confirmation page.
