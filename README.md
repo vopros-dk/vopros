@@ -18,7 +18,7 @@ And where appropiate, add the link to trigger the popup (note the
 agency id in the URL):
 
 ```html
-  <a href="http://vopros.dk/embed/ask_question?agency_id=DK-123456">Ask a question</a>
+  <a href="http://vopros.dk/embed/ask-question?agency_id=DK-123456">Ask a question</a>
 ```
 
 Further parameters may be supplied, however it might be easier to
