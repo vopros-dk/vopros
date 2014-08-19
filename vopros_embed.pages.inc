@@ -241,6 +241,11 @@ function vopros_embed_question_validate($form, &$form_state) {
   $question = $form_state['values']['question'];
   field_attach_validate('vopros_question', $question, $form, $form_state);
 
+  // Validate email.
+  if ($form_state['values']['user_answer_preference'] === 'mail'
+  OR  $form_state['values']['user_answer_preference'] === 'chat') {
+    valid_email_address($form_state['values']['user_email']);
+  }
 }
 
 /**
