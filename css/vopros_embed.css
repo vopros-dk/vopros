@@ -28,6 +28,7 @@
   padding: 0.5rem;
 }
 #content .header:after {
+  /* Clearfix. */
   content: " ";
   display: block;
   height: 0;
@@ -122,7 +123,43 @@ textarea {
   cursor: default;
 }
 
+/**
+ * Media width: < 500px.
+ */
+@media all AND (max-width: 500px) {
+  /**
+   * Form layout.
+   */
+  .answer_type {
+    float: none;
+    width: 100%;
+  }
+  .answer_details {
+    float: none;
+    width: 100%;
+  }
+
+  /**
+   * Header.
+   */
+  #content .header #page-title {
+    float: none;
+    display: block;
+    text-align: center;
+    margin-top: 0.6rem;
+  }
+  #content .header img {
+    float: none;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+/**
+ * Device width: < 500px.
+ */
 @media all and (max-device-width: 500px) {
+
   input[type='text'],
   input[type='number'],
   textarea,

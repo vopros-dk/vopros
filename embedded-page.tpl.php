@@ -11,14 +11,18 @@
 
     <div id="content">
       <div class="header">
+        <?php if($logo): ?>
+        <!-- Logo -->
+          <img src="<?php print $logo ?>" alt=""/>
+        <?php endif; ?>
+
         <?php print render($title_prefix); ?>
         <!-- Title -->
           <?php if ($title): ?>
             <h1 class="title" id="page-title"><?php print $title; ?></h1>
           <?php endif; ?>
         <?php print render($title_suffix); ?>
-        <img src="<?php print $logo ?>" alt=""/>
-      </div>
+      </div> <!-- /.header -->
 
       <?php if ($tabs): ?>
       <!-- Tabs -->

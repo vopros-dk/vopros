@@ -34,5 +34,22 @@
     $('#edit-user-email').prev('label').append('<span class="form-required">*</span>');
     $('#edit-user-mobile-phone').prev('label').append('<span class="form-required">*</span>');
 
+    /**
+     * Title margin!
+     *
+     * Set the margin of the title after loading all images (the logo)
+     * on the page.
+     */
+    $(window).load(function(){
+      var header = $('.header');
+      var title = $('#page-title');
+      var header_height = parseFloat(header.outerHeight());
+      var header_padding_top = parseFloat(header.css('padding-top'));
+      var title_height = parseFloat(title.outerHeight());
+      // Subtract title height from the header and divide it by 2.
+      // Then subtract the header's top padding.
+      title.css('margin-top', ((header_height - title_height) / 2) - header_padding_top);
+    });
+
   });
 })(jQuery);
