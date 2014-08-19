@@ -11,6 +11,22 @@
  */
 function vopros_embed_setting_form($form, &$form_state) {
 
+  // Header: Title color.
+  $form['vopros_embed_header_title_color'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Title color'),
+    '#description' => t('Provide a hex value for the title color.'),
+    '#default_value' => variable_get('vopros_embed_header_title_color', '#DDD'),
+  );
+
+  // Header: background color.
+  $form['vopros_embed_header_background_color'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Background color'),
+    '#description' => t('Provide a hex value for the header background.'),
+    '#default_value' => variable_get('vopros_embed_header_background_color', '#555'),
+  );
+
   // Logo upload.
   $form['vopros_embed_logo'] = array(
     '#type' => 'file',
@@ -38,13 +54,6 @@ function vopros_embed_setting_form($form, &$form_state) {
  */
 function vopros_embed_setting_form_validate($form, &$form_state) {
 
-  // Check and prepare the Vopros directory.
-  $directory = file_stream_wrapper_uri_normalize('public://' . variable_get('document_path', '') . '/vopros');
-  if (!file_prepare_directory($directory, FILE_CREATE_DIRECTORY)) {
-    drupal_set_message(t('The file directory @dir does not exist or is not writable. Please contact an administrator.', array('@dir' => $directory)), 'error');
-    return;
-  }
-
   // Temporary save the file and run validation.
   $file = file_save_upload(
     'vopros_embed_logo',
@@ -56,11 +65,19 @@ function vopros_embed_setting_form_validate($form, &$form_state) {
     )
   );
 
-  // Get more info about the file.
-  $file_info = image_get_info($file->uri);
-
   // Try to permanently save the file.
   if ($file) {
+    // Get more info about the file.
+    $file_info = image_get_info($file->uri);
+
+    // Check and prepare the Vopros directory.
+    $directory = file_stream_wrapper_uri_normalize('public://' . variable_get('document_path', '') . '/vopros');
+    if (!file_prepare_directory($directory, FILE_CREATE_DIRECTORY)) {
+      drupal_set_message(t('The file directory @dir does not exist or is not writable. Please contact an administrator.', array('@dir' => $directory)), 'error');
+      return;
+    }
+
+    // Save the file in the vopros directory.
     if ($file = file_move($file, $directory . '/vopros_embed_logo.' . $file_info['extension'], FILE_EXISTS_REPLACE)) {
       $form_state['values']['vopros_embed_logo'] = $file;
       // Flush all previous image styles of the old image.
@@ -70,18 +87,21 @@ function vopros_embed_setting_form_validate($form, &$form_state) {
       form_set_error('file', t('Failed to write the uploaded file the site\'s file folder.'));
     }
   }
-  else {
-    form_set_error('file', t('No file was uploaded.'));
-  }
 }
 
 /**
  * Custom submit handler.
  */
 function vopros_embed_setting_form_submit($form, &$form_state) {
+
   $file = $form_state['values']['vopros_embed_logo'];
-  unset($form_state['values']['vopros_embed_logo']);
-  $file->status = FILE_STATUS_PERMANENT;
-  file_save($file);
-  variable_set('vopros_embed_logo', $file->uri);
+  if (!empty($file)) {
+    unset($form_state['values']['vopros_embed_logo']);
+    $file->status = FILE_STATUS_PERMANENT;
+    file_save($file);
+    variable_set('vopros_embed_logo', $file->uri);
+  }
+
+  variable_set('vopros_embed_header_title_color', $form_state['values']['vopros_embed_header_title_color']);
+  variable_set('vopros_embed_header_background_color', $form_state['values']['vopros_embed_header_background_color']);
 }
