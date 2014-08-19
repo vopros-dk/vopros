@@ -33,6 +33,21 @@ function vopros_embed_menu() {
     'file' => 'vopros_embed.pages.inc',
   );
 
+  // Administrative pages.
+  $items['admin/vopros/config/embed'] = array(
+    'title' => 'Embed settings',
+    'description' => 'Configure embed settings.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('vopros_embed_setting_form'),
+    'access arguments' => array('administer vopros_embed'),
+    'file' => 'vopros_embed.admin.inc',
+  );
+
+  $items['admin/vopros/config/embed/settings'] = array(
+    'title' => 'Settings',
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+  );
+
   return $items;
 }
 
