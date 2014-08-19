@@ -40,16 +40,22 @@ jQuery(document).ready(function ($) {
   \$('.form-item-question-content textarea').focus();
 });
 EOF;
+
   // Pick out a specific subset of options.
   $options = array_intersect_key(_vopros_question_user_answer_preference(), array(
-               'mail' => TRUE,
-               'sms' => TRUE,
-               'chat' => TRUE,
-             ));
+    'mail' => TRUE,
+    'sms' => TRUE,
+    'chat' => TRUE,
+  ));
 
-  $form['user_answer_preference'] = array(
+  $form['answer_type'] = array(
+    '#prefix' => '<div class="answer_type">',
+    '#suffix' => '</div>',
+  );
+
+  $form['answer_type']['user_answer_preference'] = array(
     '#type' => 'radios',
-    '#title' => t('How to recieve answer'),
+    '#title' => t('How to receive answer'),
     '#options' => $options,
     '#default_value' => 'mail',
     '#weight' => -70,
@@ -58,7 +64,12 @@ EOF;
     ),
   );
 
-  $form['question_content'] = array(
+  $form['answer_details'] = array(
+    '#prefix' => '<div class="answer_details">',
+    '#suffix' => '</div>',
+  );
+
+  $form['answer_details']['question_content'] = array(
     '#type' => 'textarea',
     '#title' => t('Question content'),
     '#required' => TRUE,
@@ -71,7 +82,7 @@ EOF;
     ),
   );
 
-  $form['user_name'] = array(
+  $form['answer_details']['user_name'] = array(
     '#type' => 'textfield',
     '#title' => t('Name'),
     '#required' => TRUE,
@@ -79,7 +90,7 @@ EOF;
     '#weight' => -50,
   );
 
-  $form['user_email'] = array(
+  $form['answer_details']['user_email'] = array(
     '#type' => 'textfield',
     '#title' => t('Email'),
     '#default_value' => isset($_GET['mail']) ? check_plain($_GET['mail']) : '',
@@ -94,7 +105,7 @@ EOF;
     '#weight' => -40,
   );
 
-  $form['user_mobile_phone'] = array(
+  $form['answer_details']['user_mobile_phone'] = array(
     '#type' => 'textfield',
     '#title' => t('Mobile phone'),
     '#default_value' => isset($_GET['phone']) ? check_plain($_GET['phone']) : '',
@@ -106,7 +117,7 @@ EOF;
     '#weight' => -30,
   );
 
-  $form['user_postal_code'] = array(
+  $form['answer_details']['user_postal_code'] = array(
     '#type' => 'textfield',
     '#title' => t('Postal code'),
     '#default_value' => isset($_GET['zip']) ? check_plain($_GET['zip']) : '',
@@ -122,7 +133,7 @@ EOF;
   );
 
   $deadline_options = _vopros_question_deadline();
-  $form['question_deadline'] = array(
+  $form['answer_details']['question_deadline'] = array(
     '#type' => 'radios',
     '#title' => t('Deadline'),
     '#required' => TRUE,
@@ -175,7 +186,7 @@ EOF;
   // it to reorder the form elements.
   unset($form['#pre_render']);
 
-  $form['submit'] = array(
+  $form['answer_details']['submit'] = array(
     '#type' => 'submit',
     '#value' => t('Submit question'),
     '#attributes' => array('class' => array('primary-action')),
@@ -188,7 +199,7 @@ EOF;
 
   // This a copy of $form['submit'] with just the label changed and only show
   // when chat is chosen as user answer preference.
-  $form['submit-chat'] = array(
+  $form['answer_details']['submit-chat'] = array(
     '#type' => 'submit',
     '#value' => t('Start chat'),
     '#attributes' => array('class' => array('primary-action', 'chat-submit')),
@@ -208,22 +219,22 @@ EOF;
 function vopros_embed_question_validate($form, &$form_state) {
   if (in_array($form_state['values']['user_answer_preference'], array('mail', 'chat')) &&
     empty($form_state['values']['user_email'])) {
-    form_error($form['user_email'], t('E-mail required.'));
+    form_error($form['answer_details']['user_email'], t('E-mail required.'));
   }
 
   if ($form_state['values']['user_answer_preference'] == 'sms' &&
     empty($form_state['values']['user_mobile_phone'])) {
-    form_error($form['user_mobile_phone'], t('Mobile phone number required.'));
+    form_error($form['answer_details']['user_mobile_phone'], t('Mobile phone number required.'));
   }
 
   // Unset mail in case it was prepopulated.
   if ($form_state['values']['user_answer_preference'] != 'mail') {
-    form_set_value($form['user_email'], '', $form_state);
+    form_set_value($form['answer_details']['user_email'], '', $form_state);
   }
 
   // Unset sms in case it was prepopulated.
   if ($form_state['values']['user_answer_preference'] != 'sms') {
-    form_set_value($form['user_mobile_phone'], '', $form_state);
+    form_set_value($form['answer_details']['user_mobile_phone'], '', $form_state);
   }
 
   // Validate fields.

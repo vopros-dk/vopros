@@ -144,6 +144,7 @@ function vopros_embed_render_page($page) {
   }
 
   drupal_add_css(drupal_get_path('module', 'vopros_embed') . '/css/vopros_embed.css');
+  drupal_add_js(drupal_get_path('module', 'vopros_embed') . '/js/vopros_embed_styling.js');
   return drupal_render($page);
 }
 
@@ -213,7 +214,7 @@ function template_preprocess_embedded_page(&$variables) {
   $variables['language']->dir     = $GLOBALS['language']->direction ? 'rtl' : 'ltr';
   $variables['site_name']         = (theme_get_setting('toggle_name') ? filter_xss_admin(variable_get('site_name', 'Drupal')) : '');
   $variables['site_slogan']       = (theme_get_setting('toggle_slogan') ? filter_xss_admin(variable_get('site_slogan', '')) : '');
-
+  $variables['logo']              = file_create_url(image_style_url('medium', variable_get('vopros_embed_logo', '')));
 }
 
 /**

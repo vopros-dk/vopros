@@ -1,7 +1,6 @@
 /**
  * Styles for the questions form.
  */
-
 #embedded-page-wrapper #page {
   width: auto;
   margin: 0;
@@ -16,7 +15,55 @@
   display: block;
   float: none;
   position: static;
-  margin: 1em;
+  margin: 1rem;
+}
+
+/**
+ * Title.
+ */
+#content .header {
+  margin: -1rem;
+  margin-bottom: 0.5rem;
+  background: #555;
+  padding: 0.5rem;
+}
+#content .header:after {
+  content: " ";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+#content .header #page-title {
+  font-size: 1.3rem;
+  color: #ddd;
+  float: left;
+  margin: 0;
+}
+#content .header img {
+  float: right;
+  max-width: 200px;
+  max-height: 150px;
+}
+
+/**
+ * Form layout.
+ */
+.answer_type {
+  float: left;
+  width: 37.5%;
+}
+.answer_details {
+  float: right;
+  width: 57.5%;
+}
+
+/**
+ * General styling.
+ */
+#content .form-item label {
+  color: #555;
 }
 
 #embedded-page-wrapper #footer {
@@ -28,13 +75,51 @@ input[type='text'],
 input[type='number'],
 textarea {
   width: 100%;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+textarea {
+  -webkit-border-bottom-left-radius: 0;
+  -moz-border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+  -webkit-border-bottom-right-radius: 0;
+  -moz-border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
-input[type='submit']:disabled {
-  color: #d2d2d2;
+.form-required {
+  color: #D3321E;
+}
+
+/**
+ * Answer type.
+ */
+#edit-user-answer-preference .form-item input {
+  display: none;
+}
+#edit-user-answer-preference .form-item label {
+  text-align: center;
+  font-weight: bold;
+  margin: 0;
+  padding: 0.4rem;
+  display: block;
+  background: #ddd;
+  cursor: pointer;
+}
+#edit-user-answer-preference .active_answer_type label {
+  background: #555;
+  color: #ddd;
+}
+#edit-user-answer-preference .disabled_answer_type label {
+  color: #b6b6b6;
+  background: #f3f3f3;
+  cursor: default;
 }
 
 @media all and (max-device-width: 500px) {
@@ -43,11 +128,11 @@ input[type='submit']:disabled {
   textarea,
   label {
     /* Try to disable field zoom. */
-    font-size:16px;
+    font-size: 16px;
   }
 
   /* Add some finger margins on radio buttons. */
   #embedded-page-wrapper .form-type-radio {
-    margin: 1em 0;
+    margin: 1rem 0;
   }
 }
