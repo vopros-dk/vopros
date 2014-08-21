@@ -13,7 +13,7 @@
       <div class="header">
         <?php if($logo): ?>
         <!-- Logo -->
-          <img src="<?php print $logo ?>" alt=""/>
+          <?php print $logo ?>
         <?php endif; ?>
 
         <?php print render($title_prefix); ?>
