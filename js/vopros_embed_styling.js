@@ -6,18 +6,19 @@
 
     /**
      * Set active state/class to the chosen answer type.
-     * @TODO: PROPER COMMENTS!
+     * This is done with JS due to the lack of IE8's with css.
      */
     var active_answer_type = 'active_answer_type';
     var disabled_answer_type = 'disabled_answer_type';
     var answer_type = $('#edit-user-answer-preference');
     var answer_input = $('input', answer_type);
 
-    // Set the active class to the checked radio on page load.
+    // Set the active and disabled class to the checked radio on page load.
     answer_type.find('input:checked').parent().addClass(active_answer_type);
-
     answer_type.find('input:disabled').parent().addClass(disabled_answer_type);
 
+    // When the user clicks a new input, we want to remove the old state
+    // and set the newly clicked input to active.
     answer_input.change(function() {
       answer_input.parent().removeClass(active_answer_type);
       $(this).parent().addClass(active_answer_type);
