@@ -217,9 +217,13 @@ EOF;
  * Validate handler for vopros_embed_question().
  */
 function vopros_embed_question_validate($form, &$form_state) {
-  if (in_array($form_state['values']['user_answer_preference'], array('mail', 'chat')) &&
-    empty($form_state['values']['user_email'])) {
-    form_error($form['answer_details']['user_email'], t('E-mail required.'));
+  if (in_array($form_state['values']['user_answer_preference'], array('mail', 'chat'))) {
+    if (empty($form_state['values']['user_email'])) {
+      form_error($form['answer_details']['user_email'], t('E-mail required.'));
+    }
+    if (valid_email_address($form_state['values']['user_email'])) {
+      form_error($form['answer_details']['user_email'], t('E-mail invalid.'));
+    }
   }
 
   if ($form_state['values']['user_answer_preference'] == 'sms' &&
@@ -228,7 +232,7 @@ function vopros_embed_question_validate($form, &$form_state) {
   }
 
   // Unset mail in case it was prepopulated.
-  if ($form_state['values']['user_answer_preference'] != 'mail') {
+  if ($form_state['values']['user_answer_preference'] == 'sms') {
     form_set_value($form['answer_details']['user_email'], '', $form_state);
   }
 
@@ -240,12 +244,6 @@ function vopros_embed_question_validate($form, &$form_state) {
   // Validate fields.
   $question = $form_state['values']['question'];
   field_attach_validate('vopros_question', $question, $form, $form_state);
-
-  // Validate email.
-  if ($form_state['values']['user_answer_preference'] === 'mail'
-  OR  $form_state['values']['user_answer_preference'] === 'chat') {
-    valid_email_address($form_state['values']['user_email']);
-  }
 }
 
 /**
