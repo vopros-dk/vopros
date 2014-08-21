@@ -29,7 +29,7 @@
         <div class="tabs"><?php print render($tabs); ?></div>
       <?php endif; ?>
 
-      <!-- Message -->
+      <!-- Messages -->
       <?php print $messages; ?>
 
       <!-- Content -->
