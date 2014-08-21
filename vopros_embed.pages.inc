@@ -221,8 +221,8 @@ function vopros_embed_question_validate($form, &$form_state) {
     if (empty($form_state['values']['user_email'])) {
       form_error($form['answer_details']['user_email'], t('E-mail required.'));
     }
-    if (valid_email_address($form_state['values']['user_email'])) {
       form_error($form['answer_details']['user_email'], t('E-mail invalid.'));
+    if (!valid_email_address($form_state['values']['user_email'])) {
     }
   }
 
