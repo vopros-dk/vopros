@@ -149,12 +149,8 @@ function vopros_embed_render_page($page) {
 
   // Include custom colors.
   drupal_add_css(
-    '#content .header #page-title { color: ' . variable_get('vopros_embed_header_title_color') . ' }', array(
-      'type' => 'inline',
-    )
-  );
-  drupal_add_css(
-    '#content .header { background: ' . variable_get('vopros_embed_header_background_color') . ' }', array(
+    '#content .header #page-title { color: ' . variable_get('vopros_embed_header_title_color') . ' }
+     #content .header { background: ' . variable_get('vopros_embed_header_background_color') . ' }', array(
       'type' => 'inline',
     )
   );
