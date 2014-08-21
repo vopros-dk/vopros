@@ -71,6 +71,9 @@ function vopros_embed_theme() {
       'render element' => 'page',
       'template' => 'embedded-page',
     ),
+    'vopros_embed_question_form' => array(
+      'render element' => 'element',
+    ),
   );
 }
 
@@ -250,4 +253,16 @@ function template_process_embedded_page(&$variables) {
   if (!isset($variables['messages'])) {
     $variables['messages'] = $variables['show_messages'] ? theme('status_messages') : '';
   }
+}
+
+function theme_vopros_embed_question_form(&$vars) {
+  $element = $vars['element'];
+  $output = '';
+  if ($element['user_answer_preference']) {
+    $output .= '<div class="answer_type">' . drupal_render($element['user_answer_preference']) . '</div>';
+  }
+
+  $output .= '<div class="answer_details">' . drupal_render_children($element) . '</div>';
+
+  return $output;
 }
