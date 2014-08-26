@@ -32,15 +32,21 @@ function vopros_embed_setting_form($form, &$form_state) {
     '#type' => 'file',
     '#title' => t('Logo'),
     '#description' => t('The logo to display in the contact window.'),
-    '#suffix' => theme(
+  );
+
+  // If a logo has been uploaded, we want to show the current image
+  // as a suffix to the "upload file" field.
+  $logo = variable_get('vopros_embed_logo', '');
+  if (!empty($logo)) {
+    $form['vopros_embed_logo']['#suffix'] = theme(
       'image', array(
         'path' => image_style_url(
           'medium',
-          variable_get('vopros_embed_logo', '')
+          $logo
         )
       )
-    ),
-  );
+    );
+  }
 
   // Form handlers.
   $form['#validate'][] = 'vopros_embed_setting_form_validate';

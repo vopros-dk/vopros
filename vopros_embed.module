@@ -222,20 +222,25 @@ function template_preprocess_embedded_page(&$variables) {
     }
   }
 
+
   // Prep the logo for the template.
-  $image = array(
-    'path' => image_style_url(
-      'medium',
-      variable_get('vopros_embed_logo', '')
-    )
-  );
+  $logo = variable_get('vopros_embed_logo', '');
+  if (!empty($logo)) {
+    $variables['logo'] = theme(
+      'image', array(
+        'path' => image_style_url(
+          'medium',
+          $logo
+        )
+      )
+    );
+  }
 
   $variables['base_path']         = base_path();
   $variables['language']          = $GLOBALS['language'];
   $variables['language']->dir     = $GLOBALS['language']->direction ? 'rtl' : 'ltr';
   $variables['site_name']         = (theme_get_setting('toggle_name') ? filter_xss_admin(variable_get('site_name', 'Drupal')) : '');
   $variables['site_slogan']       = (theme_get_setting('toggle_slogan') ? filter_xss_admin(variable_get('site_slogan', '')) : '');
-  $variables['logo'] = theme('image', $image);
 }
 
 /**
