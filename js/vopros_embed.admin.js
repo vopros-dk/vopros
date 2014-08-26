@@ -39,6 +39,11 @@
           return;
         }
       });
+      // Select all when clicked.
+      $('#edit-embed textarea').click(function () {
+        this.focus();
+        this.select();
+      });
     }
   };
 
