@@ -48,6 +48,52 @@ function vopros_embed_setting_form($form, &$form_state) {
     );
   }
 
+  $form['embed'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Embed code'),
+  );
+
+  $form['embed']['agency_id'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Agency id'),
+    '#input' => FALSE,
+    '#description' => t('The agency id of the site, DK-<num> for libraries, custom string for others.'),
+  );
+
+  $form['embed']['agency_mail'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Local email'),
+    '#input' => FALSE,
+    '#description' => t('The email address to direct local inquiries to.'),
+  );
+
+  // The Drupal.formatString JS function doesn't support replacing each
+  // placeholder more than once, so use different placeholders.
+  $code = '<script src="!script_base/question_modal.js"></script>
+<a href="!form_base/ask-question?!params">Ask a question</a>
+';
+
+  $form['embed']['code'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Code'),
+    '#input' => FALSE,
+    '#attached' => array(
+      'js' => array(
+        drupal_get_path('module', 'vopros_embed') . '/js/vopros_embed.admin.js',
+        array(
+          'type' => 'setting',
+          'data' => array(
+            'voprosEmbed' => array(
+              'template' => $code,
+              'base' => url('embed', array('absolute' => TRUE)),
+            ),
+          ),
+        ),
+      ),
+    ),
+    '#description' => t('Copy this code to the site. The script element can be moved to the HEAD section of the page.'),
+  );
+
   // Form handlers.
   $form['#validate'][] = 'vopros_embed_setting_form_validate';
   $form['#submit'][] = 'vopros_embed_setting_form_submit';
@@ -99,7 +145,6 @@ function vopros_embed_setting_form_validate($form, &$form_state) {
  * Custom submit handler.
  */
 function vopros_embed_setting_form_submit($form, &$form_state) {
-
   $file = $form_state['values']['vopros_embed_logo'];
   if (!empty($file)) {
     unset($form_state['values']['vopros_embed_logo']);
