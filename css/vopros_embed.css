@@ -103,6 +103,14 @@ textarea {
   color: #D3321E;
 }
 
+.chat-submit.disabled {
+  color: #C2C2C2;
+  background: #F5F5F5;
+  -webkit-opacity: 0.75;
+  -moz-opacity: 0.75;
+  opacity: 0.75;
+}
+
 /**
  * Answer type.
  */
