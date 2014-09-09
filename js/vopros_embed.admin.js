@@ -18,6 +18,11 @@
       query.push('agency_mail=' + encodeURIComponent(email));
     }
 
+    var answer_preference = $('#edit-answer-preference input:checked').val();
+    if (answer_preference && answer_preference !== 'mail') {
+      query.push('answer_preference=' + encodeURIComponent(answer_preference));
+    }
+
     var parameters = {
       '!script_base': settings.base,
       '!form_base': settings.base,

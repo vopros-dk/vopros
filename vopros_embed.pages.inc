@@ -44,18 +44,19 @@ jQuery(document).ready(function ($) {
 });
 EOF;
 
-  // Pick out a specific subset of options.
-  $options = array_intersect_key(_vopros_question_user_answer_preference(), array(
-    'mail' => TRUE,
-    'sms' => TRUE,
-    'chat' => TRUE,
-  ));
+  $options = _vopros_embed_answer_preferences();
+
+  $answer_preference = 'mail';
+  if (isset($_GET['answer_preference']) &&
+    isset($options[$_GET['answer_preference']])) {
+    $answer_preference = $_GET['answer_preference'];
+  }
 
   $form['user_answer_preference'] = array(
     '#type' => 'radios',
     '#title' => t('How to receive answer'),
     '#options' => $options,
-    '#default_value' => 'mail',
+    '#default_value' => $answer_preference,
     '#weight' => -70,
     '#attributes' => array(
       'class' => array('options-' . count($options)),

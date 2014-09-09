@@ -67,6 +67,14 @@ function vopros_embed_setting_form($form, &$form_state) {
     '#description' => t('The email address to direct local inquiries to.'),
   );
 
+  $form['embed']['answer_preference'] = array(
+    '#type' => 'radios',
+    '#title' => t('Default answer method'),
+    '#options' => _vopros_embed_answer_preferences(),
+    '#input' => FALSE,
+    '#description' => t('Which answer method should be initially selected?'),
+  );
+
   // The Drupal.formatString JS function doesn't support replacing each
   // placeholder more than once, so use different placeholders.
   $code = '<script src="!script_base/question_modal.js"></script>

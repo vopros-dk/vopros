@@ -271,3 +271,18 @@ function theme_vopros_embed_question_form(&$vars) {
 
   return $output;
 }
+
+/**
+ * Get applicable answering methods.
+ */
+function _vopros_embed_answer_preferences() {
+  // Pick out a specific subset of options.
+  $options = _vopros_question_user_answer_preference();
+  $options = array_intersect_key($options, array(
+    'mail' => TRUE,
+    'sms' => TRUE,
+    'chat' => TRUE,
+  ));
+
+  return $options;
+}

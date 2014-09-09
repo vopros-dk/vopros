@@ -33,6 +33,7 @@ var ask_vopros = {
  name: 'User Realname',
  mail: 'user@example.com',
  phone: '2013456',
- zip: '1927'
+ zip: '1927',
+ answer_preference: 'chat'
 };
 ```
