@@ -7,6 +7,14 @@
   margin: 10px 10px 0 0;
 }
 
+.view-vopros-question-list.view-display-id-page form .form-type-bef-checkbox label {
+  float: none;
+}
+
+.view-vopros-question-list.view-display-id-page .form-type-bef-checkbox {
+  float: left;
+}
+
 .view-vopros-question-list.view-display-id-page form .views-widget {
   float: left;
 }

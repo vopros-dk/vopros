@@ -221,12 +221,149 @@ function vopros_question_views_default_views() {
   $handler->display->display_options['filters']['qanda_service_name']['expose']['label'] = 'Received from';
   $handler->display->display_options['filters']['qanda_service_name']['expose']['operator'] = 'qanda_service_name_op';
   $handler->display->display_options['filters']['qanda_service_name']['expose']['identifier'] = 'qanda_service_name';
+  /* Filter criterion: Question: User_answer_preference */
+  $handler->display->display_options['filters']['user_answer_preference']['id'] = 'user_answer_preference';
+  $handler->display->display_options['filters']['user_answer_preference']['table'] = 'vopros_question';
+  $handler->display->display_options['filters']['user_answer_preference']['field'] = 'user_answer_preference';
+  $handler->display->display_options['filters']['user_answer_preference']['value'] = array(
+    'mail' => 'mail',
+    'telephone' => 'telephone',
+    'sms' => 'sms',
+  );
+  $handler->display->display_options['filters']['user_answer_preference']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['user_answer_preference']['expose']['operator_id'] = 'user_answer_preference_op';
+  $handler->display->display_options['filters']['user_answer_preference']['expose']['label'] = 'Svartype';
+  $handler->display->display_options['filters']['user_answer_preference']['expose']['operator'] = 'user_answer_preference_op';
+  $handler->display->display_options['filters']['user_answer_preference']['expose']['identifier'] = 'user_answer_preference';
+  $handler->display->display_options['filters']['user_answer_preference']['expose']['remember'] = TRUE;
+  $handler->display->display_options['filters']['user_answer_preference']['expose']['multiple'] = TRUE;
+  $handler->display->display_options['filters']['user_answer_preference']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+  );
+  $handler->display->display_options['filters']['user_answer_preference']['group_info']['label'] = 'User_answer_preference';
+  $handler->display->display_options['filters']['user_answer_preference']['group_info']['identifier'] = 'user_answer_preference';
+  $handler->display->display_options['filters']['user_answer_preference']['group_info']['remember'] = FALSE;
+  $handler->display->display_options['filters']['user_answer_preference']['group_info']['group_items'] = array(
+    1 => array(),
+    2 => array(),
+    3 => array(),
+  );
 
   /* Display: List */
   $handler = $view->new_display('page', 'List', 'page');
   $handler->display->display_options['defaults']['exposed_form'] = FALSE;
-  $handler->display->display_options['exposed_form']['type'] = 'basic';
-  $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
+  $handler->display->display_options['exposed_form']['type'] = 'better_exposed_filters';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Anvend';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Nulstil';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sorter efter';
+  $handler->display->display_options['exposed_form']['options']['bef'] = array(
+    'general' => array(
+      'allow_secondary' => 0,
+      'secondary_label' => 'Avancerede indstillinger',
+    ),
+    'question_status' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+    'question_usage' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+    'vopros_editorial_tid' => array(
+      'bef_format' => 'default',
+      'slider_options' => array(
+        'bef_slider_min' => '0',
+        'bef_slider_max' => '99999',
+        'bef_slider_step' => '1',
+        'bef_slider_animate' => '',
+        'bef_slider_orientation' => 'horizontal',
+      ),
+      'more_options' => array(
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+    'qanda_service_name' => array(
+      'bef_format' => 'default',
+      'more_options' => array(
+        'bef_select_all_none' => FALSE,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+    'user_answer_preference' => array(
+      'bef_format' => 'bef',
+      'more_options' => array(
+        'bef_select_all_none' => 0,
+        'bef_collapsible' => 0,
+        'is_secondary' => 0,
+        'any_label' => '',
+        'bef_filter_description' => '',
+        'tokens' => array(
+          'available' => array(
+            0 => 'global_types',
+          ),
+        ),
+        'rewrite' => array(
+          'filter_rewrite_values' => '',
+        ),
+      ),
+    ),
+  );
+  $handler->display->display_options['exposed_form']['options']['input_required'] = 0;
+  $handler->display->display_options['exposed_form']['options']['text_input_required'] = 'Vælg et filter og klik på Anvend for at se resultater';
+  $handler->display->display_options['exposed_form']['options']['text_input_required_format'] = 'wysiwyg';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   $handler->display->display_options['path'] = 'admin/vopros/questions/list';
   $handler->display->display_options['menu']['type'] = 'default tab';
@@ -265,7 +402,13 @@ function vopros_question_views_default_views() {
     t('Updated'),
     t('Created'),
     t('Editorial'),
+    t('Svartype'),
+    t('User_answer_preference'),
     t('List'),
+    t('Anvend'),
+    t('Nulstil'),
+    t('Sorter efter'),
+    t('Vælg et filter og klik på Anvend for at se resultater'),
   );
   $export['vopros_question_list'] = $view;
 

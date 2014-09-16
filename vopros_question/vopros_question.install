@@ -435,3 +435,10 @@ function vopros_question_update_7004(&$sandbox) {
     ->condition('question_status', 'published')
     ->execute();
 }
+
+/**
+ * Enable the better_exposed_filters module.
+ */
+function vopros_question_update_7005() {
+  module_enable(array('better_exposed_filters'));
+}

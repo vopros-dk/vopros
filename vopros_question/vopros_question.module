@@ -691,6 +691,7 @@ function vopros_question_views_data_alter(&$data) {
   $data['vopros_question']['user_age']['field']['handler'] =
   $data['vopros_question']['qanda_service_name']['field']['handler'] =
   $data['vopros_question']['question_status']['field']['handler'] =
+  $data['vopros_question']['user_answer_preference']['field']['handler'] =
   $data['vopros_question']['question_usage']['field']['handler'] = 'vopros_question_handler_field_vopros_question';
   $data['vopros_question']['question_deadline_timestamp']['field']['handler'] = 'vopros_question_handler_field_date';
 
@@ -701,6 +702,8 @@ function vopros_question_views_data_alter(&$data) {
   $data['vopros_question']['question_status']['filter']['handler'] = 'vopros_question_status_views_handler_filter_in_operator';
 
   $data['vopros_question']['qanda_service_name']['filter']['handler'] = 'vopros_question_qanda_service_name_views_handler_filter_in_operator';
+
+  $data['vopros_question']['user_answer_preference']['filter']['handler'] = 'vopros_question_user_answer_preference_views_handler_filter';
 
 
   // Add revision table.
@@ -940,6 +943,9 @@ function _vopros_question_usage() {
   );
 }
 
+/**
+ * Returns the possible answer methods.
+ */
 function _vopros_question_user_answer_preference() {
   return module_invoke_all('vopros_question_user_answer_preference');
 }
