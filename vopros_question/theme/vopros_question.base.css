@@ -11,7 +11,8 @@
   float: none;
 }
 
-.view-vopros-question-list.view-display-id-page .form-type-bef-checkbox {
+.view-vopros-question-list.view-display-id-page .form-type-bef-checkbox,
+.view-vopros-question-list-admin.view-id-vopros_question_list_admin .form-type-bef-checkbox {
   float: left;
 }
 
