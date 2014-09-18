@@ -59,6 +59,18 @@ function _vopros_embed_menu_title() {
 }
 
 /**
+ * Implements hook_permission().
+ */
+function vopros_embed_permission() {
+  return array(
+    'administer vopros_embed' => array(
+      'title' => t('Administer embed settings'),
+      'description' => '',
+    ),
+  );
+}
+
+/**
  * Implements hook_theme().
  */
 function vopros_embed_theme() {
