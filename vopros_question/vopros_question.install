@@ -350,6 +350,119 @@ function vopros_question_schema() {
     ),
   );
 
+  $schema['vopros_question_client'] = array(
+    'description' => 'The base table for clients of the service.',
+    'fields' => array(
+      'client_id' => array(
+        'description' => 'The primary identifier for a client.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'agency' => array(
+        'description' => 'The machine name for this client.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ),
+      'revision_id' => array(
+        'description' => 'The current {vopros_question_client_revision}.revision_id version identifier.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'label' => array(
+        'description' => 'Client name, the label of the entity.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ),
+      'created' => array(
+        'description' => 'The Unix timestamp when the question was created.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'changed' => array(
+        'description' => 'The Unix timestamp when the question was most recently saved.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'uuid' => uuid_schema_field_definition(),
+    ),
+    'primary key' => array('client_id'),
+    'unique keys' => array(
+      'agency' => array('agency'),
+      'revision_id' => array('revision_id'),
+    ),
+    'indexes' => array(
+      'created' => array('created'),
+      'changed' => array('changed'),
+    ),
+    'foreign keys' => array(
+      'current_revision' => array(
+        'table' => 'vopros_question_revision',
+        'columns' => array('revision_id' => 'revision_id'),
+      ),
+    ),
+  );
+
+  $schema['vopros_question_client_revision'] = array(
+    'description' => 'Saves information about each saved revision of a {vopros_question_client}.',
+    'fields' => array(
+      'revision_id' => array(
+        'description' => 'The primary identifier for this revision.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'client_id' => array(
+        'description' => 'The {vopros_question_client}.client_id of the client this revision belongs to.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'agency' => array(
+        'description' => 'The machine name for this client.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ),
+      'label' => array(
+        'description' => 'Client name, the label of the entity.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ),
+      'log' => array(
+        'description' => 'The log entry explaining the changes in this version.',
+        'type' => 'text',
+        'not null' => TRUE,
+        'size' => 'big',
+      ),
+      'revision_timestamp' => array(
+        'description' => 'The Unix timestamp when this revision was created.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'uuid' => uuid_schema_field_definition(),
+    ),
+    'primary key' => array('revision_id'),
+    'indexes' => array(
+      'revision_timestamp' => array('revision_timestamp'),
+    ),
+    'foreign keys' => array(
+      'question' => array(
+        'table' => 'vopros_question',
+        'columns' => array('client_id' => 'client_id'),
+      ),
+    ),
+  );
+
   return $schema;
 }
 
@@ -441,4 +554,128 @@ function vopros_question_update_7004(&$sandbox) {
  */
 function vopros_question_update_7005() {
   module_enable(array('better_exposed_filters'));
+}
+
+/**
+ * Create tables for clients.
+ */
+function vopros_question_update_7006() {
+  $schema = array();
+
+  $schema['vopros_question_client'] = array(
+    'description' => 'The base table for clients of the service.',
+    'fields' => array(
+      'client_id' => array(
+        'description' => 'The primary identifier for a client.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'agency' => array(
+        'description' => 'The machine name for this client.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ),
+      'revision_id' => array(
+        'description' => 'The current {vopros_question_client_revision}.revision_id version identifier.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'label' => array(
+        'description' => 'Client name, the label of the entity.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ),
+      'created' => array(
+        'description' => 'The Unix timestamp when the question was created.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'changed' => array(
+        'description' => 'The Unix timestamp when the question was most recently saved.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'uuid' => uuid_schema_field_definition(),
+    ),
+    'primary key' => array('client_id'),
+    'unique keys' => array(
+      'agency' => array('agency'),
+      'revision_id' => array('revision_id'),
+    ),
+    'indexes' => array(
+      'created' => array('created'),
+      'changed' => array('changed'),
+    ),
+    'foreign keys' => array(
+      'current_revision' => array(
+        'table' => 'vopros_question_revision',
+        'columns' => array('revision_id' => 'revision_id'),
+      ),
+    ),
+  );
+
+  $schema['vopros_question_client_revision'] = array(
+    'description' => 'Saves information about each saved revision of a {vopros_question_client}.',
+    'fields' => array(
+      'revision_id' => array(
+        'description' => 'The primary identifier for this revision.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ),
+      'client_id' => array(
+        'description' => 'The {vopros_question_client}.client_id of the client this revision belongs to.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'agency' => array(
+        'description' => 'The machine name for this client.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ),
+      'label' => array(
+        'description' => 'Client name, the label of the entity.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ),
+      'log' => array(
+        'description' => 'The log entry explaining the changes in this version.',
+        'type' => 'text',
+        'not null' => TRUE,
+        'size' => 'big',
+      ),
+      'revision_timestamp' => array(
+        'description' => 'The Unix timestamp when this revision was created.',
+        'type' => 'int',
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'uuid' => uuid_schema_field_definition(),
+    ),
+    'primary key' => array('revision_id'),
+    'indexes' => array(
+      'revision_timestamp' => array('revision_timestamp'),
+    ),
+    'foreign keys' => array(
+      'question' => array(
+        'table' => 'vopros_question',
+        'columns' => array('client_id' => 'client_id'),
+      ),
+    ),
+  );
+
+  foreach ($schema as $name => $def) {
+    db_create_table($name, $def);
+  }
 }
