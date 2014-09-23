@@ -93,7 +93,6 @@ function vopros_question_client_form_submit(&$form, &$form_state) {
   $client = $form_state['values']['client'];
 
   $info = entity_get_property_info('vopros_question_client');
-  dpm($info);
   foreach (array_keys($info['properties']) as $key) {
     if (isset($form_state['values'][$key])) {
       $client->{$key} = $form_state['values'][$key];

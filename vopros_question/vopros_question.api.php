@@ -34,6 +34,21 @@ function hook_vopros_question_qanda_serice_options_alter(&$options) {
 }
 
 /**
+ * Return question channels.
+ *
+ * @return array
+ *   Keys are channel identifiers, the value is an array of options:
+ *   'name':
+ *     Human readable name.
+ *   'manual':
+ *     When true, this channel can be used for manually created questions.
+ *     (optional)
+ */
+function hook_vopros_question_channels() {
+
+}
+
+/**
  * Alter Question status reason options.
  */
 function hook_vopros_question_status_reason_options_alter(&$type, &$options) {

@@ -210,6 +210,30 @@ function vopros_question_question_form($form, &$form_state, $question, $add_ques
     );
   }
 
+  $options = _vopros_question_client_options();
+  // If the current client_id isn't part of the options, add it in to allow for
+  // persisting the value.
+  if (!empty($question->client_id) && !isset($options[$question->client_id])) {
+    $options = array($question->client_id => $question->client_id) + $options;
+  }
+
+  $form['form']['client_id'] = array(
+    '#type' => 'select',
+    '#title' => t('Client'),
+    '#options' => $options,
+    '#default_value' => $question->client_id,
+  );
+
+  // Only set channel for new questions.
+  if ($question->is_new) {
+    $form['form']['channel'] = array(
+      '#type' => 'select',
+      '#title' => t('Channel'),
+      '#options' => _vopros_question_manual_channels(),
+      '#default_value' => $question->channel,
+    );
+  }
+
   $form['form']['question_note'] = array(
     '#type' => 'textarea',
     '#title' => t('Note about the question'),

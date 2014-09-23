@@ -71,18 +71,46 @@ function vopros_question_schema() {
       ),
       // Info about the origin of the question
       'qanda_service_name' => array(
-        'description' => 'The service that brought us the question.',
+        'description' => 'The service that brought us the question. (deprecated)',
         'type' => 'varchar',
         'length' => '255',
         'not null' => TRUE,
         'default' => '',
       ),
       'agency_id' => array(
-        'description' => 'The agency/portal that sent the question.',
+        'description' => 'The agency/portal that sent the question. (deprecated)',
         'type' => 'varchar',
         'length' => '255',
         'not null' => TRUE,
         'default' => '',
+      ),
+      'client_id' => array(
+        'description' => 'The client site.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'channel' => array(
+        'description' => 'The channel used to ask the question.',
+        'type' => 'varchar',
+        'length' => '255',
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'channel_id' => array(
+        'description' => 'The sub-id of the channel used to ask the question .',
+        'type' => 'varchar',
+        'length' => '255',
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'channel_data' => array(
+        'type' => 'blob',
+        'not null' => FALSE,
+        'size' => 'big',
+        'serialize' => TRUE,
+        'description' => 'A serialized array of additional channel data.',
       ),
       'referenced_by' => array(
         'description' => 'Referenced from.',
@@ -166,6 +194,8 @@ function vopros_question_schema() {
       'question_status' => array('question_status'),
       'question_usage' => array('question_usage'),
       'qanda_service_name' => array('qanda_service_name'),
+      'client_id' => array('client_id'),
+      'channel' => array('channel'),
       'created' => array('created'),
       'changed' => array('changed'),
     ),
@@ -248,18 +278,46 @@ function vopros_question_schema() {
       ),
       // Info about the origin of the question
       'qanda_service_name' => array(
-        'description' => 'The service that brought us the question.',
+        'description' => 'The service that brought us the question. (deprecated)',
         'type' => 'varchar',
         'length' => '255',
         'not null' => TRUE,
         'default' => '',
       ),
       'agency_id' => array(
-        'description' => 'The agency/portal that sent the question.',
+        'description' => 'The agency/portal that sent the question. (deprecated)',
         'type' => 'varchar',
         'length' => '255',
         'not null' => TRUE,
         'default' => '',
+      ),
+      'client_id' => array(
+        'description' => 'The client site.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      'channel' => array(
+        'description' => 'The channel used to ask the question.',
+        'type' => 'varchar',
+        'length' => '255',
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'channel_id' => array(
+        'description' => 'The sub-id of the channel used to ask the question .',
+        'type' => 'varchar',
+        'length' => '255',
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      'channel_data' => array(
+        'type' => 'blob',
+        'not null' => FALSE,
+        'size' => 'big',
+        'serialize' => TRUE,
+        'description' => 'A serialized array of additional channel data.',
       ),
       'referenced_by' => array(
         'description' => 'Referenced from.',
@@ -340,6 +398,8 @@ function vopros_question_schema() {
       'question_status' => array('question_status'),
       'question_usage' => array('question_usage'),
       'qanda_service_name' => array('qanda_service_name'),
+      'client_id' => array('client_id'),
+      'channel' => array('channel'),
       'revision_timestamp' => array('revision_timestamp'),
     ),
     'foreign keys' => array(
@@ -677,5 +737,67 @@ function vopros_question_update_7006() {
 
   foreach ($schema as $name => $def) {
     db_create_table($name, $def);
+  }
+}
+
+/**
+ * Add new qanda_service replacing fields.
+ */
+function vopros_question_update_7007() {
+  $fields = array(
+    'client_id' => array(
+      array(
+        'description' => 'The client site.',
+        'type' => 'int',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+        'default' => 0,
+      ),
+      array(
+        'indexes' => array(
+          'client_id' => array('client_id'),
+        ),
+      ),
+    ),
+    'channel' => array(
+      array(
+        'description' => 'The channel used to ask the question.',
+        'type' => 'varchar',
+        'length' => '255',
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      array(
+        'indexes' => array(
+          'channel' => array('channel'),
+        ),
+      ),
+    ),
+    'channel_id' => array(
+      array(
+        'description' => 'The sub-id of the channel used to ask the question .',
+        'type' => 'varchar',
+        'length' => '255',
+        'not null' => TRUE,
+        'default' => '',
+      ),
+      array(),
+    ),
+    'channel_data' => array(
+      array(
+        'type' => 'blob',
+        'not null' => FALSE,
+        'size' => 'big',
+        'serialize' => TRUE,
+        'description' => 'A serialized array of additional channel data.',
+      ),
+      array(),
+    ),
+  );
+  $tables = array('vopros_question', 'vopros_question_revision');
+  foreach ($tables as $table) {
+    foreach ($fields as $name => $def) {
+      db_add_field($table, $name, $def[0], $def[1]);
+    }
   }
 }

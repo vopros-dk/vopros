@@ -808,6 +808,18 @@ function vopros_question_entity_property_info_alter(&$info) {
 }
 
 /**
+ * Implements hook_vopros_question_channels().
+ */
+function vopros_question_vopros_question_channels() {
+  return array(
+    'telephone' => array(
+      'name' => t('Telephone'),
+      'manual' => TRUE,
+    ),
+  );
+}
+
+/**
  * Implements hook_views_data_alter().
  */
 function vopros_question_views_data_alter(&$data) {
@@ -1218,6 +1230,34 @@ function _vopros_question_qanda_serice_options() {
   }
   drupal_alter('vopros_question_qanda_serice_options', $options);
   return $options;
+}
+
+/**
+ * Get the possible clients as an options array.
+ */
+function _vopros_question_client_options() {
+  return db_select('vopros_question_client', 'vqc')
+    ->fields('vqc', array('client_id', 'label'))
+    ->execute()
+    ->fetchAllKeyed();
+}
+
+/**
+ * Get manual channels as an option array.
+ */
+function _vopros_question_manual_channels() {
+  $manual_channels = &drupal_static(__FUNCTION__, NULL);
+  if (is_null($manual_channels)) {
+    $manual_channels = array();
+    $channels = module_invoke_all('vopros_question_channels');
+    foreach ($channels as $name => $channel) {
+      if (!empty($channel['name']) && isset($channel['manual']) && $channel['manual']) {
+        $manual_channels[$name] = $channel['name'];
+      }
+    }
+  }
+
+  return $manual_channels;
 }
 
 /**
