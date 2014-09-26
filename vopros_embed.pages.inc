@@ -65,7 +65,7 @@ EOF;
 
   $form['question_content'] = array(
     '#type' => 'textarea',
-    '#title' => t('Question content'),
+    '#title' => t("What's your question?"),
     '#required' => TRUE,
     '#default_value' => '',
     '#weight' => -60,
@@ -78,7 +78,7 @@ EOF;
 
   $form['user_name'] = array(
     '#type' => 'textfield',
-    '#title' => t('Name'),
+    '#title' => t("What's your name?"),
     '#required' => TRUE,
     '#default_value' => isset($_GET['name']) ? check_plain($_GET['name']) : '',
     '#weight' => -50,
@@ -86,7 +86,7 @@ EOF;
 
   $form['user_email'] = array(
     '#type' => 'textfield',
-    '#title' => t('Email'),
+    '#title' => t('Enter your e-mail address'),
     '#default_value' => isset($_GET['mail']) ? check_plain($_GET['mail']) : '',
     '#states' => array(
       'visible' => array(
@@ -101,7 +101,7 @@ EOF;
 
   $form['user_mobile_phone'] = array(
     '#type' => 'textfield',
-    '#title' => t('Mobile phone'),
+    '#title' => t('Enter your cell number'),
     '#default_value' => isset($_GET['phone']) ? check_plain($_GET['phone']) : '',
     '#states' => array(
       'visible' => array(
@@ -113,7 +113,7 @@ EOF;
 
   $form['user_postal_code'] = array(
     '#type' => 'textfield',
-    '#title' => t('Postal code'),
+    '#title' => t("What's your zip code?"),
     '#default_value' => isset($_GET['zip']) ? check_plain($_GET['zip']) : '',
     '#states' => array(
       'visible' => array(
@@ -129,7 +129,7 @@ EOF;
   $deadline_options = _vopros_question_deadline();
   $form['question_deadline'] = array(
     '#type' => 'radios',
-    '#title' => t('Deadline'),
+    '#title' => t('When do you need the answer?'),
     '#required' => TRUE,
     '#options' => $deadline_options,
     '#default_value' => -1,
