@@ -2,6 +2,9 @@ api = 2
 core = 7.x
 
 ; Contrib modules.
+projects[better_exposed_filters][subdir] = contrib
+projects[better_exposed_filters][version] = 3.0-beta4
+
 projects[cache_actions][subdir] = contrib
 projects[cache_actions][version] = 2.0-alpha5
 
