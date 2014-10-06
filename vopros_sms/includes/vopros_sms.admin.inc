@@ -59,6 +59,21 @@ function vopros_sms_settings_form($form, &$form_state) {
     '#element_validate' => array('vopros_sms_push_sender_validate'),
   );
 
+  if (module_exists('vopros_editorial')) {
+    $vocab = taxonomy_vocabulary_machine_name_load('vopros_editorial');
+    $terms = taxonomy_term_load_multiple(FALSE, array('vid' => $vocab->vid));
+    $options = array('' => t('No default value'));
+    foreach ($terms as $tid => $term) {
+      $options[$tid] = $term->name;
+    }
+    $form['vopros_sms_default_sms_editoral'] = array(
+      '#type' => 'select',
+      '#title' => t('Default SMS editorial'),
+      '#options' => $options,
+      '#default_value' => variable_get('vopros_sms_default_sms_editoral', ''),
+    );
+  }
+
   $form['info'] = array(
     '#markup' => t('Below you can define default texts used for different situations when sending a SMS to the user. This could be a SMS containing the answer, or when the need to contact the user arises, fx to ask for more info. It is possible to use Drupal tokens to create dynamic macros containing question/answer or user data. See below under each category for a list of available tokens and their meaning.'),
     '#prefix' => '<p>',
