@@ -861,6 +861,14 @@ function vopros_question_views_data_alter(&$data) {
     ),
   );
 
+  $data['vopros_question']['client_id']['title'] = 'Question client';
+  $data['vopros_question']['client_id']['relationship'] = array(
+    'handler' => 'views_handler_relationship',
+    'base' => 'vopros_question_client',
+    'field' => 'client_id',
+    'label' => 'Question client',
+  );
+
   $data['vopros_question']['revision_id']['relationship'] = array(
     'handler' => 'views_handler_relationship',
     'base' => 'vopros_question_revision',
