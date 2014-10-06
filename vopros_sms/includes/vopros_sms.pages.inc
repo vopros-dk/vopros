@@ -14,6 +14,7 @@ function vopros_sms_create_sms() {
   $default_values = array(
     'user_answer_preference' => 'sms',
     'channel' => 'sms',
+    'client' => variable_get('vopros_sms_default_client_id', 0),
   );
 
   $question = vopros_question_new($default_values);
@@ -26,7 +27,7 @@ function vopros_sms_create_sms() {
     $question->question_content = implode(' ', $words);
     $question->user_mobile_phone = $phone;
     $question->question_deadline = 2;
-    if (module_exists('vopros_editorial') && $tid = variable_get('vopros_question_default_sms_editoral', '')) {
+    if (module_exists('vopros_editorial') && $tid = variable_get('vopros_sms_default_sms_editoral', '')) {
       $question_wrapper = entity_metadata_wrapper('vopros_question', $question);
       $question_wrapper->vopros_editorial = $tid;
     }

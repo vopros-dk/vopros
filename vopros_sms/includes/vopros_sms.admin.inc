@@ -9,6 +9,14 @@
  * Answer settings form
  */
 function vopros_sms_settings_form($form, &$form_state) {
+  $form['vopros_sms_default_client_id'] = array(
+    '#type' => 'select',
+    '#title' => t('Client'),
+    '#options' => _vopros_question_client_options(),
+    '#default_value' => variable_get('vopros_sms_default_client_id', 0),
+    '#description' => t('The client which SMS questions is assigned to.'),
+  );
+
   $form['sms_gateway'] = array(
     '#type' => 'fieldset',
     '#title' => t('SMS gateway'),
