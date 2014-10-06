@@ -13,7 +13,7 @@
 function vopros_sms_create_sms() {
   $default_values = array(
     'user_answer_preference' => 'sms',
-    'agency_id' => 'SMS1919',
+    'channel' => 'sms',
   );
 
   $question = vopros_question_new($default_values);
@@ -22,7 +22,7 @@ function vopros_sms_create_sms() {
   if ($message && $phone) {
     $words = explode(' ', $message);
     $keyword = array_shift($words);
-    $question->qanda_service_name = 'sms';
+    $question->channel_id = $keyword;
     $question->question_content = implode(' ', $words);
     $question->user_mobile_phone = $phone;
     $question->question_deadline = 2;
@@ -35,11 +35,11 @@ function vopros_sms_create_sms() {
     }
     $question->save();
   }
-  $output =
-'<?xml version="1.0" encoding="iso-8859-1"?>
+  $output = '<?xml version="1.0" encoding="iso-8859-1"?>
   <action>
     <type>terminate</type>
   </action>';
   print $output;
-  exit();
+  // Not returning anything makes Drupal not render anything apart from the
+  // output we already made.
 }

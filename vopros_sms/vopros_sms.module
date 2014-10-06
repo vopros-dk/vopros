@@ -275,6 +275,17 @@ function vopros_sms_vopros_question_user_answer_preference() {
 }
 
 /**
+ * Implements hook_vopros_question_channels().
+ */
+function vopros_sms_vopros_question_channels() {
+  return array(
+    'sms' => array(
+      'name' => t('SMS'),
+    ),
+  );
+}
+
+/**
  * Checks sms access for various operations.
  *
  * @param $op
