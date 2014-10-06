@@ -11,10 +11,12 @@
  * Returns a form for asking a question.
  */
 function vopros_embed_question($form, &$form_state) {
+  // @todo implement configuration of forms on the clients.
   $agency_id = isset($_GET['agency_id']) ? check_plain($_GET['agency_id']) : '';
 
+  $client = vopros_question_client_load_by_agency($agency_id);
   // We can't work without an agency.
-  if (empty($agency_id)) {
+  if (empty($client)) {
     $form['error'] = array(
       '#markup' => t('Whoops, widget not configured properly. Please contact the site and tell them about this.'),
     );
@@ -141,9 +143,9 @@ EOF;
     ),
   );
 
-  $form['agency_id'] = array(
+  $form['client_id'] = array(
     '#type' => 'value',
-    '#value' => $agency_id,
+    '#value' => $client->client_id,
   );
 
   $form['agency_mail'] = array(
@@ -254,16 +256,11 @@ function vopros_embed_question_submit($form, &$form_state) {
   }
   $log = array();
 
-  // Ensure that there's an qanda_service_name for this sender.
-  $agency_id = $question->agency_id;
-  $qanda_options = _vopros_question_qanda_serice_options();
-  if (!isset($qanda_options[$agency_id])) {
-    $options = variable_get('vopros_question_qanda_service_options', '');
-    // @todo look up agency name.
-    $new_options = trim($options) . "\n" . $agency_id . '|' . $agency_id . "\n";
-    variable_set('vopros_question_qanda_service_options', $new_options);
-  }
-  $question->qanda_service_name = $agency_id;
+  $question->channel = $form_state['values']['user_answer_preference'] == 'chat' ? 'chat' : 'webform';
+  $question->channel_data = array(
+    'from_url' => $form_state['values']['from_url'],
+    'site_email' => $form_state['values']['agency_mail'],
+  );
 
   field_attach_submit('vopros_question', $question, $form, $form_state);
 

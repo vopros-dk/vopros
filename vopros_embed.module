@@ -103,6 +103,20 @@ function vopros_embed_element_info() {
 }
 
 /**
+ * Implements hook_vopros_question_channels().
+ */
+function vopros_emded_vopros_question_channels() {
+  return array(
+    'webform' => array(
+      'name' => t('Webform'),
+    ),
+    'chat' => array(
+      'name' => t('Chat'),
+    ),
+  );
+}
+
+/**
  * Custom delivery callback for embedded pages.
  *
  * Mimics drupal_deliver_html_page().
