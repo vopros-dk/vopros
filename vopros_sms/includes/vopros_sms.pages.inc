@@ -14,7 +14,7 @@ function vopros_sms_create_sms() {
   $default_values = array(
     'user_answer_preference' => 'sms',
     'channel' => 'sms',
-    'client' => variable_get('vopros_sms_default_client_id', 0),
+    'client_id' => variable_get('vopros_sms_default_client_id', 0),
   );
 
   $question = vopros_question_new($default_values);
