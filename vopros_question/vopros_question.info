@@ -27,3 +27,4 @@ files[] = includes/views/handlers/vopros_question_status_views_handler_filter_in
 files[] = includes/views/handlers/vopros_question_usage_views_handler_filter_in_operator.inc
 files[] = includes/views/handlers/vopros_question_qanda_service_name_views_handler_filter.inc
 files[] = includes/views/handlers/vopros_question_user_answer_preference_views_handler_filter.inc
+files[] = includes/views/handlers/vopros_question_client_views_handler_filter.inc
