@@ -1158,7 +1158,6 @@ function vopros_question_vopros_question_user_answer_preference() {
   );
 }
 
-
 /**
  * Utility function to get the question usage options
  */
@@ -1264,18 +1263,26 @@ function _vopros_question_client_options() {
  * Get manual channels as an option array.
  */
 function _vopros_question_manual_channels() {
-  $manual_channels = &drupal_static(__FUNCTION__, NULL);
-  if (is_null($manual_channels)) {
-    $manual_channels = array();
-    $channels = module_invoke_all('vopros_question_channels');
-    foreach ($channels as $name => $channel) {
-      if (!empty($channel['name']) && isset($channel['manual']) && $channel['manual']) {
-        $manual_channels[$name] = $channel['name'];
-      }
+  $manual_channels = array();
+  foreach (vopros_question_channels() as $name => $channel) {
+    if (!empty($channel['name']) && isset($channel['manual']) && $channel['manual']) {
+      $manual_channels[$name] = $channel['name'];
     }
   }
 
   return $manual_channels;
+}
+
+/**
+ * Get known channels.
+ */
+function vopros_question_channels() {
+  $channels = &drupal_static(__FUNCTION__, NULL);
+  if (is_null($channels)) {
+    $channels = module_invoke_all('vopros_question_channels');
+  }
+
+  return $channels;
 }
 
 /**
