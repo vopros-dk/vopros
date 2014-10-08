@@ -81,40 +81,6 @@ function vopros_question_settings_form_validate($form, &$form_state) {
 }
 
 /**
- * QandA mapping settings form.
- */
-function vopros_question_mappings_form($form, &$form_state) {
-  $mapping = _vopros_question_qanda_mapping();
-
-  // Check the db to see if there's any unmapped services, and add them in.
-  $res = db_select('vopros_question', 'vq')
-    ->fields('vq', array('qanda_service_name', 'agency_id'))
-    ->distinct()
-    ->execute();
-  foreach ($res as $row) {
-    $key = $row->qanda_service_name . '|' . $row->agency_id;
-    if (!isset($mapping[$key])) {
-      $mapping[$key] = array('client' => '', 'channel' => '');
-    }
-  }
-
-  // Revert to textual representation.
-  $mapping_string = '';
-  foreach ($mapping as $key => $val) {
-    $mapping_string .= $key . ' -> ' . $val['client'] . '|' . $val['channel'] . "\n";
-  }
-
-  $form['vopros_question_qanda_mapping'] = array(
-    '#type' => 'textarea',
-    '#title' => t('QandA mapping'),
-    '#default_value' => $mapping_string,
-    '#description' => t('Mapping of QandA sevice names to clients in the form of <em>qanda|agency_id -> client|channel.'),
-  );
-
-  return system_settings_form($form);
-}
-
-/**
  * Form to edit or create a question
  */
 function vopros_question_question_form($form, &$form_state, $question, $add_question = FALSE) {

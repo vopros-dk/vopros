@@ -275,6 +275,17 @@ function vopros_question_menu() {
     'weight' => -10,
   );
 
+  // QandA migrate page.
+  $items['admin/vopros/config/client/migrate'] = array(
+    'title' => 'QandA migrate',
+    'description' => 'Migrate QandA to clients.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('vopros_question_client_migrate_form'),
+    'access arguments' => array('administer questions'),
+    'file' => 'includes/vopros_question_client.admin.inc',
+    'type' => MENU_LOCAL_TASK,
+  );
+
   // Client editing pages.
   $items['admin/vopros/clients/add'] = array(
     'title' => 'Add a client',
@@ -310,17 +321,6 @@ function vopros_question_menu() {
     'title' => 'Settings',
     'type' => MENU_DEFAULT_LOCAL_TASK,
     'weight' => -10,
-  );
-
-  // QuandA mapping page.
-  $items['admin/vopros/config/question/mapping'] = array(
-    'title' => 'QandA mapping',
-    'description' => 'Set up mapping of QandA service names to clients.',
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('vopros_question_mappings_form'),
-    'access arguments' => array('administer questions'),
-    'file' => 'includes/vopros_question.admin.inc',
-    'type' => MENU_LOCAL_TASK,
   );
 
   // Question adding and display pages.
@@ -1299,20 +1299,42 @@ function vopros_question_channels() {
 function _vopros_question_qanda_mapping() {
   $mapping = &drupal_static(__FILE__, NULL);
   if (is_null($mapping)) {
-    $mapping = array();
-    foreach (explode("\n", variable_get('vopros_question_qanda_mapping', '')) as $line) {
-      $parts = explode('->', $line);
-      if (count($parts) == 2) {
-        $tmp = explode('|', trim($parts[1]));
-        $client = array(
-          'client' => $tmp[0],
-          'channel' => isset($tmp[1]) ? $tmp[1] : '',
-        );
-        $mapping[trim($parts[0])] = $client;
+    $mapping = _vopros_question_parse_qanda_mapping(variable_get('vopros_question_qanda_mapping', ''));
+  }
+
+  return $mapping;
+}
+
+/**
+ * Parses QandA service mapping spec.
+ *
+ * @param string $mapping_string
+ *   The textual representation.
+ * @param bool $strict
+ *   Whether to fail on unparsable lines.
+ *
+ * @return array
+ *   The mapping in form of 'qanda_service_name|agency_id' => array(). Each
+ *   value array has a client and channel key.
+ */
+function _vopros_question_parse_qanda_mapping($mapping_string, $strict = FALSE) {
+  $mapping = array();
+  foreach (explode("\n", $mapping_string) as $line) {
+    $parts = explode('->', $line);
+    if (count($parts) == 2) {
+      $tmp = explode('|', trim($parts[1]));
+      $client = array(
+        'client' => $tmp[0],
+        'channel' => isset($tmp[1]) ? $tmp[1] : '',
+      );
+      $mapping[trim($parts[0])] = $client;
+    }
+    else {
+      if (trim($line) && $strict) {
+        return FALSE;
       }
     }
   }
-
   return $mapping;
 }
 
