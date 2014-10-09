@@ -428,7 +428,7 @@ function vopros_question_menu() {
     'file' => 'includes/vopros_question.admin.inc',
   );
 
-  // Create question from service..
+  // Create question from service.
   $items['vopros/question/create/service'] = array(
     'page callback' => 'vopros_question_create_service',
     'access arguments' => array('create question via web service'),

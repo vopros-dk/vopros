@@ -16,11 +16,11 @@ function vopros_question_create_service() {
   $post_data = array();
   // Reformat all the post data to not use CamelCase.
   foreach ($_POST as $key => $value) {
-    $post_data[strtolower(preg_replace('/(?<=\\w)(?=[A-Z])/',"_$1", $key))] = $value;
+    $post_data[strtolower(preg_replace('/(?<=\\w)(?=[A-Z])/', "_$1", $key))] = $value;
   }
   $properties = $question_wrapper->getPropertyInfo();
-  // Populate the question with the needed info
-  foreach ($properties as $property => $info) {
+  // Populate the question with the needed info.
+  foreach (array_keys($properties) as $property) {
     if (isset($post_data[$property])) {
       $question->{$property} = $post_data[$property];
     }
@@ -46,19 +46,24 @@ function vopros_question_create_service() {
     }
   }
   if (!empty($post_data)) {
-  $validation = vopros_question_validate_data($question);
+    $validation = vopros_question_validate_data($question);
     if ($validation['status'] == 'valid') {
       $question_wrapper->save();
       print 'Question created';
-      exit();
+      return;
     }
     drupal_add_http_header('Status', '400');
     $errors = array();
     foreach ($validation['errors'] as $value) {
       $errors[] = $value[0];
     }
-    watchdog('vopros_question', 'Could not create vopros question, invalid data for: %fields. Validation object: %validation, POST data: %post', array('%fields' => implode(', ', $errors), '%validation' => print_r($validation, TRUE), '%post' => print_r($_POST, TRUE)), WATCHDOG_ERROR);
+    $message = 'Could not create vopros question, invalid data for: %fields. Validation object: %validation, POST data: %post';
+    $args = array(
+      '%fields' => implode(', ', $errors),
+      '%validation' => print_r($validation, TRUE),
+      '%post' => print_r($_POST, TRUE),
+    );
+    watchdog('vopros_question', $message, $args, WATCHDOG_ERROR);
   }
   print 'Question not created';
-  exit();
 }
