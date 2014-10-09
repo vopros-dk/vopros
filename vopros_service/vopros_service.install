@@ -4,6 +4,9 @@
  * Implements hook_schema().
  */
 function vopros_service_schema() {
+  // Ensure that uuid.install is loaded for uuid_schema_field_definition().
+  module_load_install('uuid');
+
   $schema = array();
 
   $schema['vopros_service'] = array(
