@@ -1,5 +1,5 @@
 name = Vopros Service
-description = Defines other services that Vopros can connect to
+description = Connect Vopros to other Vopros instances.
 package = Vopros
 core = 7.x
 
