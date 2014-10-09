@@ -310,7 +310,7 @@ function vopros_statistics_client_channels_view($start = NULL, $end = NULL) {
     // Also add non-zero to the zero (the totals column) tid.
     if ($tid != 0) {
       $totals[$client_name]['totals'][0] += $row->count;
-      $totals[$client_name]['channels'][$channel_name][0] = $row->count;
+      $totals[$client_name]['channels'][$channel_name][0] += $row->count;
     }
 
     // Add everything to the column totals.
