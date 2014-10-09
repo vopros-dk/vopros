@@ -12,23 +12,36 @@ function vopros_question_client_settings_form($form, &$form_state) {
   $mapping = _vopros_question_qanda_mapping();
 
   // Check the db to see if there's any unmapped services, and add them in.
-  $res = db_select('vopros_question', 'vq')
+  $questions = db_select('vopros_question', 'vq')
     ->fields('vq', array('qanda_service_name', 'agency_id'))
-    ->distinct()
+    ->groupBy('qanda_service_name')
+    ->groupBy('agency_id')
     ->orderBy('qanda_service_name')
-    ->orderBy('agency_id')
-    ->execute();
-  foreach ($res as $row) {
+    ->orderBy('agency_id');
+  $count_field = $questions->addExpression('COUNT(question_id)', 'count');
+  $migrated_field = $questions->addExpression("(client_id <> 0 AND channel <> '')", 'migrated');
+  $questions->groupBy($migrated_field);
+
+  foreach ($questions->execute() as $row) {
     $key = $row->qanda_service_name . '|' . $row->agency_id;
     if (!isset($mapping[$key])) {
       $mapping[$key] = array('client' => '', 'channel' => '');
     }
+    $mapping[$key] += array(
+      'unmigrated' => 0,
+      'migrated' => 0,
+    );
+    $field = 'unmigrated';
+    if ($row->{$migrated_field}) {
+      $field = 'migrated';
+    }
+    $mapping[$key][$field] = $row->{$count_field};
   }
 
   // Revert to textual representation.
   $mapping_string = '';
   foreach ($mapping as $key => $val) {
-    $mapping_string .= $key . ' -> ' . $val['client'] . '|' . $val['channel'] . "\n";
+    $mapping_string .= $key . ' -> ' . $val['client'] . '|' . $val['channel'] . ' # ' . $val['unmigrated'] . '/' . $val['migrated'] . "\n";
   }
 
   $form['vopros_question_qanda_mapping'] = array(
@@ -36,7 +49,7 @@ function vopros_question_client_settings_form($form, &$form_state) {
     '#title' => t('QandA mapping'),
     '#rows' => 30,
     '#default_value' => $mapping_string,
-    '#description' => t('Mapping of QandA sevice names to clients in the form of <em>qanda|agency_id -> client|channel.</em>'),
+    '#description' => t('Mapping of QandA sevice names to clients in the form of <em>qanda|agency_id -> client|channel</em>. Everything after a # is ignored, and are populated with the number of pending/migrated questions.'),
   );
 
   return system_settings_form($form);
@@ -48,9 +61,10 @@ function vopros_question_client_settings_form($form, &$form_state) {
  * Checks that the configured clients and channels exists.
  */
 function vopros_question_client_settings_form_validate($form, &$form_state) {
+  $mapping = preg_replace('/\s+#[^\n]*$/m', '', $form_state['values']['vopros_question_qanda_mapping']);
   // Allow for empty submission. It's the way to clear the mapping and build it
   // up again.
-  if (empty($form_state['values']['vopros_question_qanda_mapping'])) {
+  if (empty($mapping)) {
     return;
   }
 
@@ -60,7 +74,7 @@ function vopros_question_client_settings_form_validate($form, &$form_state) {
   }
   $channels = vopros_question_channels();
 
-  $parsed = _vopros_question_parse_qanda_mapping($form_state['values']['vopros_question_qanda_mapping']);
+  $parsed = _vopros_question_parse_qanda_mapping($mapping);
   if (!$parsed) {
     form_error($form['vopros_question_qanda_mapping'], t('Error parsing mapping.'));
   }
@@ -72,6 +86,9 @@ function vopros_question_client_settings_form_validate($form, &$form_state) {
       form_error($form['vopros_question_qanda_mapping'], t('Unknown channel @channel.', array('@channel' => $to['channel'])));
     }
   }
+
+  // Set the value to the comment-stripped version.
+  form_set_value($form['vopros_question_qanda_mapping'], $mapping, $form_state);
 }
 
 /**
