@@ -36,6 +36,21 @@ function vopros_question_create_service() {
       $question_wrapper->vopros_question_attachment[0] = $file_data;
     }
   }
+
+  // Map qanda and agency to client and channel.
+  $mappings = _vopros_question_qanda_mapping();
+  $full_key = $question->qanda_service_name . '|' . $question->agency;
+  // Fall back to mapping with empty agency.
+  $qanda_key = $question->qanda_service_name . '|';
+  if (($mapping = $mappings[$full_key]) || ($mapping = $mappings[$qanda_key])) {
+    if ($mapping['client']) {
+      $question->client_id = $mapping['client'];
+    }
+    if ($mapping['channel']) {
+      $question->channel = $mapping['channel'];
+    }
+  }
+
   if (module_exists('vopros_editorial') && !empty($_POST['vopros_editorial'])) {
     unset($question->vopros_editorial);
     $vocab = taxonomy_vocabulary_machine_name_load('vopros_editorial');
