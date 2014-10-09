@@ -1288,6 +1288,14 @@ function vopros_question_channels() {
 }
 
 /**
+ * Get a channel definition.
+ */
+function vopros_question_channel($name) {
+  $channels = $name;
+  return isset($channels[$name]) ? $channels[$name] : FALSE;
+}
+
+/**
  * Get QandA service mapping.
  *
  * Returns the mapping of old QandA service names and agency_id to the new
