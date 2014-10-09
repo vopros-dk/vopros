@@ -143,8 +143,9 @@ function vopros_question_views_default_views() {
   $handler->display->display_options['style_plugin'] = 'table';
   $handler->display->display_options['style_options']['columns'] = array(
     'question_id' => 'question_id',
+    'question_status_reason' => 'question_status_reason',
     'question_title' => 'question_title',
-    'qanda_service_name' => 'qanda_service_name',
+    'client_id' => 'client_id',
     'question_usage' => 'question_usage',
     'question_status' => 'question_status',
     'question_deadline_timestamp' => 'question_deadline_timestamp',
@@ -160,6 +161,13 @@ function vopros_question_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
+    'question_status_reason' => array(
+      'sortable' => 0,
+      'default_sort_order' => 'asc',
+      'align' => '',
+      'separator' => '',
+      'empty_column' => 0,
+    ),
     'question_title' => array(
       'sortable' => 1,
       'default_sort_order' => 'asc',
@@ -167,7 +175,7 @@ function vopros_question_views_default_views() {
       'separator' => '',
       'empty_column' => 0,
     ),
-    'qanda_service_name' => array(
+    'client_id' => array(
       'sortable' => 0,
       'default_sort_order' => 'asc',
       'align' => '',
@@ -242,12 +250,11 @@ function vopros_question_views_default_views() {
   $handler->display->display_options['fields']['question_title']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['question_title']['alter']['path'] = 'admin/vopros/questions/[question_id]';
   $handler->display->display_options['fields']['question_title']['hide_alter_empty'] = FALSE;
-  /* Field: Question: Qanda_service_name */
-  $handler->display->display_options['fields']['qanda_service_name']['id'] = 'qanda_service_name';
-  $handler->display->display_options['fields']['qanda_service_name']['table'] = 'vopros_question';
-  $handler->display->display_options['fields']['qanda_service_name']['field'] = 'qanda_service_name';
-  $handler->display->display_options['fields']['qanda_service_name']['label'] = 'Received from';
-  $handler->display->display_options['fields']['qanda_service_name']['element_label_colon'] = FALSE;
+  /* Field: Question: Question client */
+  $handler->display->display_options['fields']['client_id']['id'] = 'client_id';
+  $handler->display->display_options['fields']['client_id']['table'] = 'vopros_question';
+  $handler->display->display_options['fields']['client_id']['field'] = 'client_id';
+  $handler->display->display_options['fields']['client_id']['label'] = 'Received from';
   /* Field: Question: Question_usage */
   $handler->display->display_options['fields']['question_usage']['id'] = 'question_usage';
   $handler->display->display_options['fields']['question_usage']['table'] = 'vopros_question';
@@ -293,6 +300,7 @@ function vopros_question_views_default_views() {
     'answered' => 'answered',
     'closed' => 'closed',
   );
+  $handler->display->display_options['filters']['question_status']['group'] = 1;
   $handler->display->display_options['filters']['question_status']['exposed'] = TRUE;
   $handler->display->display_options['filters']['question_status']['expose']['operator_id'] = 'question_status_op';
   $handler->display->display_options['filters']['question_status']['expose']['label'] = 'Status';
@@ -303,6 +311,7 @@ function vopros_question_views_default_views() {
   $handler->display->display_options['filters']['question_usage']['id'] = 'question_usage';
   $handler->display->display_options['filters']['question_usage']['table'] = 'vopros_question';
   $handler->display->display_options['filters']['question_usage']['field'] = 'question_usage';
+  $handler->display->display_options['filters']['question_usage']['group'] = 1;
   $handler->display->display_options['filters']['question_usage']['exposed'] = TRUE;
   $handler->display->display_options['filters']['question_usage']['expose']['operator_id'] = 'question_usage_op';
   $handler->display->display_options['filters']['question_usage']['expose']['label'] = 'Usage';
@@ -313,22 +322,30 @@ function vopros_question_views_default_views() {
   $handler->display->display_options['filters']['vopros_editorial_tid']['id'] = 'vopros_editorial_tid';
   $handler->display->display_options['filters']['vopros_editorial_tid']['table'] = 'field_data_vopros_editorial';
   $handler->display->display_options['filters']['vopros_editorial_tid']['field'] = 'vopros_editorial_tid';
-  $handler->display->display_options['filters']['vopros_editorial_tid']['group'] = 0;
+  $handler->display->display_options['filters']['vopros_editorial_tid']['group'] = 1;
   $handler->display->display_options['filters']['vopros_editorial_tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['vopros_editorial_tid']['expose']['operator_id'] = 'vopros_editorial_tid_op';
   $handler->display->display_options['filters']['vopros_editorial_tid']['expose']['label'] = 'with the editorial';
   $handler->display->display_options['filters']['vopros_editorial_tid']['expose']['operator'] = 'vopros_editorial_tid_op';
   $handler->display->display_options['filters']['vopros_editorial_tid']['expose']['identifier'] = 'vopros_editorial_tid';
   $handler->display->display_options['filters']['vopros_editorial_tid']['expose']['remember'] = TRUE;
-  /* Filter criterion: Question: Qanda_service_name */
-  $handler->display->display_options['filters']['qanda_service_name']['id'] = 'qanda_service_name';
-  $handler->display->display_options['filters']['qanda_service_name']['table'] = 'vopros_question';
-  $handler->display->display_options['filters']['qanda_service_name']['field'] = 'qanda_service_name';
-  $handler->display->display_options['filters']['qanda_service_name']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['qanda_service_name']['expose']['operator_id'] = 'qanda_service_name_op';
-  $handler->display->display_options['filters']['qanda_service_name']['expose']['label'] = 'Received from';
-  $handler->display->display_options['filters']['qanda_service_name']['expose']['operator'] = 'qanda_service_name_op';
-  $handler->display->display_options['filters']['qanda_service_name']['expose']['identifier'] = 'qanda_service_name';
+  /* Filter criterion: Question: Question client */
+  $handler->display->display_options['filters']['client_id']['id'] = 'client_id';
+  $handler->display->display_options['filters']['client_id']['table'] = 'vopros_question';
+  $handler->display->display_options['filters']['client_id']['field'] = 'client_id';
+  $handler->display->display_options['filters']['client_id']['group'] = 1;
+  $handler->display->display_options['filters']['client_id']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['client_id']['expose']['operator_id'] = 'client_id_op';
+  $handler->display->display_options['filters']['client_id']['expose']['label'] = 'Received from';
+  $handler->display->display_options['filters']['client_id']['expose']['operator'] = 'client_id_op';
+  $handler->display->display_options['filters']['client_id']['expose']['identifier'] = 'client_id';
+  $handler->display->display_options['filters']['client_id']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+  );
   /* Filter criterion: Question: User_answer_preference */
   $handler->display->display_options['filters']['user_answer_preference']['id'] = 'user_answer_preference';
   $handler->display->display_options['filters']['user_answer_preference']['table'] = 'vopros_question';
@@ -338,6 +355,7 @@ function vopros_question_views_default_views() {
     'telephone' => 'telephone',
     'sms' => 'sms',
   );
+  $handler->display->display_options['filters']['user_answer_preference']['group'] = 1;
   $handler->display->display_options['filters']['user_answer_preference']['exposed'] = TRUE;
   $handler->display->display_options['filters']['user_answer_preference']['expose']['operator_id'] = 'user_answer_preference_op';
   $handler->display->display_options['filters']['user_answer_preference']['expose']['label'] = 'Svartype';
@@ -432,7 +450,7 @@ function vopros_question_views_default_views() {
         ),
       ),
     ),
-    'qanda_service_name' => array(
+    'client_id' => array(
       'bef_format' => 'default',
       'more_options' => array(
         'bef_select_all_none' => FALSE,
@@ -1041,6 +1059,9 @@ function vopros_question_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['submit_button'] = 'Anvend';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Nulstil';
+  $handler->display->display_options['exposed_form']['options']['exposed_sorts_label'] = 'Sorter efter';
   $handler->display->display_options['exposed_form']['options']['autosubmit'] = TRUE;
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '50';
@@ -1049,7 +1070,6 @@ function vopros_question_views_default_views() {
     'question_id' => 'question_id',
     'question_title' => 'question_title',
     'subject_catagory' => 'subject_catagory',
-    'question_usage' => 'question_usage',
     'question_status' => 'question_status',
     'question_deadline_timestamp' => 'question_deadline_timestamp',
     'changed' => 'changed',
@@ -1072,13 +1092,6 @@ function vopros_question_views_default_views() {
       'empty_column' => 0,
     ),
     'subject_catagory' => array(
-      'align' => '',
-      'separator' => '',
-      'empty_column' => 0,
-    ),
-    'question_usage' => array(
-      'sortable' => 1,
-      'default_sort_order' => 'asc',
       'align' => '',
       'separator' => '',
       'empty_column' => 0,
@@ -1218,17 +1231,24 @@ function vopros_question_views_default_views() {
   $handler->display->display_options['filters']['vopros_editorial_tid']['expose']['label'] = 'Editorial';
   $handler->display->display_options['filters']['vopros_editorial_tid']['expose']['operator'] = 'vopros_editorial_tid_op';
   $handler->display->display_options['filters']['vopros_editorial_tid']['expose']['identifier'] = 'vopros_editorial_tid';
-  /* Filter criterion: Question: Qanda_service_name */
-  $handler->display->display_options['filters']['qanda_service_name']['id'] = 'qanda_service_name';
-  $handler->display->display_options['filters']['qanda_service_name']['table'] = 'vopros_question';
-  $handler->display->display_options['filters']['qanda_service_name']['field'] = 'qanda_service_name';
-  $handler->display->display_options['filters']['qanda_service_name']['relationship'] = 'question_id';
-  $handler->display->display_options['filters']['qanda_service_name']['group'] = 1;
-  $handler->display->display_options['filters']['qanda_service_name']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['qanda_service_name']['expose']['operator_id'] = 'qanda_service_name_op';
-  $handler->display->display_options['filters']['qanda_service_name']['expose']['label'] = 'Received from';
-  $handler->display->display_options['filters']['qanda_service_name']['expose']['operator'] = 'qanda_service_name_op';
-  $handler->display->display_options['filters']['qanda_service_name']['expose']['identifier'] = 'qanda_service_name';
+  /* Filter criterion: Question: Question client */
+  $handler->display->display_options['filters']['client_id']['id'] = 'client_id';
+  $handler->display->display_options['filters']['client_id']['table'] = 'vopros_question';
+  $handler->display->display_options['filters']['client_id']['field'] = 'client_id';
+  $handler->display->display_options['filters']['client_id']['relationship'] = 'question_id';
+  $handler->display->display_options['filters']['client_id']['group'] = 1;
+  $handler->display->display_options['filters']['client_id']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['client_id']['expose']['operator_id'] = 'client_id_op';
+  $handler->display->display_options['filters']['client_id']['expose']['label'] = 'Received from';
+  $handler->display->display_options['filters']['client_id']['expose']['operator'] = 'client_id_op';
+  $handler->display->display_options['filters']['client_id']['expose']['identifier'] = 'client_id';
+  $handler->display->display_options['filters']['client_id']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    3 => 0,
+    4 => 0,
+    5 => 0,
+  );
   /* Filter criterion: Question: Emner (subject_catagory) */
   $handler->display->display_options['filters']['subject_catagory_tid']['id'] = 'subject_catagory_tid';
   $handler->display->display_options['filters']['subject_catagory_tid']['table'] = 'field_data_subject_catagory';
@@ -1258,9 +1278,9 @@ function vopros_question_views_default_views() {
     t('Master'),
     t('Public question list'),
     t('more'),
-    t('Apply'),
-    t('Reset'),
-    t('Sort by'),
+    t('Anvend'),
+    t('Nulstil'),
+    t('Sorter efter'),
     t('Asc'),
     t('Desc'),
     t('Items per page'),
