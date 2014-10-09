@@ -35,6 +35,13 @@ class vopros_question_handler_field_vopros_question extends views_handler_field 
         $mapping = _vopros_question_user_answer_preference();
         return isset($mapping[$san]) ? $mapping[$san] : $san;
 
+      case 'client_id':
+        $client = vopros_question_client_load($san);
+        if ($client) {
+          return $client->label;
+        }
+        return check_plain(t('<uknown>'));
+
     }
     return $san;
   }
