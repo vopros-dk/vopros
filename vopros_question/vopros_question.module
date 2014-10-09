@@ -126,11 +126,6 @@ function vopros_question_field_extra_fields() {
         'description' => t('The usage of the question'),
         'weight' => -3,
       ),
-      'qanda_service_name' => array(
-        'label' => t('Q and A service'),
-        'description' => t('The service that has sent the question'),
-        'weight' => -2,
-      ),
       'question_note' => array(
         'label' => t('Question note'),
         'description' => t('Internal note regarding the question'),
@@ -181,11 +176,6 @@ function vopros_question_field_extra_fields() {
       'user_answer_preference' => array(
         'label' => t('Prefered answer method'),
         'weight' => -3,
-      ),
-      'qanda_service_name' => array(
-        'label' => t('Q and A service'),
-        'description' => t('The service that has sent the question'),
-        'weight' => -2,
       ),
       'question_note' => array(
         'label' => t('Question note'),
@@ -889,7 +879,6 @@ function vopros_question_views_data_alter(&$data) {
 
   // Add custom handlers for select fields.
   $data['vopros_question']['user_age']['field']['handler'] =
-  $data['vopros_question']['qanda_service_name']['field']['handler'] =
   $data['vopros_question']['question_status']['field']['handler'] =
   $data['vopros_question']['user_answer_preference']['field']['handler'] =
   $data['vopros_question']['client_id']['field']['handler'] =
@@ -901,8 +890,6 @@ function vopros_question_views_data_alter(&$data) {
 
   $data['vopros_question']['question_status']['argument']['handler'] =
   $data['vopros_question']['question_status']['filter']['handler'] = 'vopros_question_status_views_handler_filter_in_operator';
-
-  $data['vopros_question']['qanda_service_name']['filter']['handler'] = 'vopros_question_qanda_service_name_views_handler_filter_in_operator';
 
   $data['vopros_question']['user_answer_preference']['filter']['handler'] = 'vopros_question_user_answer_preference_views_handler_filter';
 
@@ -1077,11 +1064,6 @@ function vopros_question_build_content($question, $view_mode = 'administrator', 
     '#question' => $question,
     '#view_mode' => $view_mode,
   );
-  $question->content['qanda_service_name'] = array(
-    '#theme' => 'vopros_question_qanda_service',
-    '#question' => $question,
-    '#view_mode' => $view_mode,
-  );
   $question->content['question_note'] = array(
     '#theme' => 'vopros_question_note',
     '#question' => $question,
@@ -1237,21 +1219,6 @@ function _vopros_question_status_reason() {
 }
 
 /**
- * Get the possible Q and A service name as a option array.
- */
-function _vopros_question_qanda_serice_options() {
-  $options = array();
-  foreach (explode("\n", variable_get('vopros_question_qanda_service_options', '')) as $option_text) {
-    $option = explode('|', $option_text);
-    if (count($option) == 2) {
-      $options[$option[0]] = $option[1];
-    }
-  }
-  drupal_alter('vopros_question_qanda_serice_options', $options);
-  return $options;
-}
-
-/**
  * Get the possible clients as an options array.
  */
 function _vopros_question_client_options() {
@@ -1400,11 +1367,6 @@ function vopros_question_theme() {
       'path' => $path,
     ),
     'vopros_question_log' => array(
-      'render element' => 'question',
-      'file' => 'vopros_question.theme.inc',
-      'path' => $path,
-    ),
-    'vopros_question_qanda_service' => array(
       'render element' => 'question',
       'file' => 'vopros_question.theme.inc',
       'path' => $path,

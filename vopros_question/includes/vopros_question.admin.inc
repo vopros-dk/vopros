@@ -9,13 +9,6 @@
  * Question settings form
  */
 function vopros_question_settings_form($form, &$form_state) {
-  $form['vopros_question_qanda_service_options'] = array(
-    '#type' => 'textarea',
-    '#title' => t('Q and A service options'),
-    '#description' => t('Setup the possible Q and A service options used in question list filters. Enter options as key|name and one per new line.'),
-    '#default_value' => variable_get('vopros_question_qanda_service_options', ''),
-  );
-
   $form['vopros_question_usage_default'] = array(
     '#type' => 'select',
     '#title' => t('Default usage value'),
@@ -173,24 +166,6 @@ function vopros_question_question_form($form, &$form_state, $question, $add_ques
     '#options' => _vopros_question_usage(),
     '#default_value' => !empty($question->question_usage) ? $question->question_usage : variable_get('vopros_question_usage_default', ''),
   );
-
-  $qanda = isset($question->qanda_service_name) ? $question->qanda_service_name : '';
-  $qanda_options = _vopros_question_qanda_serice_options();
-  if ($qanda && !isset($qanda_options[$qanda])) {
-    $form['form']['qanda_service_name'] = array(
-      '#type' => 'textfield',
-      '#title' => t('Q and A service'),
-      '#default_value' => $qanda,
-    );
-  }
-  else {
-    $form['form']['qanda_service_name'] = array(
-      '#type' => 'select',
-      '#title' => t('Q and A service'),
-      '#options' => _vopros_question_qanda_serice_options(),
-      '#default_value' => $qanda,
-    );
-  }
 
   $options = _vopros_question_client_options();
   // If the current client_id isn't part of the options, add it in to allow for

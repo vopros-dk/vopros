@@ -801,3 +801,10 @@ function vopros_question_update_7007() {
     }
   }
 }
+
+/**
+ * Remove the vopros_question_qanda_service_options variable.
+ */
+function vopros_question_update_7008() {
+  variable_del('vopros_question_qanda_service_options');
+}

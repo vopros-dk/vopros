@@ -137,17 +137,6 @@ function theme_vopros_question_user_answer_preference($variables) {
   return $output;
 }
 
-function theme_vopros_question_qanda_service($variables) {
-  $qanda_mapping = _vopros_question_qanda_serice_options();
-  $qanda = $variables['question']['#question']->qanda_service_name;
-  $output = '';
-  $output .= '<div class="question-qanda-service vopros-question-extra clearfix">';
-  $output .= '<span class="label">' . t('Q and A service:') .  '</span>';
-  $output .= '<span class="value">' . (isset($qanda_mapping[$qanda]) ? $qanda_mapping[$qanda] : $qanda) .  '</span>';
-  $output .= '</div>';
-  return $output;
-}
-
 /**
  * Theme function for question user data
  */

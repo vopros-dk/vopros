@@ -27,10 +27,6 @@ class vopros_question_handler_field_vopros_question extends views_handler_field 
         $mapping = _vopros_question_user_age();
         return isset($mapping[$san]) ? $mapping[$san] : $mapping['no inform'];
 
-      case 'qanda_service_name':
-        $mapping = _vopros_question_qanda_serice_options();
-        return isset($mapping[$san]) ? $mapping[$san] : $san;
-
       case 'user_answer_preference':
         $mapping = _vopros_question_user_answer_preference();
         return isset($mapping[$san]) ? $mapping[$san] : $san;

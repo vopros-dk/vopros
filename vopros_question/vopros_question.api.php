@@ -27,13 +27,6 @@ function hook_vopros_question_status_reasons_alter(&$reasons) {
 }
 
 /**
- * Alter Quanda service options.
- */
-function hook_vopros_question_qanda_serice_options_alter(&$options) {
-
-}
-
-/**
  * Return question channels.
  *
  * @return array
