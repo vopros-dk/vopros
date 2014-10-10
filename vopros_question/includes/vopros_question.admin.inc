@@ -182,7 +182,7 @@ function vopros_question_question_form($form, &$form_state, $question, $add_ques
   );
 
   // Only set channel for new questions.
-  if ($question->is_new) {
+  if (isset($question->is_new)) {
     $form['form']['channel'] = array(
       '#type' => 'select',
       '#title' => t('Channel'),
