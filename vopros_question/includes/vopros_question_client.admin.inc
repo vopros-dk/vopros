@@ -255,12 +255,12 @@ function vopros_question_client_form($form, &$form_state, $client, $op = 'edit')
 
   field_attach_form('vopros_question_client', $client, $form, $form_state);
 
-  $form['form']['buttons'] = array(
+  $form['buttons'] = array(
     '#type' => 'actions',
     '#weight' => 100,
   );
 
-  $form['form']['buttons']['save'] = array(
+  $form['buttons']['save'] = array(
     '#type' => 'submit',
     '#value' => t('Save'),
     '#attributes' => array('class' => array('primary-action')),
