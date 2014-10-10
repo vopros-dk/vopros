@@ -142,20 +142,30 @@ function vopros_question_field_extra_fields() {
         'description' => t('The usage of the question'),
         'weight' => -3,
       ),
+      'client_id' => array(
+        'label' => t('Client'),
+        'description' => t('The client that submitted the question'),
+        'weight' => -2,
+      ),
+      'channel' => array(
+        'label' => t('Channel'),
+        'description' => t('The the channel that the client used'),
+        'weight' => -1,
+      ),
       'question_note' => array(
         'label' => t('Question note'),
         'description' => t('Internal note regarding the question'),
-        'weight' => -1,
+        'weight' => 0,
       ),
       'ask' => array(
         'label' => t('User data'),
         'description' => t('Data about the user asking the question'),
-        'weight' => -0,
+        'weight' => 1,
       ),
       'log' => array(
         'label' => t('Internal log'),
         'description' => t('Internal log about the question itself.'),
-        'weight' => 1,
+        'weight' => 2,
       ),
     ),
     'display' => array(
@@ -184,29 +194,39 @@ function vopros_question_field_extra_fields() {
         'description' => t('The deadline for the question'),
         'weight' => -5,
       ),
+      'client' => array(
+        'label' => t('Client'),
+        'description' => t('The client that submitted the question'),
+        'weight' => -4,
+      ),
+      'channel' => array(
+        'label' => t('Channel'),
+        'description' => t('The the channel that the client used'),
+        'weight' => -3,
+      ),
       'question_usage' => array(
         'label' => t('Usage'),
         'description' => t('The usage of the question'),
-        'weight' => -4,
+        'weight' => -2,
       ),
       'user_answer_preference' => array(
         'label' => t('Prefered answer method'),
-        'weight' => -3,
+        'weight' => -1,
       ),
       'question_note' => array(
         'label' => t('Question note'),
         'description' => t('Internal note regarding the question'),
-        'weight' => -1,
+        'weight' => 0,
       ),
       'ask' => array(
         'label' => t('User data'),
         'description' => t('Data about the user asking the question'),
-        'weight' => 0,
+        'weight' => 1,
       ),
       'log' => array(
         'label' => t('Internal log'),
         'description' => t('Internal log about the question itself.'),
-        'weight' => 1,
+        'weight' => 2,
       ),
       'buttons' => array(
         'label' => t('Buttons'),
@@ -1036,6 +1056,17 @@ function vopros_question_build_content($question, $view_mode = 'administrator', 
     '#question' => $question,
     '#view_mode' => $view_mode,
   );
+  $question->content['client'] = array(
+    '#theme' => 'vopros_client',
+    '#question' => $question,
+    '#client' => vopros_question_client_load($question->client_id),
+    '#view_mode' => $view_mode,
+  );
+  $question->content['channel'] = array(
+    '#theme' => 'vopros_channel',
+    '#question' => $question,
+    '#view_mode' => $view_mode,
+  );
   $question->content['user_answer_preference'] = array(
     '#theme' => 'vopros_question_user_answer_preference',
     '#question' => $question,
@@ -1324,6 +1355,16 @@ function vopros_question_theme() {
       'path' => $path,
     ),
     'vopros_question_usage' => array(
+      'render element' => 'question',
+      'file' => 'vopros_question.theme.inc',
+      'path' => $path,
+    ),
+    'vopros_client' => array(
+      'render element' => 'question',
+      'file' => 'vopros_question.theme.inc',
+      'path' => $path,
+    ),
+    'vopros_channel' => array(
       'render element' => 'question',
       'file' => 'vopros_question.theme.inc',
       'path' => $path,

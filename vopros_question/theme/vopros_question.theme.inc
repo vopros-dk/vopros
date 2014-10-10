@@ -102,6 +102,54 @@ function theme_vopros_question_usage($variables) {
   return $output;
 }
 
+function theme_vopros_client($variables) {
+  $question = $variables['question']['#question'];
+  $client = $variables['question']['#client'];
+  $output = '';
+  if ($client) {
+    $output = '<div class="question-client vopros-question-extra">';
+    $output .= '<span class="label">' . t('Client:') .  '</span>';
+    $output .= '<span class="value">' . ($client->label) . '</span>';
+    $output .= '</div>';
+  }
+  return $output;
+}
+
+function theme_vopros_channel($variables) {
+  $question = $variables['question']['#question'];
+  $output = '';
+  $channel = vopros_question_channel($question->channel);
+
+  $output .= '<div class="question-channel vopros-question-extra">';
+  $output .= '<span class="label">' . t('Channel:') .  '</span>';
+  $output .= '<span class="value">' . (!empty($channel['name']) ? $channel['name'] : $question->channel) . '</span>';
+  $output .= '</div>';
+
+  if (!empty($question->channel_id)) {
+    $output .= '<div class="question-channel-id vopros-question-extra">';
+    $output .= '<span class="label">' . t('Channel ID:') .  '</span>';
+    $output .= '<span class="value">' . ($question->channel_id) . '</span>';
+    $output .= '</div>';
+  }
+
+  if (!empty($question->channel_data)) {
+    if (isset($channel['data render']) && function_exists($channel['data render'])) {
+      $function = $channel['data render'];
+      $rendered = $function($question->channel_data);
+    }
+    else {
+      // Fall back to var_export.
+      $rendered = var_export($question->channel_data, TRUE);
+    }
+    $output .= '<div class="question-channel-data vopros-question-extra">';
+    $output .= '<span class="label">' . t('Channel data:') .  '</span>';
+    $output .= '<span class="value">' . $rendered . '</span>';
+    $output .= '</div>';
+  }
+
+  return $output;
+}
+
 function theme_vopros_question_created($variables) {
   $question = $variables['question']['#question'];
   $output = '<div class="question-created vopros-question-extra">';
