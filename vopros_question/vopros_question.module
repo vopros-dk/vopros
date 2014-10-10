@@ -712,9 +712,10 @@ function vopros_question_client_load_multiple($client_ids = FALSE, $conditions =
  * Loads a client by agency.
  */
 function vopros_question_client_load_by_agency($agency, $reset = FALSE) {
-  $conditions = array();
-  $conditions['agency'] = $agency;
-  $clients = vopros_question_client_load_multiple(array(), $conditions, $reset);
+  $conditions = array(
+    'agency' => $agency,
+  );
+  $clients = vopros_question_client_load_multiple(FALSE, $conditions, $reset);
   return $clients ? reset($clients) : FALSE;
 }
 
