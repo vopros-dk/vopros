@@ -280,7 +280,7 @@ function vopros_question_client_form_validate(&$form, &$form_state) {
     ->fields('vqc', array('client_id'))
     ->condition('agency', $form_state['values']['agency']);
 
-  if (!$client->is_new) {
+  if (!isset($client->is_new)) {
     $query->condition('client_id', $client->client_id, '<>');
   }
   $clients = $query->execute()
