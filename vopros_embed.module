@@ -109,11 +109,30 @@ function vopros_embed_vopros_question_channels() {
   return array(
     'webform' => array(
       'name' => t('Webform'),
+      'data render' => 'vopros_embed_channel_data_render',
     ),
     'chat' => array(
       'name' => t('Chat'),
+      'data render' => 'vopros_embed_channel_data_render',
     ),
   );
+}
+
+/**
+ * Channel data render callback.
+ */
+function vopros_embed_channel_data_render($data) {
+  $output = '';
+  if ($data['from_url']) {
+    $url = $data['from_url'];
+    $output .= '<div>From page: ' . l($url, $url, array('external' => TRUE)) . '</div>';
+  }
+  if ($data['site_email']) {
+    $mail = $data['site_email'];
+    $output .= '<div>Site email: ' . l($mail, 'mailto:' . $mail, array('external' => TRUE)) . '</div>';
+  }
+
+  return $output;
 }
 
 /**
