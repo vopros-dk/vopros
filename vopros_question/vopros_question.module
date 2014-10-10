@@ -92,7 +92,15 @@ function vopros_question_entity_info() {
         'custom settings' => FALSE,
       ),
     ),
+    // We need to define module so VoprosClientUIController can find the include
+    // file, but when we do that entity_entity_property_info() checks the module
+    // for a hook_entity_property_info() and assuems that it will supply the
+    // entity properties. As we only implement hook_entity_property_info() to
+    // adjust a few properties to the vopros_question entity, this results in no
+    // properties for vopros_question_client. So we set the 'metadata controller
+    // class' explicitly to the default.
     'module' => 'vopros_question',
+    'metadata controller class' => 'EntityDefaultMetadataController',
     'access callback' => 'vopros_question_client_access',
     'views controller class' => 'EntityDefaultViewsController',
     // Enable the entity API's admin UI.
