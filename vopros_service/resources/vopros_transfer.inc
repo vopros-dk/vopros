@@ -87,6 +87,8 @@ function _vopros_service_resource_retrieve($type, $data) {
       $question->user_library = $data['user_library'];
     }
     $local_answer_preference = _vopros_question_user_answer_preference();
+    // This won't do ever.
+    unset($local_answer_preference['vopros_service']);
     if (!empty($data['user_answer_preference'])) {
       if (!isset($local_answer_preference[$data['user_answer_preference']])) {
         services_error('Invalid user_answer_preference.', 422);
