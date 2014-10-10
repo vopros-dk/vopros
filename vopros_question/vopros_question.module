@@ -74,6 +74,7 @@ function vopros_question_entity_info() {
     'entity keys' => array(
       'id' => 'client_id',
       'revision' => 'revision_id',
+      'label' => 'label',
     ),
     'bundles' => array(
       'vopros_question_client' => array(
@@ -91,8 +92,15 @@ function vopros_question_entity_info() {
         'custom settings' => FALSE,
       ),
     ),
+    'module' => 'vopros_question',
     'access callback' => 'vopros_question_client_access',
     'views controller class' => 'EntityDefaultViewsController',
+    // Enable the entity API's admin UI.
+    'admin ui' => array(
+      'path' => 'admin/vopros/clients',
+      'file' => 'includes/vopros_question_client.admin.inc',
+      'controller class' => 'VoprosClientUIController',
+    ),
   );
 
   return $return;
@@ -216,15 +224,6 @@ function vopros_question_uri($question) {
 }
 
 /**
- * Entity uri callback.
- */
-function vopros_question_client_uri($client) {
-  return array(
-    'path' => 'admin/vopros/clients/' . $client->client_id,
-  );
-}
-
-/**
  * Implements hook_enable().
  */
 function vopros_question_enable() {
@@ -274,27 +273,6 @@ function vopros_question_menu() {
     'access arguments' => array('administer questions'),
     'file' => 'includes/vopros_question_client.admin.inc',
     'type' => MENU_LOCAL_TASK,
-  );
-
-  // Client editing pages.
-  $items['admin/vopros/clients/add'] = array(
-    'title' => 'Add a client',
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('vopros_question_client_form', NULL),
-    'access callback' => 'vopros_question_client_access',
-    'access arguments' => array('create'),
-    'file' => 'includes/vopros_question_client.admin.inc',
-  );
-
-  $items['admin/vopros/clients/%vopros_question_client/edit'] = array(
-    'title' => 'Edit client',
-    'page callback' => 'drupal_get_form',
-    'page arguments' => array('vopros_question_client_form', 3),
-    'access callback' => 'vopros_question_client_access',
-    'access arguments' => array('update'),
-    'file' => 'includes/vopros_question_client.admin.inc',
-    'type' => MENU_LOCAL_TASK,
-    'context' => MENU_CONTEXT_PAGE | MENU_CONTEXT_INLINE,
   );
 
   // Question settings page.
@@ -452,16 +430,6 @@ function vopros_question_menu_local_tasks_alter(&$data, $router_item, $root_path
       );
     }
     $item = menu_get_item('admin/vopros/questions/add-with-answer');
-    if ($item['access']) {
-      $data['actions']['output'][] = array(
-        '#theme' => 'menu_local_action',
-        '#link' => $item,
-      );
-    }
-  }
-
-  if ($root_path == 'admin/vopros/clients') {
-    $item = menu_get_item('admin/vopros/clients/add');
     if ($item['access']) {
       $data['actions']['output'][] = array(
         '#theme' => 'menu_local_action',

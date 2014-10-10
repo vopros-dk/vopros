@@ -226,12 +226,11 @@ function vopros_question_client_migrate_batch_operation($per_run, $number, &$con
 /**
  * Form to edit or create a client.
  */
-function vopros_question_client_form($form, &$form_state, $client) {
-  if (empty($client)) {
-    $client = entity_create('vopros_question_client', array());
+function vopros_question_client_form($form, &$form_state, $client, $op = 'edit') {
+  if ($op == 'clone') {
+    $client->agency .= '_new';
+    $client->label .= ' (cloned)';
   }
-
-  field_attach_form('vopros_question_client', $client, $form, $form_state);
 
   $form['client'] = array(
     '#type' => 'value',
@@ -254,7 +253,10 @@ function vopros_question_client_form($form, &$form_state, $client) {
     '#description' => t('Human readable label for this client.'),
   );
 
+  field_attach_form('vopros_question_client', $client, $form, $form_state);
+
   $form['form']['buttons'] = array(
+    '#type' => 'actions',
     '#weight' => 100,
   );
 
