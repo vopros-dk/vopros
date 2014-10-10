@@ -1235,7 +1235,7 @@ function vopros_question_channels() {
  * Get a channel definition.
  */
 function vopros_question_channel($name) {
-  $channels = $name;
+  $channels = vopros_question_channels();
   return isset($channels[$name]) ? $channels[$name] : FALSE;
 }
 
