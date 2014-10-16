@@ -42,20 +42,14 @@ function vopros_service_forward_form($form, &$form_state, $question) {
     '#view_mode' => 'full',
   );
 
-  $options = array(
-    'help' => t('Ask for help'),
-  );
-  if ($question->user_answer_preference == 'sms') {
-    $options['turn_over_sms'] = t('Turn over the question');
-  }
-  else {
-    $options['turn_over'] = t('Turn over the question');
-  }
   // @todo Really, we should filter out types without any services.
   $form['form']['send_type'] = array(
     '#type' => 'radios',
     '#title' => t('Way of sending'),
-    '#options' => $options,
+    '#options' => array(
+      'help' => t('Ask for help'),
+      'turn_over' => t('Turn over the question'),
+    ),
     '#required' => TRUE,
     '#ajax' => array(
       'callback' => 'vopros_service_forward_form_ajax',
