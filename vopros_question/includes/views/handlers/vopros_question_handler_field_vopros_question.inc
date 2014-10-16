@@ -36,7 +36,7 @@ class vopros_question_handler_field_vopros_question extends views_handler_field 
         if ($client) {
           return $client->label;
         }
-        return check_plain(t('<uknown>'));
+        return check_plain(t('<unknown>'));
 
     }
     return $san;
