@@ -147,6 +147,12 @@ function vopros_question_views_default_views() {
   $handler->display->display_options['fields']['client_id']['table'] = 'vopros_question';
   $handler->display->display_options['fields']['client_id']['field'] = 'client_id';
   $handler->display->display_options['fields']['client_id']['label'] = 'Received from';
+  /* Field: Question: Channel */
+  $handler->display->display_options['fields']['channel']['id'] = 'channel';
+  $handler->display->display_options['fields']['channel']['table'] = 'vopros_question';
+  $handler->display->display_options['fields']['channel']['field'] = 'channel';
+  $handler->display->display_options['fields']['channel']['label'] = 'Kanal';
+  $handler->display->display_options['fields']['channel']['element_label_colon'] = FALSE;
   /* Field: Question: Question_usage */
   $handler->display->display_options['fields']['question_usage']['id'] = 'question_usage';
   $handler->display->display_options['fields']['question_usage']['table'] = 'vopros_question';
@@ -414,6 +420,7 @@ function vopros_question_views_default_views() {
     t('Question_status_reason'),
     t('Title'),
     t('Received from'),
+    t('Kanal'),
     t('Usage'),
     t('Status'),
     t('Deadline'),
