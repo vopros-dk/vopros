@@ -20,7 +20,7 @@ class VoprosQuestionEntityController extends VoprosAPIEntityController {
       // Set the deadline to x hours from creation.
       $question->question_deadline_timestamp = 3600 * $question->question_deadline + $created;
     }
-    parent::save($question, $transaction);
+    return parent::save($question, $transaction);
   }
 
 

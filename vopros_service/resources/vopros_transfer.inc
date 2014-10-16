@@ -50,11 +50,6 @@ function _vopros_service_resource_retrieve($type, $data) {
   $question->client_id = $service->client_id;
   $question->channel = 'vopros_service';
 
-  // Handle message from upstream.
-  if (!empty($data['message'])) {
-    $question->question_content .= "\n\n-- " . t('Message from forwarding service') . "--\n\n" . $data['message'];
-  }
-
   if ($type == 'help') {
     $question->user_name = t('Request for assistance from @service', array('@service' => vopros_service_label($service)));
     // Set answer preference so messages will be returned to the other Vopros.
@@ -124,9 +119,23 @@ function _vopros_service_resource_retrieve($type, $data) {
   $question->vopros_service = $service;
 
   // First save question.
-  if (entity_save('vopros_question', $question) === FALSE) {
+  if (!$question->save()) {
     services_error('Error while saving question.', 500);
   }
+
+  // Handle message from upstream.
+  if (!empty($data['message'])) {
+    $message = t('Message from forwarding service') . ":\n\n" . $data['message'];
+
+    // Save as an log entry.
+    $values = array(
+      'question_id' => $question->question_id,
+      'log_content' => $message,
+    );
+    $log = vopros_log_new($values);
+    vopros_log_save($log);
+  }
+
   // Then note that it is an external question.
   db_insert('vopros_service_question')
     ->fields(array(
