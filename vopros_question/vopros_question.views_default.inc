@@ -764,6 +764,10 @@ function vopros_question_views_default_views() {
   $handler->display->display_options['fields']['question_title']['alter']['make_link'] = TRUE;
   $handler->display->display_options['fields']['question_title']['alter']['path'] = 'admin/vopros/questions/[question_id]';
   $handler->display->display_options['fields']['question_title']['hide_alter_empty'] = FALSE;
+  /* Field: Question: Channel */
+  $handler->display->display_options['fields']['channel']['id'] = 'channel';
+  $handler->display->display_options['fields']['channel']['table'] = 'vopros_question';
+  $handler->display->display_options['fields']['channel']['field'] = 'channel';
   /* Field: Question: Emner */
   $handler->display->display_options['fields']['subject_catagory']['id'] = 'subject_catagory';
   $handler->display->display_options['fields']['subject_catagory']['table'] = 'field_data_subject_catagory';
@@ -933,6 +937,7 @@ function vopros_question_views_default_views() {
     t('Sorter efter'),
     t('Vælg et filter og klik på Anvend for at se resultater'),
     t('user'),
+    t('Channel'),
     t('Svartype'),
     t('Asked for help'),
   );
