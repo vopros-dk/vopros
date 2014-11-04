@@ -122,17 +122,17 @@ function vopros_embed_vopros_question_channels() {
  * Channel data render callback.
  */
 function vopros_embed_channel_data_render($data) {
-  $output = '';
+  $output = array();
   if ($data['from_url']) {
     $url = $data['from_url'];
-    $output .= '<div>From page: ' . l($url, $url, array('external' => TRUE)) . '</div>';
+    $output[] = t('From page: ') . l($url, $url, array('external' => TRUE));
   }
   if ($data['site_email']) {
     $mail = $data['site_email'];
-    $output .= '<div>Site email: ' . l($mail, 'mailto:' . $mail, array('external' => TRUE)) . '</div>';
+    $output[] = t('Site email: ') . l($mail, 'mailto:' . $mail, array('external' => TRUE));
   }
 
-  return $output;
+  return implode('<br />', $output);
 }
 
 /**
