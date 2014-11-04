@@ -267,25 +267,6 @@ function vopros_embed_question_submit($form, &$form_state) {
   // Save question.
   $question->save();
 
-  if (module_exists('vopros_log')) {
-    if ($form_state['values']['from_url']) {
-      $log[] = "Sendt fra " . $form_state['values']['from_url'];
-    }
-
-    if ($form_state['values']['agency_mail']) {
-      $log[] = "Videresend til " . $form_state['values']['agency_mail'] . " hvis dette er et spørgsmål der bedre kan besvares lokalt.";
-    }
-    // Save log entry.
-    $values = array(
-      'question_id' => $question->question_id,
-      // 'answer_id' => NULL,
-      'log_content' => implode("\n", $log),
-      // 'uid' => NULL,
-    );
-    $log = vopros_log_new($values);
-    vopros_log_save($log);
-  }
-
   // If the form was not shown from a popup, add the originating URL to the
   // path, so we can add a return link.
   if (!$form_state['values']['popup']) {
