@@ -143,7 +143,7 @@ function theme_vopros_channel($variables) {
     }
     $output .= '<div class="question-channel-data vopros-question-extra">';
     $output .= '<span class="label">' . t('Channel data:') .  '</span>';
-    $output .= '<span class="value">' . $rendered . '</span>';
+    $output .= '<div class="value">' . $rendered . '</div>';
     $output .= '</div>';
   }
 
