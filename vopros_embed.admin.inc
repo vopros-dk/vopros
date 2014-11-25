@@ -77,7 +77,9 @@ function vopros_embed_setting_form($form, &$form_state) {
 
   // The Drupal.formatString JS function doesn't support replacing each
   // placeholder more than once, so use different placeholders.
-  $code = '<script src="!script_base/question_modal.js"></script>
+  // Using async and defer is the currently recommend practice,
+  // @see https://www.igvita.com/2014/05/20/script-injected-async-scripts-considered-harmful/
+  $code = '<script src="!script_base/question_modal.js" async defer></script>
 <a href="!form_base/ask-question?!params">Ask a question</a>
 ';
 
