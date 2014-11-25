@@ -49,6 +49,10 @@
     if (popup) {
       links.magnificPopup({
         type: 'iframe',
+        closeOnContentClick: false,
+        closeOnBgClick: false,
+        showCloseBtn: true,
+        enableEscapeKey: false
       });
     }
   });
