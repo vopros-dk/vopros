@@ -10,6 +10,18 @@
  * Settings form.
  */
 function vopros_embed_setting_form($form, &$form_state) {
+  $form['appearance'] = array(
+    '#type' => 'fieldset',
+    '#title' => t('Appearance'),
+  );
+
+  $form['appearance']['vopros_embed_title'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Title'),
+    '#default_value' => variable_get('vopros_embed_title', 'Ask @site_name'),
+    '#description' => t('Main title of the page. Use <em>@site_name</em> to insert the site title.'),
+  );
+
   $form['embed'] = array(
     '#type' => 'fieldset',
     '#title' => t('Embed code'),

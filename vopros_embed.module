@@ -55,7 +55,7 @@ function vopros_embed_menu() {
  * Menu title callback.
  */
 function _vopros_embed_menu_title() {
-  return t('Ask @site_name', array('@site_name' => variable_get('site_name', 'Drupal')));
+  return format_string(variable_get('vopros_embed_title', 'Ask @site_name'), array('@site_name' => variable_get('site_name', 'Drupal')));
 }
 
 /**
