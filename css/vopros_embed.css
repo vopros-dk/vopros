@@ -19,39 +19,6 @@
 }
 
 /**
- * Title.
- */
-#content .header {
-  background: #555;
-  margin: -1rem;
-  margin-bottom: 0.5rem;
-  padding: 0.5rem;
-}
-
-#content .header:after {
-  /* Clearfix. */
-  content: " ";
-  display: block;
-  height: 0;
-  clear: both;
-  overflow: hidden;
-  visibility: hidden;
-}
-
-#content .header #page-title {
-  color: #ddd;
-  font-size: 1.3rem;
-  float: left;
-  margin: 0;
-}
-
-#content .header img {
-  float: right;
-  max-width: 200px;
-  max-height: 150px;
-}
-
-/**
  * Form layout.
  */
 .answer_type {
@@ -67,10 +34,6 @@
 /**
  * General styling.
  */
-#content .form-item label {
-  color: #555;
-}
-
 #embedded-page-wrapper #footer {
   width: auto;
   min-width: 0;
@@ -99,6 +62,9 @@ textarea {
   border-bottom-right-radius: 0;
 }
 
+/**
+ * Slightly less aggressive red.
+ */
 .form-required {
   color: #D3321E;
 }
