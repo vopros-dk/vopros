@@ -26,17 +26,6 @@
     });
 
     /**
-     * Add a "required" sign to the user email field.
-     *
-     * Because we use the same form and the email isn't required when
-     * you want an answer by SMS/text, we then use a custom validation
-     * handler to check this but we're missing out on the "required"
-     * icon. This is why we manually append it.
-     */
-    $('#edit-user-email').prev('label').append('<span class="form-required">*</span>');
-    $('#edit-user-mobile-phone').prev('label').append('<span class="form-required">*</span>');
-
-    /**
      * Title margin!
      *
      * Set the margin of the title after loading all images (the logo)

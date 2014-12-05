@@ -97,6 +97,12 @@ EOF;
           array('value' => 'chat'),
         ),
       ),
+      'required' => array(
+        'input[name=user_answer_preference]' => array(
+          array('value' => 'mail'),
+          array('value' => 'chat'),
+        ),
+      ),
     ),
     '#weight' => -40,
   );
@@ -107,6 +113,9 @@ EOF;
     '#default_value' => isset($_GET['phone']) ? check_plain($_GET['phone']) : '',
     '#states' => array(
       'visible' => array(
+        'input[name=user_answer_preference]' => array('value' => 'sms'),
+      ),
+      'required' => array(
         'input[name=user_answer_preference]' => array('value' => 'sms'),
       ),
     ),
