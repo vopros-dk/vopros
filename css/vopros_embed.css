@@ -80,11 +80,11 @@ textarea {
 /**
  * Answer type.
  */
-#edit-user-answer-preference .form-item input {
+.form-item-user-answer-preference .form-item input {
   display: none;
 }
 
-#edit-user-answer-preference .form-item label {
+.form-item-user-answer-preference .form-item label {
   text-align: center;
   font-weight: bold;
   margin: 0;
@@ -94,12 +94,12 @@ textarea {
   cursor: pointer;
 }
 
-#edit-user-answer-preference .active_answer_type label {
+.form-item-user-answer-preference .active_answer_type label {
   background: #555;
   color: #ddd;
 }
 
-#edit-user-answer-preference .disabled_answer_type label {
+.form-item-user-answer-preference .disabled_answer_type label {
   color: #b6b6b6;
   background: #f3f3f3;
   cursor: default;
