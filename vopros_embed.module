@@ -195,14 +195,6 @@ function vopros_embed_render_page($page) {
   drupal_add_css(drupal_get_path('module', 'vopros_embed') . '/css/vopros_embed.css');
   drupal_add_js(drupal_get_path('module', 'vopros_embed') . '/js/vopros_embed_styling.js');
 
-  // Include custom colors.
-  drupal_add_css(
-    '#content .header #page-title { color: ' . variable_get('vopros_embed_header_title_color') . ' }
-     #content .header { background: ' . variable_get('vopros_embed_header_background_color') . ' }', array(
-      'type' => 'inline',
-    )
-  );
-
   return drupal_render($page);
 }
 

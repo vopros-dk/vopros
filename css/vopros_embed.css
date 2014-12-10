@@ -22,7 +22,7 @@
  * Title.
  */
 #content .header {
-  /*background: #555;*/
+  background: #555;
   margin: -1rem;
   margin-bottom: 0.5rem;
   padding: 0.5rem;
@@ -39,7 +39,7 @@
 }
 
 #content .header #page-title {
-  /*color: #ddd;*/
+  color: #ddd;
   font-size: 1.3rem;
   float: left;
   margin: 0;
