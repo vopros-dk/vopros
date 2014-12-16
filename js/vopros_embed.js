@@ -11,12 +11,9 @@
   var settings = !settings;
 
   // Add stylesheet for magnificPopup.
-  $('head').append('<link rel="stylesheet" href="' + settings.mag_style + '" type="text/css" />');
-  // Add our own CSS.
-  $('head').append('<link rel="stylesheet" href="' + settings.vopros_style + '" type="text/css" />');
-  // And for the tab.
-  $('head').append('<link rel="stylesheet" href="' + settings.vopros_tab_style + '" type="text/css" />');
-
+  $.each(settings.styles, function(index, style) {
+    $('head').append('<link rel="stylesheet" href="' + style + '" type="text/css" />');
+  });
 
   $(document).ready(function() {
     // Set up onmessage handler to close popup.
