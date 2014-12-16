@@ -37,9 +37,11 @@
     });
 
     // Find any settings.
-    var query = {};
+    var query = settings.query;
     if (typeof window.ask_vopros != "undefined") {
-      query = window.ask_vopros;
+      $.each(window.ask_vopros, function (key, value) {
+        query[key] = value;
+      });
     }
 
     var popup = false;

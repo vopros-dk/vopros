@@ -8,6 +8,7 @@
   var updateCode = function () {
     var settings = Drupal.settings.voprosEmbed;
 
+    var tab = $('#edit-tab').is(':checked');
     var query = [];
 
     // Add agency.
@@ -28,7 +29,7 @@
       '!form_base': settings.base,
       '!params': query.join('&')
     };
-    var code = Drupal.formatString(settings.template, parameters);
+    var code = Drupal.formatString(tab ? settings.tab_template : settings.template, parameters);
     $('#edit-code').val(code);
   };
 

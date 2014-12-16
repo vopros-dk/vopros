@@ -357,6 +357,9 @@ function vopros_embed_question_modal_js() {
     $tab_styles = array(url($base . '/css/vopros_embed_tab.css', array('absolute' => TRUE)));
   }
 
+  // Prepare query for link.
+  $query = array_intersect_key($_GET, array_flip(array('agency_id', 'url', 'agency_mail', 'popup', 'answer_preference', 'destination')));
+
   $styles = array_merge($styles, $tab_styles);
   $tab_title = format_string(variable_get('vopros_embed_tab_title', 'Ask @site_name'), array('@site_name' => variable_get('site_name', 'Drupal')));
   // Render our code.
@@ -366,6 +369,7 @@ function vopros_embed_question_modal_js() {
     'ask_url' => $ask_url,
     'tab' => theme('vopros_embed_tab', array('title' => $tab_title, 'url' => $ask_url)),
     'add_tab' => isset($_GET['tab']),
+    'query' => $query,
   );
 
   // And add it to the collected JS.

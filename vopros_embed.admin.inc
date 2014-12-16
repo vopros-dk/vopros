@@ -56,12 +56,21 @@ function vopros_embed_setting_form($form, &$form_state) {
     '#description' => t('Which answer method should be initially selected?'),
   );
 
+  $form['embed']['tab'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Create tab'),
+    '#input' => FALSE,
+    '#description' => t('Automatically create tab.'),
+  );
+
   // The Drupal.formatString JS function doesn't support replacing each
   // placeholder more than once, so use different placeholders.
   // Using async and defer is the currently recommend practice,
   // @see https://www.igvita.com/2014/05/20/script-injected-async-scripts-considered-harmful/
   $code = '<script src="!script_base/question_modal.js" async defer></script>
 <a href="!form_base/ask-question?!params">Ask a question</a>
+';
+  $tab_code = '<script src="!script_base/question_modal.js?tab=true&!params" async defer></script>
 ';
 
   $form['embed']['code'] = array(
@@ -76,6 +85,7 @@ function vopros_embed_setting_form($form, &$form_state) {
           'data' => array(
             'voprosEmbed' => array(
               'template' => $code,
+              'tab_template' => $tab_code,
               'base' => url('embed', array('absolute' => TRUE)),
             ),
           ),
