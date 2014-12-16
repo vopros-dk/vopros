@@ -8,11 +8,12 @@
 // Creating our own scope as to not pollute the global scope.
 (function() {
   var $ = jQuery.noConflict(true);
+  var settings = !settings;
 
   // Add stylesheet for magnificPopup.
-  $('head').append('<link rel="stylesheet" href="!mag_style" type="text/css" />');
+  $('head').append('<link rel="stylesheet" href="' + settings.mag_style + '" type="text/css" />');
   // Add our own CSS.
-  $('head').append('<link rel="stylesheet" href="!vopros_style" type="text/css" />');
+  $('head').append('<link rel="stylesheet" href="' + settings.vopros_style + '" type="text/css" />');
 
 
   $(document).ready(function() {
@@ -44,7 +45,7 @@
     query.url = window.location.href;
 
     // Fix urls and attach Magnific popup to the link.
-    var links = $('a[href*="!ask_url"]');
+    var links = $('a[href*="' + settings.ask_url + '"]');
     links.querystring(query);
     if (popup) {
       links.magnificPopup({

@@ -346,12 +346,13 @@ function vopros_embed_question_modal_js() {
 
   // Add our own code.
   $our_js = file_get_contents($base . '/js/vopros_embed.js');
-  $css = array(
-    '!mag_style' => url($base . '/libraries/magnific-popup-0.9.9/magnific-popup.css', array('absolute' => TRUE)),
-    '!vopros_style' => url($base . '/css/vopros_embed_popup.css', array('absolute' => TRUE)),
-    '!ask_url' => $ask_url,
+  $settings = array(
+    'mag_style' => url($base . '/libraries/magnific-popup-0.9.9/magnific-popup.css', array('absolute' => TRUE)),
+    'vopros_style' => url($base . '/css/vopros_embed_popup.css', array('absolute' => TRUE)),
+    'ask_url' => $ask_url,
   );
-  $js .= strtr($our_js, $css);
+
+  $js .= strtr($our_js, array('!settings' => json_encode($settings)));
   $js .= "\n";
 
   print $js;
