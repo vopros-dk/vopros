@@ -86,6 +86,10 @@ function vopros_embed_theme() {
     'vopros_embed_question_form' => array(
       'render element' => 'element',
     ),
+    'vopros_embed_tab' => array(
+      'variables' => array('title' => '', 'url' => ''),
+      'template' => 'vopros-embed-tab',
+    ),
   );
 }
 

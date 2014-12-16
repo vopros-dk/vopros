@@ -28,8 +28,7 @@
 
     // Replace tab placeholders with our own rendering.
     $('.ask-vopros-tab, .ask-vopros-tab-placeholder').each(function () {
-      var link = $('<a>').attr('href', settings.ask_url).text(settings.link_title);
-      var tab = $('<div>').append(link).addClass('ask-vopros-tab');
+      var tab = $(settings.tab).addClass('ask-vopros-tab');
       $(this).replaceWith(tab);
     });
 

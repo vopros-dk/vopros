@@ -359,14 +359,15 @@ function vopros_embed_question_modal_js() {
 
   $styles = array_merge($styles, $tab_styles);
 
-  // Add our own code.
+  // Render our code.
   $our_js = file_get_contents($base . '/js/vopros_embed.js');
   $settings = array(
     'styles' => $styles,
     'ask_url' => $ask_url,
-    'link_title' => _vopros_embed_menu_title(),
+    'tab' => theme('vopros_embed_tab', array('title' => _vopros_embed_menu_title(), 'url' => $ask_url)),
   );
 
+  // And add it to the collected JS.
   $js .= strtr($our_js, array('!settings' => json_encode($settings)));
   $js .= "\n";
 
