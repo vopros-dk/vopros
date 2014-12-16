@@ -349,7 +349,9 @@ function vopros_embed_question_modal_js() {
   $settings = array(
     'mag_style' => url($base . '/libraries/magnific-popup-0.9.9/magnific-popup.css', array('absolute' => TRUE)),
     'vopros_style' => url($base . '/css/vopros_embed_popup.css', array('absolute' => TRUE)),
+    'vopros_tab_style' => url($base . '/css/vopros_embed_tab.css', array('absolute' => TRUE)),
     'ask_url' => $ask_url,
+    'link_title' => _vopros_embed_menu_title(),
   );
 
   $js .= strtr($our_js, array('!settings' => json_encode($settings)));

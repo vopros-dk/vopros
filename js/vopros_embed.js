@@ -14,6 +14,8 @@
   $('head').append('<link rel="stylesheet" href="' + settings.mag_style + '" type="text/css" />');
   // Add our own CSS.
   $('head').append('<link rel="stylesheet" href="' + settings.vopros_style + '" type="text/css" />');
+  // And for the tab.
+  $('head').append('<link rel="stylesheet" href="' + settings.vopros_tab_style + '" type="text/css" />');
 
 
   $(document).ready(function() {
@@ -25,6 +27,13 @@
       if (e.originalEvent.data == 'ask_vopros_close') {
         $.magnificPopup.close();
       }
+    });
+
+    // Replace tab placeholders with our own rendering.
+    $('.ask-vopros-tab, .ask-vopros-tab-placeholder').each(function () {
+      var link = $('<a>').attr('href', "!ask_url").text(settings.link_title);
+      var tab = $('<div>').append(link).addClass('ask-vopros-tab');
+      $(this).replaceWith(tab);
     });
 
     // Find any settings.
