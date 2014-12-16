@@ -26,6 +26,10 @@
       }
     });
 
+    if (settings.add_tab) {
+      $('body').append($('<span>').addClass('ask-vopros-tab-placeholder'));
+    }
+
     // Replace tab placeholders with our own rendering.
     $('.ask-vopros-tab, .ask-vopros-tab-placeholder').each(function () {
       var tab = $(settings.tab).addClass('ask-vopros-tab');

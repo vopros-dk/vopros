@@ -365,6 +365,7 @@ function vopros_embed_question_modal_js() {
     'styles' => $styles,
     'ask_url' => $ask_url,
     'tab' => theme('vopros_embed_tab', array('title' => $tab_title, 'url' => $ask_url)),
+    'add_tab' => isset($_GET['tab']),
   );
 
   // And add it to the collected JS.
