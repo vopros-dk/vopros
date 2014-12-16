@@ -358,13 +358,13 @@ function vopros_embed_question_modal_js() {
   }
 
   $styles = array_merge($styles, $tab_styles);
-
+  $tab_title = format_string(variable_get('vopros_embed_tab_title', 'Ask @site_name'), array('@site_name' => variable_get('site_name', 'Drupal')));
   // Render our code.
   $our_js = file_get_contents($base . '/js/vopros_embed.js');
   $settings = array(
     'styles' => $styles,
     'ask_url' => $ask_url,
-    'tab' => theme('vopros_embed_tab', array('title' => _vopros_embed_menu_title(), 'url' => $ask_url)),
+    'tab' => theme('vopros_embed_tab', array('title' => $tab_title, 'url' => $ask_url)),
   );
 
   // And add it to the collected JS.
