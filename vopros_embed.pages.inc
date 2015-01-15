@@ -360,11 +360,16 @@ function vopros_embed_question_modal_js() {
     $tab_styles = array(url($base . '/css/vopros_embed_tab.css', array('absolute' => TRUE)));
   }
 
+  $styles = array_merge($styles, $tab_styles);
+
   // Prepare query for link.
   $query = array_intersect_key($_GET, array_flip(array('agency_id', 'url', 'agency_mail', 'popup', 'answer_preference', 'destination')));
 
-  $styles = array_merge($styles, $tab_styles);
   $tab_title = format_string(variable_get('vopros_embed_tab_title', 'Ask @site_name'), array('@site_name' => variable_get('site_name', 'Drupal')));
+
+  // Include the volatile script inline in the function.
+  $volatile = file_get_contents($base . '/js/vopros_embed_volatile.js');
+
   // Render our code.
   $our_js = file_get_contents($base . '/js/vopros_embed.js');
   $settings = array(
@@ -373,10 +378,16 @@ function vopros_embed_question_modal_js() {
     'tab' => theme('vopros_embed_tab', array('title' => $tab_title, 'url' => $ask_url)),
     'add_tab' => isset($_GET['tab']),
     'query' => $query,
+    'confirm_message' => t('Are you sure you want to close?'),
+  );
+
+  $replacements = array(
+    '!settings' => json_encode($settings),
+    '!volatile' => $volatile,
   );
 
   // And add it to the collected JS.
-  $js .= strtr($our_js, array('!settings' => json_encode($settings)));
+  $js .= strtr($our_js, $replacements);
   $js .= "\n";
 
   print $js;
