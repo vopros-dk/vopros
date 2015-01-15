@@ -302,9 +302,12 @@ function vopros_embed_question_submitted_page() {
     '#prefix' => '<p>',
     '#suffix' => '</p>',
     '#markup' => t('Your question has been submitted.'),
-    '#attached' => array(
-      'js' => array(drupal_get_path('module', 'vopros_embed') . '/js/vopros_embed_popup.js'),
-    ),
+  );
+
+  $build[] = array(
+    '#prefix' => '<p>',
+    '#suffix' => '</p>',
+    '#markup' => vopros_embed_popup_close_link(check_plain(t('Close window'))),
   );
 
   // Add return button.

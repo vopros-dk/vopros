@@ -199,6 +199,7 @@ function vopros_embed_render_page($page) {
   drupal_add_css(drupal_get_path('module', 'vopros_embed') . '/css/vopros_embed.css');
   drupal_add_css(drupal_get_path('module', 'vopros_embed') . '/css/vopros_embed_form.css');
   drupal_add_js(drupal_get_path('module', 'vopros_embed') . '/js/vopros_embed_styling.js');
+  drupal_add_js(drupal_get_path('module', 'vopros_embed') . '/js/vopros_embed_popup.js');
 
   return drupal_render($page);
 }
@@ -312,6 +313,16 @@ function theme_vopros_embed_question_form(&$vars) {
   $output .= '<div class="answer_details">' . drupal_render_children($element) . '</div>';
 
   return $output;
+}
+
+/**
+ * Get the HTML for a close popup link.
+ *
+ * @param string $text
+ *   The raw HTML link content.
+ */
+function vopros_embed_popup_close_link($text) {
+  return '<a href=# class="element-hidden close-popup">' . $text . '</a>';
 }
 
 /**

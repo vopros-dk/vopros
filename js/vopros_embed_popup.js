@@ -5,13 +5,12 @@
 (function ($) {
   $(document).ready(function () {
     if (window != window.top) {
-      var close_button = $('<a href="#">').text(Drupal.t('Close window'));
-      close_button.click(function () {
-        // Post message to parent frame.
-        window.top.postMessage('ask_vopros_close', '*');
+      $('.close-popup.element-hidden').each(function () {
+        $(this).click(function () {
+          // Post message to parent frame.
+          window.top.postMessage('ask_vopros_close', '*');
+        }).removeClass('element-hidden');
       });
-
-      $('#content').append(close_button.wrap('<p></p>').parent().get(0));
     }
   });
 })(jQuery);
