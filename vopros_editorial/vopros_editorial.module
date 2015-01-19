@@ -403,8 +403,21 @@ function vopros_editorial_entity_delete($entity, $entity_type) {
  * Set default editorial value on newly created questions.
  */
 function vopros_editorial_entity_presave($entity, $entity_type) {
-  if ($entity_type == 'vopros_question' && $entity->is_new && !empty($entity->vopros_service) && ($tid = variable_get('vopros_editorial_service_default_' . $entity->vopros_service->machine_name, 0))) {
-    $wrapper = entity_metadata_wrapper('vopros_question', $entity);
-    $wrapper->vopros_editorial->set($tid);
+  if ($entity_type == 'vopros_question' ) {
+    if ($entity->is_new) {
+      if (!empty($entity->vopros_service) && ($tid = variable_get('vopros_editorial_service_default_' . $entity->vopros_service->machine_name, 0))) {
+        $wrapper = entity_metadata_wrapper('vopros_question', $entity);
+        $wrapper->vopros_editorial->set($tid);
+      }
+    }
+    else {
+      // If the editorial changed, reactivate the question.
+      $previous = entity_load_unchanged('vopros_question', $entity->question_id);
+      $wrapper = entity_metadata_wrapper('vopros_question', $entity);
+      $wrapper2 = entity_metadata_wrapper('vopros_question', $previous);
+      if ($wrapper->vopros_editorial->value() != $wrapper2->vopros_editorial->value()) {
+        $entity->question_status = 'active';
+      }
+    }
   }
 }
