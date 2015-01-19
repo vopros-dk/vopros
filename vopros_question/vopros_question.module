@@ -421,7 +421,7 @@ function vopros_question_menu() {
     'page callback' => 'drupal_get_form',
     'page arguments' => array('vopros_question_notify_user_form', 3),
     'access callback' => 'vopros_question_access',
-    'access arguments' => array('update'),
+    'access arguments' => array('notify'),
     'file' => 'includes/vopros_question.admin.inc',
   );
 
@@ -494,6 +494,9 @@ function vopros_question_permission() {
     'access and use revisions for questions' => array(
       'title' => t('Access and use revisions'),
     ),
+    'notify user on question' => array(
+      'title' => t('Assign a user a question or notify them about it'),
+    ),
   );
 
   return $permissions;
@@ -529,6 +532,10 @@ function vopros_question_access($op, $question = NULL, $account = NULL) {
   // Grant access to any operation for any question for administrators.
   if (user_access('administer questions', $account)) {
     return TRUE;
+  }
+
+  if ($op == 'notify') {
+    return user_access('notify user on question', $account);
   }
 
   // Grant view access to users with the administrative access questions permission
@@ -1455,6 +1462,7 @@ function vopros_question_handle_question_form($form, &$form_state, $question) {
       '#value' => t('Notify librarian'),
       '#submit' => array('vopros_question_handle_question_form_notify_submit'),
       '#weight' => 3,
+      '#access' => user_access('notify user on question'),
     );
   }
   $form['actions']['edit'] = array(
