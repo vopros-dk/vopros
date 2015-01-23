@@ -2,6 +2,28 @@
 
   var isTop = null;
   var isVolatile = null;
+  var clients = [];
+  /**
+   * Client handle.
+   */
+  var volatileClient = function(message) {
+    this.volatile = false;
+    this.message = message ? message : "";
+  };
+
+  volatileClient.prototype.message = function(message) {
+    this.message = message ? message : "";
+  };
+
+  volatileClient.prototype.set = function(state) {
+    // Ensure we have a bolean.
+    this.volatile = !!state;
+    volatile.upstream();
+  };
+
+  volatileClient.prototype.is = function() {
+    return this.volatile;
+  };
 
   Drupal.voprosEmbed = Drupal.voprosEmbed || {};
   Drupal.voprosEmbed.volatile = Drupal.voprosEmbed.volatile || {};
@@ -14,9 +36,23 @@
    * Asks for confirmation if we're volatile.
    */
   var beforeunload = function(e) {
-    if (isVolatile === true) {
+    var e = e || window.event;
+    var messages = [];
+    for (var index = 0; index < clients.length; ++index) {
+      if (clients[index].is()) {
+        messages.push(clients[index].message);
+      }
+    }
+
+    if (messages.length > 0) {
+      var message = messages.join("\n\n");
+      // For IE and Firefox prior to version 4
+      if (e) {
+        e.returnValue = message;
+      }
+
       // Apparently we need to return at least an empty string to trigger.
-      return " ";
+      return message + " ";
     }
     return;
   };
@@ -31,17 +67,17 @@
   volatile.init = function () {
     isTop = window === window.top;
     if (isTop) {
+      // We're our own client.
+      client = volatile.client();
+
       // Listen for messages from other frames to set volatility.
       $(window).bind('message', function (e) {
-        switch (e.originalEvent.data) {
-        case 'vopros_embed_volatile':
-          volatile.set(true);
-          break;
-
-        case 'vopros_embed_nonvolatile':
-          volatile.set(false);
-          break;
+        var data = e.originalEvent.data;
+        if (typeof data.type === 'undefined' || data.message !== 'vopros_embed_volatile') {
+          return;
         }
+        client.message = data.message;
+        client.set(data.state);
       });
 
       // Bind our handler.
@@ -50,25 +86,42 @@
   };
 
   /**
-   * Set volatility.
-   *
-   * If we're volatile, ask user for confirmation before navigating
-   * away. If we're top level register it for our own beforeunload
-   * handler. If we're not, send an inter-frame message.
+   * Get a client handle.
    */
-  volatile.set = function (state) {
-    switch (isTop)  {
-      case true:
-      isVolatile = state;
-      break;
+  volatile.client = function(message) {
+    var cl = new volatileClient(message);
+    clients.push(cl);
+    return cl;
+  };
 
-      case false:
+  /**
+   * Update volatility info in a possible parent frame.
+   */
+  volatile.upstream = function () {
+    if (isTop)  {
+      var messages = [];
+      for (var index = 0; index < clients.length; ++index) {
+        if (clients[index].is()) {
+          messages.push(clients[index].message);
+        }
+      }
+
       // Post message to parent frame.
-      var message = state ? 'vopros_embed_volatile' : 'vopros_embed_nonvolatile';
-      window.top.postMessage(message, '*');
+      var message = {
+        type: 'vopros_embed_volatile',
+        state: false,
+        message: ""
+      }
+      if (messages.length > 0) {
+        message.message = messages.join("\n\n");
+        message.state = true;
+      }
 
-      break;
+      window.top.postMessage(message, '*');
+      return true;
     }
+
+    return false;
   };
 
   /**
@@ -77,8 +130,19 @@
    * Returns whether we're volatile or not.
    */
   volatile.is = function () {
-    return isVolatile;
+    for (var index = 0; index < clients.length; ++index) {
+      if (clients[index].is()) {
+        return true;
+      }
+    }
+    return false;
   };
+
+  volatile.clearAll = function() {
+    for (var index = 0; index < clients.length; ++index) {
+      clients[index].set(false);
+    }
+  }
 
   volatile.init();
 

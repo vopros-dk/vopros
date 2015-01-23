@@ -30,7 +30,7 @@
     }
 
     // We assume that we're nonvolatile when the popup requested to be closed.
-    volatile.set(false);
+    volatile.clearAll();
     $.magnificPopup.proto.close.call(this);
   }
 
