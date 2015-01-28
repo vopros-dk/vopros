@@ -52,6 +52,19 @@ function vopros_question_client_settings_form($form, &$form_state) {
     '#description' => t('Mapping of QandA sevice names to clients in the form of <em>qanda|agency_id -> client|channel</em>. Everything after a # is ignored, and are populated with the number of pending/migrated questions.'),
   );
 
+  $channels = vopros_question_channels();
+  $channel_list = '<dl>';
+  foreach ($channels as $name => $channel) {
+    $channel_list .= '<dt>' . check_plain($channel['name']) . '</dt><dd>' .
+      $name . '</dd>';
+  }
+  $channel_list .= '</dl>';
+  $form['vopros_question_channels'] = array(
+    '#type' => 'item',
+    '#title' => t('Known channels'),
+    '#markup' => $channel_list,
+  );
+
   return system_settings_form($form);
 }
 
