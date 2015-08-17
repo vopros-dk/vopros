@@ -44,7 +44,8 @@ function vopros_question_create_service() {
   $qanda_key = $question->qanda_service_name . '|';
   if (($mapping = $mappings[$full_key]) || ($mapping = $mappings[$qanda_key])) {
     if ($mapping['client']) {
-      $question->client_id = $mapping['client'];
+      $client = vopros_question_client_load_by_agency($mapping['client']);
+      $question->client_id = $client->client_id;
     }
     if ($mapping['channel']) {
       $question->channel = $mapping['channel'];
@@ -60,6 +61,12 @@ function vopros_question_create_service() {
       $question_wrapper->vopros_editorial = $term;
     }
   }
+
+  // We can't have an empty answer preference.
+  if (empty($question->user_answer_preference)) {
+    $question->user_answer_preference = 'mail';
+  }
+
   if (!empty($post_data)) {
     $validation = vopros_question_validate_data($question);
     if ($validation['status'] == 'valid') {
