@@ -137,20 +137,34 @@ EOF;
     '#weight' => -20,
   );
 
-  $deadline_options = _vopros_question_deadline();
-  $form['question_deadline'] = array(
-    '#type' => 'radios',
-    '#title' => t('When do you need the answer?'),
-    '#required' => TRUE,
-    '#options' => $deadline_options,
-    '#default_value' => -1,
-    '#weight' => -10,
-    '#states' => array(
-      'invisible' => array(
-        'input[name=user_answer_preference]' => array('value' => 'chat'),
+  $show_deadline = array_filter(variable_get('vopros_embed_show_deadline', array('mail', 'sms')));
+  if ($show_deadline) {
+    $values = array();
+    foreach ($show_deadline as $option) {
+      $values[] = array('value' => $option);
+    }
+    $deadline_options = _vopros_question_deadline();
+    $form['question_deadline'] = array(
+      '#type' => 'radios',
+      '#title' => t('When do you need the answer?'),
+      '#required' => TRUE,
+      '#options' => $deadline_options,
+      '#default_value' => -1,
+      '#weight' => -10,
+      '#states' => array(
+        'visible' => array(
+          'input[name=user_answer_preference]' => $values,
+        ),
       ),
-    ),
-  );
+    );
+  }
+  else {
+    $form['question_deadline'] = array(
+      '#type' => 'value',
+      '#value' => -1,
+      '#weight' => -10,
+    );
+  }
 
   $form['client_id'] = array(
     '#type' => 'value',
