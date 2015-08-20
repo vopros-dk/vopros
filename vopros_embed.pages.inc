@@ -191,20 +191,6 @@ EOF;
     '#value' => variable_get('vopros_question_usage_default', ''),
   );
 
-  if (module_exists('vopros_editorial')) {
-    // We have to call field_attach_form, else it wont copy over the values to
-    // the entity in field_attach_submit().
-    field_attach_form('vopros_question', $question, $form, $form_state, NULL, array('field_name' => 'vopros_editorial'));
-
-    // Hardcoded.
-    $form['vopros_editorial']['und']['#type'] = 'value';
-    $form['vopros_editorial']['und']['#value'] = 2;
-  }
-
-  // Remove the pre_render callback that field_attach_form added. We don't want
-  // it to reorder the form elements.
-  unset($form['#pre_render']);
-
   $form['submit'] = array(
     '#type' => 'submit',
     '#value' => t('Submit question'),
@@ -259,10 +245,6 @@ function vopros_embed_question_validate($form, &$form_state) {
   if ($form_state['values']['user_answer_preference'] != 'sms') {
     form_set_value($form['user_mobile_phone'], '', $form_state);
   }
-
-  // Validate fields.
-  $question = $form_state['values']['question'];
-  field_attach_validate('vopros_question', $question, $form, $form_state);
 }
 
 /**
@@ -284,8 +266,6 @@ function vopros_embed_question_submit($form, &$form_state) {
     'from_url' => $form_state['values']['from_url'],
     'site_email' => $form_state['values']['agency_mail'],
   );
-
-  field_attach_submit('vopros_question', $question, $form, $form_state);
 
   // Save question.
   $question->save();
