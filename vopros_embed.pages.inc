@@ -186,7 +186,7 @@ EOF;
     '#value' => $popup,
   );
 
-  $form['form']['question_usage'] = array(
+  $form['question_usage'] = array(
     '#type' => 'value',
     '#value' => variable_get('vopros_question_usage_default', ''),
   );
