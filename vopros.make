@@ -78,12 +78,6 @@ projects[views][version] = 3.11
 projects[votingapi][subdir] = contrib
 projects[votingapi][version] = 2.12
 
-; Our own module collection
-projects[vopros_modules][type] = module
-projects[vopros_modules][download][type] = git
-projects[vopros_modules][download][url] = "https://github.com/DBCDK/Vopros-base.git"
-projects[vopros_modules][directory_name] = vopros
-
 ; Libraries
 libraries[search_api_solr_php_client][download][type] = get
 libraries[search_api_solr_php_client][download][url] = http://solr-php-client.googlecode.com/files/SolrPhpClient.r60.2011-05-04.tgz
