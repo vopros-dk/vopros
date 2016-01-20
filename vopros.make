@@ -30,7 +30,7 @@ projects[fivestar][subdir] = contrib
 projects[fivestar][version] = 2.1
 ; Better views filter.
 ; https://www.drupal.org/node/1255160#comment-10392031
-projects[fivestar][patches][] = https://www.drupal.org/files/issues/add_better_views-1255160-29.patch
+projects[fivestar][patch][] = https://www.drupal.org/files/issues/add_better_views-1255160-35.patch
 
 projects[job_scheduler][subdir] = contrib
 projects[job_scheduler][version] = 2.0-alpha3
