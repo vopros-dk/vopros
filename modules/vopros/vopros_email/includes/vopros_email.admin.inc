@@ -1,12 +1,12 @@
 <?php
 
 /**
- * @ file
+ * @file
  * Admin forms and callback functions.
  */
 
 /**
- * Answer settings form
+ * Answer settings form.
  */
 function vopros_email_settings_form($form, &$form_state) {
   $form['info'] = array(
@@ -109,7 +109,7 @@ function vopros_email_settings_form($form, &$form_state) {
 }
 
 /**
- * Answer form
+ * Answer form.
  */
 function vopros_email_form($form, &$form_state, $email, $answer = NULL) {
   if (empty($answer) && $email->answer_id) {
@@ -210,6 +210,9 @@ function vopros_email_form($form, &$form_state, $email, $answer = NULL) {
   return $form;
 }
 
+/**
+ * Validate handler for saving emails.
+ */
 function vopros_email_form_validate(&$form, &$form_state) {
   $email = $form_state['values']['vopros_email'];
   field_attach_validate('vopros_email', $email, $form, $form_state);
@@ -217,7 +220,7 @@ function vopros_email_form_validate(&$form, &$form_state) {
 }
 
 /**
- * Submit handler for saving questions
+ * Submit handler for saving emails.
  */
 function vopros_email_form_submit(&$form, &$form_state) {
   // Update the email with submitted data.
@@ -252,7 +255,10 @@ function vopros_email_form_submit(&$form, &$form_state) {
   }
 
   $form_state['redirect'] = 'admin/vopros/questions';
-  drupal_set_message(t('The answer has been sent to @receiver and the question !question is marked as answered.', array('@receiver' => $email->email, '!question' => '<em>' . l($question->question_title, 'admin/vopros/questions/' . $question->question_id) . '</em>')));
+  drupal_set_message(t('The answer has been sent to @receiver and the question !question is marked as answered.', array(
+    '@receiver' => $email->email,
+    '!question' => '<em>' . l($question->question_title, 'admin/vopros/questions/' . $question->question_id) . '</em>',
+  )));
 }
 
 /**
@@ -446,7 +452,7 @@ function vopros_email_convert_to_question_form($form, &$form_state, $email) {
     'question_title' => $email->subject,
     'question_content' => $email->email_content,
     'user_email' => $email->email,
-    'channel' => 'mail'
+    'channel' => 'mail',
   ));
 
   $form = vopros_question_question_form($form, $form_state, $question);
@@ -536,7 +542,7 @@ function vopros_email_forward_form_submit($form, &$form_state) {
 }
 
 /**
- * Form for transferring an email from one question to another
+ * Form for transferring an email from one question to another.
  */
 function vopros_email_transfer_form($form, &$form_state, $email) {
   // Don't allow transfering emails that doesn't belong to a question.
