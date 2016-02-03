@@ -88,13 +88,13 @@ function vopros_email_settings_form($form, &$form_state) {
 
   $form['bounce']['vopros_email_subject_macro_bounce'] = array(
     '#type' => 'textfield',
-    '#title' => t('Subject.'),
+    '#title' => t('Subject'),
     '#default_value' => variable_get('vopros_email_subject_macro_bounce', ''),
   );
 
   $form['bounce']['vopros_email_macro_bounce'] = array(
     '#type' => 'textarea',
-    '#title' => t('Mail body.'),
+    '#title' => t('Mail body'),
     '#default_value' => variable_get('vopros_email_macro_bounce', ''),
   );
   $form['bounce']['tokens'] = array(
