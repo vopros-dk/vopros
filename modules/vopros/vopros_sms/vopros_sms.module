@@ -303,7 +303,7 @@ function vopros_sms_access($op, $sms = NULL, $account = NULL) {
     return TRUE;
   }
 
-  if (isset($order) && ($op == 'update' || $op == 'delete')) {
+  if (isset($sms) && ($op == 'update' || $op == 'delete')) {
     if (user_access('edit any sms', $account)) {
       return TRUE;
     }
