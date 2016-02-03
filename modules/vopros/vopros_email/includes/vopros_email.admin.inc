@@ -44,7 +44,7 @@ function vopros_email_settings_form($form, &$form_state) {
   $form['contact']['tokens'] = array(
     '#markup' => theme('token_tree', array(
       'token_types' => array('vopros_question'),
-      'global_types' => FALSE,
+      'global_types' => TRUE,
     )),
     '#weight' => 2,
   );
@@ -72,7 +72,7 @@ function vopros_email_settings_form($form, &$form_state) {
   $form['macros']['tokens'] = array(
     '#markup' => theme('token_tree', array(
       'token_types' => array('vopros_answer', 'vopros_question', 'vopros_email'),
-      'global_types' => FALSE,
+      'global_types' => TRUE,
     )),
     '#weight' => 2,
   );
@@ -100,7 +100,7 @@ function vopros_email_settings_form($form, &$form_state) {
   $form['bounce']['tokens'] = array(
     '#markup' => theme('token_tree', array(
                  'token_types' => array('vopros_question'),
-                 'global_types' => FALSE,
+                 'global_types' => TRUE,
                )),
     '#weight' => 2,
   );
