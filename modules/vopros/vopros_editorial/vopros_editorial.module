@@ -2,12 +2,14 @@
 
 /**
  * @file
+ * Main module file for vopros_editorial.
+ *
  * The vopros_editorial module allows to seperate questions into editorial
  * groups, with their own type of macross etc.
  */
 
 /**
- * Implements of hook_init().
+ * Implements hook_init().
  */
 function vopros_editorial_init() {
   drupal_add_css(drupal_get_path('module', 'vopros_editorial') . '/theme/vopros_editorial.base.css');
@@ -17,7 +19,7 @@ function vopros_editorial_init() {
  * Implements hook_enable().
  */
 function vopros_editorial_enable() {
-  // Create the question vopros_editorial vocabolary
+  // Create the question vopros_editorial vocabolary.
   if (!taxonomy_vocabulary_machine_name_load('vopros_editorial')) {
     $vocabulary = (object) array(
       'name' => t('Editorial'),
@@ -29,6 +31,9 @@ function vopros_editorial_enable() {
   vopros_editorial_configure_question();
 }
 
+/**
+ * Configure editorial fields on vopros_question.
+ */
 function vopros_editorial_configure_question() {
   $type = 'vopros_question';
   $bundle = 'vopros_question';
@@ -190,7 +195,7 @@ function vopros_editorial_form_vopros_sms_form_alter(&$form, &$form_state) {
     $answer_wrapper = entity_metadata_wrapper('vopros_answer', $answer);
     $tid = $answer_wrapper->question->vopros_editorial->value() ? $answer_wrapper->question->vopros_editorial->tid->value() : 0;
     if ($tid) {
-      $form['form']['content_wrapper']['content']['#default_value'] = $content =  token_replace(variable_get('vopros_sms_answered_question_macro_' . $tid, ''), array(
+      $form['form']['content_wrapper']['content']['#default_value'] = token_replace(variable_get('vopros_sms_answered_question_macro_' . $tid, ''), array(
          'vopros_answer' => $answer,
          'vopros_question' => $answer_wrapper->question->value(),
        ), array('sanitize' => FALSE));
@@ -311,7 +316,7 @@ function vopros_editorial_entity_delete($entity, $entity_type) {
  * Set default editorial value on newly created questions.
  */
 function vopros_editorial_entity_presave($entity, $entity_type) {
-  if ($entity_type == 'vopros_question' ) {
+  if ($entity_type == 'vopros_question') {
     if ($entity->is_new) {
       if (!empty($entity->vopros_service) && ($tid = variable_get('vopros_editorial_service_default_' . $entity->vopros_service->machine_name, 0))) {
         $wrapper = entity_metadata_wrapper('vopros_question', $entity);
