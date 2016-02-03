@@ -927,11 +927,7 @@ Med venlig hilsen
  * Get the subject macro for the given name.
  */
 function _vopros_email_subject_macro($name) {
-  // Backwards compatibility.
   $key = 'vopros_email_subject_macro_' . $name;
-  if ($name == 'answered_question') {
-    $key = 'vopros_email_answered_question_subject_macro';
-  }
   return variable_get($key, _vopros_email_default_macro('subject', $name));
 }
 
@@ -939,10 +935,6 @@ function _vopros_email_subject_macro($name) {
  * Get the body macro for the given name.
  */
 function _vopros_email_body_macro($name) {
-  // Backwards compatibility.
   $key = 'vopros_email_macro_' . $name;
-  if ($name == 'answered_question') {
-    $key = 'vopros_email_answered_question_macro';
-  }
   return variable_get($key, _vopros_email_default_macro('body', $name));
 }
