@@ -31,13 +31,13 @@ function vopros_email_settings_form($form, &$form_state) {
     $form['contact'][$key]['vopros_email_subject_macro_' . $key] = array(
       '#type' => 'textfield',
       '#title' => t('Subject.'),
-      '#default_value' => variable_get('vopros_email_subject_macro_' . $key, ''),
+      '#default_value' => _vopros_email_subject_macro($key),
     );
 
     $form['contact'][$key]['vopros_email_macro_' . $key] = array(
       '#type' => 'textarea',
       '#title' => t('Mail body.'),
-      '#default_value' => variable_get('vopros_email_macro_' . $key, ''),
+      '#default_value' => _vopros_email_body_macro($key),
     );
   }
 
@@ -59,14 +59,14 @@ function vopros_email_settings_form($form, &$form_state) {
     '#type' => 'textfield',
     '#title' => t('Answered question subject'),
     '#description' => t('Macro used when answering a question.'),
-    '#default_value' => variable_get('vopros_email_answered_question_subject_macro', ''),
+    '#default_value' => _vopros_email_subject_macro('answered_question'),
   );
 
   $form['macros']['vopros_email_answered_question_macro'] = array(
     '#type' => 'textarea',
     '#title' => t('Answered question mail body'),
     '#description' => t('Macro used when answering a question.'),
-    '#default_value' => variable_get('vopros_email_answered_question_macro', ''),
+    '#default_value' => _vopros_email_body_macro('answered_question'),
   );
 
   $form['macros']['tokens'] = array(
@@ -89,13 +89,13 @@ function vopros_email_settings_form($form, &$form_state) {
   $form['bounce']['vopros_email_subject_macro_bounce'] = array(
     '#type' => 'textfield',
     '#title' => t('Subject'),
-    '#default_value' => variable_get('vopros_email_subject_macro_bounce', ''),
+    '#default_value' => _vopros_email_subject_macro('bounce'),
   );
 
   $form['bounce']['vopros_email_macro_bounce'] = array(
     '#type' => 'textarea',
     '#title' => t('Mail body'),
-    '#default_value' => variable_get('vopros_email_macro_bounce', ''),
+    '#default_value' => _vopros_email_body_macro('bounce'),
   );
   $form['bounce']['tokens'] = array(
     '#markup' => theme('token_tree', array(
@@ -168,7 +168,7 @@ function vopros_email_form($form, &$form_state, $email, $answer = NULL) {
   );
 
   if (!$email->subject && $answer && isset($answer_wrapper)) {
-    $form['form']['subject']['#default_value'] = token_replace(variable_get('vopros_email_answered_question_subject_macro', ''), array(
+    $form['form']['subject']['#default_value'] = token_replace(_vopros_email_subject_macro('answered_question'), array(
       'vopros_answer' => $answer,
       'vopros_question' => $answer_wrapper->question->value(),
     ), array('sanitize' => FALSE));
@@ -184,7 +184,7 @@ function vopros_email_form($form, &$form_state, $email, $answer = NULL) {
   );
 
   if (!$email->email_content && $answer && isset($answer_wrapper)) {
-    $form['form']['email_content']['#default_value'] = token_replace(variable_get('vopros_email_answered_question_macro', ''), array(
+    $form['form']['email_content']['#default_value'] = token_replace(_vopros_email_body_macro('answered_question'), array(
       'vopros_answer' => $answer,
       'vopros_question' => $answer_wrapper->question->value(),
     ), array('sanitize' => FALSE));
@@ -333,12 +333,12 @@ function vopros_email_question_contact_form($form, &$form_state, $question) {
 function vopros_email_question_contact_form_macro($form, &$form_state) {
   $key = str_replace(' ', '_', $form_state['values']['reason']);
   $content_key = 'vopros_email_macro_' . $key;
-  $content = variable_get($content_key, '');
+  $content = _vopros_email_body_macro($key);
   drupal_alter('vopros_email_question_contact_form_macro', $content, $form, $content_key);
   $processed_content = token_replace($content, array('vopros_question' => $form_state['values']['question']), array('sanitize' => FALSE));
 
   $subject_key = 'vopros_email_subject_macro_' . $key;
-  $subject = variable_get($subject_key, '');
+  $subject = _vopros_email_subject_macro($key);
   drupal_alter('vopros_email_question_contact_form_macro', $subject, $form, $subject_key);
   $processed_subject = token_replace($subject, array('vopros_question' => $form_state['values']['question']), array('sanitize' => FALSE));
 
@@ -626,7 +626,7 @@ function vopros_email_question_bounce_form($form, &$form_state, $question, $mail
     '#required' => TRUE,
   );
 
-  $subject = variable_get('vopros_email_subject_macro_bounce', '');
+  $subject = _vopros_email_subject_macro('bounce');
   $subject = token_replace($subject, array('vopros_question' => $question), array('sanitize' => FALSE));
 
   $form['form']['subject'] = array(
@@ -636,7 +636,7 @@ function vopros_email_question_bounce_form($form, &$form_state, $question, $mail
     '#required' => TRUE,
   );
 
-  $content = variable_get('vopros_email_macro_bounce', '');
+  $content = _vopros_email_body_macro('bounce');
   $content = token_replace($content, array('vopros_question' => $question), array('sanitize' => FALSE));
 
   $form['form']['email_content'] = array(

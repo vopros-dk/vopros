@@ -873,3 +873,94 @@ function vopros_email_configure_email() {
     field_create_instance($instance);
   }
 }
+
+/**
+ * Returns default email macros.
+ */
+function _vopros_email_default_macro($type, $name) {
+  static $macros = array(
+    'need_more_info' => array(
+      'subject' => 'Supplerende spørgsmål fra [site:name]',
+      'body' => 'Kære [vopros_question:user-name]
+
+Herning Bibliotekerne har modtaget dit spørgsmål, men har brug for følgende supplerende oplysninger for at kunne svar dig bedst muligt:
+
+
+
+Med venlig hilsen
+[site:name]
+
+Du har spurgt om følgende:
+[vopros_question:question-content]',
+    ),
+    'no_time_for_deadline' => array(
+      'subject' => 'Interessefrist er overskredet',
+      'body' => 'Kære  [vopros_question:user-name]
+Det har desværre ikke været muligt at få besvaret dit spørgsmål inden for den interessefrist, du angiver. Såfremt du alligevel er interesseret i et svar, bedes du henvende dig igen.
+
+Med venlig hilsen
+[site:name]
+
+Du har spurgt om følgende:
+[vopros_question:question-content]',
+    ),
+    'message_for_user' => array(
+      'subject' => 'Besked fra [site:name]',
+      'body' => 'Kære  [vopros_question:user-name]
+
+
+
+Med venlig hilsen
+[site:name]
+
+Du har spurgt om følgende
+[vopros_question:question-content]',
+    ),
+    'answered_question' => array(
+      'subject' => 'Svar fra [site:name]',
+      'body' => 'Kære  [vopros_question:user-name]
+
+Du har spurgt [site:name] om:
+
+[vopros_question:question-content]
+
+Vores svar er:
+
+[vopros_answer:answer-content]
+
+Med venlig hilsen
+[vopros_answer:user:profile-vopros-user-librarian:vopros-user-first-name] [vopros_answer:user:profile-vopros-user-librarian:vopros-user-last-name]
+[site:name]',
+    ),
+  );
+
+  if (!empty($macros[$name][$type])) {
+    return $macros[$name][$type];
+  }
+
+  return '';
+}
+
+/**
+ * Get the subject macro for the given name.
+ */
+function _vopros_email_subject_macro($name) {
+  // Backwards compatibility.
+  $key = 'vopros_email_subject_macro_' . $name;
+  if ($name == 'answered_question') {
+    $key = 'vopros_email_answered_question_subject_macro';
+  }
+  return variable_get($key, _vopros_email_default_macro('subject', $name));
+}
+
+/**
+ * Get the body macro for the given name.
+ */
+function _vopros_email_body_macro($name) {
+  // Backwards compatibility.
+  $key = 'vopros_email_macro_' . $name;
+  if ($name == 'answered_question') {
+    $key = 'vopros_email_answered_question_macro';
+  }
+  return variable_get($key, _vopros_email_default_macro('body', $name));
+}
