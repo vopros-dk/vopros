@@ -139,7 +139,7 @@ function vopros_sms_menu() {
  * Title callback for SMSes
  */
 function vopros_sms_title($sms) {
-  return isset($mail->subject) && !empty($mail->subject) ? $mail->subject : t('New sms');
+  return t('SMS');
 }
 
 /**
