@@ -1,0 +1,46 @@
+/**
+ * @file
+ * Default styles for the tab.
+ */
+.ask-vopros-tab {
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+
+  display: block;
+  cursor: pointer;
+
+  position: fixed;
+  /*
+   * Leave room for the standard Ding cookie control widget.
+   */
+  margin-left: 62px;
+  bottom: -10px;
+  right: 25%;
+  padding: 5px 20px 15px;
+
+  border-radius: 5px 5px 0 0;
+
+  -webkit-box-shadow: 2px -1px 10px 0 rgba(0,0,0,0.3);
+  -moz-box-shadow: 2px -1px 10px 0 rgba(0,0,0,0.3);
+  box-shadow: 2px -1px 10px 0 rgba(0,0,0,0.3);
+}
+
+.ask-vopros-tab a:link,
+.ask-vopros-tab a:hover,
+.ask-vopros-tab a:visited,
+.ask-vopros-tab a:active {
+  color: white;
+}
+
+.ask-vopros-tab.minimized {
+  right: 0;
+  border-top-right-radius: 0;
+}
+
+.ask-vopros-tab.minimized .ask-vopros-text,
+.ask-vopros-tab.minimized .ask-vopros-minimize {
+  display: none;
+}
