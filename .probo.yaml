@@ -1,0 +1,6 @@
+steps:
+  - name: Site setup
+    plugin: Drupal
+    makeFile: build_vopros.make
+    runInstall: true
+
