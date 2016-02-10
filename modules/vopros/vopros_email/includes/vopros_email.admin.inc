@@ -77,34 +77,35 @@ function vopros_email_settings_form($form, &$form_state) {
     '#weight' => 2,
   );
 
-  $form['bounce'] = array(
-    '#type' => 'fieldset',
-    '#collapsible' => TRUE,
-    '#collapsed' => TRUE,
-    '#title' => t('Forward to local contact'),
-    '#description' => t('Setup mail sent to local contact.'),
-    '#weight' => 10,
-  );
+  if (module_exists('vopros_embed')) {
+    $form['bounce'] = array(
+      '#type' => 'fieldset',
+      '#collapsible' => TRUE,
+      '#collapsed' => TRUE,
+      '#title' => t('Forward to local contact'),
+      '#description' => t('Setup mail sent to local contact.'),
+      '#weight' => 10,
+    );
 
-  $form['bounce']['vopros_email_subject_macro_bounce'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Subject'),
-    '#default_value' => _vopros_email_subject_macro('bounce'),
-  );
+    $form['bounce']['vopros_email_subject_macro_bounce'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Subject'),
+      '#default_value' => _vopros_email_subject_macro('bounce'),
+    );
 
-  $form['bounce']['vopros_email_macro_bounce'] = array(
-    '#type' => 'textarea',
-    '#title' => t('Mail body'),
-    '#default_value' => _vopros_email_body_macro('bounce'),
-  );
-  $form['bounce']['tokens'] = array(
-    '#markup' => theme('token_tree', array(
-                 'token_types' => array('vopros_question'),
-                 'global_types' => TRUE,
-               )),
-    '#weight' => 2,
-  );
-
+    $form['bounce']['vopros_email_macro_bounce'] = array(
+      '#type' => 'textarea',
+      '#title' => t('Mail body'),
+      '#default_value' => _vopros_email_body_macro('bounce'),
+    );
+    $form['bounce']['tokens'] = array(
+      '#markup' => theme('token_tree', array(
+        'token_types' => array('vopros_question'),
+        'global_types' => TRUE,
+      )),
+      '#weight' => 2,
+    );
+  }
   return system_settings_form($form);
 }
 
