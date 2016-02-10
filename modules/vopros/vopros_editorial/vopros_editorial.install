@@ -8,7 +8,7 @@
 /**
  * Delete obsolete email macros.
  */
-function vopros_editorial_uninstall() {
+function vopros_editorial_update_7101() {
   $vocabolary = taxonomy_vocabulary_machine_name_load('vopros_editorial');
   $terms = taxonomy_term_load_multiple(NULL, array('vid' => $vocabolary->vid));
 
