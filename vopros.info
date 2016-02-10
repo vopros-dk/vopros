@@ -44,5 +44,3 @@ dependencies[] = vopros_log
 dependencies[] = vopros_question
 dependencies[] = vopros_sms
 dependencies[] = vopros_user
-
-files[] = vopros_install.profile
