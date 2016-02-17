@@ -1,85 +1,25 @@
-# $Id$
-#
-# Danish translation of Drupal (general)
-# Copyright YEAR NAME <EMAIL@ADDRESS>
-# Generated from files:
-#  vopros_answer/vopros_answer.module: n/a
-#  vopros_answer/includes/vopros_answer.admin.inc: n/a
-#  vopros_answer/includes/vopros_answer.theme.inc: n/a
-#  vopros_email/vopros_email.module: n/a
-#  vopros_feedback/includes/views/vopros_feedback.views_default.inc: n/a
-#  vopros_search/includes/views/vopros_search.views_default.inc: n/a
-#  vopros_sms/vopros_sms.module: n/a
-#  vopros_question/vopros_question.module: n/a
-#  vopros_feedback/vopros_feedback.module: n/a
-#  vopros_log/vopros_log.module: n/a
-#  vopros_email/includes/vopros_email.admin.inc: n/a
-#  vopros_sms/includes/vopros_sms.admin.inc: n/a
-#  vopros_migrate/vopros_migrate.module: n/a
-#  vopros_public_question/vopros_public_question.module: n/a
-#  vopros_answer/vopros_answer.info: n/a
-#  vopros_base/vopros_base.module: n/a
-#  vopros_base/vopros_base.info: n/a
-#  vopros_editorial/vopros_editorial.info: n/a
-#  vopros_email/vopros_email.info: n/a
-#  vopros_feedback/vopros_feedback.info: n/a
-#  vopros_log/vopros_log.info: n/a
-#  vopros_mailhandler/vopros_mailhandler.info: n/a
-#  vopros_migrate/vopros_migrate.info: n/a
-#  vopros_public_question/vopros_public_question.info: n/a
-#  vopros_question/vopros_question.info: n/a
-#  vopros_search/vopros_search.info: n/a
-#  vopros_sms/vopros_sms.info: n/a
-#  vopros_user/vopros_user.info: n/a
-#  vopros_question/theme/vopros_question.theme.inc: n/a
-#  vopros_public_question/includes/vopros_public_question.admin.inc: n/a
-#  vopros_question/includes/vopros_question.admin.inc: n/a
-#  vopros_answer/includes/views/vopros_answer.views_default.inc: n/a
-#  vopros_email/includes/views/vopros_email.views_default.inc: n/a
-#  vopros_question/includes/views/vopros_question.views_default.inc: n/a
-#  vopros_user/vopros_user.views_default.inc: n/a
-#  vopros_email/theme/vopros_email.theme.inc: n/a
-#  vopros_base/includes/views/handlers/vopros_base_taxonomy_tid_filter_handler.inc: n/a
-#  vopros_answer/includes/views/handlers/vopros_answer_area_own_questions.inc: n/a
-#  vopros_answer/includes/views/handlers/vopros_answer_area_views_count.inc: n/a
-#  vopros_editorial/vopros_editorial.module: n/a
-#  vopros_editorial/theme/vopros_editorial.theme.inc: n/a
-#  vopros_mailhandler/plugins/mailhandler/VoprosMailhandlerProcessor.inc: n/a
-#  vopros_feedback/includes/vopros_feedback.admin.inc: n/a
-#  vopros_feedback/theme/vopros_feedback.theme.inc: n/a
-#  vopros_log/theme/vopros_log.theme.inc: n/a
-#  vopros_mailhandler/plugins/mailhandler/VoprosMailhandlerParser.inc: n/a
-#  vopros_migrate/includes/vopros_migrate.admin.inc: n/a
-#  vopros_permission/vopros_permission.info: n/a
-#  vopros_public_question/theme/vopros_public_question.theme.inc: n/a
-#  vopros_question/includes/vopros_question.controller.inc: n/a
-#  vopros_question/includes/views/handlers/vopros_question_status_views_handler_filter_in_operator.inc: n/a
-#  vopros_question/vopros_question.install: n/a
-#  vopros_user/vopros_user.features.field.inc: n/a
-#  vopros_question/includes/vopros_question.pages.inc: n/a
-#  vopros_question/includes/views/handlers/vopros_question_handler_field_date.inc: n/a
-#  vopros_search/vopros_search.module: n/a
-#  vopros_user/vopros_user.module: n/a
-#
-#, fuzzy
+# Danish translation of Vopros
 msgid ""
 msgstr ""
-"Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2011-12-02 12:40+0200\n"
-"PO-Revision-Date: 2016-02-10 13:23+0100\n"
-"Last-Translator: NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Danish <EMAIL@ADDRESS>\n"
+"Project-Id-Version: Vopros\n"
+"PO-Revision-Date: 2016-02-10 13:28+0100\n"
+"Last-Translator: Thomas Fini Hansen <fini@reload.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: vopros_answer/vopros_answer.module:20
 msgctxt "a vopros answer"
 msgid "Answer"
 msgstr "Svar"
 
-#: vopros_answer/includes/vopros_answer.admin.inc:89 vopros_answer/includes/vopros_answer.theme.inc:34 vopros_email/vopros_email.module:166 vopros_feedback/includes/views/vopros_feedback.views_default.inc:332 vopros_search/includes/views/vopros_search.views_default.inc:257 vopros_sms/vopros_sms.module:140
+#: vopros_answer/includes/vopros_answer.admin.inc:89
+#: vopros_answer/includes/vopros_answer.theme.inc:34
+#: vopros_email/vopros_email.module:166
+#: vopros_feedback/includes/views/vopros_feedback.views_default.inc:332
+#: vopros_search/includes/views/vopros_search.views_default.inc:257
+#: vopros_sms/vopros_sms.module:140
 msgid "Answer"
 msgstr "Svar"
 
@@ -88,7 +28,9 @@ msgctxt "a vopros answer"
 msgid "Question"
 msgstr "Spørgsmål"
 
-#: vopros_answer/vopros_answer.module:68 vopros_email/vopros_email.module:176 vopros_feedback/includes/views/vopros_feedback.views_default.inc:330 vopros_sms/vopros_sms.module:150
+#: vopros_answer/vopros_answer.module:68 vopros_email/vopros_email.module:176
+#: vopros_feedback/includes/views/vopros_feedback.views_default.inc:330
+#: vopros_sms/vopros_sms.module:150
 msgid "Question"
 msgstr "Spørgsmål"
 
@@ -97,15 +39,19 @@ msgctxt "a vopros question"
 msgid "Question"
 msgstr "Spørgsmål"
 
-#: vopros_answer/vopros_answer.module:42 vopros_email/vopros_email.module:34 vopros_feedback/vopros_feedback.module:33 vopros_log/vopros_log.module:31 vopros_question/vopros_question.module:46 vopros_sms/vopros_sms.module:34
+#: vopros_answer/vopros_answer.module:42 vopros_email/vopros_email.module:34
+#: vopros_feedback/vopros_feedback.module:33 vopros_log/vopros_log.module:31
+#: vopros_question/vopros_question.module:46 vopros_sms/vopros_sms.module:34
 msgid "Administrator"
 msgstr "Administrator"
 
-#: vopros_answer/vopros_answer.module:46 vopros_question/vopros_question.module:50
+#: vopros_answer/vopros_answer.module:46
+#: vopros_question/vopros_question.module:50
 msgid "Public"
 msgstr "Offentlig"
 
-#: vopros_answer/vopros_answer.module:70 vopros_email/vopros_email.module:178 vopros_sms/vopros_sms.module:152
+#: vopros_answer/vopros_answer.module:70 vopros_email/vopros_email.module:178
+#: vopros_sms/vopros_sms.module:152
 msgid "The unique ID of the question the answer belongs to."
 msgstr "Unik ID på det spørgsmål som svaret hører til."
 
@@ -161,11 +107,14 @@ msgstr "Se egne svar"
 msgid "Answers:"
 msgstr "Svar:"
 
-#: vopros_answer/vopros_answer.module:426;464;177 vopros_email/vopros_email.module:83 vopros_sms/vopros_sms.module:81
+#: vopros_answer/vopros_answer.module:426;464;177
+#: vopros_email/vopros_email.module:83 vopros_sms/vopros_sms.module:81
 msgid "Answer question"
 msgstr "Svar på spørgsmål"
 
-#: vopros_answer/vopros_answer.module:429;467;185 vopros_email/includes/vopros_email.admin.inc:175 vopros_sms/includes/vopros_sms.admin.inc:212
+#: vopros_answer/vopros_answer.module:429;467;185
+#: vopros_email/includes/vopros_email.admin.inc:175
+#: vopros_sms/includes/vopros_sms.admin.inc:212
 msgid "Edit answer"
 msgstr "Rediger svar"
 
@@ -189,19 +138,26 @@ msgstr "Svarindstillinger"
 msgid "Configure general answer settings, fields, and displays."
 msgstr "Konfigurer generelle svarindstillinger, felter og visninger."
 
-#: vopros_answer/vopros_answer.module:172 vopros_email/vopros_email.module:78 vopros_feedback/vopros_feedback.module:66 vopros_migrate/vopros_migrate.module:17 vopros_public_question/vopros_public_question.module:141 vopros_question/vopros_question.module:217 vopros_sms/vopros_sms.module:76
+#: vopros_answer/vopros_answer.module:172 vopros_email/vopros_email.module:78
+#: vopros_feedback/vopros_feedback.module:66
+#: vopros_migrate/vopros_migrate.module:17
+#: vopros_public_question/vopros_public_question.module:141
+#: vopros_question/vopros_question.module:217 vopros_sms/vopros_sms.module:76
 msgid "Settings"
 msgstr "Indstillinger"
 
-#: vopros_answer/vopros_answer.module:195 vopros_question/vopros_question.module:264
+#: vopros_answer/vopros_answer.module:195
+#: vopros_question/vopros_question.module:264
 msgid "Revisions"
 msgstr "Revisioner"
 
-#: vopros_answer/vopros_answer.module:205 vopros_question/vopros_question.module:274
+#: vopros_answer/vopros_answer.module:205
+#: vopros_question/vopros_question.module:274
 msgid "Diff"
 msgstr "Forskel"
 
-#: vopros_answer/vopros_answer.module:215 vopros_question/vopros_question.module:284
+#: vopros_answer/vopros_answer.module:215
+#: vopros_question/vopros_question.module:284
 msgid "Revert revision"
 msgstr "Gå tilbage til forrige revision"
 
@@ -213,7 +169,14 @@ msgstr "Vopros svar"
 msgid "Defines the Answer entity and associated features."
 msgstr "Definer svarentiteten og tilhørende features."
 
-#: vopros_answer/vopros_answer.info:0 vopros_base/vopros_base.module:23 vopros_base/vopros_base.info:0 vopros_editorial/vopros_editorial.info:0 vopros_email/vopros_email.info:0 vopros_feedback/vopros_feedback.info:0 vopros_log/vopros_log.info:0 vopros_mailhandler/vopros_mailhandler.info:0 vopros_migrate/vopros_migrate.info:0 vopros_public_question/vopros_public_question.info:0 vopros_question/vopros_question.info:0 vopros_search/vopros_search.info:0 vopros_sms/vopros_sms.info:0 vopros_user/vopros_user.info:0
+#: vopros_answer/vopros_answer.info:0 vopros_base/vopros_base.module:23
+#: vopros_base/vopros_base.info:0 vopros_editorial/vopros_editorial.info:0
+#: vopros_email/vopros_email.info:0 vopros_feedback/vopros_feedback.info:0
+#: vopros_log/vopros_log.info:0 vopros_mailhandler/vopros_mailhandler.info:0
+#: vopros_migrate/vopros_migrate.info:0
+#: vopros_public_question/vopros_public_question.info:0
+#: vopros_question/vopros_question.info:0 vopros_search/vopros_search.info:0
+#: vopros_sms/vopros_sms.info:0 vopros_user/vopros_user.info:0
 msgid "Vopros"
 msgstr "Vopros"
 
@@ -225,11 +188,15 @@ msgstr "Gem og send"
 msgid "Question data"
 msgstr "Spørgsmålsdata"
 
-#: vopros_answer/includes/vopros_answer.admin.inc:112 vopros_question/vopros_question.module:100;151 vopros_question/theme/vopros_question.theme.inc:149
+#: vopros_answer/includes/vopros_answer.admin.inc:112
+#: vopros_question/vopros_question.module:100;151
+#: vopros_question/theme/vopros_question.theme.inc:149
 msgid "User data"
 msgstr "Brugerdata"
 
-#: vopros_answer/includes/vopros_answer.admin.inc:124 vopros_public_question/includes/vopros_public_question.admin.inc:84 vopros_question/includes/vopros_question.admin.inc:27;167;231;710
+#: vopros_answer/includes/vopros_answer.admin.inc:124
+#: vopros_public_question/includes/vopros_public_question.admin.inc:84
+#: vopros_question/includes/vopros_question.admin.inc:27;167;231;710
 msgid "Save"
 msgstr "Gem"
 
@@ -249,39 +216,48 @@ msgstr "Svar er obligatorisk"
 msgid "The question has been unlocked for others to answer."
 msgstr "Spørgsmålet er nu låst op så andre kan svare."
 
-#: vopros_answer/includes/vopros_answer.admin.inc:266;274;327;331 vopros_question/includes/vopros_question.admin.inc:334;342;395;399
+#: vopros_answer/includes/vopros_answer.admin.inc:266;274;327;331
+#: vopros_question/includes/vopros_question.admin.inc:334;342;395;399
 msgid "!date by !username"
 msgstr "!date for !username"
 
-#: vopros_answer/includes/vopros_answer.admin.inc:279 vopros_question/includes/vopros_question.admin.inc:347
+#: vopros_answer/includes/vopros_answer.admin.inc:279
+#: vopros_question/includes/vopros_question.admin.inc:347
 msgid "revert"
 msgstr "fortryd"
 
-#: vopros_answer/includes/vopros_answer.admin.inc:301 vopros_question/includes/vopros_question.admin.inc:369
+#: vopros_answer/includes/vopros_answer.admin.inc:301
+#: vopros_question/includes/vopros_question.admin.inc:369
 msgid "Show diff"
 msgstr "Vis forskel"
 
-#: vopros_answer/includes/vopros_answer.admin.inc:359 vopros_question/includes/vopros_question.admin.inc:427
+#: vopros_answer/includes/vopros_answer.admin.inc:359
+#: vopros_question/includes/vopros_question.admin.inc:427
 msgid "next diff >"
 msgstr "næste forskel"
 
-#: vopros_answer/includes/vopros_answer.admin.inc:365 vopros_question/includes/vopros_question.admin.inc:433
+#: vopros_answer/includes/vopros_answer.admin.inc:365
+#: vopros_question/includes/vopros_question.admin.inc:433
 msgid "< previous diff"
 msgstr "< forrige forskel"
 
-#: vopros_answer/includes/vopros_answer.admin.inc:402 vopros_question/includes/vopros_question.admin.inc:470
+#: vopros_answer/includes/vopros_answer.admin.inc:402
+#: vopros_question/includes/vopros_question.admin.inc:470
 msgid "Current revision:"
 msgstr "Aktuel revision:"
 
-#: vopros_answer/includes/vopros_answer.admin.inc:405 vopros_question/includes/vopros_question.admin.inc:473
+#: vopros_answer/includes/vopros_answer.admin.inc:405
+#: vopros_question/includes/vopros_question.admin.inc:473
 msgid "Revision of !new_date:"
 msgstr "Revision af !new_date:"
 
-#: vopros_answer/includes/vopros_answer.admin.inc:504 vopros_question/includes/vopros_question.admin.inc:590
+#: vopros_answer/includes/vopros_answer.admin.inc:504
+#: vopros_question/includes/vopros_question.admin.inc:590
 msgid "Changes to %name"
 msgstr "Ændringer til %name"
 
-#: vopros_answer/includes/vopros_answer.admin.inc:514 vopros_question/includes/vopros_question.admin.inc:600
+#: vopros_answer/includes/vopros_answer.admin.inc:514
+#: vopros_question/includes/vopros_question.admin.inc:600
 msgid "No visible changes"
 msgstr "Ingen synlige ændringer"
 
@@ -289,7 +265,12 @@ msgstr "Ingen synlige ændringer"
 msgid "Answers"
 msgstr "Svar"
 
-#: vopros_answer/includes/views/vopros_answer.views_default.inc:260 vopros_email/includes/views/vopros_email.views_default.inc:303 vopros_feedback/includes/views/vopros_feedback.views_default.inc:316 vopros_question/includes/views/vopros_question.views_default.inc:697 vopros_search/includes/views/vopros_search.views_default.inc:241 vopros_user/vopros_user.views_default.inc:77;369
+#: vopros_answer/includes/views/vopros_answer.views_default.inc:260
+#: vopros_email/includes/views/vopros_email.views_default.inc:303
+#: vopros_feedback/includes/views/vopros_feedback.views_default.inc:316
+#: vopros_question/includes/views/vopros_question.views_default.inc:697
+#: vopros_search/includes/views/vopros_search.views_default.inc:241
+#: vopros_user/vopros_user.views_default.inc:77;369
 msgid "Master"
 msgstr "Master"
 
@@ -297,87 +278,160 @@ msgstr "Master"
 msgid "Your questions"
 msgstr "Dine spørgsmål"
 
-#: vopros_answer/includes/views/vopros_answer.views_default.inc:262 vopros_email/includes/views/vopros_email.views_default.inc:305 vopros_feedback/includes/views/vopros_feedback.views_default.inc:340 vopros_question/includes/views/vopros_question.views_default.inc:699 vopros_search/includes/views/vopros_search.views_default.inc:243 vopros_user/vopros_user.views_default.inc:79;371
+#: vopros_answer/includes/views/vopros_answer.views_default.inc:262
+#: vopros_email/includes/views/vopros_email.views_default.inc:305
+#: vopros_feedback/includes/views/vopros_feedback.views_default.inc:340
+#: vopros_question/includes/views/vopros_question.views_default.inc:699
+#: vopros_search/includes/views/vopros_search.views_default.inc:243
+#: vopros_user/vopros_user.views_default.inc:79;371
 msgid "more"
 msgstr "mere"
 
-#: vopros_answer/includes/views/vopros_answer.views_default.inc:263 vopros_email/includes/views/vopros_email.views_default.inc:306 vopros_feedback/includes/views/vopros_feedback.views_default.inc:319 vopros_question/includes/views/vopros_question.views_default.inc:700 vopros_search/includes/views/vopros_search.views_default.inc:244 vopros_user/vopros_user.views_default.inc:80;372
+#: vopros_answer/includes/views/vopros_answer.views_default.inc:263
+#: vopros_email/includes/views/vopros_email.views_default.inc:306
+#: vopros_feedback/includes/views/vopros_feedback.views_default.inc:319
+#: vopros_question/includes/views/vopros_question.views_default.inc:700
+#: vopros_search/includes/views/vopros_search.views_default.inc:244
+#: vopros_user/vopros_user.views_default.inc:80;372
 msgid "Apply"
 msgstr "Anvend"
 
-#: vopros_answer/includes/views/vopros_answer.views_default.inc:264 vopros_email/includes/views/vopros_email.views_default.inc:307 vopros_question/includes/views/vopros_question.views_default.inc:701 vopros_search/includes/views/vopros_search.views_default.inc:245 vopros_user/vopros_user.views_default.inc:81;373
+#: vopros_answer/includes/views/vopros_answer.views_default.inc:264
+#: vopros_email/includes/views/vopros_email.views_default.inc:307
+#: vopros_question/includes/views/vopros_question.views_default.inc:701
+#: vopros_search/includes/views/vopros_search.views_default.inc:245
+#: vopros_user/vopros_user.views_default.inc:81;373
 msgid "Reset"
 msgstr "Nulstil"
 
-#: vopros_answer/includes/views/vopros_answer.views_default.inc:265 vopros_email/includes/views/vopros_email.views_default.inc:308 vopros_question/includes/views/vopros_question.views_default.inc:702 vopros_search/includes/views/vopros_search.views_default.inc:246 vopros_user/vopros_user.views_default.inc:82;374
+#: vopros_answer/includes/views/vopros_answer.views_default.inc:265
+#: vopros_email/includes/views/vopros_email.views_default.inc:308
+#: vopros_question/includes/views/vopros_question.views_default.inc:702
+#: vopros_search/includes/views/vopros_search.views_default.inc:246
+#: vopros_user/vopros_user.views_default.inc:82;374
 msgid "Sort by"
 msgstr "Sorter efter"
 
-#: vopros_answer/includes/views/vopros_answer.views_default.inc:266 vopros_email/includes/views/vopros_email.views_default.inc:309 vopros_feedback/includes/views/vopros_feedback.views_default.inc:322 vopros_question/includes/views/vopros_question.views_default.inc:703 vopros_search/includes/views/vopros_search.views_default.inc:247 vopros_user/vopros_user.views_default.inc:83;375
+#: vopros_answer/includes/views/vopros_answer.views_default.inc:266
+#: vopros_email/includes/views/vopros_email.views_default.inc:309
+#: vopros_feedback/includes/views/vopros_feedback.views_default.inc:322
+#: vopros_question/includes/views/vopros_question.views_default.inc:703
+#: vopros_search/includes/views/vopros_search.views_default.inc:247
+#: vopros_user/vopros_user.views_default.inc:83;375
 msgid "Asc"
 msgstr "Asc"
 
-#: vopros_answer/includes/views/vopros_answer.views_default.inc:267 vopros_email/includes/views/vopros_email.views_default.inc:310 vopros_feedback/includes/views/vopros_feedback.views_default.inc:323 vopros_question/includes/views/vopros_question.views_default.inc:704 vopros_search/includes/views/vopros_search.views_default.inc:248 vopros_user/vopros_user.views_default.inc:84;376
+#: vopros_answer/includes/views/vopros_answer.views_default.inc:267
+#: vopros_email/includes/views/vopros_email.views_default.inc:310
+#: vopros_feedback/includes/views/vopros_feedback.views_default.inc:323
+#: vopros_question/includes/views/vopros_question.views_default.inc:704
+#: vopros_search/includes/views/vopros_search.views_default.inc:248
+#: vopros_user/vopros_user.views_default.inc:84;376
 msgid "Desc"
 msgstr "Desc"
 
-#: vopros_answer/includes/views/vopros_answer.views_default.inc:268 vopros_email/includes/views/vopros_email.views_default.inc:311 vopros_question/includes/views/vopros_question.views_default.inc:705 vopros_search/includes/views/vopros_search.views_default.inc:249 vopros_user/vopros_user.views_default.inc:85;377
+#: vopros_answer/includes/views/vopros_answer.views_default.inc:268
+#: vopros_email/includes/views/vopros_email.views_default.inc:311
+#: vopros_question/includes/views/vopros_question.views_default.inc:705
+#: vopros_search/includes/views/vopros_search.views_default.inc:249
+#: vopros_user/vopros_user.views_default.inc:85;377
 msgid "Items per page"
 msgstr "Poster pr side"
 
-#: vopros_answer/includes/views/vopros_answer.views_default.inc:269 vopros_email/includes/views/vopros_email.views_default.inc:312 vopros_question/includes/views/vopros_question.views_default.inc:706 vopros_search/includes/views/vopros_search.views_default.inc:250 vopros_user/vopros_user.views_default.inc:86;378
+#: vopros_answer/includes/views/vopros_answer.views_default.inc:269
+#: vopros_email/includes/views/vopros_email.views_default.inc:312
+#: vopros_question/includes/views/vopros_question.views_default.inc:706
+#: vopros_search/includes/views/vopros_search.views_default.inc:250
+#: vopros_user/vopros_user.views_default.inc:86;378
 msgid "- All -"
 msgstr "- Alle -"
 
-#: vopros_answer/includes/views/vopros_answer.views_default.inc:270 vopros_email/includes/views/vopros_email.views_default.inc:313 vopros_feedback/includes/views/vopros_feedback.views_default.inc:326 vopros_question/includes/views/vopros_question.views_default.inc:707 vopros_search/includes/views/vopros_search.views_default.inc:251 vopros_user/vopros_user.views_default.inc:87;379
+#: vopros_answer/includes/views/vopros_answer.views_default.inc:270
+#: vopros_email/includes/views/vopros_email.views_default.inc:313
+#: vopros_feedback/includes/views/vopros_feedback.views_default.inc:326
+#: vopros_question/includes/views/vopros_question.views_default.inc:707
+#: vopros_search/includes/views/vopros_search.views_default.inc:251
+#: vopros_user/vopros_user.views_default.inc:87;379
 msgid "Offset"
 msgstr "Offset"
 
-#: vopros_answer/includes/views/vopros_answer.views_default.inc:271 vopros_email/theme/vopros_email.theme.inc:174 vopros_question/includes/views/vopros_question.views_default.inc:708
+#: vopros_answer/includes/views/vopros_answer.views_default.inc:271
+#: vopros_email/theme/vopros_email.theme.inc:174
+#: vopros_question/includes/views/vopros_question.views_default.inc:708
 msgid "question"
 msgstr "spørgsmål"
 
-#: vopros_answer/includes/views/vopros_answer.views_default.inc:272 vopros_question/includes/views/vopros_question.views_default.inc:709
+#: vopros_answer/includes/views/vopros_answer.views_default.inc:272
+#: vopros_question/includes/views/vopros_question.views_default.inc:709
 msgid "Question ID"
 msgstr "Spørgsmåls-ID"
 
-#: vopros_answer/includes/views/vopros_answer.views_default.inc:273 vopros_email/includes/views/vopros_email.views_default.inc:315 vopros_feedback/includes/views/vopros_feedback.views_default.inc:329 vopros_question/includes/views/vopros_question.views_default.inc:710 vopros_search/includes/views/vopros_search.views_default.inc:252
+#: vopros_answer/includes/views/vopros_answer.views_default.inc:273
+#: vopros_email/includes/views/vopros_email.views_default.inc:315
+#: vopros_feedback/includes/views/vopros_feedback.views_default.inc:329
+#: vopros_question/includes/views/vopros_question.views_default.inc:710
+#: vopros_search/includes/views/vopros_search.views_default.inc:252
 msgid "."
 msgstr "."
 
-#: vopros_answer/includes/views/vopros_answer.views_default.inc:274 vopros_public_question/includes/vopros_public_question.admin.inc:41 vopros_question/includes/vopros_question.admin.inc:52 vopros_question/includes/views/vopros_question.views_default.inc:711
+#: vopros_answer/includes/views/vopros_answer.views_default.inc:274
+#: vopros_public_question/includes/vopros_public_question.admin.inc:41
+#: vopros_question/includes/vopros_question.admin.inc:52
+#: vopros_question/includes/views/vopros_question.views_default.inc:711
 msgid "Title"
 msgstr "Titel"
 
-#: vopros_answer/includes/views/vopros_answer.views_default.inc:275 vopros_feedback/includes/views/vopros_feedback.views_default.inc:331 vopros_question/includes/views/vopros_question.views_default.inc:712 vopros_search/includes/views/vopros_search.views_default.inc:253
-msgid "admin/vopros/questions/[question_id]"
-msgstr ""
-
-#: vopros_answer/includes/views/vopros_answer.views_default.inc:276 vopros_email/vopros_email.module:595 vopros_email/includes/vopros_email.admin.inc:134;268 vopros_email/includes/views/vopros_email.views_default.inc:317 vopros_public_question/vopros_public_question.module:110 vopros_question/vopros_question.module:700 vopros_question/includes/views/vopros_question.views_default.inc:713
+#: vopros_answer/includes/views/vopros_answer.views_default.inc:276
+#: vopros_email/vopros_email.module:595
+#: vopros_email/includes/vopros_email.admin.inc:134;268
+#: vopros_email/includes/views/vopros_email.views_default.inc:317
+#: vopros_public_question/vopros_public_question.module:110
+#: vopros_question/vopros_question.module:700
+#: vopros_question/includes/views/vopros_question.views_default.inc:713
 msgid "Subject"
 msgstr "Emne"
 
-#: vopros_answer/includes/views/vopros_answer.views_default.inc:277 vopros_question/vopros_question.module:90;137 vopros_question/includes/vopros_question.admin.inc:83 vopros_question/includes/views/vopros_question.views_default.inc:714
+#: vopros_answer/includes/views/vopros_answer.views_default.inc:277
+#: vopros_question/vopros_question.module:90;137
+#: vopros_question/includes/vopros_question.admin.inc:83
+#: vopros_question/includes/views/vopros_question.views_default.inc:714
 msgid "Usage"
 msgstr "Brug"
 
-#: vopros_answer/includes/views/vopros_answer.views_default.inc:278 vopros_question/includes/vopros_question.admin.inc:68 vopros_question/includes/views/vopros_question.views_default.inc:715 vopros_question/theme/vopros_question.theme.inc:52 vopros_search/includes/views/vopros_search.views_default.inc:255
+#: vopros_answer/includes/views/vopros_answer.views_default.inc:278
+#: vopros_question/includes/vopros_question.admin.inc:68
+#: vopros_question/includes/views/vopros_question.views_default.inc:715
+#: vopros_question/theme/vopros_question.theme.inc:52
+#: vopros_search/includes/views/vopros_search.views_default.inc:255
 msgid "Status"
 msgstr "Status"
 
-#: vopros_answer/includes/views/vopros_answer.views_default.inc:279 vopros_question/vopros_question.module:85;132 vopros_question/includes/vopros_question.admin.inc:76 vopros_question/includes/views/vopros_question.views_default.inc:716
+#: vopros_answer/includes/views/vopros_answer.views_default.inc:279
+#: vopros_question/vopros_question.module:85;132
+#: vopros_question/includes/vopros_question.admin.inc:76
+#: vopros_question/includes/views/vopros_question.views_default.inc:716
 msgid "Deadline"
 msgstr "Tidsfrist"
 
-#: vopros_answer/includes/views/vopros_answer.views_default.inc:280 vopros_question/vopros_question.module:127 vopros_question/includes/views/vopros_question.views_default.inc:718
+#: vopros_answer/includes/views/vopros_answer.views_default.inc:280
+#: vopros_question/vopros_question.module:127
+#: vopros_question/includes/views/vopros_question.views_default.inc:718
 msgid "Created"
 msgstr "Oprettet"
 
-#: vopros_answer/includes/views/vopros_answer.views_default.inc:281 vopros_base/includes/views/handlers/vopros_base_taxonomy_tid_filter_handler.inc:18 vopros_feedback/includes/views/vopros_feedback.views_default.inc:337 vopros_user/vopros_user.views_default.inc:88
+#: vopros_answer/includes/views/vopros_answer.views_default.inc:281
+#: vopros_base/includes/views/handlers/vopros_base_taxonomy_tid_filter_handler.inc:18
+#: vopros_feedback/includes/views/vopros_feedback.views_default.inc:337
+#: vopros_user/vopros_user.views_default.inc:88
 msgid "All"
 msgstr "Alle"
 
-#: vopros_answer/includes/views/vopros_answer.views_default.inc:282 vopros_email/includes/views/vopros_email.views_default.inc:327 vopros_feedback/includes/views/vopros_feedback.views_default.inc:339 vopros_question/includes/views/vopros_question.views_default.inc:725 vopros_search/includes/views/vopros_search.views_default.inc:258 vopros_user/vopros_user.views_default.inc:388
+#: vopros_answer/includes/views/vopros_answer.views_default.inc:282
+#: vopros_email/includes/views/vopros_email.views_default.inc:327
+#: vopros_feedback/includes/views/vopros_feedback.views_default.inc:339
+#: vopros_question/includes/views/vopros_question.views_default.inc:725
+#: vopros_search/includes/views/vopros_search.views_default.inc:258
+#: vopros_user/vopros_user.views_default.inc:388
 msgid "Page"
 msgstr "Side"
 
@@ -396,8 +450,7 @@ msgstr "Adgang til adminitration af vopros"
 #: vopros_base/vopros_base.module:105
 msgid "Access advances admin pages (Structure, Config and Help)"
 msgstr ""
-"Adgang til avancereret adminitration (struktur, konfiguration og "
-"hjælp)"
+"Adgang til avancereret adminitration (struktur, konfiguration og hjælp)"
 
 #: vopros_base/vopros_base.module:135
 msgid "Generic file with images"
@@ -422,14 +475,14 @@ msgstr "Vopros database"
 #: vopros_base/vopros_base.info:0
 msgid "General module to tie all vopros together with admin interface"
 msgstr ""
-"Generelt modul til at binde hele vopros sammen med "
-"administrationsinterface"
+"Generelt modul til at binde hele vopros sammen med administrationsinterface"
 
 #: vopros_base/includes/views/handlers/vopros_base_taxonomy_tid_filter_handler.inc:23
 msgid "Value"
 msgstr "Værdi"
 
-#: vopros_editorial/vopros_editorial.module:25;70 vopros_question/includes/views/vopros_question.views_default.inc:730
+#: vopros_editorial/vopros_editorial.module:25;70
+#: vopros_question/includes/views/vopros_question.views_default.inc:730
 msgid "Editorial"
 msgstr "Redaktion"
 
@@ -438,11 +491,9 @@ msgid " (no editorial)"
 msgstr " (ingen redaktion)"
 
 #: vopros_editorial/vopros_editorial.module:110
-msgid "vopros_editorial"
-msgstr ""
-
-#: vopros_editorial/vopros_editorial.module:110
-msgid "SQL error trying to get activity stream for question: @question_id with error message: @message"
+msgid ""
+"SQL error trying to get activity stream for question: @question_id with "
+"error message: @message"
 msgstr ""
 "SQL fejl ved forsøg på at hente aktivitetsoversigt for spørgsmål: "
 "@question_id med fejlbeskeden: @message"
@@ -455,7 +506,8 @@ msgstr "Vopros redaktion"
 msgid "Creates editorial seperation for question."
 msgstr "Opretter redaktionsinddeling af spørgsmål."
 
-#: vopros_editorial/theme/vopros_editorial.theme.inc:14 vopros_question/theme/vopros_question.theme.inc:206
+#: vopros_editorial/theme/vopros_editorial.theme.inc:14
+#: vopros_question/theme/vopros_question.theme.inc:206
 msgid "System"
 msgstr "System"
 
@@ -468,7 +520,8 @@ msgctxt "a vopros email"
 msgid "Email"
 msgstr "Email"
 
-#: vopros_question/vopros_question.module:866 vopros_question/includes/vopros_question.admin.inc:109;155
+#: vopros_question/vopros_question.module:866
+#: vopros_question/includes/vopros_question.admin.inc:109;155
 msgid "Email"
 msgstr "Email"
 
@@ -508,7 +561,8 @@ msgstr "Se egne emails"
 msgid "The subject of the question"
 msgstr "Spørgsmålets emne"
 
-#: vopros_email/vopros_email.module:600 vopros_email/includes/views/vopros_email.views_default.inc:316
+#: vopros_email/vopros_email.module:600
+#: vopros_email/includes/views/vopros_email.views_default.inc:316
 msgid "Email address"
 msgstr "Mailadresse"
 
@@ -516,7 +570,8 @@ msgstr "Mailadresse"
 msgid "The email address that the email has been sent to or from"
 msgstr "Mailadressen som emailen er sendt til eller fra"
 
-#: vopros_email/vopros_email.module:605 vopros_sms/includes/vopros_sms.admin.inc:185;194
+#: vopros_email/vopros_email.module:605
+#: vopros_sms/includes/vopros_sms.admin.inc:185;194
 msgid "Content"
 msgstr "Indhold"
 
@@ -536,7 +591,8 @@ msgstr "Ind"
 msgid "Outgoing"
 msgstr "Ud"
 
-#: vopros_email/vopros_email.module:782 vopros_question/vopros_question.module:741
+#: vopros_email/vopros_email.module:782
+#: vopros_question/vopros_question.module:741
 msgid "File attachments"
 msgstr "Filvedhæftninger"
 
@@ -548,23 +604,36 @@ msgstr "Emailindstillinger"
 msgid "Configure general email settings, fields, and displays."
 msgstr "Konfigurer generelle emailindstillinger, felter og visning."
 
-#: vopros_email/vopros_email.module:100 vopros_email/includes/views/vopros_email.views_default.inc:320 vopros_feedback/vopros_feedback.module:89 vopros_public_question/vopros_public_question.module:148 vopros_question/vopros_question.module:239 vopros_sms/vopros_sms.module:98
+#: vopros_email/vopros_email.module:100
+#: vopros_email/includes/views/vopros_email.views_default.inc:320
+#: vopros_feedback/vopros_feedback.module:89
+#: vopros_public_question/vopros_public_question.module:148
+#: vopros_question/vopros_question.module:239 vopros_sms/vopros_sms.module:98
 msgid "View"
 msgstr "Se"
 
-#: vopros_email/vopros_email.module:105 vopros_feedback/vopros_feedback.module:94 vopros_public_question/vopros_public_question.module:153 vopros_question/vopros_question.module:254 vopros_sms/vopros_sms.module:103
+#: vopros_email/vopros_email.module:105
+#: vopros_feedback/vopros_feedback.module:94
+#: vopros_public_question/vopros_public_question.module:153
+#: vopros_question/vopros_question.module:254 vopros_sms/vopros_sms.module:103
 msgid "Edit"
 msgstr "Rediger"
 
-#: vopros_email/vopros_email.module:115 vopros_email/includes/vopros_email.admin.inc:393 vopros_email/includes/views/vopros_email.views_default.inc:325
+#: vopros_email/vopros_email.module:115
+#: vopros_email/includes/vopros_email.admin.inc:393
+#: vopros_email/includes/views/vopros_email.views_default.inc:325
 msgid "Delete"
 msgstr "Slet"
 
-#: vopros_email/vopros_email.module:123 vopros_email/includes/views/vopros_email.views_default.inc:323
+#: vopros_email/vopros_email.module:123
+#: vopros_email/includes/views/vopros_email.views_default.inc:323
 msgid "Convert"
 msgstr "Konverter"
 
-#: vopros_email/vopros_email.module:131 vopros_question/vopros_question.module:1035 vopros_question/includes/vopros_question.admin.inc:798 vopros_sms/vopros_sms.module:113
+#: vopros_email/vopros_email.module:131
+#: vopros_question/vopros_question.module:1035
+#: vopros_question/includes/vopros_question.admin.inc:798
+#: vopros_sms/vopros_sms.module:113
 msgid "Contact user"
 msgstr "Kontakt spørger"
 
@@ -581,16 +650,21 @@ msgid "Defines the Email entity and associated features."
 msgstr "Definerer email-entitet og tilhørende features."
 
 #: vopros_email/includes/vopros_email.admin.inc:13
-msgid "Below you can define default texts used for different situations when sending an email to the user. This could be an email containing the answer, or when the need to contact the user arises, fx to ask for more info. It is possible to use Drupal tokens to create dynamic macros containing question/answer or user data. See below under each category for a list of available tokens and their meaning."
+msgid ""
+"Below you can define default texts used for different situations when "
+"sending an email to the user. This could be an email containing the answer, "
+"or when the need to contact the user arises, fx to ask for more info. It is "
+"possible to use Drupal tokens to create dynamic macros containing question/"
+"answer or user data. See below under each category for a list of available "
+"tokens and their meaning."
 msgstr ""
-"Herunder kan du tilføje standardtekster til brug i forskellige "
-"situationer, hvor der skal sendes mails til brugeren. Det kan fx være "
-"en email der indeholder svaret, eller hvis der opstår behov for at "
-"kontakte brugeren, fx for at få mere information. Det er muligt at "
-"bruge særlige tokens (Drupal tokens) til at generere dynamiske "
-"makroer der indeholder spørgsmål/svar-data og/eller brugerdata. "
-"Neden under hver kategory findes en liste over tilgængelige tokens og "
-"deres betydning."
+"Herunder kan du tilføje standardtekster til brug i forskellige situationer, "
+"hvor der skal sendes mails til brugeren. Det kan fx være en email der "
+"indeholder svaret, eller hvis der opstår behov for at kontakte brugeren, fx "
+"for at få mere information. Det er muligt at bruge særlige tokens (Drupal "
+"tokens) til at generere dynamiske makroer der indeholder spørgsmål/svar-data "
+"og/eller brugerdata. Neden under hver kategory findes en liste over "
+"tilgængelige tokens og deres betydning."
 
 #: vopros_email/includes/vopros_email.admin.inc:20
 msgid "Contact user email macros"
@@ -620,7 +694,8 @@ msgstr "Lav makroer til indsættelse ved afsendelse af en email."
 msgid "Answered question subject"
 msgstr "Emnefelt for besvaret spørgsmål"
 
-#: vopros_email/includes/vopros_email.admin.inc:61;68 vopros_sms/includes/vopros_sms.admin.inc:100
+#: vopros_email/includes/vopros_email.admin.inc:61;68
+#: vopros_sms/includes/vopros_sms.admin.inc:100
 msgid "Macro used when answering a question."
 msgstr "Makro til brug ved besvarelse af spørgsmål."
 
@@ -628,11 +703,13 @@ msgstr "Makro til brug ved besvarelse af spørgsmål."
 msgid "Answered question mail body"
 msgstr "Indhold i mail til besvaret spørgsmål"
 
-#: vopros_email/includes/vopros_email.admin.inc:103;169 vopros_sms/includes/vopros_sms.admin.inc:141;206
+#: vopros_email/includes/vopros_email.admin.inc:103;169
+#: vopros_sms/includes/vopros_sms.admin.inc:141;206
 msgid "Send"
 msgstr "Send"
 
-#: vopros_email/includes/vopros_email.admin.inc:122;251 vopros_sms/includes/vopros_sms.admin.inc:165;262
+#: vopros_email/includes/vopros_email.admin.inc:122;251
+#: vopros_sms/includes/vopros_sms.admin.inc:165;262
 msgid "To"
 msgstr "Til"
 
@@ -648,23 +725,31 @@ msgstr "Emailindhold"
 msgid "The main content of the email."
 msgstr "Hovedindholdet i emailen."
 
-#: vopros_email/includes/vopros_email.admin.inc:224 vopros_sms/includes/vopros_sms.admin.inc:241
-msgid "The answer has been sent to @receiver and the question !question is marked as answered."
-msgstr "Emailen er sendt til @receiver og spørgsmålet !question er markeret som besvaret."
+#: vopros_email/includes/vopros_email.admin.inc:224
+#: vopros_sms/includes/vopros_sms.admin.inc:241
+msgid ""
+"The answer has been sent to @receiver and the question !question is marked "
+"as answered."
+msgstr ""
+"Emailen er sendt til @receiver og spørgsmålet !question er markeret som "
+"besvaret."
 
 #: vopros_email/includes/vopros_email.admin.inc:237;281
 msgid "Send mail"
 msgstr "Send email"
 
-#: vopros_email/includes/vopros_email.admin.inc:259 vopros_sms/includes/vopros_sms.admin.inc:270
+#: vopros_email/includes/vopros_email.admin.inc:259
+#: vopros_sms/includes/vopros_sms.admin.inc:270
 msgid "Answer type"
 msgstr "Svartype"
 
-#: vopros_email/includes/vopros_email.admin.inc:274 vopros_email/includes/views/vopros_email.views_default.inc:319
+#: vopros_email/includes/vopros_email.admin.inc:274
+#: vopros_email/includes/views/vopros_email.views_default.inc:319
 msgid "Email content"
 msgstr "Indhold i email"
 
-#: vopros_email/includes/vopros_email.admin.inc:287;394 vopros_question/includes/vopros_question.admin.inc:239
+#: vopros_email/includes/vopros_email.admin.inc:287;394
+#: vopros_question/includes/vopros_question.admin.inc:239
 msgid "Cancel"
 msgstr "Annuller"
 
@@ -673,8 +758,12 @@ msgid "The email address %mail is not valid."
 msgstr "Mailadressen %mail er ikke valid."
 
 #: vopros_email/includes/vopros_email.admin.inc:346
-msgid "The e-mail has been sent to @receiver and the question !question is marked as closed without answer (@status_reason)."
-msgstr "Emailen er sendt til @receiver og spørgsmålet !question er markeret som lukket uden svar (@status_reason)."
+msgid ""
+"The e-mail has been sent to @receiver and the question !question is marked "
+"as closed without answer (@status_reason)."
+msgstr ""
+"Emailen er sendt til @receiver og spørgsmålet !question er markeret som "
+"lukket uden svar (@status_reason)."
 
 #: vopros_email/includes/vopros_email.admin.inc:390
 msgid "Are you sure you want to delete the email?"
@@ -685,10 +774,11 @@ msgid "This action cannot be undone."
 msgstr "Denne handling kan ikke fortrydes."
 
 #: vopros_email/includes/vopros_email.admin.inc:436
-msgid "Email is already attached to a question, cannot be converted to a question."
+msgid ""
+"Email is already attached to a question, cannot be converted to a question."
 msgstr ""
-"Emailen er allerede tilknyttet et spørgsmål, og kan derfor ikke "
-"konverteres til et nyt spørgsmål."
+"Emailen er allerede tilknyttet et spørgsmål, og kan derfor ikke konverteres "
+"til et nyt spørgsmål."
 
 #: vopros_email/includes/vopros_email.admin.inc:460
 msgid "This email cannot be transferred"
@@ -702,31 +792,16 @@ msgstr "Indkomne mails der ikke er knyttet til et spørgsmål"
 msgid "Email ID"
 msgstr "Email-ID"
 
-#: vopros_email/includes/views/vopros_email.views_default.inc:318 vopros_feedback/includes/views/vopros_feedback.views_default.inc:334
-msgid "admin/vopros/emails/[email_id]"
-msgstr ""
-
-#: vopros_email/includes/views/vopros_email.views_default.inc:321
-msgid "<br />"
-msgstr ""
-
 #: vopros_email/includes/views/vopros_email.views_default.inc:322
 msgid "Action"
 msgstr "Handling"
-
-#: vopros_email/includes/views/vopros_email.views_default.inc:324
-msgid "admin/vopros/emails/[email_id]/convert"
-msgstr ""
-
-#: vopros_email/includes/views/vopros_email.views_default.inc:326
-msgid "admin/vopros/emails/[email_id]/delete"
-msgstr ""
 
 #: vopros_email/includes/views/vopros_email.views_default.inc:331
 msgid "Display a list of inbound emails"
 msgstr "Se en liste af indkomne e-mails"
 
-#: vopros_email/includes/views/vopros_email.views_default.inc:332 vopros_mailhandler/plugins/mailhandler/VoprosMailhandlerProcessor.inc:99
+#: vopros_email/includes/views/vopros_email.views_default.inc:332
+#: vopros_mailhandler/plugins/mailhandler/VoprosMailhandlerProcessor.inc:99
 msgid "Emails"
 msgstr "Emails"
 
@@ -782,7 +857,8 @@ msgstr "Overført:"
 msgid "!question created by !username"
 msgstr "!question oprettet af !username"
 
-#: vopros_email/theme/vopros_email.theme.inc:157 vopros_question/vopros_question.module:402;411
+#: vopros_email/theme/vopros_email.theme.inc:157
+#: vopros_question/vopros_question.module:402;411
 msgid "New question"
 msgstr "Nyt spørgsmål"
 
@@ -800,7 +876,11 @@ msgctxt "a vopros feedback"
 msgid "Feedback"
 msgstr "Vurdering"
 
-#: vopros_feedback/vopros_feedback.module:460 vopros_feedback/includes/vopros_feedback.admin.inc:37 vopros_feedback/includes/views/vopros_feedback.views_default.inc:336;345 vopros_feedback/theme/vopros_feedback.theme.inc:13 vopros_question/includes/views/vopros_question.views_default.inc:740
+#: vopros_feedback/vopros_feedback.module:460
+#: vopros_feedback/includes/vopros_feedback.admin.inc:37
+#: vopros_feedback/includes/views/vopros_feedback.views_default.inc:336;345
+#: vopros_feedback/theme/vopros_feedback.theme.inc:13
+#: vopros_question/includes/views/vopros_question.views_default.inc:740
 msgid "Feedback"
 msgstr "Vurdering"
 
@@ -844,11 +924,15 @@ msgstr "Notifikation, et svar har modtaget en vurdering"
 msgid "The answer for the question: @title  has received feedback link: !url"
 msgstr "Svaret på spørgsmålet: @title har modtaget denne vurdering: !url"
 
-#: vopros_feedback/vopros_feedback.module:415 vopros_feedback/includes/views/vopros_feedback.views_default.inc:335 vopros_question/includes/views/vopros_question.views_default.inc:719
+#: vopros_feedback/vopros_feedback.module:415
+#: vopros_feedback/includes/views/vopros_feedback.views_default.inc:335
+#: vopros_question/includes/views/vopros_question.views_default.inc:719
 msgid "Rating"
 msgstr "Rating"
 
-#: vopros_feedback/vopros_feedback.module:449 vopros_feedback/includes/views/vopros_feedback.views_default.inc:346 vopros_question/includes/views/vopros_question.views_default.inc:741
+#: vopros_feedback/vopros_feedback.module:449
+#: vopros_feedback/includes/views/vopros_feedback.views_default.inc:346
+#: vopros_question/includes/views/vopros_question.views_default.inc:741
 msgid "User feedback"
 msgstr "Brugervurdering"
 
@@ -876,7 +960,8 @@ msgstr "Vurderingsindstillinger"
 msgid "Configure general feedback settings, fields, and displays."
 msgstr "Konfigurer generelle vurderingsindstillinger, felter og visning."
 
-#: vopros_feedback/vopros_feedback.module:112 vopros_feedback/includes/vopros_feedback.admin.inc:48
+#: vopros_feedback/vopros_feedback.module:112
+#: vopros_feedback/includes/vopros_feedback.admin.inc:48
 msgid "Give feedback"
 msgstr "Giv vurdering"
 
@@ -885,10 +970,12 @@ msgid "Vopros Feedback"
 msgstr "Vopros Vurdering"
 
 #: vopros_feedback/vopros_feedback.info:0
-msgid "Defines the Feedback entity and associated features, used for allowing users to provide feedback."
+msgid ""
+"Defines the Feedback entity and associated features, used for allowing users "
+"to provide feedback."
 msgstr ""
-"Definerer vurderingsentiteten og tilhørende features. Anvendes til at "
-"lade brugerne give vurderinger."
+"Definerer vurderingsentiteten og tilhørende features. Anvendes til at lade "
+"brugerne give vurderinger."
 
 #: vopros_feedback/includes/vopros_feedback.admin.inc:13
 msgid "MD5 Secret"
@@ -909,34 +996,6 @@ msgstr "Vi har modtaget din vurdering. Tak skal du have."
 #: vopros_feedback/includes/views/vopros_feedback.views_default.inc:317
 msgid "Your feedback"
 msgstr "Din vuredering"
-
-#: vopros_feedback/includes/views/vopros_feedback.views_default.inc:318
-msgid "mere"
-msgstr ""
-
-#: vopros_feedback/includes/views/vopros_feedback.views_default.inc:320
-msgid "Nulstil"
-msgstr ""
-
-#: vopros_feedback/includes/views/vopros_feedback.views_default.inc:321
-msgid "Sorter efter"
-msgstr ""
-
-#: vopros_feedback/includes/views/vopros_feedback.views_default.inc:324
-msgid "Poster pr side"
-msgstr ""
-
-#: vopros_feedback/includes/views/vopros_feedback.views_default.inc:325
-msgid "- Alle -"
-msgstr ""
-
-#: vopros_feedback/includes/views/vopros_feedback.views_default.inc:327
-msgid "email"
-msgstr ""
-
-#: vopros_feedback/includes/views/vopros_feedback.views_default.inc:328
-msgid "spørgsmål"
-msgstr ""
 
 #: vopros_feedback/includes/views/vopros_feedback.views_default.inc:333
 msgid "See answer sent to user"
@@ -979,7 +1038,8 @@ msgstr "Rediger egne logs"
 msgid "View own logs"
 msgstr "Se egne logs"
 
-#: vopros_log/vopros_log.module:195 vopros_question/vopros_question.module:105;156
+#: vopros_log/vopros_log.module:195
+#: vopros_question/vopros_question.module:105;156
 msgid "Internal log"
 msgstr "Intern log"
 
@@ -1051,7 +1111,8 @@ msgstr "Migrationsindstillinger"
 msgid "Configure external database used for migration."
 msgstr "Konfigurer ekstern database til brug for migration."
 
-#: vopros_migrate/vopros_migrate.module:21 vopros_migrate/includes/vopros_migrate.admin.inc:74;131;188
+#: vopros_migrate/vopros_migrate.module:21
+#: vopros_migrate/includes/vopros_migrate.admin.inc:74;131;188
 msgid "Migrate"
 msgstr "Migrere"
 
@@ -1092,10 +1153,12 @@ msgid "Database configuration"
 msgstr "Databaseindstillinger"
 
 #: vopros_migrate/includes/vopros_migrate.admin.inc:18
-msgid "Setup the connection to the external database you want to use as source for the migration of data."
+msgid ""
+"Setup the connection to the external database you want to use as source for "
+"the migration of data."
 msgstr ""
-"Opsætning af adgang til den eksterne database der skal bruges til "
-"migration af data."
+"Opsætning af adgang til den eksterne database der skal bruges til migration "
+"af data."
 
 #: vopros_migrate/includes/vopros_migrate.admin.inc:26
 msgid "Host"
@@ -1113,7 +1176,8 @@ msgstr "Brugernavn"
 msgid "The Username used to login to the database."
 msgstr "Brugernavn til login i database."
 
-#: vopros_migrate/includes/vopros_migrate.admin.inc:40 vopros_sms/includes/vopros_sms.admin.inc:42
+#: vopros_migrate/includes/vopros_migrate.admin.inc:40
+#: vopros_sms/includes/vopros_sms.admin.inc:42
 msgid "Password"
 msgstr "Adgangskode"
 
@@ -1132,10 +1196,6 @@ msgstr "Databasens navn."
 #: vopros_migrate/includes/vopros_migrate.admin.inc:54
 msgid "Database driver"
 msgstr "Databasedriver"
-
-#: vopros_migrate/includes/vopros_migrate.admin.inc:56
-msgid "Mssql"
-msgstr ""
 
 #: vopros_migrate/includes/vopros_migrate.admin.inc:69
 msgid "Number of questions to migrate"
@@ -1205,7 +1265,8 @@ msgctxt "a vopros public question"
 msgid "Public question"
 msgstr "Publicerede spørgsmål"
 
-#: vopros_public_question/vopros_public_question.module:347 vopros_public_question/theme/vopros_public_question.theme.inc:25
+#: vopros_public_question/vopros_public_question.module:347
+#: vopros_public_question/theme/vopros_public_question.theme.inc:25
 msgid "Public question"
 msgstr "Publicerede spørgsmål"
 
@@ -1241,7 +1302,8 @@ msgstr "Link til den offentlige version af dette spørgsmål, hvis det findes."
 msgid "Public question settings"
 msgstr "Indstillinger for publicering af spørgsmål"
 
-#: vopros_public_question/vopros_public_question.module:134 vopros_question/vopros_question.module:210
+#: vopros_public_question/vopros_public_question.module:134
+#: vopros_question/vopros_question.module:210
 msgid "Configure general question settings, fields, and displays."
 msgstr "Konfigurer generelle indstillinger for spørgsmål, felter og visning."
 
@@ -1261,7 +1323,10 @@ msgstr "Definerer entitet for publiceret spørgsmål og tilhørende features."
 msgid "No settings yet."
 msgstr "Ingen indstillinger er lavet."
 
-#: vopros_public_question/includes/vopros_public_question.admin.inc:47 vopros_question/vopros_question.module:80;122 vopros_question/includes/vopros_question.admin.inc:60 vopros_question/includes/vopros_question.controller.inc:27
+#: vopros_public_question/includes/vopros_public_question.admin.inc:47
+#: vopros_question/vopros_question.module:80;122
+#: vopros_question/includes/vopros_question.admin.inc:60
+#: vopros_question/includes/vopros_question.controller.inc:27
 msgid "Question content"
 msgstr "Spørgsmålsindhold"
 
@@ -1349,7 +1414,8 @@ msgstr "Information om spørgeren"
 msgid "Internal log about the question itself."
 msgstr "Intern log vedrørende selve spørgsmålet."
 
-#: vopros_question/vopros_question.module:117 vopros_question/includes/views/vopros_question.views_default.inc:728
+#: vopros_question/vopros_question.module:117
+#: vopros_question/includes/views/vopros_question.views_default.inc:728
 msgid "Question status"
 msgstr "Spørgsmålsstatus"
 
@@ -1421,7 +1487,8 @@ msgstr "Spørgsmålsejer"
 msgid "Business"
 msgstr "Erhverv"
 
-#: vopros_question/vopros_question.module:855 vopros_question/theme/vopros_question.theme.inc:101
+#: vopros_question/vopros_question.module:855
+#: vopros_question/theme/vopros_question.theme.inc:101
 msgid "Other"
 msgstr "Andet"
 
@@ -1436,8 +1503,7 @@ msgstr "Folkeskoleopgave"
 #: vopros_question/vopros_question.module:858
 msgid "Assignment for highschool"
 msgstr ""
-"Opgave til gymnasium, EUC, VUC, SOSU eller anden kort videregående "
-"uddannelse"
+"Opgave til gymnasium, EUC, VUC, SOSU eller anden kort videregående uddannelse"
 
 #: vopros_question/vopros_question.module:859
 msgid "Assignment for college education"
@@ -1447,7 +1513,8 @@ msgstr "Opgave til mellemlang eller lang videregående uddannelse"
 msgid "Assignment for university education or research"
 msgstr "Opgave til universitetsuddannelse eller forskning"
 
-#: vopros_question/vopros_question.module:867 vopros_question/includes/vopros_question.admin.inc:156
+#: vopros_question/vopros_question.module:867
+#: vopros_question/includes/vopros_question.admin.inc:156
 msgid "SMS"
 msgstr "SMS"
 
@@ -1593,7 +1660,8 @@ msgstr "Frigiv"
 msgid "Open question"
 msgstr "Åbn spørgsmål"
 
-#: vopros_question/vopros_question.module:1040 vopros_question/includes/vopros_question.admin.inc:631;803
+#: vopros_question/vopros_question.module:1040
+#: vopros_question/includes/vopros_question.admin.inc:631;803
 msgid "Close question"
 msgstr "Luk spørgsmål"
 
@@ -1641,7 +1709,8 @@ msgstr "Note vedrørende spørgsmålet"
 msgid "Info about person who asked the question"
 msgstr "Information om spørgeren"
 
-#: vopros_question/includes/vopros_question.admin.inc:103 vopros_user/vopros_user.views_default.inc:387
+#: vopros_question/includes/vopros_question.admin.inc:103
+#: vopros_user/vopros_user.views_default.inc:387
 msgid "Name"
 msgstr "Navn"
 
@@ -1665,7 +1734,9 @@ msgstr "Køn"
 msgid "Field of study"
 msgstr "Studieretning"
 
-#: vopros_question/includes/vopros_question.admin.inc:147 vopros_user/vopros_user.features.field.inc:398 vopros_user/vopros_user.views_default.inc:382
+#: vopros_question/includes/vopros_question.admin.inc:147
+#: vopros_user/vopros_user.features.field.inc:398
+#: vopros_user/vopros_user.views_default.inc:382
 msgid "Library"
 msgstr "Bibliotek"
 
@@ -1734,10 +1805,6 @@ msgid "Question not created"
 msgstr "Spørgsmålet er ikke oprettet"
 
 #: vopros_question/includes/vopros_question.pages.inc:60
-msgid "vopros_question"
-msgstr ""
-
-#: vopros_question/includes/vopros_question.pages.inc:60
 msgid "Could not create vopros question, invalid data for: %fields"
 msgstr "Spørgsmål kunne ikke oprettes, %fields indeholder invalide data"
 
@@ -1801,15 +1868,18 @@ msgstr "Se en liste af active spørgsmål"
 msgid "Vopros deadline"
 msgstr "Vopros tidsfrist"
 
-#: vopros_question/includes/views/handlers/vopros_question_handler_field_date.inc:17 vopros_question/theme/vopros_question.theme.inc:78
+#: vopros_question/includes/views/handlers/vopros_question_handler_field_date.inc:17
+#: vopros_question/theme/vopros_question.theme.inc:78
 msgid "Deadline passed"
 msgstr "Tidsfristen er overskredet"
 
-#: vopros_question/includes/views/handlers/vopros_question_handler_field_date.inc:20 vopros_question/theme/vopros_question.theme.inc:81
+#: vopros_question/includes/views/handlers/vopros_question_handler_field_date.inc:20
+#: vopros_question/theme/vopros_question.theme.inc:81
 msgid "No Deadline"
 msgstr "Ingen tidsfrist"
 
-#: vopros_question/includes/views/handlers/vopros_question_handler_field_date.inc:23 vopros_question/theme/vopros_question.theme.inc:84
+#: vopros_question/includes/views/handlers/vopros_question_handler_field_date.inc:23
+#: vopros_question/theme/vopros_question.theme.inc:84
 msgid "%time to deadline"
 msgstr "%time tilbage inden tidsfrist udløber"
 
@@ -1890,10 +1960,12 @@ msgid "%status by !username @date"
 msgstr "%status af !username @date"
 
 #: vopros_search/vopros_search.module:50
-msgid "An automatically created search index required to be able to use the search page create by Vopros search."
+msgid ""
+"An automatically created search index required to be able to use the search "
+"page create by Vopros search."
 msgstr ""
-"Et automatisk genereret søgeindeks, som er nødvendigt for at kunne "
-"bruge søgesiden til Vopros søgning."
+"Et automatisk genereret søgeindeks, som er nødvendigt for at kunne bruge "
+"søgesiden til Vopros søgning."
 
 #: vopros_search/vopros_search.info:0
 msgid "Vopros Search"
@@ -1910,10 +1982,6 @@ msgstr "Søg"
 #: vopros_search/includes/views/vopros_search.views_default.inc:254
 msgid "Asked"
 msgstr "Spurgt"
-
-#: vopros_search/includes/views/vopros_search.views_default.inc:256
-msgid "[question_question_status] ([question_question_status_reason])"
-msgstr ""
 
 #: vopros_sms/vopros_sms.module:127
 msgid "New sms"
@@ -2016,8 +2084,21 @@ msgid "Used as the sender of the SMSes, 11 alphanumeric chars allowed"
 msgstr "Bruges som afsender af sms'er (11 alfanumriske tegn er tilladt)"
 
 #: vopros_sms/includes/vopros_sms.admin.inc:63
-msgid "Below you can define default texts used for different situations when sending a SMS to the user. This could be a SMS containing the answer, or when the need to contact the user arises, fx to ask for more info. It is possible to use Drupal tokens to create dynamic macros containing question/answer or user data. See below under each category for a list of available tokens and their meaning."
-msgstr "Her kan du definere standardtekster til forskellige situtationer, hvor der skal sendes sms til brugeren. Dette kan fx være en sms med svaret, eller hvis der er behov for at kontakte brugeren, fx for at bede om mere information. Det er muligt at bruge særlige tokens (Drupal tokens) til at generere dynamiske makroer der indeholder spørgsmål/svar-data og/eller brugerdata. Neden under hver kategory findes en liste over tilgængelige tokens og deres betydning."
+msgid ""
+"Below you can define default texts used for different situations when "
+"sending a SMS to the user. This could be a SMS containing the answer, or "
+"when the need to contact the user arises, fx to ask for more info. It is "
+"possible to use Drupal tokens to create dynamic macros containing question/"
+"answer or user data. See below under each category for a list of available "
+"tokens and their meaning."
+msgstr ""
+"Her kan du definere standardtekster til forskellige situtationer, hvor der "
+"skal sendes sms til brugeren. Dette kan fx være en sms med svaret, eller "
+"hvis der er behov for at kontakte brugeren, fx for at bede om mere "
+"information. Det er muligt at bruge særlige tokens (Drupal tokens) til at "
+"generere dynamiske makroer der indeholder spørgsmål/svar-data og/eller "
+"brugerdata. Neden under hver kategory findes en liste over tilgængelige "
+"tokens og deres betydning."
 
 #: vopros_sms/includes/vopros_sms.admin.inc:70
 msgid "Contact user SMS macros"
@@ -2060,16 +2141,20 @@ msgid "SMS body"
 msgstr "Sms indhold"
 
 #: vopros_sms/includes/vopros_sms.admin.inc:331
-msgid "The SMS has been sent to @receiver and the question is closed until the user provides feedback"
+msgid ""
+"The SMS has been sent to @receiver and the question is closed until the user "
+"provides feedback"
 msgstr ""
-"Sms'en er sendt til @receiver og spørgsmålet er lukket indtil "
-"brugeren kommer med feeback"
+"Sms'en er sendt til @receiver og spørgsmålet er lukket indtil brugeren "
+"kommer med feeback"
 
-#: vopros_user/vopros_user.features.field.inc:396 vopros_user/vopros_user.views_default.inc:383
+#: vopros_user/vopros_user.features.field.inc:396
+#: vopros_user/vopros_user.views_default.inc:383
 msgid "First name"
 msgstr "Fornavn"
 
-#: vopros_user/vopros_user.features.field.inc:397 vopros_user/vopros_user.views_default.inc:384
+#: vopros_user/vopros_user.features.field.inc:397
+#: vopros_user/vopros_user.views_default.inc:384
 msgid "Last name"
 msgstr "Efternavn"
 
@@ -2077,11 +2162,13 @@ msgstr "Efternavn"
 msgid "Notes"
 msgstr "Noter"
 
-#: vopros_user/vopros_user.features.field.inc:400 vopros_user/vopros_user.views_default.inc:386
+#: vopros_user/vopros_user.features.field.inc:400
+#: vopros_user/vopros_user.views_default.inc:386
 msgid "Phone number"
 msgstr "Telefonnummer"
 
-#: vopros_user/vopros_user.features.field.inc:401 vopros_user/vopros_user.views_default.inc:78
+#: vopros_user/vopros_user.features.field.inc:401
+#: vopros_user/vopros_user.views_default.inc:78
 msgid "Shortcut links"
 msgstr "Genvejslinks"
 
@@ -2110,11 +2197,12 @@ msgid "Included libraries"
 msgstr "Inkluderede biblioteker"
 
 #: vopros_user/vopros_user.module:28
-msgid "Enter the library ids you want to include to the library list, seperate by space and leave empty to include all."
+msgid ""
+"Enter the library ids you want to include to the library list, seperate by "
+"space and leave empty to include all."
 msgstr ""
-"Indtast de biblioteksnumre på de biblioteker der skal være på "
-"listen over biblioteker. Adskil med mellemrum. Hvis dette felt er "
-"tomt, inkluderes alle."
+"Indtast de biblioteksnumre på de biblioteker der skal være på listen over "
+"biblioteker. Adskil med mellemrum. Hvis dette felt er tomt, inkluderes alle."
 
 #: vopros_user/vopros_user.module:87
 msgid "Edit own shortcut links"
@@ -2143,4 +2231,3 @@ msgstr "Vopros-bruger"
 #: vopros_user/vopros_user.info:0
 msgid "Defines the user profile with fields for admins."
 msgstr "Definerer brugerprofilen med felter til administration."
-
