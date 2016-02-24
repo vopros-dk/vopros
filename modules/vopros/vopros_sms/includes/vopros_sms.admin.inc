@@ -107,7 +107,7 @@ function vopros_sms_settings_form($form, &$form_state) {
   $form['contact']['tokens'] = array(
     '#markup' => theme('token_tree', array(
       'token_types' => array('vopros_question'),
-      'global_types' => FALSE,
+      'global_types' => TRUE,
     )),
   );
 
@@ -128,7 +128,7 @@ function vopros_sms_settings_form($form, &$form_state) {
   $form['macros']['tokens'] = array(
     '#markup' => theme('token_tree', array(
       'token_types' => array('vopros_answer', 'vopros_question'),
-      'global_types' => FALSE,
+      'global_types' => TRUE,
     )),
   );
 
