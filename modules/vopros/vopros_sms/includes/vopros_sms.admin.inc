@@ -121,7 +121,7 @@ function vopros_sms_settings_form($form, &$form_state) {
     '#type' => 'textarea',
     '#title' => t('Answered question'),
     '#description' => t('Macro used when answering a question.'),
-    '#default_value' => variable_get('vopros_sms_answered_question_macro', ''),
+    '#default_value' => variable_get('vopros_sms_answered_question_macro', VOPROS_SMS_ANSWERED_QUESTION_MACRO),
     '#weight' => -1,
   );
 
@@ -189,7 +189,7 @@ function vopros_sms_form($form, &$form_state, $answer, $sms) {
     '#required' => TRUE,
   );
 
-  $content = token_replace(variable_get('vopros_sms_answered_question_macro', ''), array(
+  $content = token_replace(variable_get('vopros_sms_answered_question_macro', VOPROS_SMS_ANSWERED_QUESTION_MACRO), array(
      'vopros_answer' => $answer,
      'vopros_question' => $answer_wrapper->question->value(),
    ), array('sanitize' => FALSE));
