@@ -38,6 +38,7 @@ dependencies[] = views_ui
 ; Vopros modules
 dependencies[] = vopros_answer
 dependencies[] = vopros_base
+dependencies[] = vopros_embed
 dependencies[] = vopros_email
 dependencies[] = vopros_log
 dependencies[] = vopros_question
