@@ -1,7 +1,8 @@
 name = "Vopros"
-description = "Install Vopros, a library-centered
-question and answer service."
+distribution_name = "Vopros"
+description = "Install Vopros, a library-centered question and answer service."
 core = "7.x"
+exclusive = TRUE
 
 ; Core
 dependencies[] = block
