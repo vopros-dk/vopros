@@ -42,5 +42,6 @@ dependencies[] = vopros_email
 dependencies[] = vopros_log
 dependencies[] = vopros_question
 dependencies[] = vopros_sms
+dependencies[] = vopros_shortcut
 dependencies[] = vopros_statistics
 dependencies[] = vopros_user
