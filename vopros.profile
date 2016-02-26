@@ -3,8 +3,16 @@
 /**
  * @file
  *
- * Vopros install profile. Uses Profiler.
+ * Vopros install profile.
  */
+
+function vopros_profile_details() {
+  return array(
+    'name' => 'Vopros',
+    'description' => 'Install Vopros, a library-centered question and answer service.',
+    'language' => 'da',
+  );
+}
 
 /**
  * Implements hook_form_FORM_ID_alter().
@@ -21,15 +29,11 @@ function vopros_form_install_configure_form_alter(&$form, $form_state) {
  * Replace locale selection with our own.
  */
 function vopros_install_tasks_alter(&$tasks, $install_state) {
-  $tasks['install_select_locale']['function'] = '_vopros_locale_selection';
+  // Hide hardcoded steps.
+  $tasks['install_select_profile']['display'] = FALSE;
+  $tasks['install_select_locale']['display'] = FALSE;
 }
 
-/**
- * Set language to danish.
- */
-function _vopros_locale_selection(&$install_state) {
-  $install_state['parameters']['locale'] = 'da';
-}
 /**
  * Implements hook_install_tasks().
  *
