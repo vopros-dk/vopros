@@ -44,11 +44,25 @@ function vopros_user_field_views_data_alter(&$data, $field, $module) {
  * Settings form for the vopros_user module.
  */
 function vopros_user_settings_form($form, &$form_state) {
+  $form['vopros_user_libraries'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Libraries'),
+    '#description' => t('Enter one library per line in the format <em>librarynumber|library name</em>.'),
+    '#default_value' => variable_get('vopros_user_libraries', ''),
+  );
+
+  $states = array(
+    'enabled' => array(
+      'textarea[name=vopros_user_libraries]' => array('value' => ''),
+    ),
+  );
+
   $form['vopros_user_service_url'] = array(
     '#type' => 'textfield',
     '#title' => t('Service URL'),
     '#description' => t('URL of the OpenAgency service.'),
     '#default_value' => variable_get('vopros_user_service_url', VOPROS_USER_DEFAULT_URL),
+    '#states' => $states,
   );
 
   $form['vopros_user_service_group'] = array(
@@ -56,6 +70,7 @@ function vopros_user_settings_form($form, &$form_state) {
     '#title' => t('Service group'),
     '#description' => t('Group used for authentication.'),
     '#default_value' => variable_get('vopros_user_service_group', ''),
+    '#states' => $states,
   );
 
   $form['vopros_user_service_user'] = array(
@@ -63,6 +78,7 @@ function vopros_user_settings_form($form, &$form_state) {
     '#title' => t('Service user'),
     '#description' => t('User used for authentication.'),
     '#default_value' => variable_get('vopros_user_service_user', ''),
+    '#states' => $states,
   );
 
   $form['vopros_user_service_password'] = array(
@@ -70,6 +86,7 @@ function vopros_user_settings_form($form, &$form_state) {
     '#title' => t('Service password'),
     '#description' => t('Password used for authentication.'),
     '#default_value' => variable_get('vopros_user_service_password', ''),
+    '#states' => $states,
   );
 
   $form['vopros_user_included_libraries'] = array(
@@ -77,11 +94,31 @@ function vopros_user_settings_form($form, &$form_state) {
     '#title' => t('Included libraries'),
     '#description' => t('Enter the library ids you want to include to the library list, seperate by space and leave empty to include all.'),
     '#default_value' => variable_get('vopros_user_included_libraries', ''),
+    '#states' => $states,
   );
+
+  $form['#submit'][] = 'vopros_user_settings_form_submit';
 
   return system_settings_form($form);
 }
 
+/**
+ * Submit handler for settings form.
+ *
+ * Clear the library cache.
+ */
+function vopros_user_settings_form_submit($form, &$form_state) {
+  cache_set('vopros_user_libraries', array(), 'cache_field', REQUEST_TIME - 86400);
+}
+
+/**
+ * Return list of libraries.
+ *
+ * Suitable for #options.
+ *
+ * @return array
+ *   Name of libraries indexed by library id.
+ */
 function vopros_user_get_libraries() {
   $cache = cache_get('vopros_user_libraries', 'cache_field');
   // Return cache if possible.
@@ -89,38 +126,60 @@ function vopros_user_get_libraries() {
     $libraries = $cache->data;
   }
   else {
-    // Get the libraries from openagency service if no cache was found.
-    $libraries = array();
-    $library_types = array('Folkebibliotek', 'Forskningsbibliotek');
-    foreach ($library_types as $library_type) {
-      $client = new NanoSOAPClient(variable_get('vopros_user_service_url', VOPROS_USER_DEFAULT_URL), array('namespaces' => array('' => 'http://oss.dbc.dk/ns/openagency')));
-      $params = array(
-        'authentication' => array(
-          'groupIdAut' => variable_get('vopros_user_service_group', ''),
-          'passwordAut' => variable_get('vopros_user_service_password', ''),
-          'userIdAut' => variable_get('vopros_user_service_user', ''),
-        ),
-        'libraryType' => $library_type,
-      );
-      $xml = $client->call('nameListRequest', $params);
-      $result = DOMDocument::loadXML($xml);
-      foreach ($result->getElementsByTagName('agency') as $agency) {
-        $libraries[$agency->getElementsByTagName('agencyId')->item(0)->nodeValue] = $agency->getElementsByTagName('agencyName')->item(0)->nodeValue;
+    if ($preset_libraries = variable_get('vopros_user_libraries', '')) {
+      $libraries = array();
+      foreach (explode("\n", $preset_libraries) as $line) {
+        list($id, $name) = explode('|', $line);
+        if ($id && $name) {
+          $libraries[trim($id)] = trim($name);
+        }
       }
     }
+    else {
+      // Get the libraries from openagency service if no cache was found.
+      $libraries = _vopros_user_get_libraries_from_service();
+    }
     asort($libraries);
+    $include_libraries = variable_get('vopros_user_included_libraries', '');
+    if ($include_libraries) {
+      $include_libraries = explode(' ', $include_libraries);
+      $libraries = array_intersect_key($libraries, array_flip(array_values($include_libraries)));
+    }
+
     cache_set('vopros_user_libraries', $libraries, 'cache_field', REQUEST_TIME + 86400);
   }
-  $include_libraries = variable_get('vopros_user_included_libraries', '');
-  if ($include_libraries) {
-    $include_libraries_list = explode(' ', $include_libraries);
-    return array_intersect_key($libraries, array_flip(array_values($include_libraries_list)));
-  }
+
   return $libraries;
 }
 
 /**
- * Implementation of hook_default_profile2_type().
+ * Get library listing from openagency service.
+ */
+function _vopros_user_get_libraries_from_service() {
+  $libraries = array();
+  $library_types = array('Folkebibliotek', 'Forskningsbibliotek');
+  foreach ($library_types as $library_type) {
+    $client = new NanoSOAPClient(variable_get('vopros_user_service_url', VOPROS_USER_DEFAULT_URL), array('namespaces' => array('' => 'http://oss.dbc.dk/ns/openagency')));
+    $params = array(
+      'authentication' => array(
+        'groupIdAut' => variable_get('vopros_user_service_group', ''),
+        'passwordAut' => variable_get('vopros_user_service_password', ''),
+        'userIdAut' => variable_get('vopros_user_service_user', ''),
+      ),
+      'libraryType' => $library_type,
+    );
+    $xml = $client->call('nameListRequest', $params);
+    $result = DOMDocument::loadXML($xml);
+    foreach ($result->getElementsByTagName('agency') as $agency) {
+      $libraries[$agency->getElementsByTagName('agencyId')->item(0)->nodeValue] = $agency->getElementsByTagName('agencyName')->item(0)->nodeValue;
+    }
+  }
+
+  return $libraries;
+}
+
+/**
+ * Implements hook_default_profile2_type().
  */
 function vopros_user_default_profile2_type() {
   $items = array();
