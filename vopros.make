@@ -44,6 +44,9 @@ projects[link][version] = 1.3
 projects[mailhandler][subdir] = contrib
 projects[mailhandler][version] = 2.10
 
+projects[media][subdir] = contrib
+projects[media][version] = 1.5
+
 projects[nanosoap][subdir] = contrib
 projects[nanosoap][version] = 1.0
 
@@ -68,6 +71,9 @@ projects[services][version] = 3.12
 projects[services_views][subdir] = contrib
 projects[services_views][version] = 1.1
 
+projects[transliteration][subdir] = contrib
+projects[transliteration][version] = 3.2
+
 projects[token][subdir] = contrib
 projects[token][version] = 1.6
 
@@ -80,8 +86,16 @@ projects[views][version] = 3.11
 projects[votingapi][subdir] = contrib
 projects[votingapi][version] = 2.12
 
+projects[wysiwyg][subdir] = contrib
+projects[wysiwyg][version] = 2.2
+
 ; Libraries
 libraries[search_api_solr_php_client][download][type] = get
 libraries[search_api_solr_php_client][download][url] = http://solr-php-client.googlecode.com/files/SolrPhpClient.r60.2011-05-04.tgz
 libraries[search_api_solr_php_client][directory_name] = SolrPhpClient
 libraries[search_api_solr_php_client][destination] = libraries
+
+libraries[ckeditor][download][type] = get
+libraries[ckeditor][download][url] = http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.6.6.2/ckeditor_3.6.6.2.zip
+libraries[ckeditor][directory_name] = ckeditor
+libraries[ckeditor][destination] = libraries
