@@ -31,6 +31,7 @@ function vopros_embed_menu() {
     'page callback' => 'vopros_embed_question_modal_js',
     'access callback' => TRUE,
     'file' => 'vopros_embed.pages.inc',
+    'type' => MENU_CALLBACK,
   );
 
   // Administrative pages.

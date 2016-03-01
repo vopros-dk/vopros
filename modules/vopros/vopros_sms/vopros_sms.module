@@ -133,6 +133,7 @@ function vopros_sms_menu() {
     'page callback' => 'vopros_sms_create_sms',
     'access arguments' => array('create question via sms service'),
     'file' => 'includes/vopros_sms.pages.inc',
+    'type' => MENU_CALLBACK,
   );
 
   return $items;

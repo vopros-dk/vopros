@@ -439,6 +439,7 @@ function vopros_question_menu() {
     'page callback' => 'vopros_question_create_service',
     'access arguments' => array('create question via web service'),
     'file' => 'includes/vopros_question.pages.inc',
+    'type' => MENU_CALLBACK,
   );
 
   return $items;
