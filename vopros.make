@@ -88,6 +88,8 @@ projects[votingapi][version] = 2.12
 
 projects[wysiwyg][subdir] = contrib
 projects[wysiwyg][version] = 2.2
+; Fix allow_url_fopen warning https://www.drupal.org/node/1802394
+projects[wysiwyg][patch][1802394] = https://www.drupal.org/files/wysiwyg-1802394-4.patch
 
 ; Libraries
 libraries[search_api_solr_php_client][download][type] = get
