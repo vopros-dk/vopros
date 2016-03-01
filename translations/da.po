@@ -22041,3 +22041,34 @@ msgstr "Callback-URLen er ikke lokal og er ikke troværdig: !url"
 
 msgid "CustomMessage: !customMessage"
 msgstr "CustomMessage: !customMessage"
+
+#: profiles/vopros/vopros.profile:91
+msgid "Questions and answer search"
+msgstr "Spørgsmål og svar søgning"
+
+#: profiles/vopros/vopros.profile:67;95
+msgid "Additional options"
+msgstr "Valgfrie moduler"
+
+#: profiles/vopros/vopros.profile:75;113
+msgid "Enable options"
+msgstr "Aktiver moduler"
+
+#: profiles/vopros/vopros.profile:90
+msgid "Get questions from an email account."
+msgstr "Hent spørgsmål fra en e-mail konto."
+
+#: profiles/vopros/vopros.profile:97
+msgid ""
+"Vopros comes bundled with additional options that provide extra "
+"functionality, but that is not required for basic functions. These can be "
+"enabled later if they're not selected now. We've pre-selected recommended "
+"options."
+msgstr ""
+"Visse dele af Vopros er valgfrie hvis man ikke har brug for "
+"funktionaliteten, og kan vælges fra her. De kan senere aktiveres hvis "
+"behovet opstår. Vi har forudvalgt de anbefalede elementer."
+
+#: profiles/vopros/vopros.profile:228
+msgid "Enabling additional options"
+msgstr "Aktiverer moduler"
