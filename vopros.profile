@@ -103,6 +103,7 @@ function vopros_module_selection_form($form, &$form_state) {
     '#type' => 'checkboxes',
     '#options' => $modules,
     '#default_value' => array(
+      'vopros_mailhandler',
       'vopros_database_search',
     ),
   );
