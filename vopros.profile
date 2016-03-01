@@ -87,6 +87,7 @@ function vopros_install_tasks($install_state) {
  */
 function vopros_module_selection_form($form, &$form_state) {
   $modules = array(
+    'vopros_mailhandler' => st('Get questions from an email account.'),
     'vopros_database_search' => st('Questions and answer search'),
   );
 
