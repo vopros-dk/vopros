@@ -22081,3 +22081,7 @@ msgstr ""
 "Der er ingen e-mail konto konfigureret til e-mail import. Der skal <a "
 "href=@url>konfigureres en konto</a> før Vopros kan modtage spørgsmål per "
 "mail."
+
+#: profiles/vopros/vopros.profile:92
+msgid "Transfer questions to/from another Vopros site."
+msgstr "Overfør spørgsmål til/fra et andet Vopros site."

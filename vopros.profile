@@ -89,6 +89,7 @@ function vopros_module_selection_form($form, &$form_state) {
   $modules = array(
     'vopros_mailhandler' => st('Get questions from an email account.'),
     'vopros_database_search' => st('Questions and answer search'),
+    'vopros_service' => st('Transfer questions to/from another Vopros site.'),
   );
 
   $form['modules'] = array(
@@ -105,6 +106,7 @@ function vopros_module_selection_form($form, &$form_state) {
     '#default_value' => array(
       'vopros_mailhandler',
       'vopros_database_search',
+      'vopros_service',
     ),
   );
 
