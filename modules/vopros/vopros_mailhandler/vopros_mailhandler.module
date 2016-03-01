@@ -13,7 +13,7 @@ function vopros_mailhandler_init() {
       !variable_get('vopros_mailhandler_configured', FALSE)) {
     $mailboxes = mailhandler_mailbox_load_all(FALSE);
     if (count($mailboxes) < 1) {
-      drupal_set_message(t('No mailboxes configured for automatic mail import. Please <a href=@url>add a mailbox</a>.', array('@url' => 'admin/structure/mailhandler/add')), 'error');
+      drupal_set_message(t('No mailboxes configured for automatic mail import. Please <a href=@url>add a mailbox</a>.', array('@url' => 'admin/structure/mailhandler/add')), 'error', FALSE);
     }
     else {
       variable_set('vopros_mailhandler_configured', TRUE);
