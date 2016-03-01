@@ -193,6 +193,12 @@ function vopros_module_list_as_operations($module_list) {
  */
 function _vopros_enable_module($module, $module_name, &$context) {
   module_enable(array($module), FALSE);
+  if ($module == 'mailhandler') {
+    // Swallow messages from mailhandler. It shows messages about no enabled
+    // fetcher modules if none was enabled together with it, and a hint to
+    // create a new fetcher. Looks stupid in the installer.
+    drupal_get_messages();
+  }
   $context['message'] = st('Installed %module module.', array('%module' => $module_name));
 }
 

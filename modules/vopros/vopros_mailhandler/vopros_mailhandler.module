@@ -6,7 +6,10 @@ include_once 'vopros_mailhandler.features.inc';
  * Implements hook_init().
  */
 function vopros_mailhandler_init() {
-  if (user_access('access administration pages') &&
+  // Using drupal_installation_attempted() to defer warnings until the
+  // installation is complete.
+  if (!drupal_installation_attempted() &&
+      user_access('access administration pages') &&
       !variable_get('vopros_mailhandler_configured', FALSE)) {
     $mailboxes = mailhandler_mailbox_load_all(FALSE);
     if (count($mailboxes) < 1) {
