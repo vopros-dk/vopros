@@ -1,5 +1,23 @@
 <?php
 
+include_once 'vopros_mailhandler.features.inc';
+
+/**
+ * Implements hook_init().
+ */
+function vopros_mailhandler_init() {
+  if (user_access('access administration pages') &&
+      !variable_get('vopros_mailhandler_configured', FALSE)) {
+    $mailboxes = mailhandler_mailbox_load_all(FALSE);
+    if (count($mailboxes) < 1) {
+      drupal_set_message(t('No mailboxes configured for automatic mail import. Please <a href=@url>add a mailbox</a>.', array('@url' => 'admin/structure/mailhandler/add')), 'error');
+    }
+    else {
+      variable_set('vopros_mailhandler_configured', TRUE);
+    }
+  }
+}
+
 /**
  * Implements hook_feeds_plugins().
  */
@@ -28,5 +46,3 @@ function vopros_mailhandler_feeds_plugins() {
     ),
   );
 }
-
-include_once('vopros_mailhandler.features.inc');
