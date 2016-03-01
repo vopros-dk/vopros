@@ -22072,3 +22072,12 @@ msgstr ""
 #: profiles/vopros/vopros.profile:228
 msgid "Enabling additional options"
 msgstr "Aktiverer moduler"
+
+#: profiles/vopros/modules/vopros/vopros_mailhandler/vopros_mailhandler.module:16
+msgid ""
+"No mailboxes configured for automatic mail import. Please <a href=@url>add a "
+"mailbox</a>."
+msgstr ""
+"Der er ingen e-mail konto konfigureret til e-mail import. Der skal <a "
+"href=@url>konfigureres en konto</a> før Vopros kan modtage spørgsmål per "
+"mail."
