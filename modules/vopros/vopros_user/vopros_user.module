@@ -14,9 +14,35 @@ include_once 'vopros_user.features.inc';
 function vopros_user_menu() {
   $items['admin/vopros/config/user'] = array(
     'title' => 'User settings',
+    'description' => 'Configure Vopros user and role settings.',
     'page callback' => 'drupal_get_form',
     'page arguments' => array('vopros_user_settings_form'),
     'access arguments' => array('administer vopros'),
+    'file' => 'vopros_user.admin.inc',
+  );
+
+  $items['admin/vopros/config/user/settings'] = array(
+    'title' => 'User settings',
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'weight' => -10,
+  );
+
+  $items['admin/vopros/config/user/roles'] = array(
+    'title' => 'Role settings',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('vopros_user_role_settings_form'),
+    'access arguments' => array('administer vopros'),
+    'type' => MENU_LOCAL_TASK,
+    'file' => 'vopros_user.admin.inc',
+  );
+
+  $items['admin/vopros/config/user/roles/rebuild'] = array(
+    'title' => 'Rebuild permissions',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('vopros_user_role_settings_rebuild_form'),
+    'access arguments' => array('administer vopros'),
+    'type' => MENU_CALLBACK,
+    'file' => 'vopros_user.admin.inc',
   );
 
   return $items;
@@ -38,77 +64,6 @@ function vopros_user_field_views_data_alter(&$data, $field, $module) {
     );
     $data['field_data_vopros_user_library']['vopros_user_same_agency']['filter']['handler'] = 'vopros_user_filter_user_same_agency';
   }
-}
-
-/**
- * Settings form for the vopros_user module.
- */
-function vopros_user_settings_form($form, &$form_state) {
-  $form['vopros_user_libraries'] = array(
-    '#type' => 'textarea',
-    '#title' => t('Libraries'),
-    '#description' => t('Enter one library per line in the format <em>librarynumber|library name</em>.'),
-    '#default_value' => variable_get('vopros_user_libraries', ''),
-  );
-
-  $states = array(
-    'enabled' => array(
-      'textarea[name=vopros_user_libraries]' => array('value' => ''),
-    ),
-  );
-
-  $form['vopros_user_service_url'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Service URL'),
-    '#description' => t('URL of the OpenAgency service.'),
-    '#default_value' => variable_get('vopros_user_service_url', VOPROS_USER_DEFAULT_URL),
-    '#states' => $states,
-  );
-
-  $form['vopros_user_service_group'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Service group'),
-    '#description' => t('Group used for authentication.'),
-    '#default_value' => variable_get('vopros_user_service_group', ''),
-    '#states' => $states,
-  );
-
-  $form['vopros_user_service_user'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Service user'),
-    '#description' => t('User used for authentication.'),
-    '#default_value' => variable_get('vopros_user_service_user', ''),
-    '#states' => $states,
-  );
-
-  $form['vopros_user_service_password'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Service password'),
-    '#description' => t('Password used for authentication.'),
-    '#default_value' => variable_get('vopros_user_service_password', ''),
-    '#states' => $states,
-  );
-
-  $form['vopros_user_included_libraries'] = array(
-    '#type' => 'textarea',
-    '#title' => t('Included libraries'),
-    '#description' => t('Enter the library ids you want to include to the library list, seperate by space and leave empty to include all.'),
-    '#default_value' => variable_get('vopros_user_included_libraries', ''),
-    '#states' => $states,
-  );
-
-  $form['#submit'][] = 'vopros_user_settings_form_submit';
-
-  return system_settings_form($form);
-}
-
-/**
- * Submit handler for settings form.
- *
- * Clear the library cache.
- */
-function vopros_user_settings_form_submit($form, &$form_state) {
-  cache_set('vopros_user_libraries', array(), 'cache_field', REQUEST_TIME - 86400);
 }
 
 /**
@@ -264,4 +219,46 @@ function vopros_user_get_librarians() {
     $options[$profile->uid] = vopros_user_profile_user_name($profile);
   }
   return $options;
+}
+
+/**
+ * Update user permissions.
+ */
+function vopros_user_update_permissions() {
+  // Ensure that admin_role has all permissions, as core doesn't.
+  $rid = variable_get('user_admin_role', 0);
+  if ($rid) {
+    $permissions = module_invoke_all('permission');
+    $permissions = array_keys($permissions);
+
+    if (!empty($permissions)) {
+      user_role_grant_permissions($rid, $permissions);
+    }
+  }
+
+  // Grant Vopros permissions.
+  $rid = variable_get('vopros_user_staff_role', 0);
+  if ($rid) {
+    $permissions = array();
+    $all_permissions = module_invoke_all('permission');
+    foreach ($all_permissions as $name => $permission) {
+      // We're only concerned about adding permissions.
+      if (isset($permission['vopros roles']) && in_array('staff', $permission['vopros roles'])) {
+        $permissions[] = $name;
+      }
+    }
+
+    if (!empty($permissions)) {
+      user_role_grant_permissions($rid, $permissions);
+    }
+  }
+}
+
+/**
+ * Implements hook_flush_caches().
+ *
+ * Update permissions on cache clear.
+ */
+function vopros_user_flush_caches() {
+  vopros_user_update_permissions();
 }
