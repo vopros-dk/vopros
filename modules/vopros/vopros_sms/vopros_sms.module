@@ -227,9 +227,11 @@ function vopros_sms_permission() {
     'administer SMSes' => array(
       'title' => t('Administer SMSes'),
       'restrict access' => TRUE,
+      'vopros roles' => array('staff'),
     ),
     'access SMSes' => array(
       'title' => t('Access lists of SMSes, primarily for viewing and referencing'),
+      'vopros roles' => array('staff'),
     ),
     'create SMSes' => array(
       'title' => t('Create SMSes'),
@@ -240,12 +242,15 @@ function vopros_sms_permission() {
     'edit any sms' => array(
       'title' => t('Edit any sms'),
       'restrict access' => TRUE,
+      'vopros roles' => array('staff'),
     ),
     'edit own SMSes' => array(
       'title' => t('Edit own SMSes'),
+      'vopros roles' => array('staff'),
     ),
     'view own SMSes' => array(
       'title' => t('View own SMSes'),
+      'vopros roles' => array('staff'),
     ),
   );
 

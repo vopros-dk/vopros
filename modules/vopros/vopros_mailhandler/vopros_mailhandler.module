@@ -49,3 +49,12 @@ function vopros_mailhandler_feeds_plugins() {
     ),
   );
 }
+
+/**
+ * Implements hook_vopros_extra_permissions().
+ */
+function vopros_mailhandler_vopros_extra_permissions() {
+  return array(
+    'staff' => array('administer mailhandler'),
+  );
+}

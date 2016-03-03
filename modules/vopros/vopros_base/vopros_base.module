@@ -110,6 +110,19 @@ function vopros_base_permission() {
   return $permissions;
 }
 
+/**
+ * Implements hook_vopros_extra_permissions().
+ */
+function vopros_base_vopros_extra_permissions() {
+  return array(
+    'staff' => array(
+      'access toolbar',
+      'view the administration theme',
+    ),
+  );
+}
+
+
 function vopros_base_menu_alter(&$items) {
   $items['admin/structure']['access arguments'] = array('access advances admin pages');
   $items['admin/config']['access arguments'] = array('access advances admin pages');

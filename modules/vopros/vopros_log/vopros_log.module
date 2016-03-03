@@ -49,22 +49,28 @@ function vopros_log_permission() {
     'administer logs' => array(
       'title' => t('Administer logs'),
       'restrict access' => TRUE,
+      'vopros roles' => array('staff'),
     ),
     'access logs' => array(
       'title' => t('Access lists of logs, primarily for viewing and referencing'),
+      'vopros roles' => array('staff'),
     ),
     'create logs' => array(
       'title' => t('Create logs'),
+      'vopros roles' => array('staff'),
     ),
     'edit any log' => array(
       'title' => t('Edit any log'),
       'restrict access' => TRUE,
+      'vopros roles' => array('staff'),
     ),
     'edit own logs' => array(
       'title' => t('Edit own logs'),
+      'vopros roles' => array('staff'),
     ),
     'view own logs' => array(
       'title' => t('View own logs'),
+      'vopros roles' => array('staff'),
     ),
   );
 

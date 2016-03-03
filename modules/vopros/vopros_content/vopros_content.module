@@ -3,3 +3,12 @@
  * @file
  * Drupal needs this blank file.
  */
+
+/**
+ * Implements hook_vopros_extra_permissions().
+ */
+function vopros_content_vopros_extra_permissions() {
+  return array(
+    'staff' => array('access printer-friendly version'),
+  );
+}

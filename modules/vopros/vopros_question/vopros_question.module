@@ -482,21 +482,26 @@ function vopros_question_permission() {
     ),
     'access questions' => array(
       'title' => t('Access lists of questions, primarily for viewing and referencing'),
+      'vopros roles' => array('staff'),
     ),
     'create questions' => array(
       'title' => t('Create questions'),
+      'vopros roles' => array('staff'),
     ),
     'edit any question' => array(
       'title' => t('Edit any question'),
+      'vopros roles' => array('staff'),
     ),
     'contact user about question' => array(
       'title' => t('Contact user about question'),
+      'vopros roles' => array('staff'),
     ),
     'access and use revisions for questions' => array(
       'title' => t('Access and use revisions'),
     ),
     'notify user on question' => array(
       'title' => t('Assign a user a question or notify them about it'),
+      'vopros roles' => array('staff'),
     ),
   );
 
