@@ -236,16 +236,22 @@ function vopros_user_update_permissions() {
     }
   }
 
-  // Grant Vopros permissions.
   $rid = variable_get('vopros_user_staff_role', 0);
   if ($rid) {
     $permissions = array();
+    // Grant Vopros permissions.
     $all_permissions = module_invoke_all('permission');
     foreach ($all_permissions as $name => $permission) {
       // We're only concerned about adding permissions.
       if (isset($permission['vopros roles']) && in_array('staff', $permission['vopros roles'])) {
         $permissions[] = $name;
       }
+    }
+
+    // Grant extra non-Vopros permissions.
+    $extra_permissions = module_invoke_all('vopros_extra_permissions');
+    if (isset($extra_permissions['staff'])) {
+      $permissions = array_merge($permissions, $extra_permissions['staff']);
     }
 
     if (!empty($permissions)) {
