@@ -1,0 +1,418 @@
+# Danish translation of Vopros
+msgid ""
+msgstr ""
+"Project-Id-Version: Vopros\n"
+"POT-Creation-Date: 2016-03-04 11:32+0100\n"
+"PO-Revision-Date: 2016-02-10 13:28+0100\n"
+"Last-Translator: Thomas Fini Hansen <fini@reload.dk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:14
+#, fuzzy
+msgid "Libraries"
+msgstr "Bibliotek"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:15
+msgid ""
+"Enter one library per line in the format <em>librarynumber|library name</em>."
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:27
+msgid "Service URL"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:28
+msgid "URL of the OpenAgency service."
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:35
+#, fuzzy
+msgid "Service group"
+msgstr "Tekstgruppe"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:36
+#, fuzzy
+msgid "Group used for authentication."
+msgstr "HTTP-godkendelse"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:43
+#, fuzzy
+msgid "Service user"
+msgstr "godkendt bruger"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:44
+#, fuzzy
+msgid "User used for authentication."
+msgstr "HTTP-godkendelse"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:51
+#, fuzzy
+msgid "Service password"
+msgstr "Nulstil adgangskode"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:52
+#, fuzzy
+msgid "Password used for authentication."
+msgstr "Adgangskodefelt fundet"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:59
+msgid "Included libraries"
+msgstr "Inkluderede biblioteker"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:60
+msgid ""
+"Enter the library ids you want to include to the library list, seperate by "
+"space and leave empty to include all."
+msgstr ""
+"Indtast de biblioteksnumre på de biblioteker der skal være på listen over "
+"biblioteker. Adskil med mellemrum. Hvis dette felt er tomt, inkluderes alle."
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:86
+msgid "disabled"
+msgstr "deaktiveret"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:90
+#, fuzzy
+msgid "Staff role"
+msgstr "Gem rolle"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:93
+#, fuzzy
+msgid ""
+"This role will be automatically assigned new Vopros permissions whenever a "
+"module is enabled. Changing this setting will not affect existing "
+"permissions."
+msgstr ""
+"Denne rolle tildeles automatisk nye tilladelser når et modul aktiveres. "
+"Ændring af denne indstilling påvirker ikke eksisterende tilladelser."
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:99
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.module:40
+msgid "Rebuild permissions"
+msgstr "Gendan tilladelser"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:122
+#, fuzzy
+msgid "Are you sure you want to rebuild permissions?"
+msgstr "Ønsker du at gendanne tilladelser?"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:124
+msgid ""
+"This will reset permissions for the staff profile to the defaults "
+"recommended by Vopros and can not be undone."
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:146
+#, fuzzy
+msgid "Permissions rebuild."
+msgstr "Tilladelser"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.features.field_instance.inc:350
+msgid "Bemærkninger"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.features.field_instance.inc:351
+msgid "Beskrivelse"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.features.field_instance.inc:352
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:307
+msgid "Bibliotek"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.features.field_instance.inc:353
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:309
+msgid "Efternavn"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.features.field_instance.inc:354
+msgid "Fagområder"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.features.field_instance.inc:355
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:308
+msgid "Fornavn"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.features.field_instance.inc:356
+msgid "Image"
+msgstr "Billede"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.features.field_instance.inc:357
+msgid "Shortcut links"
+msgstr "Genvejslinks"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.features.field_instance.inc:358
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:311
+msgid "Telefonnummer"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:290;455
+msgid "Master"
+msgstr "Master"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:291
+msgid "Vopros user list"
+msgstr "Liste over Vopros brugere"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:292
+msgid "mere"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:293
+msgid "Anvend"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:294
+msgid "Nulstil"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:295
+#, fuzzy
+msgid "Sorter efter"
+msgstr "Center venstre"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:296;460
+msgid "Asc"
+msgstr "Asc"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:297;461
+msgid "Desc"
+msgstr "Desc"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:298
+#, fuzzy
+msgid "Poster pr side"
+msgstr "Indsendt til"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:299
+#, fuzzy
+msgid "- Alle -"
+msgstr "- Alle -"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:300
+msgid "Forskydning"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:301
+msgid "« første"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:302
+msgid "‹ forrige"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:303
+msgid "næste ›"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:304
+msgid "sidste »"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:305
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.module:60
+msgid "Profile"
+msgstr "Profil"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:306
+msgid "User name"
+msgstr "Brugernavn"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:310
+msgid "E-mail"
+msgstr "E-mail"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:312
+msgid "Name"
+msgstr "Navn"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:313
+msgid "First name"
+msgstr "Fornavn"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:314
+msgid "Last name"
+msgstr "Efternavn"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:315
+msgid "Library"
+msgstr "Bibliotek"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:316
+msgid "Page"
+msgstr "Side"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:317;456
+msgid "more"
+msgstr "mere"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:318
+msgid "Rolle"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:457
+msgid "Apply"
+msgstr "Anvend"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:458
+msgid "Reset"
+msgstr "Nulstil"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:459
+msgid "Sort by"
+msgstr "Sorter efter"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:462
+msgid "Items per page"
+msgstr "Poster pr side"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:463
+msgid "- All -"
+msgstr "- Alle -"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:464
+msgid "Offset"
+msgstr "Offset"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:465
+msgid "« first"
+msgstr "« første"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:466
+msgid "‹ previous"
+msgstr "‹ forrige"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:467
+msgid "next ›"
+msgstr "næste ›"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:468
+msgid "last »"
+msgstr "sidste »"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:469
+msgid "User"
+msgstr "Bruger"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:470
+#, fuzzy
+msgid "Profile ID"
+msgstr "Profil"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:471
+msgid "."
+msgstr "."
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:472
+msgid ","
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:473
+#, fuzzy
+msgid "agency"
+msgstr "Institutions-ID"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:474
+#, fuzzy
+msgid "last_name"
+msgstr "Efternavn"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:475
+#, fuzzy
+msgid "first_name"
+msgstr "Fornavn"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:476
+#, fuzzy
+msgid "user_name"
+msgstr "Brugernavn"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:477
+msgid "uid"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:478
+#, fuzzy
+msgid "description"
+msgstr "Beskrivelse"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:479
+msgid "image"
+msgstr "billede"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:480
+msgid "expertise"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:481
+#, fuzzy
+msgid "User uid"
+msgstr "Brugerdata"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:482
+msgid "Name (raw)"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:483
+#, fuzzy
+msgid "Services"
+msgstr "Web-services"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.module:61
+#, fuzzy
+msgid "Same library as current user"
+msgstr "Bandlys aktuelle brugers IP-adresse"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.module:62
+msgid "Selects users from the same library."
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.module:158
+msgid "Edit own shortcut links"
+msgstr "Rediger egne genvejslinks"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.module:159
+msgid "Edit own shortcut links on user profile."
+msgstr "Rediger egne genvejslinks på brugerprofil."
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.module:162
+msgid "Edit any shortcut links"
+msgstr "Rediger genvejslinks"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.module:163
+msgid "Edit any shortcut links on user profile."
+msgstr "Rediger genvejslinks på brugerprofil."
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.module:16;25
+msgid "User settings"
+msgstr "Brugerindstillinger"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.module:17
+#, fuzzy
+msgid "Configure Vopros user and role settings."
+msgstr "Tilpas søgeindstillinger"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.module:31
+#, fuzzy
+msgid "Role settings"
+msgstr "Lokalitet"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.info:0
+msgid "Vopros user"
+msgstr "Vopros-bruger"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.info:0
+msgid "Defines the user profile with fields for admins."
+msgstr "Definerer brugerprofilen med felter til administration."
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.info:0
+msgid "Vopros"
+msgstr "Vopros"
+
+#: profiles/vopros/modules/vopros/vopros_user/includes/views/handlers/vopros_user_filter_user_same_agency.inc:16
+msgid "Is from the same library as the current user"
+msgstr ""
