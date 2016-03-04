@@ -1275,7 +1275,9 @@ function vopros_question_views_default_views() {
     t('user'),
     t('Channel'),
     t('Svartype'),
+    t('Admin list'),
     t('Asked for help'),
+    t('Asked for help list'),
   );
   $export['vopros_question_list_admin'] = $view;
 
