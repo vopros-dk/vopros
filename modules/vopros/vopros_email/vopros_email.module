@@ -12,6 +12,7 @@ function vopros_email_entity_info() {
   $return = array(
     'vopros_email' => array(
       'label' => t('Email', array(), array('context' => 'a vopros email')),
+      'plural label' => t('Emails', array(), array('context' => 'a vopros email')),
       'controller class' => 'VoprosEmailEntityController',
       'entity class' => 'VoprosEmail',
       'base table' => 'vopros_email',

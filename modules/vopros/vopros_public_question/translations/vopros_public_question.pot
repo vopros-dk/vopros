@@ -14,7 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-03-08 08:55+0100\n"
+"POT-Creation-Date: 2016-03-08 09:31+0100\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -99,7 +99,7 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.views_default.inc:253 profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:115
+#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.views_default.inc:253 profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:116
 msgid "Subject"
 msgstr ""
 
@@ -139,69 +139,74 @@ msgstr ""
 msgid "Public questions"
 msgstr ""
 
+#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:25
+msgctxt "a vopros question"
+msgid "Public questions"
+msgstr ""
+
 #: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:24
 msgctxt "a vopros question"
 msgid "Public question"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:37
+#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:38
 msgctxt "a vopros public question"
 msgid "Public question"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:362 profiles/vopros/modules/vopros/vopros_public_question/theme/vopros_public_question.theme.inc:25
+#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:363 profiles/vopros/modules/vopros/vopros_public_question/theme/vopros_public_question.theme.inc:25
 msgid "Public question"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:47
+#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:48
 msgid "Default"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:185
+#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:186
 msgid "Administer public questions"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:189
+#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:190
 msgid "Access public questions"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:193
+#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:194
 msgid "Create public questions"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:197
+#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:198
 msgid "Edit any public question"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:336
+#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:337
 msgid "Publish question and answer"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:363
+#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:364
 msgid "Link to the public version of this question if it exists."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:138
+#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:139
 msgid "Public question settings"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:139
+#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:140
 msgid "Configure general question settings, fields, and displays."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:146
+#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:147
 msgid "Settings"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:153
+#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:154
 msgid "View"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:158
+#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:159
 msgid "Edit"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:168
+#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:169
 msgid "Publish question"
 msgstr ""
 

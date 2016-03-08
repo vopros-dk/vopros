@@ -14,6 +14,7 @@ function vopros_sms_entity_info() {
   $return = array(
     'vopros_sms' => array(
       'label' => t('SMS', array(), array('context' => 'a vopros sms')),
+      'plural label' => t('SMSes', array(), array('context' => 'a vopros sms')),
       'controller class' => 'VoprosSMSEntityController',
       'base table' => 'vopros_sms',
       'revision table' => 'vopros_sms_revision',

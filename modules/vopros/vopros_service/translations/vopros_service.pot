@@ -19,7 +19,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-03-08 08:55+0100\n"
+"POT-Creation-Date: 2016-03-08 09:32+0100\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -112,7 +112,7 @@ msgstr ""
 msgid "Way of sending"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.pages.inc:50 profiles/vopros/modules/vopros/vopros_service/vopros_service.module:488
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.pages.inc:50 profiles/vopros/modules/vopros/vopros_service/vopros_service.module:490
 msgid "Ask for help"
 msgstr ""
 
@@ -128,7 +128,7 @@ msgstr ""
 msgid "Message to service"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.pages.inc:108 profiles/vopros/modules/vopros/vopros_service/vopros_service.module:655;120
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.pages.inc:108 profiles/vopros/modules/vopros/vopros_service/vopros_service.module:657;122
 msgid "Forward question"
 msgstr ""
 
@@ -148,159 +148,167 @@ msgstr ""
 msgid "The question \"@title\" has been handed over to an external service"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:27;39;852 profiles/vopros/modules/vopros/vopros_service/vopros_service.info:0
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:27;40;854 profiles/vopros/modules/vopros/vopros_service/vopros_service.info:0
 msgid "Vopros Service"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:45;67
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:28
+msgid "Vopros Services"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:46;69
 msgid "Administrator"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:55
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:56
 msgid "Vopros Service Message"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:84
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:57
+msgid "Vopros Service Messages"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:86
 msgid "Administer vopros services"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:88
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:90
 msgid "Access lists of vopros services, primarily for viewing and referencing"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:91
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:93
 msgid "Create vopros services"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:94
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:96
 msgid "Edit and delete vopros services"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:98
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:100
 msgid "Forward questions"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:327
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:329
 msgid "Vopros service authentication"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:328
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:330
 msgid "Use Vopros service authentication."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:410
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:412
 msgid "This allows for inter-Vopros communication with this client."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:421
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:423
 msgid "URL"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:422
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:424
 msgid "The base URL for vopros service."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:446
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:448
 msgid "Auth key"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:447
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:449
 msgid "Shared token. Must be the same on both ends, and unique across all services. Use regenerate to generate a random token that's not already used."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:456
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:458
 msgid "Regenerate"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:469
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:471
 msgid "Allow incoming"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:486
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:488
 msgid "Outgoing service type"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:489
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:491
 msgid "Turn over questions"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:490
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:492
 msgid "Turn over SMS questions"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:519
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:521
 msgid "Invalid service URL."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:571
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:573
 msgid "Service messages"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:582
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:584
 msgid "No messages"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:670
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:672
 msgid "Asked for help at @service "
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:674
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:676
 msgid "Handed over to @service "
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:839 profiles/vopros/modules/vopros/vopros_service/vopros_service.info:0
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:841 profiles/vopros/modules/vopros/vopros_service/vopros_service.info:0
 msgid "Vopros"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:863
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:865
 msgid "Handed over to external service"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:864
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:866
 msgid "Reactivated by external service"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:876;911
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:878;913
 msgid "Service takeover"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:877
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:879
 msgid "Mail sendt when a question is forwarded from another Vopros installation."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:882
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:884
 msgid "Take over mail subject"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:883
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:885
 msgid "Subject of mail sendt to user when reciving forwarded question."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:889
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:891
 msgid "Take over mail body"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:890
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:892
 msgid "Main message."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:912
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:914
 msgid "SMS sendt when a question is forwarded from another Vopros installation."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:917
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:919
 msgid "Take over message"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:918
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:920
 msgid "Macro used when taking over a question."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:129
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:131
 msgid "Contact user"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:138
+#: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:140
 msgid "Answer question"
 msgstr ""
 

@@ -12,6 +12,7 @@ function vopros_log_entity_info() {
   $return = array(
     'vopros_log' => array(
       'label' => t('Log', array(), array('context' => 'a vopros log')),
+      'plural label' => t('Logs', array(), array('context' => 'a vopros log')),
       'controller class' => 'VoprosLogEntityController',
       'entity class' => 'VoprosLog',
       'base table' => 'vopros_log',

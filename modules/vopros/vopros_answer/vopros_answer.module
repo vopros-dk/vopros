@@ -20,6 +20,7 @@ function vopros_answer_entity_info() {
   $return = array(
     'vopros_answer' => array(
       'label' => t('Answer', array(), array('context' => 'a vopros answer')),
+      'plural label' => t('Answers', array(), array('context' => 'a vopros answer')),
       'controller class' => 'VoprosAnswerEntityController',
       'entity class' => 'VoprosAnswer',
       'base table' => 'vopros_answer',

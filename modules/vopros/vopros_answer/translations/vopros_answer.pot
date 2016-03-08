@@ -15,7 +15,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-03-08 08:55+0100\n"
+"POT-Creation-Date: 2016-03-08 09:31+0100\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -112,11 +112,11 @@ msgstr ""
 msgid "."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.views_default.inc:246 profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:71
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.views_default.inc:246 profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:72
 msgid "Question"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:35
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:36
 msgctxt "a vopros answer"
 msgid "Question"
 msgstr ""
@@ -169,7 +169,7 @@ msgstr ""
 msgid "Deadline"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.views_default.inc:441 profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:106
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.views_default.inc:441 profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:107
 msgid "Date asked"
 msgstr ""
 
@@ -190,143 +190,152 @@ msgstr ""
 msgid "Answer"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:45
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:23
+msgctxt "a vopros answer"
+msgid "Answers"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_answer/includes/vopros_answer.theme.inc:50
+msgid "Answers"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:46
 msgid "Administrator"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:49
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:50
 msgid "Public"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:73
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:74
 msgid "The unique ID of the question the answer belongs to."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:81
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:82
 msgid "Answer owner"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:83
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:84
 msgid "The uid of the user creating the answer."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:108
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:109
 msgid "The date the question was submitted."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:115
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:116
 msgid "Date changed"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:118
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:119
 msgid "The date the question was most recently updated."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:149
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:150
 msgid "User given feedback"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:194
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:195
 msgid "Own questions"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:195
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:196
 msgid "Display a table with a users own questions."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:202
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:203
 msgid "Views Count"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:203
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:204
 msgid "Display the number of results for the view."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:220
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:221
 msgid "Answer revision creator"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:232
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:233
 msgid "Revision timestamp"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:319
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:320
 msgid "Administer answers"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:324
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:325
 msgid "Access lists of answers, primarily for viewing and referencing"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:328
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:329
 msgid "Create answers"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:332
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:333
 msgid "Edit any answer"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:337
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:338
 msgid "Edit own answers"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:341
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:342
 msgid "View own answers"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:345
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:346
 msgid "Access and use revisions"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:492
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:493
 msgid "Answers:"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:515
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:516
 msgid "See more"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:536;586;265
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:537;587;266
 msgid "Answer question"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:539;589;273 profiles/vopros/modules/vopros/vopros_answer/includes/vopros_answer.theme.inc:38;46
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:540;590;274 profiles/vopros/modules/vopros/vopros_answer/includes/vopros_answer.theme.inc:38;46
 msgid "Edit answer"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:558
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:559
 msgid "Save and answer"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:607
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:608
 msgid "You can't answer the question, the question is already being answered"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:617
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:618
 msgid "The question been locked for you, while you are answering it."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:252
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:253
 msgid "Answer settings"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:253
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:254
 msgid "Configure general answer settings, fields, and displays."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:260
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:261
 msgid "Settings"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:283
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:284
 msgid "Revisions"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:293
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:294
 msgid "Diff"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:303
+#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:304
 msgid "Revert revision"
 msgstr ""
 
@@ -432,10 +441,6 @@ msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_answer/includes/vopros_answer.admin.inc:571
 msgid "No visible changes"
-msgstr ""
-
-#: profiles/vopros/modules/vopros/vopros_answer/includes/vopros_answer.theme.inc:50
-msgid "Answers"
 msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_answer/includes/views/handlers/vopros_answer_area_own_questions.inc:28

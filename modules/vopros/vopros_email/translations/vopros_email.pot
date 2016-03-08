@@ -4,8 +4,8 @@
 # Copyright YEAR NAME <EMAIL@ADDRESS>
 # Generated from files:
 #  profiles/vopros/modules/vopros/vopros_email/vopros_email.module: n/a
-#  profiles/vopros/modules/vopros/vopros_email/includes/vopros_email.admin.inc: n/a
 #  profiles/vopros/modules/vopros/vopros_email/includes/views/vopros_email.views_default.inc: n/a
+#  profiles/vopros/modules/vopros/vopros_email/includes/vopros_email.admin.inc: n/a
 #  profiles/vopros/modules/vopros/vopros_email/vopros_email.info: n/a
 #  profiles/vopros/modules/vopros/vopros_email/theme/vopros_email.theme.inc: n/a
 #
@@ -13,7 +13,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-03-08 08:55+0100\n"
+"POT-Creation-Date: 2016-03-08 09:31+0100\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -22,152 +22,161 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:14;26
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:14;27
 msgctxt "a vopros email"
 msgid "Email"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:291
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:292
 msgid "Email"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:36
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:15
+msgctxt "a vopros email"
+msgid "Emails"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_email/includes/views/vopros_email.views_default.inc:332
+msgid "Emails"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:37
 msgid "Administrator"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:163
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:164
 msgid "New email"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:176
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:177
 msgid "Answer"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:178
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:179
 msgid "The unique ID of answer the email belongs to."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:186
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:187
 msgid "Question"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:188
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:189
 msgid "The unique ID of the question the answer belongs to."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:256
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:257
 msgid "Administer emails"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:261
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:262
 msgid "Access lists of emails, primarily for viewing and referencing"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:265
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:266
 msgid "Create emails"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:269
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:270
 msgid "Edit any email"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:274
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:275
 msgid "Edit own emails"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:278
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:279
 msgid "View own emails"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:301
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:302
 msgid "E-mail"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:500
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:501
 msgid "[@site] FWD: @subject"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:508
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:509
 msgid "------ Forwarded by @user fra @site ------"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:670 profiles/vopros/modules/vopros/vopros_email/includes/vopros_email.admin.inc:92;165;306;634 profiles/vopros/modules/vopros/vopros_email/includes/views/vopros_email.views_default.inc:317
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:671 profiles/vopros/modules/vopros/vopros_email/includes/vopros_email.admin.inc:92;165;306;634 profiles/vopros/modules/vopros/vopros_email/includes/views/vopros_email.views_default.inc:317
 msgid "Subject"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:671
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:672
 msgid "The subject of the question"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:675 profiles/vopros/modules/vopros/vopros_email/includes/views/vopros_email.views_default.inc:316
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:676 profiles/vopros/modules/vopros/vopros_email/includes/views/vopros_email.views_default.inc:316
 msgid "Email address"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:676
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:677
 msgid "The email address that the email has been sent to or from"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:680
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:681
 msgid "Content"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:681
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:682
 msgid "The content of the email"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:802
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:803
 msgid "Ingoing"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:803
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:804
 msgid "Outgoing"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:839
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:840
 msgid "File attachments"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:71
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:72
 msgid "Email settings"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:72
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:73
 msgid "Configure general email settings, fields, and displays."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:79
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:80
 msgid "Settings"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:84
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:85
 msgid "Answer question"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:101 profiles/vopros/modules/vopros/vopros_email/includes/views/vopros_email.views_default.inc:320
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:102 profiles/vopros/modules/vopros/vopros_email/includes/views/vopros_email.views_default.inc:320
 msgid "View"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:106 profiles/vopros/modules/vopros/vopros_email/includes/vopros_email.admin.inc:431 profiles/vopros/modules/vopros/vopros_email/includes/views/vopros_email.views_default.inc:325
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:107 profiles/vopros/modules/vopros/vopros_email/includes/vopros_email.admin.inc:431 profiles/vopros/modules/vopros/vopros_email/includes/views/vopros_email.views_default.inc:325
 msgid "Delete"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:115 profiles/vopros/modules/vopros/vopros_email/includes/views/vopros_email.views_default.inc:323
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:116 profiles/vopros/modules/vopros/vopros_email/includes/views/vopros_email.views_default.inc:323
 msgid "Convert"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:124
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:125
 msgid "Forward"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:133
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:134
 msgid "Contact user"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:141
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:142
 msgid "Send mail to channel source"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:149
+#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:150
 msgid "Transfer email"
 msgstr ""
 
@@ -401,10 +410,6 @@ msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_email/includes/views/vopros_email.views_default.inc:331
 msgid "Display a list of inbound emails"
-msgstr ""
-
-#: profiles/vopros/modules/vopros/vopros_email/includes/views/vopros_email.views_default.inc:332
-msgid "Emails"
 msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_email/includes/views/vopros_email.views_default.inc:333

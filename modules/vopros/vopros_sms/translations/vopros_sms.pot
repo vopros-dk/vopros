@@ -12,7 +12,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-03-08 08:55+0100\n"
+"POT-Creation-Date: 2016-03-08 09:32+0100\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -21,88 +21,93 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:16;27
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:16;28
 msgctxt "a vopros sms"
 msgid "SMS"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:146;265;275
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:147;266;276
 msgid "SMS"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:37
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:17
+msgctxt "a vopros sms"
+msgid "SMSes"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:38
 msgid "Administrator"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:159
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:160
 msgid "Answer"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:161
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:162
 msgid "The unique ID of answer the sms belongs to."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:169
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:170
 msgid "Question"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:171
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:172
 msgid "The unique ID of the question the answer belongs to."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:228
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:229
 msgid "Administer SMSes"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:233
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:234
 msgid "Access lists of SMSes, primarily for viewing and referencing"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:237
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:238
 msgid "Create SMSes"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:240
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:241
 msgid "Create question via SMS service"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:243
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:244
 msgid "Edit any sms"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:248
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:249
 msgid "Edit own SMSes"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:252
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:253
 msgid "View own SMSes"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:72
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:73
 msgid "SMS settings"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:73
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:74
 msgid "Configure general sms settings, fields, and displays."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:81
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:82
 msgid "Settings"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:87
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:88
 msgid "Answer question"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:106
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:107
 msgid "View"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:112
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:113
 msgid "Edit"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:123
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:124
 msgid "Contact user"
 msgstr ""
 

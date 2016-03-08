@@ -11,7 +11,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-03-08 08:55+0100\n"
+"POT-Creation-Date: 2016-03-08 09:31+0100\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -20,52 +20,57 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:14;26
+#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:14;27
 msgctxt "a vopros log"
 msgid "Log"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:32
+#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:15
+msgctxt "a vopros log"
+msgid "Logs"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:33
 msgid "Administrator"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:50
+#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:51
 msgid "Administer logs"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:55
+#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:56
 msgid "Access lists of logs, primarily for viewing and referencing"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:59
+#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:60
 msgid "Create logs"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:63
+#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:64
 msgid "Edit any log"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:68
+#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:69
 msgid "Edit own logs"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:72
+#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:73
 msgid "View own logs"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:224
+#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:225
 msgid "Internal log"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:230
+#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:231
 msgid "Add log message"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:289
+#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:290
 msgid "Log message created"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:296
+#: profiles/vopros/modules/vopros/vopros_log/vopros_log.module:297
 msgid "Log message not created, cannot create an empty log message"
 msgstr ""
 

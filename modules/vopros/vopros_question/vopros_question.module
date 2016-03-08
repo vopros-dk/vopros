@@ -25,6 +25,7 @@ function vopros_question_entity_info() {
 
   $return['vopros_question'] = array(
     'label' => t('Question', array(), array('context' => 'a vopros question')),
+    'plural label' => t('Questions', array(), array('context' => 'a vopros question')),
     'entity class' => 'VoprosQuestion',
     'controller class' => 'VoprosQuestionEntityController',
     'base table' => 'vopros_question',
@@ -65,6 +66,7 @@ function vopros_question_entity_info() {
 
   $return['vopros_question_client'] = array(
     'label' => t('Client', array(), array('context' => 'a vopros question')),
+    'plural label' => t('Clients', array(), array('context' => 'a vopros question')),
     'entity class' => 'VoprosQuestionClient',
     'controller class' => 'VoprosAPIEntityController',
     'base table' => 'vopros_question_client',
