@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Vopros\n"
-"POT-Creation-Date: 2016-03-04 11:32+0100\n"
+"POT-Creation-Date: 2016-03-08 08:55+0100\n"
 "PO-Revision-Date: 2016-02-10 13:28+0100\n"
 "Last-Translator: Thomas Fini Hansen <fini@reload.dk>\n"
 "MIME-Version: 1.0\n"
@@ -17,11 +17,6 @@ msgstr "MD5 Hemmelighed"
 #: profiles/vopros/modules/vopros/vopros_feedback/vopros_feedback.admin.inc:14
 msgid "Used for creating a validation hash used as access control."
 msgstr "Brugt til at generere en valid hash til brug for adgangskontrol."
-
-#: profiles/vopros/modules/vopros/vopros_feedback/vopros_feedback.admin.inc:20
-#, fuzzy
-msgid "Intro text"
-msgstr "Lang tekst"
 
 #: profiles/vopros/modules/vopros/vopros_feedback/vopros_feedback.admin.inc:21
 msgid "Setup intro text on feedback page when feedback has been saved."
@@ -57,9 +52,8 @@ msgid "Your feedback has been received. Thank you."
 msgstr "Vi har modtaget din vurdering. Tak skal du have."
 
 #: profiles/vopros/modules/vopros/vopros_feedback/vopros_feedback.pages.inc:71
-#, fuzzy
 msgid "Edit feedback"
-msgstr "Rediger vurdering"
+msgstr "Redigér vurdering og kommentar"
 
 #: profiles/vopros/modules/vopros/vopros_feedback/vopros_feedback.module:13
 msgctxt "a vopros feedback"
@@ -92,11 +86,6 @@ msgstr "Rediger egen vurdering"
 
 #: profiles/vopros/modules/vopros/vopros_feedback/vopros_feedback.module:145
 msgid "View own feedback"
-msgstr "Se egen vurdering"
-
-#: profiles/vopros/modules/vopros/vopros_feedback/vopros_feedback.module:148
-#, fuzzy
-msgid "View agency feedback"
 msgstr "Se egen vurdering"
 
 #: profiles/vopros/modules/vopros/vopros_feedback/vopros_feedback.module:269;276
@@ -140,16 +129,6 @@ msgstr "Link til vurdering"
 msgid "The feedback url used in emails."
 msgstr "Link til vurdering anvendt i emails."
 
-#: profiles/vopros/modules/vopros/vopros_feedback/vopros_feedback.module:542;558
-#, fuzzy
-msgid "Feedback token"
-msgstr "Indhold i vurdering"
-
-#: profiles/vopros/modules/vopros/vopros_feedback/vopros_feedback.module:543;561
-#, fuzzy
-msgid "The feedback token used in emails."
-msgstr "Link til vurdering anvendt i emails."
-
 #: profiles/vopros/modules/vopros/vopros_feedback/vopros_feedback.module:59
 msgid "Feedback settings"
 msgstr "Vurderingsindstillinger"
@@ -190,11 +169,6 @@ msgstr "Vopros"
 msgid "Master"
 msgstr "Master"
 
-#: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:666
-#, fuzzy
-msgid "All Feedback"
-msgstr "Vurdering"
-
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:667
 msgid "mere"
 msgstr ""
@@ -207,11 +181,6 @@ msgstr "Anvend"
 msgid "Nulstil"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:670
-#, fuzzy
-msgid "Sorter efter"
-msgstr "Center venstre"
-
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:671
 msgid "Asc"
 msgstr "Asc"
@@ -219,16 +188,6 @@ msgstr "Asc"
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:672
 msgid "Desc"
 msgstr "Desc"
-
-#: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:673
-#, fuzzy
-msgid "Poster pr side"
-msgstr "Indsendt til"
-
-#: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:674
-#, fuzzy
-msgid "- Alle -"
-msgstr "- Alle -"
 
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:675
 msgid "Offset"
@@ -249,11 +208,6 @@ msgstr "næste ›"
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:679
 msgid "last »"
 msgstr "sidste »"
-
-#: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:680
-#, fuzzy
-msgid "email"
-msgstr "mail"
 
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:681
 msgid "spørgsmål"
@@ -287,11 +241,6 @@ msgstr "Brugerrating"
 msgid "more"
 msgstr "mere"
 
-#: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:691
-#, fuzzy
-msgid "answer"
-msgstr "Svar"
-
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:692
 msgid "user"
 msgstr "bruger"
@@ -306,26 +255,15 @@ msgstr "Navn"
 
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:695
 msgid "Uid"
-msgstr ""
+msgstr "Uid"
 
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:696
-#, fuzzy
 msgid "Agency feedback"
-msgstr "Brugervurdering"
+msgstr "Feedback på bibliotekets svar"
 
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:697
 msgid "bruger"
 msgstr ""
-
-#: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:698
-#, fuzzy
-msgid "All feedbacks"
-msgstr "vurdering"
-
-#: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:699
-#, fuzzy
-msgid "Profil"
-msgstr "Profil"
 
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:700
 msgid "Navn"
@@ -333,7 +271,7 @@ msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:701
 msgid ","
-msgstr ""
+msgstr ","
 
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:702
 msgid "Bibliotek "

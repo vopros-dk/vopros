@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Vopros\n"
-"POT-Creation-Date: 2016-03-04 11:32+0100\n"
+"POT-Creation-Date: 2016-03-08 08:55+0100\n"
 "PO-Revision-Date: 2016-02-10 13:28+0100\n"
 "Last-Translator: Thomas Fini Hansen <fini@reload.dk>\n"
 "MIME-Version: 1.0\n"
@@ -23,21 +23,11 @@ msgid ""
 "Main title of the page. Use <em>@site_name</em> to insert the site title."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:27
-#, fuzzy
-msgid "Tab title"
-msgstr "Sidetitel"
-
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:29
 msgid ""
 "Title of the tab used on client sites.. Use <em>@site_name</em> to insert "
 "the site title."
 msgstr ""
-
-#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:34
-#, fuzzy
-msgid "Show deadline for"
-msgstr "Ingen tidsfrist"
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:41
 msgid "Show deadline options for these answer methods."
@@ -56,29 +46,9 @@ msgid ""
 "The agency id of the site, DK-<num> for libraries, custom string for others."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:59
-#, fuzzy
-msgid "Local email"
-msgstr "Lokalitet"
-
-#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:62
-#, fuzzy
-msgid "The email address to direct local inquiries to."
-msgstr "Brugerkontoens e-mail-adresse."
-
-#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:67
-#, fuzzy
-msgid "Default answer method"
-msgstr "Foretrukket svarmetode"
-
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:71
 msgid "Which answer method should be initially selected?"
 msgstr ""
-
-#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:76
-#, fuzzy
-msgid "Create tab"
-msgstr "Opret"
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:79
 msgid "Automatically create tab."
@@ -105,135 +75,85 @@ msgid ""
 "@site_name has yet to approve questions from this site. Please contact "
 "@site_mail with the agency code \"@agency_id\"."
 msgstr ""
+"@site_name har endnu ikke godkendt spørgsmål fra dette site. Kontakt "
+"venligst bibcaa@herning.dk og oplys biblioteksnavn og agency code "
+"\"@agency_id\"."
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:69
-#, fuzzy
 msgid "How to receive answer"
-msgstr "Hvordan ønsker spørgeren at modtage svar"
+msgstr "Kontaktform"
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:80
-#, fuzzy
 msgid "What's your question?"
-msgstr "Dine spørgsmål"
+msgstr "Hvad vil du spørge om?"
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:93
-#, fuzzy
 msgid "What's your name?"
 msgstr "Dit navn"
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:101
-#, fuzzy
 msgid "Enter your e-mail address"
-msgstr "Din e-mail-adresse"
+msgstr "Din e-mailadresse"
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:122
-#, fuzzy
 msgid "Enter your cell number"
-msgstr "Indtast dit @s brugernavn."
+msgstr "Dit mobilnummer"
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:137
 msgid "What's your zip code?"
-msgstr ""
+msgstr "Dit postnummer"
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:159
 msgid "When do you need the answer?"
-msgstr ""
+msgstr "Hvornår skal du senest have svar?"
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:206
-#, fuzzy
 msgid "Submit question"
-msgstr "Publicerede spørgsmål"
+msgstr "Send spørgsmål"
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:219
 msgid "Start chat"
-msgstr ""
-
-#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:237
-#, fuzzy
-msgid "E-mail required."
-msgstr "!title !required"
-
-#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:240
-#, fuzzy
-msgid "E-mail invalid."
-msgstr "Emailliste"
-
-#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:246
-#, fuzzy
-msgid "Mobile phone number required."
-msgstr "Det nye gruppenavn er påkrævet."
+msgstr "Start chat"
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:308
-#, fuzzy
 msgid "Your question has been submitted."
-msgstr "Dine indstillinger er blevet gemt."
+msgstr "Dit spørgsmål er sendt til biblioteksvagten."
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:314
-#, fuzzy
 msgid "Close window"
-msgstr "Lukkede"
+msgstr "Luk vindue"
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:322
-#, fuzzy
 msgid "Return"
-msgstr "Tilbage til liste"
+msgstr "Tilbage"
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:385
-#, fuzzy
 msgid "Are you sure you want to close?"
-msgstr "Er du sikker på, at du ønsker at slette %ip?"
-
-#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.module:70
-#, fuzzy
-msgid "Administer embed settings"
-msgstr "Administrér indstillinger."
-
-#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.module:118
-#, fuzzy
-msgid "Webform"
-msgstr "formular"
+msgstr "Er du sikker på at du vil lukke chatten?"
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.module:122
 msgid "Chat"
 msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.module:135
-#, fuzzy
 msgid "From page: "
-msgstr "Forside"
+msgstr "Sendt fra: "
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.module:141
 msgid "Forward to @address"
-msgstr ""
-
-#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.module:13
-#, fuzzy
-msgid "Ask question"
-msgstr "Svar på spørgsmål"
+msgstr "Videresend spørgsmål til @address "
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.module:24
-#, fuzzy
 msgid "Question submitted"
-msgstr "Titel på spørgsmål"
+msgstr "Spørgsmål sendt"
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.module:41
-#, fuzzy
 msgid "Embed settings"
-msgstr "Feltindstillinger"
-
-#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.module:42
-#, fuzzy
-msgid "Configure embed settings."
-msgstr "Tilpas søgeindstillinger"
+msgstr "Embed-spørgeboks-indstillinger"
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.module:50
 msgid "Settings"
 msgstr "Indstillinger"
-
-#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.info:0
-#, fuzzy
-msgid "Vopros Embed"
-msgstr "Vopros email"
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.info:0
 msgid "Provide embedable question forms for other sites."

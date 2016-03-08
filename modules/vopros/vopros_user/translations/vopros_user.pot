@@ -14,7 +14,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
-"POT-Creation-Date: 2016-03-04 11:32+0100\n"
+"POT-Creation-Date: 2016-03-08 08:55+0100\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Last-Translator: NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
@@ -135,7 +135,7 @@ msgstr ""
 msgid "Telefonnummer"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:290;455
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:290;457
 msgid "Master"
 msgstr ""
 
@@ -159,11 +159,11 @@ msgstr ""
 msgid "Sorter efter"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:296;460
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:296;462
 msgid "Asc"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:297;461
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:297;463
 msgid "Desc"
 msgstr ""
 
@@ -227,7 +227,7 @@ msgstr ""
 msgid "Page"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:317;456
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:317;458
 msgid "more"
 msgstr ""
 
@@ -235,103 +235,111 @@ msgstr ""
 msgid "Rolle"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:457
-msgid "Apply"
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:319
+msgid "Users"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:458
-msgid "Reset"
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:320
+msgid "View the list of users."
 msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:459
+msgid "Apply"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:460
+msgid "Reset"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:461
 msgid "Sort by"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:462
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:464
 msgid "Items per page"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:463
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:465
 msgid "- All -"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:464
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:466
 msgid "Offset"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:465
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:467
 msgid "« first"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:466
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:468
 msgid "‹ previous"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:467
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:469
 msgid "next ›"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:468
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:470
 msgid "last »"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:469
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:471
 msgid "User"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:470
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:472
 msgid "Profile ID"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:471
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:473
 msgid "."
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:472
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:474
 msgid ","
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:473
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:475
 msgid "agency"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:474
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:476
 msgid "last_name"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:475
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:477
 msgid "first_name"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:476
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:478
 msgid "user_name"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:477
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:479
 msgid "uid"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:478
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:480
 msgid "description"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:479
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:481
 msgid "image"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:480
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:482
 msgid "expertise"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:481
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:483
 msgid "User uid"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:482
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:484
 msgid "Name (raw)"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:483
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:485
 msgid "Services"
 msgstr ""
 

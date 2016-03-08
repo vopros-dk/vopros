@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Vopros\n"
-"POT-Creation-Date: 2016-03-04 11:32+0100\n"
+"POT-Creation-Date: 2016-03-08 08:55+0100\n"
 "PO-Revision-Date: 2016-02-10 13:28+0100\n"
 "Last-Translator: Thomas Fini Hansen <fini@reload.dk>\n"
 "MIME-Version: 1.0\n"
@@ -70,11 +70,6 @@ msgstr "Se egne emails"
 #: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:301
 msgid "E-mail"
 msgstr "E-mail"
-
-#: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:500
-#, fuzzy
-msgid "[@site] FWD: @subject"
-msgstr "[!site-name] !subject"
 
 #: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:508
 msgid "------ Forwarded by @user fra @site ------"
@@ -152,9 +147,8 @@ msgid "Convert"
 msgstr "Konverter"
 
 #: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:124
-#, fuzzy
 msgid "Forward"
-msgstr "Norge"
+msgstr "Videresend"
 
 #: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:133
 msgid "Contact user"
@@ -235,7 +229,7 @@ msgstr "Indhold i mail til besvaret spørgsmål"
 
 #: profiles/vopros/modules/vopros/vopros_email/includes/vopros_email.admin.inc:85
 msgid "Forward to local contact"
-msgstr ""
+msgstr "Videresend spørgsmål til lokal besvarelse"
 
 #: profiles/vopros/modules/vopros/vopros_email/includes/vopros_email.admin.inc:86
 msgid "Setup mail sent to local contact."
@@ -322,9 +316,8 @@ msgid "User"
 msgstr "Bruger"
 
 #: profiles/vopros/modules/vopros/vopros_email/includes/vopros_email.admin.inc:506
-#, fuzzy
 msgid "Select the user you want to forward the mail to."
-msgstr "Vælg sitets standard land."
+msgstr "Vælg den Biblioteksvagt mailen skal videresendes til"
 
 #: profiles/vopros/modules/vopros/vopros_email/includes/vopros_email.admin.inc:513
 msgid "Message"
@@ -332,17 +325,11 @@ msgstr "Meddelelse"
 
 #: profiles/vopros/modules/vopros/vopros_email/includes/vopros_email.admin.inc:514
 msgid "An extra message to append to the mail."
-msgstr ""
+msgstr "En ekstra besked, der kan medsendes"
 
 #: profiles/vopros/modules/vopros/vopros_email/includes/vopros_email.admin.inc:519
-#, fuzzy
 msgid "forward"
-msgstr "Norge"
-
-#: profiles/vopros/modules/vopros/vopros_email/includes/vopros_email.admin.inc:541
-#, fuzzy
-msgid "Email forwarded."
-msgstr "Mailadresse"
+msgstr "Send"
 
 #: profiles/vopros/modules/vopros/vopros_email/includes/vopros_email.admin.inc:552
 msgid "This email cannot be transferred"
@@ -441,9 +428,8 @@ msgid "Subject:"
 msgstr "Emne:"
 
 #: profiles/vopros/modules/vopros/vopros_email/theme/vopros_email.theme.inc:41
-#, fuzzy
 msgid "See mail content"
-msgstr "Indhold i email"
+msgstr "Se mailens indhold"
 
 #: profiles/vopros/modules/vopros/vopros_email/theme/vopros_email.theme.inc:53
 msgid "Email address:"

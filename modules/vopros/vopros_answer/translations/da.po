@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Vopros\n"
-"POT-Creation-Date: 2016-03-04 11:32+0100\n"
+"POT-Creation-Date: 2016-03-08 08:55+0100\n"
 "PO-Revision-Date: 2016-02-10 13:28+0100\n"
 "Last-Translator: Thomas Fini Hansen <fini@reload.dk>\n"
 "MIME-Version: 1.0\n"
@@ -15,9 +15,8 @@ msgid "Master"
 msgstr "Master"
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.views_default.inc:225
-#, fuzzy
 msgid "Answer overview"
-msgstr "Svarejer"
+msgstr "Oversigt over svar"
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.views_default.inc:226;419
 msgid "more"
@@ -71,28 +70,21 @@ msgstr "næste ›"
 msgid "last »"
 msgstr "sidste »"
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.views_default.inc:239
-#, fuzzy
-msgid "Answer revisions"
-msgstr "Svar på spørgsmål"
-
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.views_default.inc:240;432
 msgid "question"
 msgstr "spørgsmål"
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.views_default.inc:241
-#, fuzzy
 msgid "Answer creator"
-msgstr "Svarindhold"
+msgstr "Svar oprettet af"
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.views_default.inc:242
 msgid "Profile"
 msgstr "Profil"
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.views_default.inc:243
-#, fuzzy
 msgid "Question client"
-msgstr "Spørgsmålsliste"
+msgstr "Modtaget fra"
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.views_default.inc:244;433
 msgid "Question ID"
@@ -114,11 +106,11 @@ msgstr "Spørgsmål"
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.views_default.inc:247
 msgid "Client"
-msgstr ""
+msgstr "Modtaget fra"
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.views_default.inc:248;437
 msgid "Channel"
-msgstr ""
+msgstr "Kanal"
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.views_default.inc:249
 msgid "Bibliotek"
@@ -160,16 +152,9 @@ msgstr "Status"
 msgid "Deadline"
 msgstr "Tidsfrist"
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.views_default.inc:441
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:106
-#, fuzzy
-msgid "Date asked"
-msgstr "Dato oprettet"
-
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.views_default.inc:442
-#, fuzzy
 msgid "Release question"
-msgstr "Luk spørgsmål"
+msgstr "Frigiv spørgsmål"
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.views_default.inc:443
 msgid "All"
@@ -205,19 +190,9 @@ msgstr "Svarejer"
 msgid "The uid of the user creating the answer."
 msgstr "Unik ID på brugeren der laver svaret."
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:108
-#, fuzzy
-msgid "The date the question was submitted."
-msgstr "Indholdselementets oprettelsesdato."
-
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:115
 msgid "Date changed"
 msgstr "Dato ændret"
-
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:118
-#, fuzzy
-msgid "The date the question was most recently updated."
-msgstr "Datoen hvor indholdselementet senest blev opdateret."
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:149
 msgid "User given feedback"
@@ -238,16 +213,6 @@ msgstr "Visningsantal"
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:203
 msgid "Display the number of results for the view."
 msgstr "Vis antallet af resultater for visningen"
-
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:220
-#, fuzzy
-msgid "Answer revision creator"
-msgstr "Svar på spørgsmål"
-
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:232
-#, fuzzy
-msgid "Revision timestamp"
-msgstr "Råt timestamp"
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:319
 msgid "Administer answers"
@@ -273,19 +238,13 @@ msgstr "Rediger egne svar"
 msgid "View own answers"
 msgstr "Se egne svar"
 
-#: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:345
-#, fuzzy
-msgid "Access and use revisions"
-msgstr "Indholdselementtilladelser"
-
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:492
 msgid "Answers:"
 msgstr "Svar:"
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:515
-#, fuzzy
 msgid "See more"
-msgstr "læs mere"
+msgstr "Se mere ..."
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:536;586;265
 msgid "Answer question"
@@ -345,9 +304,8 @@ msgid "Vopros"
 msgstr "Vopros"
 
 #: profiles/vopros/modules/vopros/vopros_answer/includes/vopros_answer.admin.inc:46;180
-#, fuzzy
 msgid "Save telephone answer"
-msgstr "Gem og svar"
+msgstr "Gem telefonsvar"
 
 #: profiles/vopros/modules/vopros/vopros_answer/includes/vopros_answer.admin.inc:46;180
 msgid "Save and send"
@@ -358,18 +316,16 @@ msgid "Question data"
 msgstr "Spørgsmålsdata"
 
 #: profiles/vopros/modules/vopros/vopros_answer/includes/vopros_answer.admin.inc:120
-#, fuzzy
 msgid "Channel data"
-msgstr "Skift widget"
+msgstr "Kanaldata"
 
 #: profiles/vopros/modules/vopros/vopros_answer/includes/vopros_answer.admin.inc:131
 msgid "User data"
 msgstr "Brugerdata"
 
 #: profiles/vopros/modules/vopros/vopros_answer/includes/vopros_answer.admin.inc:142
-#, fuzzy
 msgid "Question history"
-msgstr "Spørgsmålsliste"
+msgstr "Spørgsmålets historik"
 
 #: profiles/vopros/modules/vopros/vopros_answer/includes/vopros_answer.admin.inc:166
 msgid "Save"
@@ -388,22 +344,20 @@ msgid "Answer field is required"
 msgstr "Svar er obligatorisk"
 
 #: profiles/vopros/modules/vopros/vopros_answer/includes/vopros_answer.admin.inc:221
-#, fuzzy
 msgid "Answer saved"
-msgstr "Besvarede"
+msgstr "Svaret er gemt"
 
 #: profiles/vopros/modules/vopros/vopros_answer/includes/vopros_answer.admin.inc:231
 msgid "The question has been unlocked for others to answer."
 msgstr "Spørgsmålet er nu låst op så andre kan svare."
 
 #: profiles/vopros/modules/vopros/vopros_answer/includes/vopros_answer.admin.inc:271
-#, fuzzy
 msgid "Answer saved and question released for others to answer."
-msgstr "Spørgsmålet er nu låst op så andre kan svare."
+msgstr "Svaret er gemt og spørgsmålet er frigivet, så andre kan besvare det"
 
 #: profiles/vopros/modules/vopros/vopros_answer/includes/vopros_answer.admin.inc:297
 msgid "Answer saved and is ready to be submited to the user."
-msgstr ""
+msgstr "Besvarelsen er gemt og klar til at blive sendt til brugeren."
 
 #: profiles/vopros/modules/vopros/vopros_answer/includes/vopros_answer.admin.inc:323;331;384;388
 msgid "!date by !username"

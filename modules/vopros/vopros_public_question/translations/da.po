@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Vopros\n"
-"POT-Creation-Date: 2016-03-04 11:32+0100\n"
+"POT-Creation-Date: 2016-03-08 08:55+0100\n"
 "PO-Revision-Date: 2016-02-10 13:28+0100\n"
 "Last-Translator: Thomas Fini Hansen <fini@reload.dk>\n"
 "MIME-Version: 1.0\n"
@@ -15,9 +15,8 @@ msgid "Master"
 msgstr "Master"
 
 #: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.views_default.inc:235
-#, fuzzy
 msgid "Public question list"
-msgstr "Publicerede spørgsmål"
+msgstr "Offentliggjorte spørgsmål"
 
 #: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.views_default.inc:236
 msgid "more"
@@ -30,11 +29,6 @@ msgstr ""
 #: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.views_default.inc:238
 msgid "Nulstil"
 msgstr ""
-
-#: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.views_default.inc:239
-#, fuzzy
-msgid "Sorter efter"
-msgstr "Center venstre"
 
 #: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.views_default.inc:240
 msgid "Asc"
@@ -124,12 +118,11 @@ msgstr "Redaktion"
 
 #: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.views_default.inc:261
 msgid "Received from"
-msgstr ""
+msgstr "Modtaget fra"
 
 #: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.views_default.inc:262
-#, fuzzy
 msgid "Public questions"
-msgstr "Publicerede spørgsmål"
+msgstr "Er publiceret"
 
 #: profiles/vopros/modules/vopros/vopros_public_question/vopros_public_question.module:24
 msgctxt "a vopros question"
@@ -210,20 +203,9 @@ msgstr "Definerer entitet for publiceret spørgsmål og tilhørende features."
 msgid "Vopros"
 msgstr "Vopros"
 
-#: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.admin.inc:14
-#, fuzzy
-msgid "Agency ID"
-msgstr "Institutions-ID"
-
-#: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.admin.inc:16
-#, fuzzy
-msgid "Agency ID used on published questions."
-msgstr "Tilgå publicerede spørgsmål"
-
 #: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.admin.inc:21
-#, fuzzy
 msgid "Source"
-msgstr "Kilder"
+msgstr "Kilde"
 
 #: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.admin.inc:23
 msgid "Publisher name used on published questions."
@@ -259,11 +241,6 @@ msgstr ""
 msgid "Plain text"
 msgstr "Ren tekst"
 
-#: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.admin.inc:59
-#, fuzzy
-msgid "Default text format"
-msgstr "Deaktivér tekstformat"
-
 #: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.admin.inc:105
 msgid "Question content"
 msgstr "Spørgsmålsindhold"
@@ -285,9 +262,8 @@ msgid "Save and update"
 msgstr "Gem og opdater"
 
 #: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.admin.inc:162
-#, fuzzy
 msgid "Delete published data"
-msgstr "Ikke udgivet"
+msgstr "Slet publiceret spørgsmål"
 
 #: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.admin.inc:197
 msgid "Question/answer has been saved but haven't been made public"
@@ -306,9 +282,8 @@ msgid "Could not create question at service."
 msgstr "Kunne ikke oprettet spørgsmål via service"
 
 #: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.admin.inc:244
-#, fuzzy
 msgid "Question/answer has been updated in external data store, !link"
-msgstr "Spørgsmål/svar er gemt og publiceret"
+msgstr "Spørgsmålet er opdateret i Brønden"
 
 #: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.admin.inc:251
 msgid "Could not update question at service."
@@ -317,16 +292,6 @@ msgstr "Kunne ikke opdatere spørgsmålet via service."
 #: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.admin.inc:263
 msgid "Unknown error - could not delete question"
 msgstr ""
-
-#: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.admin.inc:269
-#, fuzzy
-msgid "link"
-msgstr "Tilføj link"
-
-#: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.admin.inc:264
-#, fuzzy
-msgid "vopros_public_question"
-msgstr "Vopros publicerede spørgsmål"
 
 #: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.admin.inc:264
 msgid "Error when trying to delete public question from data store: @error"
@@ -344,16 +309,6 @@ msgid ""
 "@content</pre>"
 msgstr ""
 
-#: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.service.inc:59
-#, fuzzy
-msgid "Could not upload XML file."
-msgstr "Symboler relateret til uploadede filer."
-
-#: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.service.inc:63
-#, fuzzy
-msgid "Could not upload trans file."
-msgstr "Kunne ikke opdatere spørgsmålet via service."
-
 #: profiles/vopros/modules/vopros/vopros_public_question/theme/vopros_public_question.theme.inc:15
 msgid "Question published by !username @date"
 msgstr "Spørgsmålet er publiceret af !username @date"
@@ -363,11 +318,9 @@ msgid "Edit public question"
 msgstr "Rediger publiceret spørgsmål"
 
 #: profiles/vopros/modules/vopros/vopros_public_question/theme/vopros_public_question.theme.inc:35
-#, fuzzy
 msgid "No public question"
-msgstr "Se publicerede spørgsmål"
+msgstr "Ikke publiceret"
 
 #: profiles/vopros/modules/vopros/vopros_public_question/theme/vopros_public_question.theme.inc:35
-#, fuzzy
 msgid "Add public question now"
-msgstr "Rediger publiceret spørgsmål"
+msgstr "Publicér spørgsmål "

@@ -13,9 +13,13 @@ templates: modules $(PROFILE_POT)
 
 translations: $(patsubst %.pot,%.po,$(POT_FILES))
 
-update-pot: vopros modules
-
 vopros: $(PROFILE_POT)
+
+# Merge in 
+import:
+	msgcat --use-first $(COMBINED) $(FILE) > import.po
+	msgmerge import.po vopros.pot > da.po
+	rm import.po
 
 $(PROFILE_POT):
 	drush potx single --files=$(PROFILE_FILES) && \
@@ -25,7 +29,7 @@ modules:
 	for path in $(MODULES); do \
 	  module=`basename $$path` && \
 	  echo $$module && \
-	  drush potx single --modules=$$module && \
+	  drush potx single --modules=$$module ; \
 	  mkdir -p $$path/translations && \
 	  mv $(ROOT)/general.pot $$path/translations/$$module.pot ; \
 	done
@@ -37,7 +41,7 @@ modules:
 
 $(patsubst %.pot,%.po,$(POT_FILES)): %.po: %.pot $(COMBINED)
 	# Update with new strings.
-	msgmerge $(COMBINED) $< | msgattrib --no-obsolete > $(dir $@)/da.po
+	msgmerge $(COMBINED) $< | msgattrib --no-fuzzy --no-obsolete > $(dir $@)/da.po
 
 vopros.pot: $(POT_FILES)
 	msgcat $(POT_FILES) > vopros.pot

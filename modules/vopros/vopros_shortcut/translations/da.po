@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Vopros\n"
-"POT-Creation-Date: 2016-03-04 11:32+0100\n"
+"POT-Creation-Date: 2016-03-08 08:55+0100\n"
 "PO-Revision-Date: 2016-02-10 13:28+0100\n"
 "Last-Translator: Thomas Fini Hansen <fini@reload.dk>\n"
 "MIME-Version: 1.0\n"
@@ -14,19 +14,9 @@ msgstr ""
 msgid "Questions"
 msgstr "Spørgsmål"
 
-#: profiles/vopros/modules/vopros/vopros_shortcut/vopros_shortcut.module:36
-#, fuzzy
-msgid "Search questions"
-msgstr "Søgeindstillinger"
-
 #: profiles/vopros/modules/vopros/vopros_shortcut/vopros_shortcut.module:44
 msgid "Users"
 msgstr "Brugere"
-
-#: profiles/vopros/modules/vopros/vopros_shortcut/vopros_shortcut.info:0
-#, fuzzy
-msgid "Vopros Shortcut"
-msgstr "Vopros søgning"
 
 #: profiles/vopros/modules/vopros/vopros_shortcut/vopros_shortcut.info:0
 msgid "Standard Vopros shortcut bar"

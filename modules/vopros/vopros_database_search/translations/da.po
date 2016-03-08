@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Vopros\n"
-"POT-Creation-Date: 2016-03-04 11:32+0100\n"
+"POT-Creation-Date: 2016-03-08 08:55+0100\n"
 "PO-Revision-Date: 2016-02-10 13:28+0100\n"
 "Last-Translator: Thomas Fini Hansen <fini@reload.dk>\n"
 "MIME-Version: 1.0\n"
@@ -70,11 +70,6 @@ msgstr "næste ›"
 msgid "last »"
 msgstr "sidste »"
 
-#: profiles/vopros/modules/vopros/vopros_database_search/vopros_database_search.views_default.inc:113
-#, fuzzy
-msgid "Date asked"
-msgstr "Dato oprettet"
-
 #: profiles/vopros/modules/vopros/vopros_database_search/vopros_database_search.views_default.inc:114
 msgid "Status"
 msgstr "Status"
@@ -86,16 +81,6 @@ msgstr ""
 #: profiles/vopros/modules/vopros/vopros_database_search/vopros_database_search.views_default.inc:116
 msgid "Page"
 msgstr "Side"
-
-#: profiles/vopros/modules/vopros/vopros_database_search/vopros_database_search.info:0
-#, fuzzy
-msgid "Vopros database search"
-msgstr "Vopros søgning"
-
-#: profiles/vopros/modules/vopros/vopros_database_search/vopros_database_search.info:0
-#, fuzzy
-msgid "Search Vopros questions and answers"
-msgstr "Publicer spørgsmål og svar"
 
 #: profiles/vopros/modules/vopros/vopros_database_search/vopros_database_search.info:0
 msgid "Vopros"

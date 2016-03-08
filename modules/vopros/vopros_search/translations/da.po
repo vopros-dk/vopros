@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Vopros\n"
-"POT-Creation-Date: 2016-03-04 11:32+0100\n"
+"POT-Creation-Date: 2016-03-08 08:55+0100\n"
 "PO-Revision-Date: 2016-02-10 13:28+0100\n"
 "Last-Translator: Thomas Fini Hansen <fini@reload.dk>\n"
 "MIME-Version: 1.0\n"
@@ -111,9 +111,8 @@ msgid "Editorial"
 msgstr "Redaktion"
 
 #: profiles/vopros/modules/vopros/vopros_search/includes/views/vopros_search.views_default.inc:162
-#, fuzzy
 msgid "Last edited by"
-msgstr "Senest opdateret"
+msgstr "Sidst redigeret af"
 
 #: profiles/vopros/modules/vopros/vopros_search/includes/views/vopros_search.views_default.inc:163
 msgid "Page"
