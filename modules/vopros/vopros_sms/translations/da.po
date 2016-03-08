@@ -2,92 +2,101 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Vopros\n"
-"POT-Creation-Date: 2016-03-08 08:55+0100\n"
-"PO-Revision-Date: 2016-02-10 13:28+0100\n"
+"POT-Creation-Date: 2016-03-08 09:32+0100\n"
+"PO-Revision-Date: 2016-03-08 10:14+0100\n"
 "Last-Translator: Thomas Fini Hansen <fini@reload.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:16;27
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:16;28
 msgctxt "a vopros sms"
 msgid "SMS"
 msgstr "SMS"
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:146;265;275
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:147;266;276
 msgid "SMS"
 msgstr "SMS"
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:37
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:17
+msgctxt "a vopros sms"
+msgid "SMSes"
+msgstr "SMSer"
+
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:38
 msgid "Administrator"
 msgstr "Administrator"
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:159
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:160
 msgid "Answer"
 msgstr "Svar"
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:161
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:162
 msgid "The unique ID of answer the sms belongs to."
 msgstr "Unikt ID på det svar som sms'en hører til"
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:169
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:170
 msgid "Question"
 msgstr "Spørgsmål"
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:171
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:172
 msgid "The unique ID of the question the answer belongs to."
 msgstr "Unik ID på det spørgsmål som svaret hører til."
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:228
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:229
 msgid "Administer SMSes"
 msgstr "Administrer sms"
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:233
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:234
 msgid "Access lists of SMSes, primarily for viewing and referencing"
 msgstr "Tilgå liste over sms'er, primært til visning og reference"
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:237
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:238
 msgid "Create SMSes"
 msgstr "Opret sms'er"
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:243
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:241
+msgid "Create question via SMS service"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:244
 msgid "Edit any sms"
 msgstr "Rediger sms"
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:248
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:249
 msgid "Edit own SMSes"
 msgstr "Rediger egne sms'er"
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:252
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:253
 msgid "View own SMSes"
 msgstr "Se egne sms'er"
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:72
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:73
 msgid "SMS settings"
 msgstr "Sms-indstillinger"
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:73
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:74
 msgid "Configure general sms settings, fields, and displays."
 msgstr "Konfigurer generelle sms-indstillinger, felter og visning"
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:81
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:82
 msgid "Settings"
 msgstr "Indstillinger"
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:87
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:88
 msgid "Answer question"
 msgstr "Svar på spørgsmål"
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:106
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:107
 msgid "View"
 msgstr "Se"
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:112
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:113
 msgid "Edit"
 msgstr "Rediger"
 
-#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:123
+#: profiles/vopros/modules/vopros/vopros_sms/vopros_sms.module:124
 msgid "Contact user"
 msgstr "Kontakt spørger"
 
@@ -162,6 +171,14 @@ msgstr "Sms-afsender"
 #: profiles/vopros/modules/vopros/vopros_sms/includes/vopros_sms.admin.inc:64
 msgid "Used as the sender of the SMSes, 11 alphanumeric chars allowed"
 msgstr "Bruges som afsender af sms'er (11 alfanumriske tegn er tilladt)"
+
+#: profiles/vopros/modules/vopros/vopros_sms/includes/vopros_sms.admin.inc:73
+msgid "No default value"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_sms/includes/vopros_sms.admin.inc:79
+msgid "Default SMS editorial"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_sms/includes/vopros_sms.admin.inc:86
 msgid ""

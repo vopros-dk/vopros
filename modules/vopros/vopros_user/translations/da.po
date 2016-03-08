@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Vopros\n"
-"POT-Creation-Date: 2016-03-08 08:55+0100\n"
-"PO-Revision-Date: 2016-02-10 13:28+0100\n"
+"POT-Creation-Date: 2016-03-08 09:32+0100\n"
+"PO-Revision-Date: 2016-03-08 10:14+0100\n"
 "Last-Translator: Thomas Fini Hansen <fini@reload.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,6 +27,30 @@ msgstr ""
 msgid "URL of the OpenAgency service."
 msgstr ""
 
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:35
+msgid "Service group"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:36
+msgid "Group used for authentication."
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:43
+msgid "Service user"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:44
+msgid "User used for authentication."
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:51
+msgid "Service password"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:52
+msgid "Password used for authentication."
+msgstr ""
+
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:59
 msgid "Included libraries"
 msgstr "Inkluderede biblioteker"
@@ -43,16 +67,38 @@ msgstr ""
 msgid "disabled"
 msgstr "deaktiveret"
 
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:90
+msgid "Staff role"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:93
+msgid ""
+"This role will be automatically assigned new Vopros permissions whenever a "
+"module is enabled. Changing this setting will not affect existing "
+"permissions."
+msgstr ""
+"Denne rolle tildeles automatisk nye Vopros tilladelser når et modul "
+"aktiveres. Ændring af denne indstilling påvirker ikke eksisterende "
+"tilladelser."
+
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:99
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.module:40
 msgid "Rebuild permissions"
 msgstr "Gendan tilladelser"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:122
+msgid "Are you sure you want to rebuild permissions?"
+msgstr "Ønsker du at gendanne tilladelser?"
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:124
 msgid ""
 "This will reset permissions for the staff profile to the defaults "
 "recommended by Vopros and can not be undone."
 msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:146
+msgid "Permissions rebuild."
+msgstr "Tilladelser gendannet"
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.features.field_instance.inc:350
 msgid "Bemærkninger"
@@ -114,6 +160,10 @@ msgstr ""
 msgid "Nulstil"
 msgstr ""
 
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:295
+msgid "Sorter efter"
+msgstr ""
+
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:296;462
 msgid "Asc"
 msgstr "Asc"
@@ -121,6 +171,14 @@ msgstr "Asc"
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:297;463
 msgid "Desc"
 msgstr "Desc"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:298
+msgid "Poster pr side"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:299
+msgid "- Alle -"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:300
 msgid "Forskydning"
@@ -235,6 +293,10 @@ msgstr "sidste »"
 msgid "User"
 msgstr "Bruger"
 
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:472
+msgid "Profile ID"
+msgstr "Profil ID"
+
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:473
 msgid "."
 msgstr "."
@@ -243,9 +305,29 @@ msgstr "."
 msgid ","
 msgstr ","
 
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:475
+msgid "agency"
+msgstr "Institution"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:476
+msgid "last_name"
+msgstr "Efternavn"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:477
+msgid "first_name"
+msgstr "Fornavn"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:478
+msgid "user_name"
+msgstr "Brugernavn"
+
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:479
 msgid "uid"
 msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:480
+msgid "description"
+msgstr "Beskrivelse"
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:481
 msgid "image"
@@ -255,9 +337,21 @@ msgstr "billede"
 msgid "expertise"
 msgstr ""
 
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:483
+msgid "User uid"
+msgstr ""
+
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:484
 msgid "Name (raw)"
 msgstr "Navn (rå data)"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:485
+msgid "Services"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.module:61
+msgid "Same library as current user"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.module:62
 msgid "Selects users from the same library."
@@ -282,6 +376,14 @@ msgstr "Rediger genvejslinks på brugerprofil."
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.module:16;25
 msgid "User settings"
 msgstr "Brugerindstillinger"
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.module:17
+msgid "Configure Vopros user and role settings."
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_user/vopros_user.module:31
+msgid "Role settings"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.info:0
 msgid "Vopros user"

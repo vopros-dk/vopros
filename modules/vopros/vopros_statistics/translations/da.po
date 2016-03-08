@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Vopros\n"
-"POT-Creation-Date: 2016-03-08 08:55+0100\n"
-"PO-Revision-Date: 2016-02-10 13:28+0100\n"
+"POT-Creation-Date: 2016-03-08 09:32+0100\n"
+"PO-Revision-Date: 2016-03-08 10:14+0100\n"
 "Last-Translator: Thomas Fini Hansen <fini@reload.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -76,9 +76,17 @@ msgstr "Tid"
 msgid "Questions created"
 msgstr "Antal spørgsmål"
 
+#: profiles/vopros/modules/vopros/vopros_statistics/vopros_statistics.admin.inc:325
+msgid "Total"
+msgstr "Total"
+
 #: profiles/vopros/modules/vopros/vopros_statistics/vopros_statistics.admin.inc:327
 msgid "Client"
 msgstr "Modtaget fra"
+
+#: profiles/vopros/modules/vopros/vopros_statistics/vopros_statistics.module:75
+msgid "Access statistics"
+msgstr "Vis statistik"
 
 #: profiles/vopros/modules/vopros/vopros_statistics/vopros_statistics.module:14
 msgid "Statistics"
@@ -95,6 +103,14 @@ msgstr "År"
 #: profiles/vopros/modules/vopros/vopros_statistics/vopros_statistics.module:59
 msgid "Clients & channels"
 msgstr "Klienter og kanaler"
+
+#: profiles/vopros/modules/vopros/vopros_statistics/vopros_statistics.info:0
+msgid "Vopros Statistics"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_statistics/vopros_statistics.info:0
+msgid "Allows users to access statistics information about Vopros"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_statistics/vopros_statistics.info:0
 msgid "Vopros"

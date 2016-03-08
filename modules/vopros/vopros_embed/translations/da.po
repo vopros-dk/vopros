@@ -2,8 +2,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Vopros\n"
-"POT-Creation-Date: 2016-03-08 08:55+0100\n"
-"PO-Revision-Date: 2016-02-10 13:28+0100\n"
+"POT-Creation-Date: 2016-03-08 09:31+0100\n"
+"PO-Revision-Date: 2016-03-08 10:14+0100\n"
 "Last-Translator: Thomas Fini Hansen <fini@reload.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,10 +23,18 @@ msgid ""
 "Main title of the page. Use <em>@site_name</em> to insert the site title."
 msgstr ""
 
+#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:27
+msgid "Tab title"
+msgstr ""
+
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:29
 msgid ""
 "Title of the tab used on client sites.. Use <em>@site_name</em> to insert "
 "the site title."
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:34
+msgid "Show deadline for"
 msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:41
@@ -46,8 +54,24 @@ msgid ""
 "The agency id of the site, DK-<num> for libraries, custom string for others."
 msgstr ""
 
+#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:59
+msgid "Local email"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:62
+msgid "The email address to direct local inquiries to."
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:67
+msgid "Default answer method"
+msgstr "Foretrukket svarmetode"
+
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:71
 msgid "Which answer method should be initially selected?"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:76
+msgid "Create tab"
 msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:79
@@ -115,6 +139,18 @@ msgstr "Send spørgsmål"
 msgid "Start chat"
 msgstr "Start chat"
 
+#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:237
+msgid "E-mail required."
+msgstr "Email påkrævet."
+
+#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:240
+msgid "E-mail invalid."
+msgstr "Email ugyldig."
+
+#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:246
+msgid "Mobile phone number required."
+msgstr "Telefonnummer er påkrævet."
+
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:308
 msgid "Your question has been submitted."
 msgstr "Dit spørgsmål er sendt til biblioteksvagten."
@@ -131,6 +167,14 @@ msgstr "Tilbage"
 msgid "Are you sure you want to close?"
 msgstr "Er du sikker på at du vil lukke chatten?"
 
+#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.module:70
+msgid "Administer embed settings"
+msgstr ""
+
+#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.module:118
+msgid "Webform"
+msgstr ""
+
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.module:122
 msgid "Chat"
 msgstr ""
@@ -143,6 +187,10 @@ msgstr "Sendt fra: "
 msgid "Forward to @address"
 msgstr "Videresend spørgsmål til @address "
 
+#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.module:13
+msgid "Ask question"
+msgstr "Stil spørgsmål"
+
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.module:24
 msgid "Question submitted"
 msgstr "Spørgsmål sendt"
@@ -151,9 +199,17 @@ msgstr "Spørgsmål sendt"
 msgid "Embed settings"
 msgstr "Embed-spørgeboks-indstillinger"
 
+#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.module:42
+msgid "Configure embed settings."
+msgstr ""
+
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.module:50
 msgid "Settings"
 msgstr "Indstillinger"
+
+#: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.info:0
+msgid "Vopros Embed"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.info:0
 msgid "Provide embedable question forms for other sites."

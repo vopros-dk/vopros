@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Vopros\n"
 "POT-Creation-Date: 2016-03-08 09:31+0100\n"
-"PO-Revision-Date: 2016-03-08 09:49+0100\n"
+"PO-Revision-Date: 2016-03-08 10:14+0100\n"
 "Last-Translator: Thomas Fini Hansen <fini@reload.dk>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -161,9 +161,8 @@ msgid "last »"
 msgstr "sidste »"
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.views_default.inc:239
-#, fuzzy
 msgid "Answer revisions"
-msgstr "Svar på spørgsmål"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.views_default.inc:240;432
 #: profiles/vopros/modules/vopros/vopros_email/theme/vopros_email.theme.inc:174
@@ -309,7 +308,6 @@ msgstr "Tidsfrist"
 #: profiles/vopros/modules/vopros/vopros_database_search/vopros_database_search.views_default.inc:113
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.views_default.inc:591;1267
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.module:831
-#, fuzzy
 msgid "Date asked"
 msgstr "Dato oprettet"
 
@@ -340,7 +338,6 @@ msgid "Answer"
 msgstr "Svar"
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:23
-#, fuzzy
 msgctxt "a vopros answer"
 msgid "Answers"
 msgstr "Svar"
@@ -380,9 +377,8 @@ msgstr "Unik ID på brugeren der laver svaret."
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:109
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.module:833
-#, fuzzy
 msgid "The date the question was submitted."
-msgstr "Indholdselementets oprettelsesdato."
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:116
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.module:840
@@ -391,9 +387,8 @@ msgstr "Dato ændret"
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:119
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.module:843
-#, fuzzy
 msgid "The date the question was most recently updated."
-msgstr "Datoen hvor indholdselementet senest blev opdateret."
+msgstr "Datoen hvor spørgsmålet senest blev opdateret."
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:150
 #: profiles/vopros/modules/vopros/vopros_feedback/vopros_feedback.module:496
@@ -417,14 +412,12 @@ msgid "Display the number of results for the view."
 msgstr "Vis antallet af resultater for visningen"
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:221
-#, fuzzy
 msgid "Answer revision creator"
-msgstr "Svar på spørgsmål"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:233
-#, fuzzy
 msgid "Revision timestamp"
-msgstr "Råt timestamp"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:320
 msgid "Administer answers"
@@ -452,9 +445,8 @@ msgstr "Se egne svar"
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:346
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.module:502
-#, fuzzy
 msgid "Access and use revisions"
-msgstr "Indholdselementtilladelser"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_answer/vopros_answer.module:493
 msgid "Answers:"
@@ -710,14 +702,12 @@ msgid "Value"
 msgstr "Værdi"
 
 #: profiles/vopros/modules/vopros/vopros_content/vopros_content.info:0
-#, fuzzy
 msgid "Vopros content"
-msgstr "Populært indhold"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_content/vopros_content.info:0
-#, fuzzy
 msgid "Add content to Vopros"
-msgstr "Tilføj indholdstype"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_database_search/vopros_database_search.views_default.inc:99
 #: profiles/vopros/modules/vopros/vopros_search/includes/views/vopros_search.views_default.inc:143
@@ -730,14 +720,12 @@ msgid "[question_question_status] ([question_question_status_reason])"
 msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_database_search/vopros_database_search.info:0
-#, fuzzy
 msgid "Vopros database search"
-msgstr "Vopros søgning"
+msgstr "Vopros database søgning"
 
 #: profiles/vopros/modules/vopros/vopros_database_search/vopros_database_search.info:0
-#, fuzzy
 msgid "Search Vopros questions and answers"
-msgstr "Publicer spørgsmål og svar"
+msgstr "Søg spørgsmål og svar"
 
 #: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:14;27
 msgctxt "a vopros email"
@@ -750,7 +738,6 @@ msgid "Email"
 msgstr "Email"
 
 #: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:15
-#, fuzzy
 msgctxt "a vopros email"
 msgid "Emails"
 msgstr "Emails"
@@ -799,9 +786,8 @@ msgid "E-mail"
 msgstr "E-mail"
 
 #: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:501
-#, fuzzy
 msgid "[@site] FWD: @subject"
-msgstr "[!site-name] !subject"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_email/vopros_email.module:509
 msgid "------ Forwarded by @user fra @site ------"
@@ -1077,9 +1063,8 @@ msgid "forward"
 msgstr "Send"
 
 #: profiles/vopros/modules/vopros/vopros_email/includes/vopros_email.admin.inc:541
-#, fuzzy
 msgid "Email forwarded."
-msgstr "Mailadresse"
+msgstr "Email vidresent."
 
 #: profiles/vopros/modules/vopros/vopros_email/includes/vopros_email.admin.inc:552
 msgid "This email cannot be transferred"
@@ -1189,9 +1174,8 @@ msgid ""
 msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:27
-#, fuzzy
 msgid "Tab title"
-msgstr "Sidetitel"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:29
 msgid ""
@@ -1200,9 +1184,8 @@ msgid ""
 msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:34
-#, fuzzy
 msgid "Show deadline for"
-msgstr "Ingen tidsfrist"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:41
 msgid "Show deadline options for these answer methods."
@@ -1222,17 +1205,14 @@ msgid ""
 msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:59
-#, fuzzy
 msgid "Local email"
-msgstr "Lokalitet"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:62
-#, fuzzy
 msgid "The email address to direct local inquiries to."
-msgstr "Brugerkontoens e-mail-adresse."
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:67
-#, fuzzy
 msgid "Default answer method"
 msgstr "Foretrukket svarmetode"
 
@@ -1241,9 +1221,8 @@ msgid "Which answer method should be initially selected?"
 msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:76
-#, fuzzy
 msgid "Create tab"
-msgstr "Opret"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.admin.inc:79
 msgid "Automatically create tab."
@@ -1311,19 +1290,16 @@ msgid "Start chat"
 msgstr "Start chat"
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:237
-#, fuzzy
 msgid "E-mail required."
-msgstr "!title !required"
+msgstr "Email påkrævet."
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:240
-#, fuzzy
 msgid "E-mail invalid."
-msgstr "Emailliste"
+msgstr "Email ugyldig."
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:246
-#, fuzzy
 msgid "Mobile phone number required."
-msgstr "Det nye gruppenavn er påkrævet."
+msgstr "Telefonnummer er påkrævet."
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.pages.inc:308
 msgid "Your question has been submitted."
@@ -1342,14 +1318,12 @@ msgid "Are you sure you want to close?"
 msgstr "Er du sikker på at du vil lukke chatten?"
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.module:70
-#, fuzzy
 msgid "Administer embed settings"
-msgstr "Administrér indstillinger."
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.module:118
-#, fuzzy
 msgid "Webform"
-msgstr "formular"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.module:122
 msgid "Chat"
@@ -1364,9 +1338,8 @@ msgid "Forward to @address"
 msgstr "Videresend spørgsmål til @address "
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.module:13
-#, fuzzy
 msgid "Ask question"
-msgstr "Svar på spørgsmål"
+msgstr "Stil spørgsmål"
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.module:24
 msgid "Question submitted"
@@ -1377,14 +1350,12 @@ msgid "Embed settings"
 msgstr "Embed-spørgeboks-indstillinger"
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.module:42
-#, fuzzy
 msgid "Configure embed settings."
-msgstr "Tilpas søgeindstillinger"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.info:0
-#, fuzzy
 msgid "Vopros Embed"
-msgstr "Vopros email"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_embed/vopros_embed.info:0
 msgid "Provide embedable question forms for other sites."
@@ -1399,9 +1370,8 @@ msgid "Used for creating a validation hash used as access control."
 msgstr "Brugt til at generere en valid hash til brug for adgangskontrol."
 
 #: profiles/vopros/modules/vopros/vopros_feedback/vopros_feedback.admin.inc:20
-#, fuzzy
 msgid "Intro text"
-msgstr "Lang tekst"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_feedback/vopros_feedback.admin.inc:21
 msgid "Setup intro text on feedback page when feedback has been saved."
@@ -1470,7 +1440,6 @@ msgid "View own feedback"
 msgstr "Se egen vurdering"
 
 #: profiles/vopros/modules/vopros/vopros_feedback/vopros_feedback.module:149
-#, fuzzy
 msgid "View agency feedback"
 msgstr "Se biblioteks vurdering"
 
@@ -1512,12 +1481,10 @@ msgid "The feedback url used in emails."
 msgstr "Link til vurdering anvendt i emails."
 
 #: profiles/vopros/modules/vopros/vopros_feedback/vopros_feedback.module:543;559
-#, fuzzy
 msgid "Feedback token"
-msgstr "Indhold i vurdering"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_feedback/vopros_feedback.module:544;562
-#, fuzzy
 msgid "The feedback token used in emails."
 msgstr "Link til vurdering anvendt i emails."
 
@@ -1548,9 +1515,8 @@ msgstr ""
 "brugerne give vurderinger."
 
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:666
-#, fuzzy
 msgid "All Feedback"
-msgstr "Vurdering"
+msgstr "Alle vurderinger"
 
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:667
 #: profiles/vopros/modules/vopros/vopros_service/includes/vopros_service.views_default.inc:290
@@ -1571,28 +1537,24 @@ msgstr ""
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.views_default.inc:597;1272
 #: profiles/vopros/modules/vopros/vopros_service/includes/vopros_service.views_default.inc:293
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:295
-#, fuzzy
 msgid "Sorter efter"
-msgstr "Center venstre"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:673
 #: profiles/vopros/modules/vopros/vopros_service/includes/vopros_service.views_default.inc:296
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:298
-#, fuzzy
 msgid "Poster pr side"
-msgstr "Indsendt til"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:674
 #: profiles/vopros/modules/vopros/vopros_service/includes/vopros_service.views_default.inc:297
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:299
-#, fuzzy
 msgid "- Alle -"
-msgstr "- Alle -"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:680
-#, fuzzy
 msgid "email"
-msgstr "mail"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:681
 #: profiles/vopros/modules/vopros/vopros_service/includes/vopros_service.views_default.inc:303
@@ -1612,9 +1574,8 @@ msgid "User rating"
 msgstr "Brugerrating"
 
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:691
-#, fuzzy
 msgid "answer"
-msgstr "Svar"
+msgstr "svar"
 
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:692
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.views_default.inc:1275
@@ -1640,14 +1601,12 @@ msgid "bruger"
 msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:698
-#, fuzzy
 msgid "All feedbacks"
-msgstr "vurdering"
+msgstr "Alle vurderinger"
 
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:699
-#, fuzzy
 msgid "Profil"
-msgstr "Profil"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_feedback/includes/views/vopros_feedback.views_default.inc:700
 msgid "Navn"
@@ -1870,14 +1829,12 @@ msgid "Defines the public question entity and associated features."
 msgstr "Definerer entitet for publiceret spørgsmål og tilhørende features."
 
 #: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.admin.inc:14
-#, fuzzy
 msgid "Agency ID"
 msgstr "Institutions-ID"
 
 #: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.admin.inc:16
-#, fuzzy
 msgid "Agency ID used on published questions."
-msgstr "Tilgå publicerede spørgsmål"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.admin.inc:21
 msgid "Source"
@@ -1914,9 +1871,8 @@ msgid "Plain text"
 msgstr "Ren tekst"
 
 #: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.admin.inc:59
-#, fuzzy
 msgid "Default text format"
-msgstr "Deaktivér tekstformat"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.admin.inc:105
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.module:133;185
@@ -1970,14 +1926,12 @@ msgid "Unknown error - could not delete question"
 msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.admin.inc:269
-#, fuzzy
 msgid "link"
-msgstr "Tilføj link"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.admin.inc:264
-#, fuzzy
 msgid "vopros_public_question"
-msgstr "Vopros publicerede spørgsmål"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.admin.inc:264
 msgid "Error when trying to delete public question from data store: @error"
@@ -1996,14 +1950,12 @@ msgid ""
 msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.service.inc:59
-#, fuzzy
 msgid "Could not upload XML file."
-msgstr "Symboler relateret til uploadede filer."
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_public_question/includes/vopros_public_question.service.inc:63
-#, fuzzy
 msgid "Could not upload trans file."
-msgstr "Kunne ikke opdatere spørgsmålet via service."
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_public_question/theme/vopros_public_question.theme.inc:15
 msgid "Question published by !username @date"
@@ -2027,9 +1979,8 @@ msgstr "Oversigt over spørgsmål"
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.views_default.inc:583
 #: profiles/vopros/modules/vopros/vopros_service/includes/vopros_service.views_default.inc:307
-#, fuzzy
 msgid "Question_status_reason"
-msgstr "Spørgsmålsstatus"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.views_default.inc:586
 msgid "Kanal"
@@ -2040,9 +1991,8 @@ msgid "Svartype"
 msgstr "Ønsket svarmåde"
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.views_default.inc:593
-#, fuzzy
 msgid "User_answer_preference"
-msgstr "Termreference"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.views_default.inc:594
 #: profiles/vopros/modules/vopros/vopros_service/includes/vopros_service.views_default.inc:317
@@ -2050,9 +2000,8 @@ msgid "List"
 msgstr "Vis"
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.views_default.inc:598;1273
-#, fuzzy
 msgid "Avancerede indstillinger"
-msgstr "Avancerede indstillinger"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.views_default.inc:599;1274
 msgid "Vælg et filter og klik på Anvend for at se resultater"
@@ -2063,9 +2012,8 @@ msgid "Question assignee"
 msgstr "Spørgsmålsejer"
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.views_default.inc:1269
-#, fuzzy
 msgid "Admin"
-msgstr "Administrativ beskrivelse"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.views_default.inc:1278
 msgid "Admin list"
@@ -2085,7 +2033,6 @@ msgid "Question"
 msgstr "Spørgsmål"
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.module:28
-#, fuzzy
 msgctxt "a vopros question"
 msgid "Questions"
 msgstr "Spørgsmål"
@@ -2100,7 +2047,6 @@ msgid "Client"
 msgstr "Klient"
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.module:69
-#, fuzzy
 msgctxt "a vopros question"
 msgid "Clients"
 msgstr "Klienter"
@@ -2126,14 +2072,12 @@ msgid "The usage of the question"
 msgstr "Formål"
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.module:149;201
-#, fuzzy
 msgid "The client that submitted the question"
-msgstr "Spørgsmålsindhold"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.module:154;206
-#, fuzzy
 msgid "The the channel that the client used"
-msgstr "Ændringerne er blevet gemt."
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.module:158;219
 msgid "Question note"
@@ -2180,9 +2124,8 @@ msgid "Subject catagory"
 msgstr "Emnekategopri"
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.module:479
-#, fuzzy
 msgid "Create question via web service"
-msgstr "Kunne ikke oprettet spørgsmål via service"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.module:482
 msgid "Administer questions"
@@ -2205,9 +2148,8 @@ msgid "Contact user about question"
 msgstr "Kontakt bruger vedrørende spørgsmål"
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.module:505
-#, fuzzy
 msgid "Assign a user a question or notify them about it"
-msgstr "Tildel spørgsmålet til denne Biblioteksvagt."
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.module:518
 msgid "[@site] Question notification"
@@ -2222,7 +2164,6 @@ msgid "You can see the quesiton here: !link."
 msgstr "Du kan se spørgsmålet her: !link. "
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.module:794
-#, fuzzy
 msgid "Question answerer"
 msgstr "Spørgsmålsbesvarer"
 
@@ -2239,7 +2180,6 @@ msgid "The URL of the question page."
 msgstr "URL til spørgsmålssiden."
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.module:827
-#, fuzzy
 msgid "The deadline for answering the question."
 msgstr "Deadline for besvarelse af spørgsmål"
 
@@ -2252,9 +2192,8 @@ msgid "Question owner"
 msgstr "Spørgsmålsejer"
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.module:947
-#, fuzzy
 msgid "Release question link"
-msgstr "Frigiv spørgsmål"
+msgstr "Frigiv spørgsmål link"
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.module:948
 msgid "Creates a link for releasing a question assigned to a user."
@@ -2444,14 +2383,12 @@ msgid "Client settings"
 msgstr "Klient-indstillinger"
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.module:284
-#, fuzzy
 msgid "Configure general settings for clients, fields, and displays."
-msgstr "Konfigurer generelle sms-indstillinger, felter og visning"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.module:299
-#, fuzzy
 msgid "QandA migrate"
-msgstr "De Forenede Arabiske Emirater"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/vopros_question.module:300
 msgid "Migrate QandA to clients."
@@ -2495,43 +2432,36 @@ msgid "Defines the Question entity and associated features."
 msgstr "Definerer spørgsmålsentiteten og tilhørende features"
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/vopros_question.admin.inc:14
-#, fuzzy
 msgid "Default usage value"
-msgstr "Standardværdi"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/vopros_question.admin.inc:15
-#, fuzzy
 msgid ""
 "Setup the default value in the admin forms used for creating and editing "
 "questions."
-msgstr "Standardværdien af dette felt, bruges ved oprettelse af indhold."
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/vopros_question.admin.inc:22;52
-#, fuzzy
 msgid "Contact user by SMS"
-msgstr "Kontakt spørger"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/vopros_question.admin.inc:23;53
-#, fuzzy
 msgid "Contact user by Email"
-msgstr "Kontakt bruger email-makroer"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/vopros_question.admin.inc:28
-#, fuzzy
 msgid "Setup status reasons"
 msgstr "Spørgsmålsstatus"
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/vopros_question.admin.inc:42
-#, fuzzy
 msgid "Enter values, one value per line in the format key|value"
 msgstr ""
 "Værdierne som dette felt kan indeholde. Indtast én værdi pr. linje på formen "
 "nøgle|værdi."
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/vopros_question.admin.inc:64
-#, fuzzy
 msgid "Invalid formatted text"
-msgstr "Ugyldigt datoformat."
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/vopros_question.admin.inc:136
 msgid "The answwer for this question."
@@ -2610,12 +2540,10 @@ msgid "Notify"
 msgstr "Send besked"
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/vopros_question.controller.inc:34;41
-#, fuzzy
 msgid "Unknown @name @id"
-msgstr "ukendt indholdselement %nid"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/vopros_question.controller.inc:34
-#, fuzzy
 msgid "Client id"
 msgstr "Modtaget fra"
 
@@ -2636,9 +2564,8 @@ msgid "User email or mobile phone"
 msgstr "Email eller mobiltelefon"
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/vopros_question_client.admin.inc:49
-#, fuzzy
 msgid "QandA mapping"
-msgstr "Kobling"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/vopros_question_client.admin.inc:52
 msgid ""
@@ -2648,34 +2575,28 @@ msgid ""
 msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/vopros_question_client.admin.inc:64
-#, fuzzy
 msgid "Known channels"
-msgstr "Klienter og kanaler"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/vopros_question_client.admin.inc:92
-#, fuzzy
 msgid "Error parsing mapping."
-msgstr "Fejl ved generering af billede."
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/vopros_question_client.admin.inc:96
-#, fuzzy
 msgid "Unknown client @client."
-msgstr "Ukendt kontekst"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/vopros_question_client.admin.inc:99
-#, fuzzy
 msgid "Unknown channel @channel."
-msgstr "Ukendt handling."
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/vopros_question_client.admin.inc:127
-#, fuzzy
 msgid "Un-migrated questions"
-msgstr "Migrer spørgsmål"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/vopros_question_client.admin.inc:133
-#, fuzzy
 msgid "Number to migrate"
-msgstr "Antal brugere der skal migreres"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/vopros_question_client.admin.inc:135
 msgid "Leave empty to migrate all un-migrated questions."
@@ -2686,7 +2607,6 @@ msgid "Migrate questions"
 msgstr "Migrer spørgsmål"
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/vopros_question_client.admin.inc:174
-#, fuzzy
 msgid "Migrating questions"
 msgstr "Migrer spørgsmål"
 
@@ -2706,17 +2626,14 @@ msgid "Label"
 msgstr "Etiket"
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/vopros_question_client.admin.inc:269
-#, fuzzy
 msgid "Human readable label for this client."
-msgstr "Viewets læsbare navn."
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/vopros_question_client.admin.inc:306
-#, fuzzy
 msgid "Machine name must be unique."
-msgstr "%name skal være et tal."
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/vopros_question_client.ui.inc:26
-#, fuzzy
 msgid "Agency"
 msgstr "Institutions-ID"
 
@@ -2740,9 +2657,8 @@ msgid "%time to deadline"
 msgstr "%time tilbage inden tidsfrist udløber"
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/views/handlers/vopros_question_handler_field_vopros_question.inc:39
-#, fuzzy
 msgid "<unknown>"
-msgstr "Ukendt"
+msgstr "<Ukendt>"
 
 #: profiles/vopros/modules/vopros/vopros_question/includes/views/handlers/vopros_question_status_views_handler_filter_in_operator.inc:50
 msgid "Open"
@@ -2781,9 +2697,8 @@ msgid "Channel:"
 msgstr "Kanal:"
 
 #: profiles/vopros/modules/vopros/vopros_question/theme/vopros_question.theme.inc:130
-#, fuzzy
 msgid "Channel ID:"
-msgstr "Kanal:"
+msgstr "Kanal ID:"
 
 #: profiles/vopros/modules/vopros/vopros_question/theme/vopros_question.theme.inc:137
 msgid "Channel data:"
@@ -2826,7 +2741,6 @@ msgid "Email:"
 msgstr "E-mail:"
 
 #: profiles/vopros/modules/vopros/vopros_question/theme/vopros_question.theme.inc:239
-#, fuzzy
 msgid "Mobile phone:"
 msgstr "Mobilnummer"
 
@@ -2951,7 +2865,6 @@ msgstr "Besked til service"
 
 #: profiles/vopros/modules/vopros/vopros_service/vopros_service.pages.inc:108
 #: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:657;122
-#, fuzzy
 msgid "Forward question"
 msgstr "Vidresend spørgsmål"
 
@@ -2964,7 +2877,6 @@ msgid "Could not forward question to service, it said: @message"
 msgstr "Kunne ikke vidresende spørgsmål til service, den sage: @message"
 
 #: profiles/vopros/modules/vopros/vopros_service/vopros_service.pages.inc:204
-#, fuzzy
 msgid "Could not forward question to service."
 msgstr "Kunne ikke vidresende spørgsmål til service"
 
@@ -3064,7 +2976,6 @@ msgid "Invalid service URL."
 msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_service/vopros_service.module:573
-#, fuzzy
 msgid "Service messages"
 msgstr ""
 
@@ -3385,14 +3296,12 @@ msgid "Used as the sender of the SMSes, 11 alphanumeric chars allowed"
 msgstr "Bruges som afsender af sms'er (11 alfanumriske tegn er tilladt)"
 
 #: profiles/vopros/modules/vopros/vopros_sms/includes/vopros_sms.admin.inc:73
-#, fuzzy
 msgid "No default value"
-msgstr "Standardværdi"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_sms/includes/vopros_sms.admin.inc:79
-#, fuzzy
 msgid "Default SMS editorial"
-msgstr "Standard SQL-lagring"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_sms/includes/vopros_sms.admin.inc:86
 msgid ""
@@ -3531,12 +3440,10 @@ msgid "Questions created"
 msgstr "Antal spørgsmål"
 
 #: profiles/vopros/modules/vopros/vopros_statistics/vopros_statistics.admin.inc:325
-#, fuzzy
 msgid "Total"
-msgstr "Totale visninger"
+msgstr "Total"
 
 #: profiles/vopros/modules/vopros/vopros_statistics/vopros_statistics.module:75
-#, fuzzy
 msgid "Access statistics"
 msgstr "Vis statistik"
 
@@ -3557,14 +3464,12 @@ msgid "Clients & channels"
 msgstr "Klienter og kanaler"
 
 #: profiles/vopros/modules/vopros/vopros_statistics/vopros_statistics.info:0
-#, fuzzy
 msgid "Vopros Statistics"
-msgstr "Statistik"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_statistics/vopros_statistics.info:0
-#, fuzzy
 msgid "Allows users to access statistics information about Vopros"
-msgstr "Registrerer brugen af netstedet."
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:14
 msgid "Libraries"
@@ -3584,34 +3489,28 @@ msgid "URL of the OpenAgency service."
 msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:35
-#, fuzzy
 msgid "Service group"
-msgstr "Tekstgruppe"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:36
-#, fuzzy
 msgid "Group used for authentication."
-msgstr "HTTP-godkendelse"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:43
-#, fuzzy
 msgid "Service user"
-msgstr "godkendt bruger"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:44
-#, fuzzy
 msgid "User used for authentication."
-msgstr "HTTP-godkendelse"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:51
-#, fuzzy
 msgid "Service password"
-msgstr "Nulstil adgangskode"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:52
-#, fuzzy
 msgid "Password used for authentication."
-msgstr "Adgangskodefelt fundet"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:59
 msgid "Included libraries"
@@ -3630,19 +3529,15 @@ msgid "disabled"
 msgstr "deaktiveret"
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:90
-#, fuzzy
 msgid "Staff role"
-msgstr "Gem rolle"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:93
-#, fuzzy
 msgid ""
 "This role will be automatically assigned new Vopros permissions whenever a "
 "module is enabled. Changing this setting will not affect existing "
 "permissions."
-msgstr ""
-"Denne rolle tildeles automatisk nye tilladelser når et modul aktiveres. "
-"Ændring af denne indstilling påvirker ikke eksisterende tilladelser."
+msgstr "Denne rolle tildeles automatisk nye Vopros tilladelser når et modul aktiveres. Ændring af denne indstilling påvirker ikke eksisterende tilladelser."
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:99
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.module:40
@@ -3650,7 +3545,6 @@ msgid "Rebuild permissions"
 msgstr "Gendan tilladelser"
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:122
-#, fuzzy
 msgid "Are you sure you want to rebuild permissions?"
 msgstr "Ønsker du at gendanne tilladelser?"
 
@@ -3661,9 +3555,8 @@ msgid ""
 msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.admin.inc:146
-#, fuzzy
 msgid "Permissions rebuild."
-msgstr "Tilladelser"
+msgstr "Tilladelser gendannet"
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.features.field_instance.inc:350
 msgid "Bemærkninger"
@@ -3725,27 +3618,22 @@ msgid "View the list of users."
 msgstr "Oversigt over alle biblioteksvagter "
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:472
-#, fuzzy
 msgid "Profile ID"
-msgstr "Profil"
+msgstr "Profil ID"
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:475
-#, fuzzy
 msgid "agency"
-msgstr "Institutions-ID"
+msgstr "Institution"
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:476
-#, fuzzy
 msgid "last_name"
 msgstr "Efternavn"
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:477
-#, fuzzy
 msgid "first_name"
 msgstr "Fornavn"
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:478
-#, fuzzy
 msgid "user_name"
 msgstr "Brugernavn"
 
@@ -3754,7 +3642,6 @@ msgid "uid"
 msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:480
-#, fuzzy
 msgid "description"
 msgstr "Beskrivelse"
 
@@ -3767,23 +3654,20 @@ msgid "expertise"
 msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:483
-#, fuzzy
 msgid "User uid"
-msgstr "Brugerdata"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:484
 msgid "Name (raw)"
 msgstr "Navn (rå data)"
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.views_default.inc:485
-#, fuzzy
 msgid "Services"
-msgstr "Web-services"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.module:61
-#, fuzzy
 msgid "Same library as current user"
-msgstr "Bandlys aktuelle brugers IP-adresse"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.module:62
 msgid "Selects users from the same library."
@@ -3810,14 +3694,12 @@ msgid "User settings"
 msgstr "Brugerindstillinger"
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.module:17
-#, fuzzy
 msgid "Configure Vopros user and role settings."
-msgstr "Tilpas søgeindstillinger"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.module:31
-#, fuzzy
 msgid "Role settings"
-msgstr "Lokalitet"
+msgstr ""
 
 #: profiles/vopros/modules/vopros/vopros_user/vopros_user.info:0
 msgid "Vopros user"
