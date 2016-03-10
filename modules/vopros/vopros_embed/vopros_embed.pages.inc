@@ -326,6 +326,31 @@ function vopros_embed_question_submitted_page() {
 }
 
 /**
+ * Return CSS for tab.
+ */
+function vopros_embed_tab_css() {
+  drupal_add_http_header('Content-Type', 'text/css');
+
+  $class = isset($_GET['class']) ? check_plain($_GET['class']) : '';
+  $base = drupal_get_path('module', 'vopros_embed');
+
+  $tab_styles = array(
+    'processed' => array(
+      $base . '/css/vopros_embed_tab.css',
+    ),
+    'external' => array(),
+  );
+  drupal_alter('vopros_embed_tab_style', $tab_styles);
+
+  $css = '';
+  foreach ($tab_styles['processed'] as $file) {
+    $css .= rtrim(file_get_contents($file)) . "\n";
+  }
+
+  print strtr($css, array('.ask-vopros-tab' => ".ask-vopros-tab.$class"));
+}
+
+/**
  * Return JavaScript for popup.
  */
 function vopros_embed_question_modal_js() {
@@ -350,6 +375,7 @@ function vopros_embed_question_modal_js() {
   }
 
   $ask_url = url('embed/ask-question', array('absolute' => TRUE));
+  $class = isset($_GET['class']) ? check_plain($_GET['class']) : '';
 
   // Required styles.
   $styles = array(
@@ -358,16 +384,28 @@ function vopros_embed_question_modal_js() {
   );
 
   // Allow module/themes to override tab styles.
-  $tab_styles = array();
+  $tab_styles = array(
+    'processed' => array(
+      $base . '/css/vopros_embed_tab.css',
+    ),
+    'external' => array(),
+  );
   drupal_alter('vopros_embed_tab_style', $tab_styles);
-  if (empty($tab_styles)) {
-    $tab_styles = array(url($base . '/css/vopros_embed_tab.css', array('absolute' => TRUE)));
+  if (!empty($tab_styles['processed'])) {
+    $tab_styles['external'][] = url('/embed/tab.css', array('absolute' => TRUE, 'query' => array('class' => $class)));
   }
 
-  $styles = array_merge($styles, $tab_styles);
+  $styles = array_merge($styles, $tab_styles['external']);
 
   // Prepare query for link.
-  $query = array_intersect_key($_GET, array_flip(array('agency_id', 'url', 'agency_mail', 'popup', 'answer_preference', 'destination')));
+  $query = array_intersect_key($_GET, array_flip(array(
+    'agency_id',
+    'url',
+    'agency_mail',
+    'popup',
+    'answer_preference',
+    'destination',
+  )));
 
   $tab_title = format_string(variable_get('vopros_embed_tab_title', 'Ask @site_name'), array('@site_name' => variable_get('site_name', 'Drupal')));
 
@@ -381,6 +419,7 @@ function vopros_embed_question_modal_js() {
     'ask_url' => $ask_url,
     'tab' => theme('vopros_embed_tab', array('title' => $tab_title, 'url' => $ask_url)),
     'add_tab' => isset($_GET['tab']),
+    'class' => $class,
     'query' => $query,
     'confirm_message' => t('Are you sure you want to close?'),
   );
