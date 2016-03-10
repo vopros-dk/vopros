@@ -26,7 +26,7 @@ function vopros_embed_setting_form($form, &$form_state) {
     '#type' => 'textfield',
     '#title' => t('Tab title'),
     '#default_value' => variable_get('vopros_embed_tab_title', 'Ask @site_name'),
-    '#description' => t('Title of the tab used on client sites.. Use <em>@site_name</em> to insert the site title.'),
+    '#description' => t('Title of the tab used on client sites. Use <em>@site_name</em> to insert the site title.'),
   );
 
   $form['appearance']['vopros_embed_show_deadline'] = array(

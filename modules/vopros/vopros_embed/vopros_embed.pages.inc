@@ -28,7 +28,7 @@ function vopros_embed_question($form, &$form_state) {
                      '@site_name' => variable_get('site_name', 'Vopros'),
                      '@site_mail' => variable_get('site_mail', '<unknown>'),
                      '@agency_id' => $agency_id,
-                   )),
+        )),
       );
     }
     return $form;
@@ -60,7 +60,7 @@ EOF;
 
   $answer_preference = 'mail';
   if (isset($_GET['answer_preference']) &&
-    isset($options[$_GET['answer_preference']])) {
+      isset($options[$_GET['answer_preference']])) {
     $answer_preference = $_GET['answer_preference'];
   }
 
