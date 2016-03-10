@@ -132,21 +132,6 @@ EOF;
     '#weight' => -30,
   );
 
-  $form['user_postal_code'] = array(
-    '#type' => 'textfield',
-    '#title' => t("What's your zip code?"),
-    '#default_value' => isset($_GET['zip']) ? check_plain($_GET['zip']) : '',
-    '#states' => array(
-      'visible' => array(
-        'input[name=user_answer_preference]' => array(
-          array('value' => 'mail'),
-          array('value' => 'sms'),
-        ),
-      ),
-    ),
-    '#weight' => -20,
-  );
-
   $show_deadline = array_filter(variable_get('vopros_embed_show_deadline', array('mail', 'sms')));
   if ($show_deadline) {
     $values = array();
