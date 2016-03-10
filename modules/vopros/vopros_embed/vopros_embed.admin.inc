@@ -41,6 +41,15 @@ function vopros_embed_setting_form($form, &$form_state) {
     '#description' => t('Show deadline options for these answer methods.'),
   );
 
+  $information_text = variable_get('vopros_embed_information_text', array('value' => '', 'format' => 0));
+  $form['appearance']['vopros_embed_information_text'] = array(
+    '#type' => 'text_format',
+    '#title' => t('Tab title'),
+    '#default_value' => $information_text['value'],
+    '#format' => $information_text['format'],
+    '#description' => t('Extra information displayed at the bottom of the form.'),
+  );
+
   $form['embed'] = array(
     '#type' => 'fieldset',
     '#title' => t('Embed code'),

@@ -176,6 +176,14 @@ EOF;
     );
   }
 
+  $information_text = variable_get('vopros_embed_information_text', array('value' => '', 'format' => 0));
+  if ($information_text['value']) {
+    $form['information'] = array(
+      '#type' => 'item',
+      '#markup' => check_markup($information_text['value'], $information_text['format']),
+    );
+  }
+
   $form['client_id'] = array(
     '#type' => 'value',
     '#value' => $client->client_id,
