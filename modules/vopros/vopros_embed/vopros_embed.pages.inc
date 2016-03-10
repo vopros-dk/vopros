@@ -355,7 +355,10 @@ function vopros_embed_tab_css() {
     $css .= rtrim(file_get_contents($file)) . "\n";
   }
 
-  print strtr($css, array('.ask-vopros-tab' => ".ask-vopros-tab.$class"));
+  if ($class) {
+    $css = strtr($css, array('.ask-vopros-tab' => ".ask-vopros-tab.$class"));
+  }
+  print $css;
 }
 
 /**

@@ -53,8 +53,12 @@
       $('body').append(tab);
     }
 
+    var class_sel = '';
+    if (settings['class']) {
+      class_sel = '.' + settings['class'];
+    }
     // Replace tab placeholders with our own rendering.
-    $('.' + settings['class'] + '.ask-vopros-tab, .' + settings['class'] + '.ask-vopros-tab-placeholder').each(function () {
+    $(class_sel + '.ask-vopros-tab, ' + class_sel + '.ask-vopros-tab-placeholder').each(function () {
       var tab = $(settings.tab).addClass('ask-vopros-tab');
       if (settings['class']) {
         tab.addClass(settings['class']);
@@ -101,7 +105,7 @@
     query.url = window.location.href;
 
     // Fix urls and attach Magnific popup to the link.
-    var links = $('.' + settings['class'] + ' a[href*="' + settings.ask_url + '"]');
+    var links = $(class_sel + ' a[href*="' + settings.ask_url + '"]');
     links.querystring(query);
 
     if (popup) {
