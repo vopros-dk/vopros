@@ -20,9 +20,10 @@ dependencies[] = menu
 dependencies[] = number
 dependencies[] = options
 dependencies[] = path
-dependencies[] = taxonomy
 dependencies[] = shortcut
+dependencies[] = taxonomy
 dependencies[] = toolbar
+dependencies[] = update
 
 ; Contrib
 dependencies[] = ctools
