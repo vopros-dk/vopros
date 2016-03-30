@@ -29,6 +29,7 @@ dependencies[] = update
 dependencies[] = ctools
 dependencies[] = entity
 dependencies[] = entity_token
+dependencies[] = l10n_update
 dependencies[] = libraries
 dependencies[] = profile2
 dependencies[] = token
