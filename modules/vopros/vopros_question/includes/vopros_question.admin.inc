@@ -183,9 +183,9 @@ function vopros_question_question_form($form, &$form_state, $question, $add_ques
     '#default_value' => $question->client_id,
   );
 
-  // Only set channel for new questions.
+  // Only allow selecting channel for new questions without a preset channel.
   // Channel id and data is never edited.
-  if (isset($question->is_new)) {
+  if (isset($question->is_new) && empty($question->channel)) {
     $form['form']['channel'] = array(
       '#type' => 'select',
       '#title' => t('Channel'),
