@@ -190,7 +190,6 @@ function vopros_question_question_form($form, &$form_state, $question, $add_ques
       '#type' => 'select',
       '#title' => t('Channel'),
       '#options' => _vopros_question_manual_channels(),
-      '#default_value' => $question->channel,
     );
   }
   else {
