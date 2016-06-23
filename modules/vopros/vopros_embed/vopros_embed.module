@@ -278,21 +278,6 @@ function template_preprocess_embedded_page(&$variables) {
     }
   }
 
-
-  // Prep the logo for the template.
-  $variables['logo'] = NULL;
-  $logo = variable_get('vopros_embed_logo', '');
-  if (!empty($logo)) {
-    $variables['logo'] = theme(
-      'image', array(
-        'path' => image_style_url(
-          'medium',
-          $logo
-        ),
-      )
-    );
-  }
-
   $variables['base_path']         = base_path();
   $variables['language']          = $GLOBALS['language'];
   $variables['language']->dir     = $GLOBALS['language']->direction ? 'rtl' : 'ltr';
