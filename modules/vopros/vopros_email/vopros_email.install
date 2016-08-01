@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * Install and update hooks for vopros_email.
+ */
+
+/**
  * Implements hook_schema().
  */
 function vopros_email_schema() {
@@ -106,11 +111,11 @@ function vopros_email_schema() {
     'foreign keys' => array(
       'current_revision' => array(
         'table' => 'vopros_email_revision',
-        'columns'=> array('revision_id' => 'revision_id'),
+        'columns' => array('revision_id' => 'revision_id'),
       ),
       'answer' => array(
         'table' => 'vopros_answer',
-        'columns'=> array('answer_id' => 'answer_id'),
+        'columns' => array('answer_id' => 'answer_id'),
       ),
     ),
   );
@@ -212,7 +217,7 @@ function vopros_email_schema() {
     'foreign keys' => array(
       'email' => array(
         'table' => 'vopros_email',
-        'columns'=> array('email_id' => 'email_id'),
+        'columns' => array('email_id' => 'email_id'),
       ),
     ),
   );
@@ -346,19 +351,19 @@ function vopros_email_update_7001(&$sandbox) {
  */
 function vopros_email_update_7002(&$sandbox) {
   db_add_field('vopros_email', 'reply_to', array(
-      'description' => 'Reply to of the mail.',
-      'type' => 'varchar',
-      'not null' => TRUE,
-      'default' => '',
-      'length' => '255',
-    ));
+    'description' => 'Reply to of the mail.',
+    'type' => 'varchar',
+    'not null' => TRUE,
+    'default' => '',
+    'length' => '255',
+  ));
   db_add_field('vopros_email_revision', 'reply_to', array(
-      'description' => 'Reply to of the mail.',
-      'type' => 'varchar',
-      'not null' => TRUE,
-      'default' => '',
-      'length' => '255',
-    ));
+    'description' => 'Reply to of the mail.',
+    'type' => 'varchar',
+    'not null' => TRUE,
+    'default' => '',
+    'length' => '255',
+  ));
 }
 
 /**
