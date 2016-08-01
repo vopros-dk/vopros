@@ -107,6 +107,7 @@ function vopros_email_schema() {
     ),
     'indexes' => array(
       'type' => array('type'),
+      'question_id' => array('question_id'),
     ),
     'foreign keys' => array(
       'current_revision' => array(
@@ -212,6 +213,8 @@ function vopros_email_schema() {
     ),
     'primary key' => array('revision_id'),
     'indexes' => array(
+      'email_id' => array('email_id'),
+      'question_id' => array('question_id'),
       'type' => array('type'),
     ),
     'foreign keys' => array(
@@ -378,4 +381,19 @@ function vopros_email_update_7101() {
     variable_set('vopros_email_macro_answered_question', $value);
     variable_del('vopros_email_answered_question_macro');
   }
+}
+
+/**
+ * Add email_id index to vopros_email_revision.
+ */
+function vopros_email_update_7102() {
+  db_add_index('vopros_email_revision', 'email_id', array('email_id'));
+}
+
+/**
+ * Add question_id indexes to vopros_email and vopros_email_revision.
+ */
+function vopros_email_update_7103() {
+  db_add_index('vopros_email', 'question_id', array('question_id'));
+  db_add_index('vopros_email_revision', 'question_id', array('question_id'));
 }
