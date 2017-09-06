@@ -169,7 +169,7 @@ function _vopros_public_question_request_object($object, $doc, $collection, $sou
       $dkabm_record->appendChild($doc->createElement('dc:subject', str_replace('&', '&amp;', $term->name)));
     }
 
-    $dkabm_record->appendChild($doc->createElement('dc:description', str_replace('&', '&amp;', $object->question_content . $object->answer_content)));
+    $dkabm_record->appendChild($doc->createElement('dc:description', str_replace('&', '&amp;', $object->question_content)));
     $dc_type = $doc->createElement('dc:type', 'Spørgsmål og svar');
     $dc_type->setAttribute('xsi:type', 'dkdcplus:BibDK-Type');
     $dkabm_record->appendChild($dc_type);
